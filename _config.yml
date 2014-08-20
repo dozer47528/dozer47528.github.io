@@ -5,9 +5,15 @@ email: mail@dozer.cc
 description: 'Dozer&#039;s Technology Blog'
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.dozer.cc" # the base hostname & protocol for your site
-twitter_username: dozer47528
-github_username: dozer47528
+github: dozer47528
+twitter: dozer47528
+
 
 # Build settings
-markdown: kramdown
+paginate: 10
+paginate_path: "page:num"
 pygments: true
+markdown: kramdown
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
