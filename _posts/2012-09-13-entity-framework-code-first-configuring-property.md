@@ -1,0 +1,457 @@
+---
+title: Entity Framework Code First 配置介绍：属性
+author: Dozer
+layout: post
+permalink: /2012/09/entity-framework-code-first-configuring-property/
+posturl_add_url:
+  - yes
+duoshuo_thread_id:
+  - 1171159103984950560
+categories:
+  - 编程技术
+tags:
+  - Code First
+  - Entiy Framework
+  - Fluent API
+---
+<div id="toc_container" class="no_bullets">
+  <p class="toc_title">
+    文章导航
+  </p>
+  
+  <ul class="toc_list">
+    <li>
+      <a href="#i"><span class="toc_number toc_depth_1">1</span> 目录</a>
+    </li>
+    <li>
+      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 配置方法介绍</a>
+    </li>
+    <li>
+      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 属性长度</a>
+    </li>
+    <li>
+      <a href="#i-4"><span class="toc_number toc_depth_1">4</span> 数据类型</a>
+    </li>
+    <li>
+      <a href="#i-5"><span class="toc_number toc_depth_1">5</span> 可空配置</a>
+    </li>
+    <li>
+      <a href="#i-6"><span class="toc_number toc_depth_1">6</span> 主键映射</a>
+    </li>
+    <li>
+      <a href="#i-7"><span class="toc_number toc_depth_1">7</span> 配置标识规范属性</a>
+    </li>
+    <li>
+      <a href="#TimeStampRowVersion"><span class="toc_number toc_depth_1">8</span> 为乐观并发配置 TimeStamp/RowVersion 字段</a>
+    </li>
+    <li>
+      <a href="#Timestamp"><span class="toc_number toc_depth_1">9</span> 为没有 Timestamp 的字段配置乐观并发</a>
+    </li>
+    <li>
+      <a href="#Unicode"><span class="toc_number toc_depth_1">10</span> 配置非Unicode的数据库类型</a>
+    </li>
+    <li>
+      <a href="#_Decimals"><span class="toc_number toc_depth_1">11</span> 配置 Decimals</a>
+    </li>
+    <li>
+      <a href="#i-8"><span class="toc_number toc_depth_1">12</span> 配置复杂类型</a>
+    </li>
+  </ul>
+</div>
+
+### <span id="i">目录</span>
+
+[**简介**][1]
+
+[**配置实体的属性**][2]
+
+**[配置实体间的引用关系][3]**
+
+[**配置数据库映射**][4]
+
+&nbsp;
+
+### <span id="i-2">配置方法介绍</span>
+
+在 Code First 之前，其实大家都知道一种配置方法：
+
+<pre class="brush: csharp; gutter: true">class AnimalType
+{
+  public int Id { get; set; }
+  [Required]
+  public string TypeName { get; set; }
+}</pre>
+
+没错，这就是 Code First 的配置方法之一：Data Annotations
+
+直译叫做数据批注，原理就是在对应的字段上加上<span style="background-color: #eeeeee;"> System.ComponentModel.DataAnnotations</span> 命名空间下的一些 Attribute，就可以实现各种配置了。
+
+这种作法在 Model First 和 Database First 的时代就有了，也可以同时被用来做 MVC 的数据验证。
+
+<!--more-->
+
+另外一种配置方法叫做：Fluent API
+
+这个实在不好翻译，我更喜欢称呼它的原名。
+
+示例如下：
+
+<pre class="brush: csharp; gutter: true">class VetContext:DbContext
+{
+  public DbSet&lt;Patient&gt; Patients { get; set; }
+  public DbSet&lt;Visit&gt; Visits { get; set; }
+  protected override void OnModelCreating(DbModelBuilder modelBuilder)
+  {
+    modelBuilder.Entity&lt;AnimalType&gt;()
+                .ToTable("Species");
+    modelBuilder.Entity&lt;AnimalType&gt;()
+                .Property(p =&gt; p.TypeName).IsRequired();
+   }
+}</pre>
+
+&nbsp;
+
+那最终到底选择哪种呢？
+
+个人建议还是选择 Fluent API。
+
+因为它提供的功能更多；而且它可以完全脱离 Model，便于分层，EF 是仓促层的东西，尽量不要入侵 Model。
+
+所以它非常适合 DDD，这里有一位高人的实例程序，非常的棒：**<a href="http://www.cnblogs.com/daxnet/archive/2012/06/20/2555938.html" target="_blank">传送门</a>**
+
+&nbsp;
+
+### <span id="i-3">属性长度</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      max (type specified by database)
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      MinLength(nn)<br /> MaxLength(nn)<br /> StringLength(nn)
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName).HasMaxLength(nn)
+    </td>
+  </tr>
+</table>
+
+长度是用来描述 <span style="background-color: #eeeeee;">String </span>或者 <span style="background-color: #eeeeee;">Byte </span>数组的，默认会被设置成对应类型的最大值。例如在 SQL Server 中，它们分别会被设置成 <span style="background-color: #eeeeee;">nvarchar(max)</span> 和 <span style="background-color: #eeeeee;">varbinary(max)</span>。
+
+&nbsp;
+
+### <span id="i-4">数据类型</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      根据不同的数据提供者，会有不同的默认数据类型。<br /> 在 SQL Server 中：<br /> String : nvarchar(max)<br /> Integer : int<br /> Byte Array : varbinary(max)<br /> Boolean : bit
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      Column(TypeName=“xxx”)
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName).HasColumnType (“xxx”)
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="i-5">可空配置</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      主键、外键: 不为空<br /> 引用类型 (String, arrays): 可空<br /> 值类型 (all numeric types, DateTime, bool, char) : 不为空<br /> Nullable<T>  : 可空
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      Required
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName).IsRequired
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="i-6">主键映射</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      命名为 Id 的属性<br /> 命名为 [类型名] + Id 的属性
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      Key
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.HasKey(t=>t.PropertyName)
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="i-7">配置标识规范属性</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      数据库默认标识规范
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      DatabaseGenerated(DatabaseGeneratedOption)
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName)<br /> .HasDatabaseGeneratedOption(DatabaseGeneratedOption)
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="TimeStampRowVersion">为乐观并发配置 TimeStamp/RowVersion 字段</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      无
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      TimeStamp
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName).IsRowVersion()
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="Timestamp">为没有 Timestamp 的字段配置乐观并发</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      无
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      ConcurrencyCheck
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName).IsConcurrencyToken()
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="Unicode">配置非Unicode的数据库类型</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      所有的 String 都会被配制成 Unicode 编码的数据库类型
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      无法配置
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName).IsUnicode(boolean)
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="_Decimals">配置 Decimals</span>
+
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      Convention
+    </td>
+    
+    <td>
+      Decimals 18, 2
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Data Annotation
+    </td>
+    
+    <td>
+      无法配置
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Fluent
+    </td>
+    
+    <td>
+      Entity<T>.Property(t=>t.PropertyName).HasPrecision(n,n)
+    </td>
+  </tr>
+</table>
+
+&nbsp;
+
+### <span id="i-8">配置复杂类型</span>
+
+这块比较复杂，也比较少用，感兴趣的可以去翻阅原文。
+
+ [1]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-intro/ "Entity Framework Code First 配置介绍"
+ [2]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-property/ "Entity Framework Code First 配置介绍：属性"
+ [3]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-relationships/ "Entity Framework Code First 配置介绍：引用关系"
+ [4]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-database-mappings/ "Entity Framework Code First 配置介绍：数据库映射"

@@ -1,0 +1,115 @@
+---
+title: 新家，100M！
+author: Dozer
+layout: post
+permalink: /2014/01/new-home-internet/
+posturl_add_url:
+  - yes
+duoshuo_thread_id:
+  - 1171159103985658379
+categories:
+  - 互联网
+tags:
+  - 交换机
+  - 路由器
+---
+<div id="toc_container" class="no_bullets">
+  <p class="toc_title">
+    文章导航
+  </p>
+  
+  <ul class="toc_list">
+    <li>
+      <a href="#100M"><span class="toc_number toc_depth_1">1</span> 100M</a>
+    </li>
+    <li>
+      <a href="#i"><span class="toc_number toc_depth_1">2</span> 设备</a>
+    </li>
+    <li>
+      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 拓扑图</a>
+    </li>
+    <li>
+      <a href="#i-3"><span class="toc_number toc_depth_1">4</span> 缺陷</a>
+    </li>
+  </ul>
+</div>
+
+### <span id="100M">100M</span>
+
+新家搬过来半个多月了，发现郊区的最大好处就是：宽带太便宜了！
+
+以前在普陀区靠近中山公园，电信宽带180/月，预付费，10M。虽然后来参加了活动，绑定了手机号，升级到了20M，但是价格依然非常昂贵，手机+宽带186/月。
+
+搬到这里后，发现电信正好在推100M宽带，所以果断放弃了原来的电信套餐。（原来的还有半年过期，钱已付，已转手，亏一点点）
+
+新套餐的价格是这样的：
+
+*   90元/月，100M，后付费
+*   需要额外绑定一个手机号，50/月，必须使用2年
+*   2年后手机号可以抛弃，宽带依然原价
+
+看上去非常划算啊，所以果断办理了，特别是2年后，宽带还可以以90元/月的价格一直用下去。估计2年后，现在的20M也都自动升级到100M了。
+
+<!--more-->
+
+&nbsp;
+
+今天正式升级到了100M了，晒晒测速图：
+
+[<img class="alignnone size-full wp-image-1422" alt="speed" src="http://www.dozer.cc/wp-content/uploads/2014/01/speed.png" width="517" height="431" />][1]
+
+我尝试过用有线直接测试，发现速度还是上不到理论值，看上去瓶颈应该在光纤猫了，而不是我的路由器了。
+
+&nbsp;
+
+### <span id="i">设备</span>
+
+好马配好鞍，这么快的网速再用TP之类的垃圾路由器坑定是跟不上这速度的。
+
+正好在知乎看到了一篇文章（<a href="http://www.zhihu.com/question/21739060" target="_blank">家庭用 100M 光纤使用什么无线路由器才能发挥最大网速？</a>），介绍了网件的路由器，所以果断入手了。
+
+[<img class="alignnone size-medium wp-image-1423" alt="router" src="http://www.dozer.cc/wp-content/uploads/2014/01/router-225x300.jpeg" width="225" height="300" />][2]
+
+我买的是WNDR3700v4，发现3800到处都买不到，淘宝的又不放心，所以买了3700。两款主要是软件的差别，所以也没多大关系啦。
+
+另外也顺便买了一个网件的8口1000M交换机，200元，心疼啊！
+
+&nbsp;
+
+### <span id="i-2">拓扑图</span>
+
+[<img class="alignnone size-full wp-image-1424" alt="network" src="http://www.dozer.cc/wp-content/uploads/2014/01/network.png" width="629" height="413" />][3]
+
+&nbsp;
+
+贴上家里的网络结构图。大家一定有一个疑问，为什么路由器要绕一大圈放在书房呢？
+
+这么弄主要是为WIFI信号考虑的，因为弱电箱是金属壳，无线路由器放进去信号肯定会受到影响。另外那边也不是最佳的WIFI店。
+
+后来斟酌了一下，发现最合适的是书房，因为这里信号最重要，而且有2个网线口。一个口进来，路由器接光纤猫；一个口出去，路由器接交换机。最后交换机再接各个房间的网线。
+
+&nbsp;
+
+### <span id="i-3">缺陷</span>
+
+现在还差什么？局域网内没有问题了，现在最苦恼的是我那新版本的光纤猫。
+
+它内置路由+WIFI，但是我不想用；如果直接用自己的路由器当交换机接上去，或导致超过电信的最大连接数限制…
+
+所以只能光纤猫做一次NAT，路由器做一个NAT。2次NAT导致UPNP失效，BT速度严重受到影响。
+
+&nbsp;
+
+在之前住的地方，还是一个比较老的光纤猫，轻松破解后把它的路由功能去掉了，直接让我的路由器拨号了。
+
+可惜现在新的光纤猫太新了，还没办法破解…
+
+所以只能等待高人出现了！
+
+&nbsp;
+
+&nbsp;
+
+ [1]: http://www.dozer.cc/wp-content/uploads/2014/01/speed.png
+ [2]: http://www.dozer.cc/wp-content/uploads/2014/01/router.jpeg
+ [3]: http://www.dozer.cc/wp-content/uploads/2014/01/network.png

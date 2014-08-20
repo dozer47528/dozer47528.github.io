@@ -1,0 +1,138 @@
+---
+title: 生活与重构
+author: Dozer
+layout: post
+permalink: /2013/08/life-and-reflector/
+posturl_add_url:
+  - yes
+wpzoom_post_title:
+  - Yes
+wpzoom_post_readmore:
+  - Yes
+wpzoom_post_url:
+  - 
+duoshuo_thread_id:
+  - 1171159103985658372
+categories:
+  - 大杂烩
+tags:
+  - TDD
+  - 重构
+---
+<div id="toc_container" class="no_bullets">
+  <p class="toc_title">
+    文章导航
+  </p>
+  
+  <ul class="toc_list">
+    <li>
+      <a href="#NB"><span class="toc_number toc_depth_1">1</span> 怎么样才是NB的工程师</a>
+    </li>
+    <li>
+      <a href="#i"><span class="toc_number toc_depth_1">2</span> 生活与重构</a><ul>
+        <li>
+          <a href="#Just_Trying_To_Make_IT_Work"><span class="toc_number toc_depth_2">2.1</span> Just Trying To Make IT Work</a>
+        </li>
+        <li>
+          <a href="#Continuous_Improvement"><span class="toc_number toc_depth_2">2.2</span> Continuous Improvement</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 关于效率</a>
+    </li>
+  </ul>
+</div>
+
+### <span id="NB">怎么样才是NB的工程师</span>
+
+记得以前我很喜欢一句话：“当你觉得以前的代码很2的时候，就说明你进步了。”
+
+好赞的一句话是不是？大学的时候，每隔一段时间就会有这样的感觉，感觉自己越来越NB了。
+
+但是，总觉得自己还不算大师，可是差在哪？
+
+<!--more-->
+
+&nbsp;
+
+在半年前进行了大量的工程实践培训，培训中接触了很多 TDD 和 重构的理论和实践，我也慢慢意识到了差距在什么地方了。
+
+我可以每次都写出比上次更好的代码，但是我不能让我的老代码越来越好。
+
+&nbsp;
+
+原来：“菜鸟喜欢重写，大师喜欢重构”。
+
+把原来的东西越改越好远比重头再写一套难得多，而且也更有价值。
+
+&nbsp;
+
+### <span id="i">生活与重构</span>
+
+但是呢，我这篇文章不是想讲重构的，重构的方法和技巧就不说了。
+
+我是感觉，重构更应该是一种思想，而且不仅仅可以用在代码中，生活中也处处会用到重构和 TDD 的思想。
+
+&nbsp;
+
+最近的一件小事，让我把 TDD 和重构的思想结合了起来：
+
+&nbsp;
+
+#### <span id="Just_Trying_To_Make_IT_Work">Just Trying To Make IT Work</span>
+
+TDD 的第一步通常是：Just Trying To Make IT Work，生活中很多事都是这样。
+
+就像我家床底，通常是放大箱子和旅行箱的地方，刚开始东西少，直接扔进去就行了。
+
+不用整理，反正外面也看不到。
+
+&nbsp;
+
+#### <span id="Continuous_Improvement">Continuous Improvement</span>
+
+TDD 和重构相辅相成，当它看起来还不错的时候，可以不去管它，但是在一个点上，就要开始持续改进了。
+
+第一次改进是当我床底的箱子塞“满”的时候，其实它们不是满了，只是太乱了。
+
+于是我开始重构了！第一次重构很简单，我把箱子放整齐就腾出了很多空间。
+
+但是够了吗？ 恩！够了！
+
+&nbsp;
+
+又过了几个月后，床底又满了。
+
+好吧，第二轮重构开始了！
+
+这次我不仅把箱子放整齐了，我还想方设法把小箱子都塞进了大箱子里。
+
+&nbsp;
+
+可是，后面再多怎么办？
+
+<img src="http://www.dozer.cc/wp-includes/images/smilies/icon_cool.gif" alt="8-)" class="wp-smiley" /> 想那么多干嘛，后面还会有那么多箱子吗？说不定都搬家了，说不定以前的箱子可以扔了，说不定…
+
+对啊，未来不可预测，只要你知道它可控就行了。
+
+&nbsp;
+
+### <span id="i-2">关于效率</span>
+
+回过头来，我又思考了一下这么做是否最高效？
+
+以前总是听人说要做好计划，从小就要把人生都规划好… 这样就不会走弯路了。
+
+可是一开始想那么多，就真的不会走弯路了吗？
+
+这个世界实在持续变化的，你无法预知后面的变化，你也无法在一开始就做好全部的选择。
+
+所以想要效率最大化，不是一开始就规划好路线；而是立刻走起来！然后不断地调整路线。
+
+&nbsp;
+
+这就是 TDD 和重构。
+
+它更是一种思想，生活中处处会用到它们。

@@ -1,0 +1,185 @@
+---
+title: Java 中拦截 System.exit
+author: Dozer
+layout: post
+permalink: /2013/04/intercept-system-exit-in-java/
+posturl_add_url:
+  - yes
+duoshuo_thread_id:
+  - 1171159103985658362
+categories:
+  - 编程技术
+tags:
+  - java
+---
+<div id="toc_container" class="no_bullets">
+  <p class="toc_title">
+    文章导航
+  </p>
+  
+  <ul class="toc_list">
+    <li>
+      <a href="#i"><span class="toc_number toc_depth_1">1</span> 场景</a>
+    </li>
+    <li>
+      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 解决方案</a>
+    </li>
+    <li>
+      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 原理</a>
+    </li>
+  </ul>
+</div>
+
+### <span id="i">场景</span>
+
+有一个 jar 包，但是这个 jar 包是一个控制台应用程序，所以我想直接调用它的 main 函数来执行。
+
+但是遇到一个很纠结的问题，这个 jar 包因为是一个控制台应用程序，所以遇到错误的时候，会直接执行 System.exit(-1)，我的程序用它的时候就会直接被退出了…
+
+但我更希望它可以抛出异常。
+
+<!--more-->
+
+### <span id="i-2">解决方案</span>
+
+解决方案其实很简单，通过了一种其他用途的手段实现了这个功能。
+
+直接上代码，先创建一个类：
+
+<pre class="lang:java decode:true">public class MySecurityManager extends SecurityManager {
+    @Override
+    public void checkPermission(Permission perm) {
+    }
+
+    @Override
+    public void checkPermission(Permission perm, Object context) {
+    }
+
+    @Override
+    public void checkCreateClassLoader() {
+    }
+
+    @Override
+    public void checkAccess(Thread t) {
+    }
+
+    @Override
+    public void checkAccess(ThreadGroup g) {
+    }
+
+    @Override
+    public void checkExit(int status) {
+        throw new SecurityException("not allow to call System.exit");
+    }
+
+    @Override
+    public void checkExec(String cmd) {
+    }
+
+    @Override
+    public void checkLink(String lib) {
+    }
+
+    @Override
+    public void checkRead(FileDescriptor fd) {
+    }
+
+    @Override
+    public void checkRead(String file) {
+    }
+
+    @Override
+    public void checkRead(String file, Object context) {
+    }
+
+    @Override
+    public void checkWrite(FileDescriptor fd) {
+    }
+
+    @Override
+    public void checkWrite(String file) {
+    }
+
+    @Override
+    public void checkDelete(String file) {
+    }
+
+    @Override
+    public void checkConnect(String host, int port) {
+    }
+
+    @Override
+    public void checkConnect(String host, int port, Object context) {
+    }
+
+    @Override
+    public void checkListen(int port) {
+    }
+
+    @Override
+    public void checkAccept(String host, int port) {
+    }
+
+    @Override
+    public void checkMulticast(InetAddress maddr) {
+    }
+
+    @Override
+    public void checkPropertiesAccess() {
+    }
+
+    @Override
+    public void checkPropertyAccess(String key) {
+    }
+
+    @Override
+    public boolean checkTopLevelWindow(Object window) {
+        return super.checkTopLevelWindow(window);
+    }
+
+    @Override
+    public void checkPrintJobAccess() {
+    }
+
+    @Override
+    public void checkSystemClipboardAccess() {
+    }
+
+    @Override
+    public void checkAwtEventQueueAccess() {
+    }
+
+    @Override
+    public void checkPackageAccess(String pkg) {
+    }
+
+    @Override
+    public void checkPackageDefinition(String pkg) {
+    }
+
+    @Override
+    public void checkSetFactory() {
+    }
+
+    @Override
+    public void checkMemberAccess(Class&lt;?&gt; clazz, int which) {
+    }
+
+    @Override
+    public void checkSecurityAccess(String target) {
+    }
+}</pre>
+
+&nbsp;
+
+然后在程序启动的时候执行：
+
+<pre class="toolbar:2 lang:java decode:true">System.setSecurityManager(new MySecurityManager());</pre>
+
+&nbsp;
+
+### <span id="i-3">原理</span>
+
+原理其实很简单，这个类可以对你所有的重要操作进行权限验证。所以当你对 exit 方法进行权限验证的时候，直接抛出异常就行了。
+
+但是为什么要重写其它方法呢？因为这个类默认会让所有的操作抛出异常，所以如果你不把其它的方法重写并保持无代码的话，其它的所有操作也无法进行了，例如：读写文件等。
