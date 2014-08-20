@@ -43,7 +43,7 @@ tags:
 
 前一段时间看完了《七周七语言》，这本书的书写风格有点像教材，会要求你回家做作业。
 
-<img src="http://www.dozer.cc/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> 但说实在的，不做作业真的无法理解里面的全部内容。
+但说实在的，不做作业真的无法理解里面的全部内容。
 
 或许抽空我也应该再看一遍并且把里面的作业做一遍。
 
