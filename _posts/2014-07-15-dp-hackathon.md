@@ -143,4 +143,4 @@ tags:
 
 玩你以前没玩过的，做你之前没空做的。如果为了得奖，急功近利，不仅丢失了乐趣，也往往得不到好的成绩。
 
- [1]: http://www.dozer.cc/uploads/2014/07/dp-hackathon.jpg
+ [1]: /uploads/2014/07/dp-hackathon.jpg

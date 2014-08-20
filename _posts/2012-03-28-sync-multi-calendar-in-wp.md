@@ -91,7 +91,7 @@ Android 上的 Google 服务没的话说，好用的不得了。到了 <a href="
 
 &nbsp;
 
- [1]: http://www.dozer.cc/uploads/2012/03/error.png
- [2]: http://www.dozer.cc/uploads/2012/03/login.png
- [3]: http://www.dozer.cc/uploads/2012/03/platform.png
- [4]: http://www.dozer.cc/uploads/2012/03/save.png
+ [1]: /uploads/2012/03/error.png
+ [2]: /uploads/2012/03/login.png
+ [3]: /uploads/2012/03/platform.png
+ [4]: /uploads/2012/03/save.png

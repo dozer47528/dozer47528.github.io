@@ -134,4 +134,4 @@ MVC 中有了 Controller 和 Action 后生成链接非常方便，其实在 Asp.
 
 如果想像 MVC 里那样，那就需要自己写几个函数了~
 
- [1]: http://www.dozer.cc/uploads/2011/03/routing.png
+ [1]: /uploads/2011/03/routing.png

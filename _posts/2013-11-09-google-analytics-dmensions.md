@@ -131,4 +131,4 @@ Google Analitics 官方文档：<a href="https://developers.google.com/analytics
 
 所以我们还在继续验证中~
 
- [1]: http://www.dozer.cc/uploads/2013/11/ga-10.png
+ [1]: /uploads/2013/11/ga-10.png

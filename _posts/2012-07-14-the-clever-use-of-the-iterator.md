@@ -158,5 +158,5 @@ static List&lt;string&gt; GetFromDatabase(int index, int size)
 
 &nbsp;
 
- [1]: http://www.dozer.cc/uploads/2012/07/memory1.png
- [2]: http://www.dozer.cc/uploads/2012/07/memory2.png
+ [1]: /uploads/2012/07/memory1.png
+ [2]: /uploads/2012/07/memory2.png

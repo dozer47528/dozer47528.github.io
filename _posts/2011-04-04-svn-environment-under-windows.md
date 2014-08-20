@@ -144,7 +144,7 @@ Visual Studio 插件：<a href="http://ankhsvn.open.collab.net/" target="_blank"
 
 [<img class="alignnone size-medium wp-image-282" title="ankhsvn" alt="" src="/uploads/2011/04/ankhsvn-175x300.png" width="175" height="300" />][4]
 
- [1]: http://www.dozer.cc/uploads/2011/04/virsualsvn.png
- [2]: http://www.dozer.cc/uploads/2011/04/import.png
- [3]: http://www.dozer.cc/uploads/2011/04/checkout.png
- [4]: http://www.dozer.cc/uploads/2011/04/ankhsvn.png
+ [1]: /uploads/2011/04/virsualsvn.png
+ [2]: /uploads/2011/04/import.png
+ [3]: /uploads/2011/04/checkout.png
+ [4]: /uploads/2011/04/ankhsvn.png

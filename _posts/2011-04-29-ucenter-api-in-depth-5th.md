@@ -26,7 +26,7 @@ tags:
 > 3.  <a href="/2011/01/ucenter-api-in-depth-3rd/" target="_blank"><strong>加密与解密：AuthCode详解 & AuthCode函数翻译过程中的注意点</strong></a>
 > 4.  **<a href="/2011/02/ucenter-api-in-depth-4th/" target="_blank">网站搭建： 康盛旗下网站 & Asp.net 网站搭建</a>**
 > 5.  **<a href="/2011/04/ucenter-api-in-depth-5th/" target="_blank">MVC 网站下的用法：在 MVC 下的使用方法</a>**
-> 6.  **<a href=" http://www.dozer.cc/2011/05/ucenter-api-fo…et-on-codeplex/" target="_blank">下载地址：UCenter API For .Net 在 CodePlex 上发布啦！</a>**
+> 6.  **<a href="/2011/05/ucenter-api-for-net-on-codeplex/" target="_blank">下载地址：UCenter API For .Net 在 CodePlex 上发布啦！</a>**
 
 &nbsp;
 

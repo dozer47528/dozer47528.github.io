@@ -79,17 +79,17 @@ tags:
 
 下载地址：[transdmin][14]
 
- [1]: http://www.dozer.cc/uploads/2011/06/admin1.png
- [2]: http://www.dozer.cc/uploads/2011/06/admin-templates-2.zip
- [3]: http://www.dozer.cc/uploads/2011/06/admin2-1.png
- [4]: http://www.dozer.cc/uploads/2011/06/admin2-2.png
- [5]: http://www.dozer.cc/uploads/2011/06/admin_template-3.zip
- [6]: http://www.dozer.cc/uploads/2011/06/admin3.png
- [7]: http://www.dozer.cc/uploads/2011/06/Admin-Template-JQuery.zip
- [8]: http://www.dozer.cc/uploads/2011/06/admin4-1.png
- [9]: http://www.dozer.cc/uploads/2011/06/admin4-2.png
- [10]: http://www.dozer.cc/uploads/2011/06/admin-xhtml.zip
- [11]: http://www.dozer.cc/uploads/2011/06/admin5.png
- [12]: http://www.dozer.cc/uploads/2011/06/in-admin-panel.zip
- [13]: http://www.dozer.cc/uploads/2011/06/admin6.png
- [14]: http://www.dozer.cc/uploads/2011/06/transdmin.zip
+ [1]: /uploads/2011/06/admin1.png
+ [2]: /uploads/2011/06/admin-templates-2.zip
+ [3]: /uploads/2011/06/admin2-1.png
+ [4]: /uploads/2011/06/admin2-2.png
+ [5]: /uploads/2011/06/admin_template-3.zip
+ [6]: /uploads/2011/06/admin3.png
+ [7]: /uploads/2011/06/Admin-Template-JQuery.zip
+ [8]: /uploads/2011/06/admin4-1.png
+ [9]: /uploads/2011/06/admin4-2.png
+ [10]: /uploads/2011/06/admin-xhtml.zip
+ [11]: /uploads/2011/06/admin5.png
+ [12]: /uploads/2011/06/in-admin-panel.zip
+ [13]: /uploads/2011/06/admin6.png
+ [14]: /uploads/2011/06/transdmin.zip

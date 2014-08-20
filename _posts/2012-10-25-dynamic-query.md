@@ -367,6 +367,6 @@ var item = JsonConvert.DeserializeObject&lt;QueryGroup&gt;(json);</pre>
 
 &nbsp;
 
- [1]: http://www.dozer.cc/uploads/2012/10/itunes.png
- [2]: http://www.dozer.cc/uploads/2012/10/ui.png
- [3]: http://www.dozer.cc/uploads/2012/10/demo.gif
+ [1]: /uploads/2012/10/itunes.png
+ [2]: /uploads/2012/10/ui.png
+ [3]: /uploads/2012/10/demo.gif

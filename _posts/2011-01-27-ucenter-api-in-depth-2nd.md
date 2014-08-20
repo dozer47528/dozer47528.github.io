@@ -161,6 +161,6 @@ if(ucLoginReturn.Success)
 
 这个也是 整个 UCenter API 的重点，下一篇文章将会详解这个函数，和它在翻译成 C# 版时的注意点。
 
- [1]: http://www.dozer.cc/uploads/2011/01/ucenterapi.png
- [2]: http://www.dozer.cc/uploads/2011/01/login.png
- [3]: http://www.dozer.cc/uploads/2011/01/login_js.png
+ [1]: /uploads/2011/01/ucenterapi.png
+ [2]: /uploads/2011/01/login.png
+ [3]: /uploads/2011/01/login_js.png

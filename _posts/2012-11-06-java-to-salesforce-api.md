@@ -228,9 +228,9 @@ public class main {
 
 &nbsp;
 
- [1]: http://www.dozer.cc/uploads/2012/11/lib.png
- [2]: http://www.dozer.cc/uploads/2012/11/run.jpg
- [3]: http://www.dozer.cc/uploads/2012/11/args.png
- [4]: http://www.dozer.cc/uploads/2012/11/src.png
- [5]: http://www.dozer.cc/uploads/2012/11/wsdl.png
- [6]: http://www.dozer.cc/uploads/2012/11/url.png
+ [1]: /uploads/2012/11/lib.png
+ [2]: /uploads/2012/11/run.jpg
+ [3]: /uploads/2012/11/args.png
+ [4]: /uploads/2012/11/src.png
+ [5]: /uploads/2012/11/wsdl.png
+ [6]: /uploads/2012/11/url.png

@@ -462,5 +462,5 @@ ab -c 10 -n 10 http://localhost:6360/asyncpage_cpu.aspx</pre>
 
 *请用 Visual Studio 11 打开*
 
- [1]: http://www.dozer.cc/uploads/2012/03/canwait.png
- [2]: http://www.dozer.cc/uploads/2012/03/async.png
+ [1]: /uploads/2012/03/canwait.png
+ [2]: /uploads/2012/03/async.png

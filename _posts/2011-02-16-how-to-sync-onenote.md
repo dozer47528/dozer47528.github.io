@@ -167,6 +167,6 @@ tags:
 
 最后，在别的电脑上也安装这个同步工具，并且登陆同一个帐号即可
 
- [1]: http://www.dozer.cc/uploads/2011/02/create.png
- [2]: http://www.dozer.cc/uploads/2011/02/share.png
- [3]: http://www.dozer.cc/uploads/2011/02/web.png
+ [1]: /uploads/2011/02/create.png
+ [2]: /uploads/2011/02/share.png
+ [3]: /uploads/2011/02/web.png

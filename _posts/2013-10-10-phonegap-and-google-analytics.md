@@ -122,5 +122,5 @@ GA 官方有很多维度，例如：版本号、地区、操作系统 等等…
 
 更多高级的用法可以单独写一篇文章了，大家可以先自行搜索相关文档。
 
- [1]: http://www.dozer.cc/uploads/2013/10/ga.png
- [2]: http://www.dozer.cc/uploads/2013/10/weidu.png
+ [1]: /uploads/2013/10/ga.png
+ [2]: /uploads/2013/10/weidu.png

@@ -258,11 +258,11 @@ C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico /bin/zsh --login</pre>
 
 [<img alt="cygwin" src="/uploads/2013/05/cygwin-300x156.png" width="300" height="156" />][8]
 
- [1]: http://www.dozer.cc/uploads/2013/05/git-color.png
- [2]: http://www.dozer.cc/uploads/2013/05/bash.png
- [3]: http://www.dozer.cc/uploads/2013/05/summary.png
- [4]: http://www.dozer.cc/uploads/2013/05/sourcetree.png
+ [1]: /uploads/2013/05/git-color.png
+ [2]: /uploads/2013/05/bash.png
+ [3]: /uploads/2013/05/summary.png
+ [4]: /uploads/2013/05/sourcetree.png
  [5]: http://sourcetreeapp.com/
  [6]: http://msysgit.github.io/
  [7]: http://windows.github.com/
- [8]: http://www.dozer.cc/uploads/2013/05/cygwin.png
+ [8]: /uploads/2013/05/cygwin.png

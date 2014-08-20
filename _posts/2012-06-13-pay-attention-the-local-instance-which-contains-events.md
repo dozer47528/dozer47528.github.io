@@ -186,4 +186,4 @@ public void client_DownloadStringCompleted(object sender, DownloadStringComplete
 
 具体怎么做就需要根据不同的类进行不同的处理了。总之一定要注意！
 
- [1]: http://www.dozer.cc/uploads/2012/06/explorer.png
+ [1]: /uploads/2012/06/explorer.png

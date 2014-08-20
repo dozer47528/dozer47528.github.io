@@ -310,8 +310,8 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 &nbsp;
 
- [1]: http://www.dozer.cc/uploads/2011/12/updatepannel.png
- [2]: http://www.dozer.cc/uploads/2011/12/ascx.png
- [3]: http://www.dozer.cc/uploads/2011/12/wrap.png
- [4]: http://www.dozer.cc/uploads/2011/12/timelist.png
- [5]: http://www.dozer.cc/uploads/2011/12/ajaxoptions.png
+ [1]: /uploads/2011/12/updatepannel.png
+ [2]: /uploads/2011/12/ascx.png
+ [3]: /uploads/2011/12/wrap.png
+ [4]: /uploads/2011/12/timelist.png
+ [5]: /uploads/2011/12/ajaxoptions.png

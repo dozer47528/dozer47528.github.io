@@ -437,5 +437,5 @@ private static void Test2(ref List&lt;int&gt; list)
 
 现在你全部明白了吗？^_^
 
- [1]: http://www.dozer.cc/uploads/2011/10/ref1.png
- [2]: http://www.dozer.cc/uploads/2011/10/ref2.png
+ [1]: /uploads/2011/10/ref1.png
+ [2]: /uploads/2011/10/ref2.png

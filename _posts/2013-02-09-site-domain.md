@@ -150,4 +150,4 @@ DNSPOD 是一个国内的免费 NameServer。个人用户免费且几乎没有�
 
 还等什么？如果你想建站，那赶快买域名去吧~
 
- [1]: http://www.dozer.cc/uploads/2013/02/qq.png
+ [1]: /uploads/2013/02/qq.png

@@ -179,23 +179,23 @@ tags:
 
 最终效果如下，点击左上角的按钮，还可以模拟轨迹运行一次呢！
 
- [1]: http://www.dozer.cc/uploads/2012/01/20120127_152406.jpg
- [2]: http://www.dozer.cc/uploads/2012/01/20120127_152411.jpg
- [3]: http://www.dozer.cc/uploads/2012/01/20120127_152421.jpg
- [4]: http://www.dozer.cc/uploads/2012/01/20120127_152426.jpg
- [5]: http://www.dozer.cc/uploads/2012/01/20120127_152431.jpg
- [6]: http://www.dozer.cc/uploads/2012/01/20120127_152453.jpg
- [7]: http://www.dozer.cc/uploads/2012/01/20120127_152457.jpg
- [8]: http://www.dozer.cc/uploads/2012/01/20120127_152504.jpg
- [9]: http://www.dozer.cc/uploads/2012/01/mt1.jpg
- [10]: http://www.dozer.cc/uploads/2012/01/mt3.jpg
- [11]: http://www.dozer.cc/uploads/2012/01/mt2.jpg
- [12]: http://www.dozer.cc/uploads/2012/01/20120127152812.png
- [13]: http://www.dozer.cc/uploads/2012/01/20120127152834.png
- [14]: http://www.dozer.cc/uploads/2012/01/20120127163416.png
- [15]: http://www.dozer.cc/uploads/2012/01/20120127152846.png
- [16]: http://www.dozer.cc/uploads/2012/01/20120127152937.png
- [17]: http://www.dozer.cc/uploads/2012/01/20120127154633.png
- [18]: http://www.dozer.cc/uploads/2012/01/20120128163414.png
- [19]: http://www.dozer.cc/uploads/2012/01/20120128163510.png
- [20]: http://www.dozer.cc/uploads/2012/01/20120128163609.png
+ [1]: /uploads/2012/01/20120127_152406.jpg
+ [2]: /uploads/2012/01/20120127_152411.jpg
+ [3]: /uploads/2012/01/20120127_152421.jpg
+ [4]: /uploads/2012/01/20120127_152426.jpg
+ [5]: /uploads/2012/01/20120127_152431.jpg
+ [6]: /uploads/2012/01/20120127_152453.jpg
+ [7]: /uploads/2012/01/20120127_152457.jpg
+ [8]: /uploads/2012/01/20120127_152504.jpg
+ [9]: /uploads/2012/01/mt1.jpg
+ [10]: /uploads/2012/01/mt3.jpg
+ [11]: /uploads/2012/01/mt2.jpg
+ [12]: /uploads/2012/01/20120127152812.png
+ [13]: /uploads/2012/01/20120127152834.png
+ [14]: /uploads/2012/01/20120127163416.png
+ [15]: /uploads/2012/01/20120127152846.png
+ [16]: /uploads/2012/01/20120127152937.png
+ [17]: /uploads/2012/01/20120127154633.png
+ [18]: /uploads/2012/01/20120128163414.png
+ [19]: /uploads/2012/01/20120128163510.png
+ [20]: /uploads/2012/01/20120128163609.png
