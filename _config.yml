@@ -8,6 +8,14 @@ url: "http://www.dozer.cc" # the base hostname & protocol for your site
 github: dozer47528
 twitter: dozer47528
 
+author:
+  name: Dozer
+  email: mail@dozer.cc
+  github: dozer47528
+  twitter: dozer47528
+  bio: 'Dozer&#039;s Technology Blog'
+  email_md5: 3cccd2b313d9e9e1019f7a6784a6a084
+
 
 # Build settings
 paginate: 10
