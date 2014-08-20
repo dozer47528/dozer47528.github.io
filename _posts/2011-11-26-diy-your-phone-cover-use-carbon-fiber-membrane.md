@@ -101,7 +101,7 @@ tags:
 
 ###### <span id="Step1"> Step1:</span>
 
-[<img class="alignnone size-medium wp-image-500" title="IMG_1979" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1979.png" width="300" height="225" />][1]
+[<img class="alignnone size-medium wp-image-500" title="IMG_1979" alt="" src="/uploads/2011/11/IMG_1979.png" width="300" height="225" />][1]
 
 把手机平放在撕下来的贴膜上
 
@@ -109,13 +109,13 @@ tags:
 
 ###### <span id="Step2">Step2:</span>
 
-[<img class="alignnone size-medium wp-image-501" title="IMG_1980" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1980.png" width="300" height="225" />][2]
+[<img class="alignnone size-medium wp-image-501" title="IMG_1980" alt="" src="/uploads/2011/11/IMG_1980.png" width="300" height="225" />][2]
 
 翻过来就是这个样子的
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-502" title="IMG_1981" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1981.png" width="300" height="225" />][3]
+[<img class="alignnone size-medium wp-image-502" title="IMG_1981" alt="" src="/uploads/2011/11/IMG_1981.png" width="300" height="225" />][3]
 
 这时候开始用电吹风吹边缘，为什么要吹呢？
 
@@ -127,7 +127,7 @@ tags:
 
 ###### <span id="Step3">Step3:</span>
 
-[<img class="alignnone size-medium wp-image-503" title="IMG_1982" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1982.png" width="300" height="225" />][4]
+[<img class="alignnone size-medium wp-image-503" title="IMG_1982" alt="" src="/uploads/2011/11/IMG_1982.png" width="300" height="225" />][4]
 
 吹完就是这个样子的，有型吧？
 
@@ -135,7 +135,7 @@ tags:
 
 ###### <span id="Step4">Step4:</span>
 
-[<img class="alignnone size-medium wp-image-504" title="IMG_1983" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1983.png" width="300" height="225" />][5]
+[<img class="alignnone size-medium wp-image-504" title="IMG_1983" alt="" src="/uploads/2011/11/IMG_1983.png" width="300" height="225" />][5]
 
 下面一步要把多余的地方裁剪掉
 
@@ -155,7 +155,7 @@ tags:
 
 ###### <span id="STEP6">STEP6:</span>
 
-[<img class="alignnone size-medium wp-image-508" title="IMG_1987" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1987.png" width="300" height="225" />][6]
+[<img class="alignnone size-medium wp-image-508" title="IMG_1987" alt="" src="/uploads/2011/11/IMG_1987.png" width="300" height="225" />][6]
 
 接下来把摄像头和闪光灯抠出来
 
@@ -167,35 +167,35 @@ tags:
 
 最后附上效果图
 
-[<img class="alignnone size-medium wp-image-505" title="IMG_1984" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1984.png" width="300" height="225" />][7]
+[<img class="alignnone size-medium wp-image-505" title="IMG_1984" alt="" src="/uploads/2011/11/IMG_1984.png" width="300" height="225" />][7]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-506" title="IMG_1985" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1985.png" width="300" height="225" />][8]
+[<img class="alignnone size-medium wp-image-506" title="IMG_1985" alt="" src="/uploads/2011/11/IMG_1985.png" width="300" height="225" />][8]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-507" title="IMG_1986" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1986.png" width="300" height="225" />][9]
+[<img class="alignnone size-medium wp-image-507" title="IMG_1986" alt="" src="/uploads/2011/11/IMG_1986.png" width="300" height="225" />][9]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-509" title="IMG_1988" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1988.png" width="300" height="225" />][10]
+[<img class="alignnone size-medium wp-image-509" title="IMG_1988" alt="" src="/uploads/2011/11/IMG_1988.png" width="300" height="225" />][10]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-510" title="IMG_1989" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1989.png" width="300" height="225" />][11]
+[<img class="alignnone size-medium wp-image-510" title="IMG_1989" alt="" src="/uploads/2011/11/IMG_1989.png" width="300" height="225" />][11]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-511" title="IMG_1991" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1991.png" width="300" height="225" />][12]
+[<img class="alignnone size-medium wp-image-511" title="IMG_1991" alt="" src="/uploads/2011/11/IMG_1991.png" width="300" height="225" />][12]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-512" title="IMG_1992" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1992.png" width="300" height="225" />][13]
+[<img class="alignnone size-medium wp-image-512" title="IMG_1992" alt="" src="/uploads/2011/11/IMG_1992.png" width="300" height="225" />][13]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-513" title="IMG_1993" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1993.png" width="300" height="225" />][14]
+[<img class="alignnone size-medium wp-image-513" title="IMG_1993" alt="" src="/uploads/2011/11/IMG_1993.png" width="300" height="225" />][14]
 
 &nbsp;
 
@@ -207,13 +207,13 @@ tags:
 
 你以为它只能贴手机后面？那就错了，其实很多地方都可以用到它！
 
-[<img class="alignnone size-medium wp-image-514" title="IMG_20111126_100249" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_20111126_100249.png" width="300" height="225" />][15]
+[<img class="alignnone size-medium wp-image-514" title="IMG_20111126_100249" alt="" src="/uploads/2011/11/IMG_20111126_100249.png" width="300" height="225" />][15]
 
 &nbsp;
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-515" title="IMG_20111126_100300" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/11/IMG_20111126_100300.png" width="300" height="225" />][16]
+[<img class="alignnone size-medium wp-image-515" title="IMG_20111126_100300" alt="" src="/uploads/2011/11/IMG_20111126_100300.png" width="300" height="225" />][16]
 
 &nbsp;
 

@@ -71,15 +71,15 @@ tags:
 <table>
   <tr>
     <td>
-      <a href="/wp-content/uploads/2011/03/uibuttonie.png"><img class="alignnone size-full wp-image-264" title="uibuttonie" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/03/uibuttonie.png" width="102" height="40" /></a>
+      <a href="/wp-content/uploads/2011/03/uibuttonie.png"><img class="alignnone size-full wp-image-264" title="uibuttonie" alt="" src="/uploads/2011/03/uibuttonie.png" width="102" height="40" /></a>
     </td>
     
     <td>
-      <a href="/wp-content/uploads/2011/03/uibuttonfirefox.png"><img class="alignnone size-full wp-image-263" title="uibuttonfirefox" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/03/uibuttonfirefox.png" width="111" height="37" /></a>
+      <a href="/wp-content/uploads/2011/03/uibuttonfirefox.png"><img class="alignnone size-full wp-image-263" title="uibuttonfirefox" alt="" src="/uploads/2011/03/uibuttonfirefox.png" width="111" height="37" /></a>
     </td>
     
     <td>
-      <a href="/wp-content/uploads/2011/03/uibuttonchrome.png"><img class="alignnone size-full wp-image-262" title="uibuttonchrome" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/03/uibuttonchrome.png" width="123" height="39" /></a>
+      <a href="/wp-content/uploads/2011/03/uibuttonchrome.png"><img class="alignnone size-full wp-image-262" title="uibuttonchrome" alt="" src="/uploads/2011/03/uibuttonchrome.png" width="123" height="39" /></a>
     </td>
   </tr>
   

@@ -31,7 +31,7 @@ tags:
 
 **模板一**
 
-[<img class="alignnone size-medium wp-image-350" title="admin1" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin1-300x170.png" width="300" height="170" />][1]
+[<img class="alignnone size-medium wp-image-350" title="admin1" alt="" src="/uploads/2011/06/admin1-300x170.png" width="300" height="170" />][1]
 
 下载地址：[admin-templates-2][2]
 
@@ -39,9 +39,9 @@ tags:
 
 **模板二**
 
-[<img class="alignnone size-medium wp-image-359" title="admin2-1" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin2-1-300x220.png" width="300" height="220" />][3]
+[<img class="alignnone size-medium wp-image-359" title="admin2-1" alt="" src="/uploads/2011/06/admin2-1-300x220.png" width="300" height="220" />][3]
 
-[<img class="alignnone size-medium wp-image-360" title="admin2-2" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin2-2-300x273.png" width="300" height="273" />][4]
+[<img class="alignnone size-medium wp-image-360" title="admin2-2" alt="" src="/uploads/2011/06/admin2-2-300x273.png" width="300" height="273" />][4]
 
 下载地址：[admin_template-3][5]
 
@@ -49,7 +49,7 @@ tags:
 
 **模板三**
 
-[<img class="alignnone size-medium wp-image-361" title="admin3" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin3-300x173.png" width="300" height="173" />][6]
+[<img class="alignnone size-medium wp-image-361" title="admin3" alt="" src="/uploads/2011/06/admin3-300x173.png" width="300" height="173" />][6]
 
 下载地址：[Admin-Template-JQuery][7]
 
@@ -57,9 +57,9 @@ tags:
 
 **模板四**
 
-[<img class="alignnone size-medium wp-image-363" title="admin4-1" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin4-1-300x253.png" width="300" height="253" />][8]
+[<img class="alignnone size-medium wp-image-363" title="admin4-1" alt="" src="/uploads/2011/06/admin4-1-300x253.png" width="300" height="253" />][8]
 
-[<img class="alignnone size-medium wp-image-364" title="admin4-2" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin4-2-300x246.png" width="300" height="246" />][9]
+[<img class="alignnone size-medium wp-image-364" title="admin4-2" alt="" src="/uploads/2011/06/admin4-2-300x246.png" width="300" height="246" />][9]
 
 下载地址：[admin-xhtml][10]
 
@@ -67,7 +67,7 @@ tags:
 
 **模板五**
 
-[<img class="alignnone size-medium wp-image-365" title="admin5" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin5-256x300.png" width="256" height="300" />][11]
+[<img class="alignnone size-medium wp-image-365" title="admin5" alt="" src="/uploads/2011/06/admin5-256x300.png" width="256" height="300" />][11]
 
 下载地址：[in-admin-panel][12]
 
@@ -75,7 +75,7 @@ tags:
 
 **模板六**
 
-[<img class="alignnone size-medium wp-image-366" title="admin6" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/admin6-300x223.png" width="300" height="223" />][13]
+[<img class="alignnone size-medium wp-image-366" title="admin6" alt="" src="/uploads/2011/06/admin6-300x223.png" width="300" height="223" />][13]
 
 下载地址：[transdmin][14]
 

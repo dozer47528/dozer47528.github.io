@@ -170,7 +170,7 @@ public void client_DownloadStringCompleted(object sender, DownloadStringComplete
 
 执行完上述代码后，程序会保持对 10000 个实例的引用，内存占用高达 100MB。
 
-[<img class="alignnone size-medium wp-image-773" title="explorer" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/06/explorer-300x60.png" width="300" height="60" />][1]
+[<img class="alignnone size-medium wp-image-773" title="explorer" alt="" src="/uploads/2012/06/explorer-300x60.png" width="300" height="60" />][1]
 
 但是还好，一般情况下也不会用那么多实例，而且 WebClient 不像前面那个，WebClient 执行一次后就停止了，然后就会被回收了。
 

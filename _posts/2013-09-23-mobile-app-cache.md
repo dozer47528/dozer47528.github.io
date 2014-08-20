@@ -119,7 +119,7 @@ tags:
 
 如下图：
 
-[<img class="alignnone size-medium wp-image-1369" alt="reopen" src="http://www.dozer.cc/wp-content/uploads/2013/09/reopen-200x300.png" width="200" height="300" />][1]
+[<img class="alignnone size-medium wp-image-1369" alt="reopen" src="/uploads/2013/09/reopen-200x300.png" width="200" height="300" />][1]
 
 最新的一条记录是在9月21日，打开 App 后直接显示上次加载的内容，App 没有自动请求数据。
 
@@ -129,7 +129,7 @@ tags:
 
 #### <span id="i-5">下拉刷新</span>
 
-[<img class="alignnone size-medium wp-image-1370" alt="reload" src="http://www.dozer.cc/wp-content/uploads/2013/09/reload-200x300.png" width="200" height="300" />][2]
+[<img class="alignnone size-medium wp-image-1370" alt="reload" src="/uploads/2013/09/reload-200x300.png" width="200" height="300" />][2]
 
 有了缓存以后，用户需要对自己的数据可控，所以加下拉刷新以后，就可以让用户自己来控制何时刷新了。
 

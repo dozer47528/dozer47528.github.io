@@ -75,7 +75,7 @@ tags:
 
 #### <span id="i-4">编译整个项目</span>
 
-[<img class="alignnone size-full wp-image-888" title="sln" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/10/sln.png" width="349" height="171" />][1]
+[<img class="alignnone size-full wp-image-888" title="sln" alt="" src="/uploads/2012/10/sln.png" width="349" height="171" />][1]
 
 &nbsp;
 

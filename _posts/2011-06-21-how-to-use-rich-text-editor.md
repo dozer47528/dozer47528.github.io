@@ -97,7 +97,7 @@ Word 是一个富文本编辑器，网页上的也是富文本编辑器，那到
 
 i) 做这个的第一步，就应该先把 Word 中的格式清除。你可以先把 Word 中的文本粘贴到记事本（或其他普通文本编辑器）中，然后再粘贴到网页的编辑器中；有些编辑器会有这样的功能，能帮你直接清楚格式，找到类似于这样的按钮，把文本粘贴进去即可。
 
-[<img class="alignnone size-full wp-image-375" title="word" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/06/word.png" width="193" height="82" />][1]
+[<img class="alignnone size-full wp-image-375" title="word" alt="" src="/uploads/2011/06/word.png" width="193" height="82" />][1]
 
 &nbsp;
 

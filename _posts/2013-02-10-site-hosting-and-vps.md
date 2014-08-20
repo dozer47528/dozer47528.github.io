@@ -70,7 +70,7 @@ tags:
 
 来一个对比吧（上图是Godaddy的，下图是万网）：
 
-[<img class="alignnone size-medium wp-image-1059" alt="godaddy" src="http://www.dozer.cc/wp-content/uploads/2013/02/godaddy-300x276.png" width="300" height="276" />][1]<img class="alignnone size-medium wp-image-1058" style="color: #333333; font-style: normal;" alt="wan" src="http://www.dozer.cc/wp-content/uploads/2013/02/wan-300x249.png" width="300" height="249" />
+[<img class="alignnone size-medium wp-image-1059" alt="godaddy" src="/uploads/2013/02/godaddy-300x276.png" width="300" height="276" />][1]<img class="alignnone size-medium wp-image-1058" style="color: #333333; font-style: normal;" alt="wan" src="/uploads/2013/02/wan-300x249.png" width="300" height="249" />
 
 对比一下最便宜的套餐吧：
 
@@ -176,7 +176,7 @@ Godaddy 也有缺点：
 
 我看了下阿里云最新的云主机价格，真的已经完全领先虚拟主机了，价格都和虚拟主机差不多了。
 
-[<img class="alignnone size-medium wp-image-1064" alt="ali" src="http://www.dozer.cc/wp-content/uploads/2013/02/ali-175x300.png" width="175" height="300" />][2]
+[<img class="alignnone size-medium wp-image-1064" alt="ali" src="/uploads/2013/02/ali-175x300.png" width="175" height="300" />][2]
 
 基本配置，跑你一个网站没问题了。所以如果你爱折腾，你会折腾的话，云主机肯定是首选了。
 

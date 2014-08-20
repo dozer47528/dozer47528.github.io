@@ -106,7 +106,7 @@ QQ邮箱可以把你的域名邮箱绑定到你的QQ邮箱上。
 
 我一个QQ邮箱就绑定了好多个帐号…
 
-[<img class="alignnone size-medium wp-image-1051" alt="qq" src="http://www.dozer.cc/wp-content/uploads/2013/02/qq-300x179.png" width="300" height="179" />][1]
+[<img class="alignnone size-medium wp-image-1051" alt="qq" src="/uploads/2013/02/qq-300x179.png" width="300" height="179" />][1]
 
 而 Google Apps 相当于帮你开了一个新的 Google 帐户，不能和你以前的 Google 帐户绑定。
 

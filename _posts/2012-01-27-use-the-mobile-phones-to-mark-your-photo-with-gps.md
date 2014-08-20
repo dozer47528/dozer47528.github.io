@@ -89,7 +89,7 @@ tags:
 
 这是一款免费好用的软件，唯一的缺点是界面略丑… 但平时它都运行在后台，要求就放低一点吧。
 
-[<img class="alignnone size-medium wp-image-612" title="20120127_152406" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152406-180x300.jpg" width="180" height="300" />][1] [<img class="alignnone size-medium wp-image-613" title="20120127_152411" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152411-180x300.jpg" width="180" height="300" />][2]
+[<img class="alignnone size-medium wp-image-612" title="20120127_152406" alt="" src="/uploads/2012/01/20120127_152406-180x300.jpg" width="180" height="300" />][1] [<img class="alignnone size-medium wp-image-613" title="20120127_152411" alt="" src="/uploads/2012/01/20120127_152411-180x300.jpg" width="180" height="300" />][2]
 
 打开软件后，应该是当服务在运行中的时候就可以记录了，在设置中也有记录的间隔。
 
@@ -97,13 +97,13 @@ tags:
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-614" title="20120127_152421" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152421-180x300.jpg" width="180" height="300" />][3] [<img class="alignnone size-medium wp-image-615" title="20120127_152426" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152426-180x300.jpg" width="180" height="300" />][4] [<img class="alignnone size-medium wp-image-617" title="20120127_152431" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152431-180x300.jpg" width="180" height="300" />][5]
+[<img class="alignnone size-medium wp-image-614" title="20120127_152421" alt="" src="/uploads/2012/01/20120127_152421-180x300.jpg" width="180" height="300" />][3] [<img class="alignnone size-medium wp-image-615" title="20120127_152426" alt="" src="/uploads/2012/01/20120127_152426-180x300.jpg" width="180" height="300" />][4] [<img class="alignnone size-medium wp-image-617" title="20120127_152431" alt="" src="/uploads/2012/01/20120127_152431-180x300.jpg" width="180" height="300" />][5]
 
 我们点击手动记录，然后设置一下需要记录的时间，然后再设置一下间隔，接下来它就开始自动记录啦！
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-618" title="20120127_152453" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152453-180x300.jpg" width="180" height="300" />][6] [<img class="alignnone size-medium wp-image-619" title="20120127_152457" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152457-180x300.jpg" width="180" height="300" />][7] [<img class="alignnone size-medium wp-image-620" title="20120127_152504" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127_152504-180x300.jpg" width="180" height="300" />][8]
+[<img class="alignnone size-medium wp-image-618" title="20120127_152453" alt="" src="/uploads/2012/01/20120127_152453-180x300.jpg" width="180" height="300" />][6] [<img class="alignnone size-medium wp-image-619" title="20120127_152457" alt="" src="/uploads/2012/01/20120127_152457-180x300.jpg" width="180" height="300" />][7] [<img class="alignnone size-medium wp-image-620" title="20120127_152504" alt="" src="/uploads/2012/01/20120127_152504-180x300.jpg" width="180" height="300" />][8]
 
 下面再来看看历史记录，它还支持回放哦，可以把你的行程再过一遍。
 
@@ -117,7 +117,7 @@ tags:
 
 统计信息更多一点，同样支持导出数据，也很推荐，同样免费。
 
-[<img class="alignnone size-medium wp-image-639" title="mt1" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/mt1-179x300.jpg" width="179" height="300" />][9] [<img class="alignnone size-medium wp-image-638" title="mt3" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/mt3-168x300.jpg" width="168" height="300" />][10] [<img class="alignnone size-medium wp-image-637" title="mt2" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/mt2-168x300.jpg" width="168" height="300" />][11]
+[<img class="alignnone size-medium wp-image-639" title="mt1" alt="" src="/uploads/2012/01/mt1-179x300.jpg" width="179" height="300" />][9] [<img class="alignnone size-medium wp-image-638" title="mt3" alt="" src="/uploads/2012/01/mt3-168x300.jpg" width="168" height="300" />][10] [<img class="alignnone size-medium wp-image-637" title="mt2" alt="" src="/uploads/2012/01/mt2-168x300.jpg" width="168" height="300" />][11]
 
 使用起来没难度，所以就不多介绍了。
 
@@ -133,27 +133,27 @@ tags:
 
 这个软件支持中文，绿色免费！也非常好用，不仅可以自己设置位置，也可以根据数据写入照片！
 
-[<img class="alignnone size-medium wp-image-628" title="20120127152812" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127152812-254x300.png" width="254" height="300" />][12] [<img class="alignnone size-medium wp-image-629" title="20120127152834" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127152834-226x300.png" width="226" height="300" />][13]
+[<img class="alignnone size-medium wp-image-628" title="20120127152812" alt="" src="/uploads/2012/01/20120127152812-254x300.png" width="254" height="300" />][12] [<img class="alignnone size-medium wp-image-629" title="20120127152834" alt="" src="/uploads/2012/01/20120127152834-226x300.png" width="226" height="300" />][13]
 
 我们现在这个软件里找到我刚刚拍摄的照片，然后在图像菜单里找到“与GPS数据文件同步…”
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-631" title="20120127163416" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127163416-300x212.png" width="300" height="212" />][14]
+[<img class="alignnone size-medium wp-image-631" title="20120127163416" alt="" src="/uploads/2012/01/20120127163416-300x212.png" width="300" height="212" />][14]
 
-[<img class="alignnone size-medium wp-image-630" title="20120127152846" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127152846-300x229.png" width="300" height="229" />][15]
+[<img class="alignnone size-medium wp-image-630" title="20120127152846" alt="" src="/uploads/2012/01/20120127152846-300x229.png" width="300" height="229" />][15]
 
 然后在导入刚才手机上的 GPS 位置记录文件，其实刚才导出的三种格式这个软件都支持。
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-626" title="20120127152937" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127152937-141x300.png" width="141" height="300" />][16]
+[<img class="alignnone size-medium wp-image-626" title="20120127152937" alt="" src="/uploads/2012/01/20120127152937-141x300.png" width="141" height="300" />][16]
 
 最后保存一下！大功告成！
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-627" title="20120127154633" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120127154633-300x178.png" width="300" height="178" />][17]
+[<img class="alignnone size-medium wp-image-627" title="20120127154633" alt="" src="/uploads/2012/01/20120127154633-300x178.png" width="300" height="178" />][17]
 
 当我们再用 Pisaca 打开这几张照片的时候，就可以成功地看到正确的地利位置信息了，误差非常小！
 
@@ -167,7 +167,7 @@ tags:
 
 还是在 GeoSetter 软件中，把需要回顾的图片选中，然后点图片菜单。
 
-[<img class="alignnone size-medium wp-image-644" title="20120128163414" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120128163414-300x195.png" width="300" height="195" />][18] [<img class="alignnone size-medium wp-image-642" title="20120128163510" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120128163510-212x300.png" width="212" height="300" />][19]
+[<img class="alignnone size-medium wp-image-644" title="20120128163414" alt="" src="/uploads/2012/01/20120128163414-300x195.png" width="300" height="195" />][18] [<img class="alignnone size-medium wp-image-642" title="20120128163510" alt="" src="/uploads/2012/01/20120128163510-212x300.png" width="212" height="300" />][19]
 
 选择导出到谷歌地图，并设置一下即可。
 
@@ -175,7 +175,7 @@ tags:
 
 然后打开谷歌地图，可以直接把这个文件拖进去。
 
-[<img class="alignnone size-medium wp-image-643" title="20120128163609" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/20120128163609-300x177.png" width="300" height="177" />][20]
+[<img class="alignnone size-medium wp-image-643" title="20120128163609" alt="" src="/uploads/2012/01/20120128163609-300x177.png" width="300" height="177" />][20]
 
 最终效果如下，点击左上角的按钮，还可以模拟轨迹运行一次呢！
 

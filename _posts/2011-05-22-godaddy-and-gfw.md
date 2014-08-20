@@ -33,7 +33,7 @@ tags:
 
 ### 更换IP
 
-[<img class="alignnone size-full wp-image-339" title="ip" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/05/ip.gif" width="360" height="300" />][1]
+[<img class="alignnone size-full wp-image-339" title="ip" alt="" src="/uploads/2011/05/ip.gif" width="360" height="300" />][1]
 
 更换 IP 非常简单，过一个小时左右就换好了，换好后再换回来…
 
@@ -47,13 +47,13 @@ tags:
 
 不得不说 Godaddy 的服务真的是非常的好！
 
-[<img class="alignnone size-full wp-image-340" title="cancel" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/05/cancel.gif" width="360" height="300" />][2]
+[<img class="alignnone size-full wp-image-340" title="cancel" alt="" src="/uploads/2011/05/cancel.gif" width="360" height="300" />][2]
 
 &nbsp;
 
 然后还需要发送一封消息
 
-[<img class="alignnone size-medium wp-image-341" title="support" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/05/support-300x212.png" width="300" height="212" />][3]
+[<img class="alignnone size-medium wp-image-341" title="support" alt="" src="/uploads/2011/05/support-300x212.png" width="300" height="212" />][3]
 
 &nbsp;
 
@@ -73,7 +73,7 @@ tags:
 
 最后，大约在一个礼拜之内就会收到退款。
 
-[<img class="alignnone size-medium wp-image-342" title="alipay" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/05/alipay-300x48.png" width="300" height="48" />][4]
+[<img class="alignnone size-medium wp-image-342" title="alipay" alt="" src="/uploads/2011/05/alipay-300x48.png" width="300" height="48" />][4]
 
  [1]: http://www.dozer.cc/wp-content/uploads/2011/05/ip.gif
  [2]: http://www.dozer.cc/wp-content/uploads/2011/05/cancel.gif

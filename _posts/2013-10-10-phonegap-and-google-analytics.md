@@ -65,7 +65,7 @@ PhoneGap 整合 <a href="http://www.google.com/analytics" target="_blank"><stron
 
 例如打开了一个页面，需要调用一下；各种事件统计，也需要自己用计时变量来统计。
 
-[<img class="alignnone size-medium wp-image-1379" alt="ga" src="http://www.dozer.cc/wp-content/uploads/2013/10/ga-300x112.png" width="300" height="112" />][1]
+[<img class="alignnone size-medium wp-image-1379" alt="ga" src="/uploads/2013/10/ga-300x112.png" width="300" height="112" />][1]
 
 &nbsp;
 
@@ -108,7 +108,7 @@ GA 官方有很多维度，例如：版本号、地区、操作系统 等等…
 
 但是总有一些自定义维度需要定义：环境(dev, prd)、用户名、用户组、用户城市 等等…
 
-[<img class="alignnone size-full wp-image-1380" alt="weidu" src="http://www.dozer.cc/wp-content/uploads/2013/10/weidu.png" width="362" height="444" />][2]
+[<img class="alignnone size-full wp-image-1380" alt="weidu" src="/uploads/2013/10/weidu.png" width="362" height="444" />][2]
 
 在 GA 的管理页面，可以找到你应用程序的自定义维度界面。
 

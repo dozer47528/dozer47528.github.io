@@ -107,7 +107,7 @@ private static void Events_OnNotificationSent(PushSharp.Common.Notification noti
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-1095" alt="push" src="http://www.dozer.cc/wp-content/uploads/2013/03/push-200x300.png" width="200" height="300" />][1]
+[<img class="alignnone size-medium wp-image-1095" alt="push" src="/uploads/2013/03/push-200x300.png" width="200" height="300" />][1]
 
 是不是很简单？
 

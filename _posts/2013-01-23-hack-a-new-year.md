@@ -74,25 +74,25 @@ tags:
 
 研究碰撞特性
 
-[<img class="alignnone size-medium wp-image-1031" alt="bump" src="http://www.dozer.cc/wp-content/uploads/2013/01/bump-300x225.png" width="300" height="225" />][1]
+[<img class="alignnone size-medium wp-image-1031" alt="bump" src="/uploads/2013/01/bump-300x225.png" width="300" height="225" />][1]
 
 &nbsp;
 
 服务器和客户端的交互图
 
-[<img class="alignnone size-medium wp-image-1032" alt="server" src="http://www.dozer.cc/wp-content/uploads/2013/01/server-225x300.png" width="225" height="300" />][2]
+[<img class="alignnone size-medium wp-image-1032" alt="server" src="/uploads/2013/01/server-225x300.png" width="225" height="300" />][2]
 
 &nbsp;
 
 联测中…
 
-[<img class="alignnone size-medium wp-image-1033" alt="all" src="http://www.dozer.cc/wp-content/uploads/2013/01/all-300x225.png" width="300" height="225" />][3]
+[<img class="alignnone size-medium wp-image-1033" alt="all" src="/uploads/2013/01/all-300x225.png" width="300" height="225" />][3]
 
 &nbsp;
 
 Github 上的版本树
 
-[<img class="alignnone size-medium wp-image-1034" alt="github" src="http://www.dozer.cc/wp-content/uploads/2013/01/github-222x300.png" width="222" height="300" />][4]
+[<img class="alignnone size-medium wp-image-1034" alt="github" src="/uploads/2013/01/github-222x300.png" width="222" height="300" />][4]
 
 &nbsp;
 

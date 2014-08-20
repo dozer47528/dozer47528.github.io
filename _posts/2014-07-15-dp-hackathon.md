@@ -87,7 +87,7 @@ tags:
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-1526" src="http://www.dozer.cc/wp-content/uploads/2014/07/dp-hackathon-300x283.jpg" alt="dp-hackathon" width="300" height="283" />][1]
+[<img class="alignnone size-medium wp-image-1526" src="/uploads/2014/07/dp-hackathon-300x283.jpg" alt="dp-hackathon" width="300" height="283" />][1]
 
 &nbsp;
 

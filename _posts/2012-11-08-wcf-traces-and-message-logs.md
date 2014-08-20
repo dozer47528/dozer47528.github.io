@@ -56,7 +56,7 @@ WCF 开启调试模式非常简单，找到 web.config 文件，然后打开 VS�
 
 当然你也可以自己写配置，但是有了这个工具会更方便一点。
 
-[<img class="alignnone size-medium wp-image-927" title="config" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/config-300x188.png" width="300" height="188" />][1]
+[<img class="alignnone size-medium wp-image-927" title="config" alt="" src="/uploads/2012/11/config-300x188.png" width="300" height="188" />][1]
 
 找到这个节点后，把几个原本是禁用的选项都启用。然后 Ctrl+S 保存即可。
 
@@ -94,7 +94,7 @@ Google 后发现，因为这个工具是 VS2010 自带的，它并不知道你�
 
 接下来就简单了，双击打开这个文件，错误的地方会有红色的字显示，非常明显：
 
-[<img class="alignnone size-medium wp-image-928" title="error" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/error-300x156.png" width="300" height="156" />][2]
+[<img class="alignnone size-medium wp-image-928" title="error" alt="" src="/uploads/2012/11/error-300x156.png" width="300" height="156" />][2]
 
 现在一下子就明白哪里出错了把？
 

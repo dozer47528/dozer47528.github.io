@@ -69,7 +69,7 @@ tags:
 
 **关闭方法：开始菜单——运行——输入“CMD”——输入“powercfg -h off”**
 
-[<img class="alignnone size-full wp-image-241" title="power" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/02/power.jpg" width="677" height="119" />][1]
+[<img class="alignnone size-full wp-image-241" title="power" alt="" src="/uploads/2011/02/power.jpg" width="677" height="119" />][1]
 
 &nbsp;
 
@@ -91,7 +91,7 @@ tags:
 
 **关闭方法：开始菜单——计算机（右击属性）——高级系统设置——高级——启动和故障恢复，设置——系统失败，写入调试信息，选择“无”**
 
-[<img class="alignnone size-medium wp-image-242" title="error" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/02/error-300x195.jpg" width="300" height="195" />][2]
+[<img class="alignnone size-medium wp-image-242" title="error" alt="" src="/uploads/2011/02/error-300x195.jpg" width="300" height="195" />][2]
 
 &nbsp;
 

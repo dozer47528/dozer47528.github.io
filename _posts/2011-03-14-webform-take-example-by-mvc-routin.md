@@ -112,7 +112,7 @@ namespace Utility
 
 打开浏览器看看吧~
 
-[<img class="alignnone size-medium wp-image-249" title="routing" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/03/routing-300x105.png" width="300" height="105" />][1]
+[<img class="alignnone size-medium wp-image-249" title="routing" alt="" src="/uploads/2011/03/routing-300x105.png" width="300" height="105" />][1]
 
 &nbsp;
 

@@ -68,7 +68,7 @@ tags:
 
 **1、新建不同的 HOSTS 方案**
 
-[<img class="alignnone size-medium wp-image-400" title="windows" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/07/windows-275x300.png" width="275" height="300" />][1]
+[<img class="alignnone size-medium wp-image-400" title="windows" alt="" src="/uploads/2011/07/windows-275x300.png" width="275" height="300" />][1]
 
 这里我新建了三个，一个是空的，一个是 IPV4 下的，一个是 IPV6 下的
 

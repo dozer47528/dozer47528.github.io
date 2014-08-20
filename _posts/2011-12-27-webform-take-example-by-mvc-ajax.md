@@ -87,7 +87,7 @@ UpdatePannel 对懒人和新手来说真是一个好东西啊。不用懂任何�
 
 但是它有一个很大的缺点，每次请求都会传送 ViewState，特别是当一个页面的 ViewState 很多的时候：
 
-[<img class="alignnone size-large wp-image-528" title="updatepannel" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/12/updatepannel-1024x782.png" width="640" height="488" />][1]
+[<img class="alignnone size-large wp-image-528" title="updatepannel" alt="" src="/uploads/2011/12/updatepannel-1024x782.png" width="640" height="488" />][1]
 
 是不是很恐怖… 这还叫 Ajax 吗？还不如直接刷新页面呢！
 
@@ -139,7 +139,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 **我们先新建一个 .ascx 页面：**
 
-[<img class="alignnone size-large wp-image-530" title="ascx" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/12/ascx-1024x743.png" width="640" height="464" />][2]
+[<img class="alignnone size-large wp-image-530" title="ascx" alt="" src="/uploads/2011/12/ascx-1024x743.png" width="640" height="464" />][2]
 
 并在里面写上一些代码，这里是用来随便输出一些时间的，页面上需要点“刷新”来更新这些数据。
 
@@ -147,7 +147,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 **接下来我们新建一个 .aspx 页面：**
 
-[<img class="alignnone size-large wp-image-531" title="wrap" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/12/wrap-1024x743.png" width="640" height="464" />][3]
+[<img class="alignnone size-large wp-image-531" title="wrap" alt="" src="/uploads/2011/12/wrap-1024x743.png" width="640" height="464" />][3]
 
 这个页面完全是一个空页面，仅仅是为了把 UserControl 输出。
 
@@ -218,7 +218,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 **让我们来直接访问一下：**
 
-[<img class="alignnone size-full wp-image-533" title="timelist" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/12/timelist.png" width="369" height="161" />][4]
+[<img class="alignnone size-full wp-image-533" title="timelist" alt="" src="/uploads/2011/12/timelist.png" width="369" height="161" />][4]
 
 &nbsp;
 
@@ -280,7 +280,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 利用 AjaxOptions 这个类的 ToUnobtrusiveHtmlAttributes 方法就可以生成一组符合标准的 attribute，然后再用代码把这些 attribute 附加到 a 标签上即可。
 
-[<img class="alignnone size-full wp-image-535" title="ajaxoptions" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/12/ajaxoptions.png" width="671" height="332" />][5]
+[<img class="alignnone size-full wp-image-535" title="ajaxoptions" alt="" src="/uploads/2011/12/ajaxoptions.png" width="671" height="332" />][5]
 
 这里要注意的是，从 MVC3 源码中赋值过来的 AjaxOptions 在 .Net3.5 下会有点问题，自己编译一下修改下即可。
 

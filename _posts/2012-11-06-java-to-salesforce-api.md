@@ -114,7 +114,7 @@ tags:
 
 下载好后，把 lib 文件夹下的 jar 包都引用到你的 project 中：
 
-[<img class="alignnone size-medium wp-image-910" title="lib" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/lib-300x211.png" width="300" height="211" />][1]
+[<img class="alignnone size-medium wp-image-910" title="lib" alt="" src="/uploads/2012/11/lib-300x211.png" width="300" height="211" />][1]
 
 然后找到这个 jar 包：
 
@@ -122,17 +122,17 @@ tags:
 
 里面有个 main 函数，运行它：
 
-[<img class="alignnone size-medium wp-image-911" title="run" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/run-300x246.jpg" width="300" height="246" />][2]
+[<img class="alignnone size-medium wp-image-911" title="run" alt="" src="/uploads/2012/11/run-300x246.jpg" width="300" height="246" />][2]
 
 第一次运行肯定是不行的，应为还没配置传入参数呢。
 
 打开 run configurations，传入 wsdl 文件的位置：
 
-[<img class="alignnone size-medium wp-image-912" title="args" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/args-300x238.png" width="300" height="238" />][3]
+[<img class="alignnone size-medium wp-image-912" title="args" alt="" src="/uploads/2012/11/args-300x238.png" width="300" height="238" />][3]
 
 最后利用这个配置 run 一下即可，F5 刷新一下就会在根目录下看到 com 文件夹，把它拖动到 src 文件夹下即可。
 
-[<img class="alignnone size-full wp-image-913" title="src" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/src.png" width="300" height="154" />][4]
+[<img class="alignnone size-full wp-image-913" title="src" alt="" src="/uploads/2012/11/src.png" width="300" height="154" />][4]
 
 到这步， wsdl to java 算是完成了！
 
@@ -144,7 +144,7 @@ eclipse 其实可以自动生成，底层其实就是调用了 Axis。
 
 使用方法很简单，在 project 上 new 一个 Web Service Client 对象，然后输入 wsdl 地址即可。
 
-[<img class="alignnone size-medium wp-image-914" title="wsdl" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/wsdl-300x283.png" width="300" height="283" />][5]
+[<img class="alignnone size-medium wp-image-914" title="wsdl" alt="" src="/uploads/2012/11/wsdl-300x283.png" width="300" height="283" />][5]
 
 最终它会自动引用相关 jar 包，并且生成代码，效果和方法二是一样的。
 
@@ -214,7 +214,7 @@ public class main {
 
 .net 中引用这个 wsld 的时候配置会自动写入 config 文件中，而 java 中却写死了，所以你需要搜索下它到底在哪？
 
-[<img class="alignnone size-medium wp-image-915" title="url" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/url-300x131.png" width="300" height="131" />][6]
+[<img class="alignnone size-medium wp-image-915" title="url" alt="" src="/uploads/2012/11/url-300x131.png" width="300" height="131" />][6]
 
 这里就需要你自己修改一下了，最好也是写入配置中，具体怎么设计就看你自己了。
 

@@ -167,7 +167,7 @@ Mono.Cecil 可以帮助你修改编译好的 dll 文件。
 
 #### <span id="i-5">源代码解决方案结构</span>
 
-[<img class="alignnone size-full wp-image-999" title="solution" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/solution.png" width="300" height="234" />][1]
+[<img class="alignnone size-full wp-image-999" title="solution" alt="" src="/uploads/2012/11/solution.png" width="300" height="234" />][1]
 
 MockHelper 是核心工具，作用就是修改编译好的 dll，一般情况下也只要使用这个即可，别的几个项目只是用来演示的。
 
@@ -185,7 +185,7 @@ NUnit 项目同样是一个演示的测试项目，但是用的是 <a href="http
 
 另外使用的时候需要复制 MockHelper.exe、mock.txt 和 Mono.Cecil*.dll 到你的测试项目中，一共六个文件。
 
-[<img class="alignnone size-thumbnail wp-image-1000" title="test" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/test-150x150.png" width="150" height="150" />][2]
+[<img class="alignnone size-thumbnail wp-image-1000" title="test" alt="" src="/uploads/2012/11/test-150x150.png" width="150" height="150" />][2]
 
 使用方法就是直接运行这个控制台应用程序，然后可以传入一个参数：代表 dll 所在的文件夹。如果不传参数的话默认是在运行目录。
 
@@ -276,19 +276,19 @@ public class UnitTest
 
 MSTest 运行结果如下：
 
-[<img class="alignnone size-full wp-image-1002" title="result" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/result.png" width="323" height="147" />][3]
+[<img class="alignnone size-full wp-image-1002" title="result" alt="" src="/uploads/2012/11/result.png" width="323" height="147" />][3]
 
 &nbsp;
 
 NUnit 运行结果如下：
 
-[<img class="alignnone size-medium wp-image-1005" title="NUnit" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/NUnit-300x156.png" width="300" height="156" />][4]
+[<img class="alignnone size-medium wp-image-1005" title="NUnit" alt="" src="/uploads/2012/11/NUnit-300x156.png" width="300" height="156" />][4]
 
 &nbsp;
 
 去掉这个工具后会报如下错误：
 
-[<img class="alignnone size-medium wp-image-1003" title="error" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/error1-300x107.png" width="300" height="107" />][5]
+[<img class="alignnone size-medium wp-image-1003" title="error" alt="" src="/uploads/2012/11/error1-300x107.png" width="300" height="107" />][5]
 
 &nbsp;
 
@@ -374,7 +374,7 @@ NUnit 运行结果如下：
 
 这个方法修改后的 IL 代码和手工写的 IL 代码的确是完全一样的。但是，调用这个函数的函数生成的 IL 代码是不一样的：
 
-[<img class="alignnone size-medium wp-image-1014" title="non-virtual" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/11/non-virtual-300x102.png" width="300" height="102" />][6]
+[<img class="alignnone size-medium wp-image-1014" title="non-virtual" alt="" src="/uploads/2012/11/non-virtual-300x102.png" width="300" height="102" />][6]
 
 原来，我手动修改和自动修改有一个被忽略掉的地方，就是调用被修改函数的函数。这里的 IL 代码，一个是 <span style="background-color: #eeeeee;">call</span>，一个是 <span style="background-color: #eeeeee;">callvirt</span>。
 

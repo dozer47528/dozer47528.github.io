@@ -101,13 +101,13 @@ QQ邮箱在 IMAP协议 的支持上会导致一些问题。
 
 1、进入一个邮箱帐户
 
-[<img class="alignnone size-medium wp-image-387" title="1" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/07/1-180x300.png" width="180" height="300" />][2]
+[<img class="alignnone size-medium wp-image-387" title="1" alt="" src="/uploads/2011/07/1-180x300.png" width="180" height="300" />][2]
 
 &nbsp;
 
 2、Menu——更多——设置——账户设置——正在接受邮件——高级
 
-[<img class="alignnone size-medium wp-image-388" title="2" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/07/2-180x300.png" width="180" height="300" />][3]
+[<img class="alignnone size-medium wp-image-388" title="2" alt="" src="/uploads/2011/07/2-180x300.png" width="180" height="300" />][3]
 
 &nbsp;
 
@@ -115,7 +115,7 @@ QQ邮箱在 IMAP协议 的支持上会导致一些问题。
 
 3、这里有个注意点，虽然打开了推送，但是建议也要打开定时检查，返回上级菜单即可设置
 
-[<img class="alignnone size-medium wp-image-389" title="3" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/07/3-180x300.png" width="180" height="300" />][4]
+[<img class="alignnone size-medium wp-image-389" title="3" alt="" src="/uploads/2011/07/3-180x300.png" width="180" height="300" />][4]
 
 &nbsp;
 
@@ -135,7 +135,7 @@ QQ邮箱在 IMAP协议 的支持上会导致一些问题。
 
 1、进入有个邮箱账户——Menu——更多——设置——账户设置——文件夹
 
-[<img class="alignnone size-medium wp-image-390" title="4" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/07/4-180x300.png" width="180" height="300" />][5]
+[<img class="alignnone size-medium wp-image-390" title="4" alt="" src="/uploads/2011/07/4-180x300.png" width="180" height="300" />][5]
 
 &nbsp;
 

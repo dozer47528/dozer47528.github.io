@@ -100,7 +100,7 @@ tags:
 
 #### <span id="i-4">一定要把证书放在“登陆”分类中</span>
 
-[<img class="alignnone size-medium wp-image-1328" alt="key" src="http://www.dozer.cc/wp-content/uploads/2013/06/key-189x300.png" width="189" height="300" />][1]
+[<img class="alignnone size-medium wp-image-1328" alt="key" src="/uploads/2013/06/key-189x300.png" width="189" height="300" />][1]
 
 &nbsp;
 

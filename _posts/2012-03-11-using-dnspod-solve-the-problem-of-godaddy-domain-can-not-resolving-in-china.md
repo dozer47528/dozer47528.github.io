@@ -66,7 +66,7 @@ tags:
 
 其实这个问题的根本原因就是因为 Godaddy 的 NameServer 经常会被墙，所以导致域名无法解析。
 
-[<img class="alignnone size-medium wp-image-689" title="ping" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/03/ping-300x193.png" width="300" height="193" />][1]
+[<img class="alignnone size-medium wp-image-689" title="ping" alt="" src="/uploads/2012/03/ping-300x193.png" width="300" height="193" />][1]
 
 Godaddy 的解析速度在国外应该是快的惊人的，它的 NameServer 都是 NS[数字].DOMAINCONTROL.COM 形式。
 
@@ -104,7 +104,7 @@ Godaddy 的解析速度在国外应该是快的惊人的，它的 NameServer �
 
 不像新网的域名管理界面，我不多说了，用过的都知道…
 
-[<img class="alignnone size-full wp-image-690" title="a" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/03/a.png" width="790" height="463" />][2]
+[<img class="alignnone size-full wp-image-690" title="a" alt="" src="/uploads/2012/03/a.png" width="790" height="463" />][2]
 
 &nbsp;
 

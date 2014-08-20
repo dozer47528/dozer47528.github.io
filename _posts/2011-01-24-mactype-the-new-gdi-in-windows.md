@@ -57,11 +57,11 @@ GDI具有如下特点：
 
 ### <span id="i"><strong>效果如下</strong></span>
 
-[<img class="alignnone size-medium wp-image-165" title="effect_1" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/effect_1-300x141.png" width="300" height="141" />][1]
+[<img class="alignnone size-medium wp-image-165" title="effect_1" alt="" src="/uploads/2011/01/effect_1-300x141.png" width="300" height="141" />][1]
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-166" title="effect_2" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/effect_2-300x273.png" width="300" height="273" />][2]
+[<img class="alignnone size-medium wp-image-166" title="effect_2" alt="" src="/uploads/2011/01/effect_2-300x273.png" width="300" height="273" />][2]
 
 &nbsp;
 

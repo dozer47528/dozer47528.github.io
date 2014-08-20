@@ -62,7 +62,7 @@ tags:
 
 3、xun6网盘的解决方案，用了一个key，给每一个验证码标一个key，这样也就防止了冲突。
 
-[<img class="alignnone size-medium wp-image-174" title="authcode" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/authcode-300x63.png" width="300" height="63" />][1]
+[<img class="alignnone size-medium wp-image-174" title="authcode" alt="" src="/uploads/2011/01/authcode-300x63.png" width="300" height="63" />][1]
 
 <!--more-->
 
@@ -72,7 +72,7 @@ tags:
 
 基本思路如下：
 
-[<img class="alignnone size-medium wp-image-175" title="visio" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/visio-215x300.png" width="215" height="300" />][2]
+[<img class="alignnone size-medium wp-image-175" title="visio" alt="" src="/uploads/2011/01/visio-215x300.png" width="215" height="300" />][2]
 
 左：直接打开或刷新页面时的流程
 
@@ -98,7 +98,7 @@ tags:
 
 直接看类设计图吧，关键看一下公有方法（我隐藏了字段，属性和私有方法，因为这些只是浮云~）：
 
-[<img class="alignnone size-medium wp-image-176" title="uml" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/uml-300x215.png" width="300" height="215" />][3]
+[<img class="alignnone size-medium wp-image-176" title="uml" alt="" src="/uploads/2011/01/uml-300x215.png" width="300" height="215" />][3]
 
 &nbsp;
 
@@ -108,7 +108,7 @@ tags:
 
 1、IAuthCodeBuilder接口，这是什么？因为验证码生成的步骤区别很大，大家自由一套办法，所以需要传入一个验证码构造者来生成和输出验证码，实现该接口即可。
 
-[<img class="alignnone size-medium wp-image-177" title="interface" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/interface-300x156.png" width="300" height="156" />][4]
+[<img class="alignnone size-medium wp-image-177" title="interface" alt="" src="/uploads/2011/01/interface-300x156.png" width="300" height="156" />][4]
 
 2、再看构造函数和Initialize方法，无参数的构造函数&Initialize函数，需要配合Unity来使用，用来实现依赖注入。如果你不想使用依赖注入，可以修改我的源码，把他们上面的Attribute去掉即可~
 
@@ -227,13 +227,13 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 
 **4、运行一下吧！**
 
-[<img class="alignnone size-medium wp-image-178" title="run" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/run-300x215.png" width="300" height="215" />][5]
+[<img class="alignnone size-medium wp-image-178" title="run" alt="" src="/uploads/2011/01/run-300x215.png" width="300" height="215" />][5]
 
 打开2个页面，左边的先打开，右边的后打开
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-179" title="run2" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/01/run2-300x214.png" width="300" height="214" />][6]
+[<img class="alignnone size-medium wp-image-179" title="run2" alt="" src="/uploads/2011/01/run2-300x214.png" width="300" height="214" />][6]
 
 在先打开的页面中输入验证码，没有冲突哦~
 

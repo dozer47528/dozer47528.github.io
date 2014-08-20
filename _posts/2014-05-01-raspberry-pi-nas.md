@@ -191,7 +191,7 @@ sudo apt-get install exfat-nofuse</pre>
 
 打开 <a href="http://yuancheng.xunlei.com/" target="_blank">http://yuancheng.xunlei.com/</a> 后点添加，输入激活码即可。
 
-[<img class="alignnone size-medium wp-image-1486" src="http://www.dozer.cc/wp-content/uploads/2014/05/xunlei-300x184.png" alt="xunlei" width="300" height="184" />][1]
+[<img class="alignnone size-medium wp-image-1486" src="/uploads/2014/05/xunlei-300x184.png" alt="xunlei" width="300" height="184" />][1]
 
 这样就搞定了？是的…非常简单！但是我们还是需要添加一下开机自动启动。
 

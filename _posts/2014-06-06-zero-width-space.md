@@ -80,7 +80,7 @@ tags:
 
 到最后是怎么发现的呢？我保存到了文本文件后不小心用 VIM 打开了它，忽然发现了玄机所在！
 
-[<img class="alignnone size-full wp-image-1509" src="http://www.dozer.cc/wp-content/uploads/2014/06/vim.png" alt="vim" width="272" height="119" />][1]
+[<img class="alignnone size-full wp-image-1509" src="/uploads/2014/06/vim.png" alt="vim" width="272" height="119" />][1]
 
 &nbsp;
 

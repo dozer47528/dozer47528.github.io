@@ -69,7 +69,7 @@ tags:
 
 正在彷徨时，忽然发现 Temp 文件夹下有大量 sess_ 开头的文件！（之前打开 Temp 文件夹的时候就特别慢）数量竟然达到了 10W 个！总容量虽然只有 300MB ，但是占用空间却达到了 3G
 
-[<img class="alignnone size-medium wp-image-289" title="sess" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/04/sess-300x230.png" width="300" height="230" />][1]
+[<img class="alignnone size-medium wp-image-289" title="sess" alt="" src="/uploads/2011/04/sess-300x230.png" width="300" height="230" />][1]
 
 &nbsp;
 
@@ -101,7 +101,7 @@ NTFS 下的最大文件数是 4,294,967,295个 (2^32 &#8211; 1)
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-288" title="authorate" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/04/authorate-300x243.png" width="300" height="243" />][2]
+[<img class="alignnone size-medium wp-image-288" title="authorate" alt="" src="/uploads/2011/04/authorate-300x243.png" width="300" height="243" />][2]
 
 其实 Php 是会删除的，但是由于权限的问题，而导致它不能及时的删除了，以上就是 IIS_USERS 组的默认权限。
 
@@ -115,7 +115,7 @@ NTFS 下的最大文件数是 4,294,967,295个 (2^32 &#8211; 1)
 
 修改好后，Temp 文件夹下的文件数一直维持在一个数量级，而没有明显的变化~
 
-[<img class="alignnone size-medium wp-image-290" title="temp" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/04/temp-248x300.png" width="248" height="300" />][3]
+[<img class="alignnone size-medium wp-image-290" title="temp" alt="" src="/uploads/2011/04/temp-248x300.png" width="248" height="300" />][3]
 
  [1]: http://www.dozer.cc/wp-content/uploads/2011/04/sess.png
  [2]: http://www.dozer.cc/wp-content/uploads/2011/04/authorate.png

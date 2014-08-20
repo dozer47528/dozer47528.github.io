@@ -103,7 +103,7 @@ tags:
 
 开启颜色后会让你的 shell 非常漂亮：
 
-[<img class="alignnone size-medium wp-image-1287" alt="git-color" src="http://www.dozer.cc/wp-content/uploads/2013/05/git-color-245x300.png" width="245" height="300" />][1]
+[<img class="alignnone size-medium wp-image-1287" alt="git-color" src="/uploads/2013/05/git-color-245x300.png" width="245" height="300" />][1]
 
 最后一块是 git 的别名功能，你可以直接在配置文件里写，也可以用命令下，具体写法网上搜一下就有了。
 
@@ -142,7 +142,7 @@ oh my zsh 是一个开元框架可以让你方便地配置 zsh。
 
 效果如下：
 
-[<img class="alignnone size-medium wp-image-1294" alt="bash" src="http://www.dozer.cc/wp-content/uploads/2013/05/bash-300x57.png" width="300" height="57" />][2]
+[<img class="alignnone size-medium wp-image-1294" alt="bash" src="/uploads/2013/05/bash-300x57.png" width="300" height="57" />][2]
 
 &nbsp;
 
@@ -154,7 +154,7 @@ git-extras 包含了很多扩展的 git 命令，有的人喜欢，有的人不�
 
 mac 下更建议从 brew 中安装。
 
-[<img class="alignnone size-medium wp-image-1295" alt="summary" src="http://www.dozer.cc/wp-content/uploads/2013/05/summary.png" width="297" height="176" />][3]
+[<img class="alignnone size-medium wp-image-1295" alt="summary" src="/uploads/2013/05/summary.png" width="297" height="176" />][3]
 
 &nbsp;
 
@@ -166,7 +166,7 @@ gitk 下的分支图，同一个分支一直会乱窜…
 
 但是在 SourceTree 下却非常清楚！
 
-[<img alt="sourcetree" src="http://www.dozer.cc/wp-content/uploads/2013/05/sourcetree.png" width="142" height="288" />][4]
+[<img alt="sourcetree" src="/uploads/2013/05/sourcetree.png" width="142" height="288" />][4]
 
 仔细看了以后发现，SourceTree 的分支图能保证一个分支一直线，所以看起来非常清晰。
 
@@ -256,7 +256,7 @@ C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico /bin/zsh --login</pre>
 
 最后效果是不是和 mac 上很像？
 
-[<img alt="cygwin" src="http://www.dozer.cc/wp-content/uploads/2013/05/cygwin-300x156.png" width="300" height="156" />][8]
+[<img alt="cygwin" src="/uploads/2013/05/cygwin-300x156.png" width="300" height="156" />][8]
 
  [1]: http://www.dozer.cc/wp-content/uploads/2013/05/git-color.png
  [2]: http://www.dozer.cc/wp-content/uploads/2013/05/bash.png

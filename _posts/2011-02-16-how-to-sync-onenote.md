@@ -91,7 +91,7 @@ tags:
 
 **如果你还没有笔记本？那么新建 OneNote 笔记本**
 
-[<img class="alignnone size-medium wp-image-232" title="create" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/02/create-300x258.png" width="300" height="258" />][1]
+[<img class="alignnone size-medium wp-image-232" title="create" alt="" src="/uploads/2011/02/create-300x258.png" width="300" height="258" />][1]
 
 1.  文件——新建
 2.  位置选择 Web
@@ -104,7 +104,7 @@ tags:
 
 **如果你的笔记本在本地？那么把它共享到网上吧**
 
-[<img class="alignnone size-medium wp-image-233" title="share" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/02/share-300x293.png" width="300" height="293" />][2]
+[<img class="alignnone size-medium wp-image-233" title="share" alt="" src="/uploads/2011/02/share-300x293.png" width="300" height="293" />][2]
 
 1.  文件——共享
 2.  选择一个笔记本
@@ -117,7 +117,7 @@ tags:
 
 **如果你的笔记本已经在网上了？那我们就用 OneNote 打开它吧**
 
-[<img class="alignnone size-full wp-image-234" title="web" alt="" src="http://www.dozer.cc/wp-content/uploads/2011/02/web.png" width="533" height="120" />][3]
+[<img class="alignnone size-full wp-image-234" title="web" alt="" src="/uploads/2011/02/web.png" width="533" height="120" />][3]
 
 1.  IE打开 www.skydrive.com(一定要IE）
 2.  找到你的 笔记本

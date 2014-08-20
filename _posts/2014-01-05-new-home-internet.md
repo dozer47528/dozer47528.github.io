@@ -56,7 +56,7 @@ tags:
 
 今天正式升级到了100M了，晒晒测速图：
 
-[<img class="alignnone size-full wp-image-1422" alt="speed" src="http://www.dozer.cc/wp-content/uploads/2014/01/speed.png" width="517" height="431" />][1]
+[<img class="alignnone size-full wp-image-1422" alt="speed" src="/uploads/2014/01/speed.png" width="517" height="431" />][1]
 
 我尝试过用有线直接测试，发现速度还是上不到理论值，看上去瓶颈应该在光纤猫了，而不是我的路由器了。
 
@@ -68,7 +68,7 @@ tags:
 
 正好在知乎看到了一篇文章（<a href="http://www.zhihu.com/question/21739060" target="_blank">家庭用 100M 光纤使用什么无线路由器才能发挥最大网速？</a>），介绍了网件的路由器，所以果断入手了。
 
-[<img class="alignnone size-medium wp-image-1423" alt="router" src="http://www.dozer.cc/wp-content/uploads/2014/01/router-225x300.jpeg" width="225" height="300" />][2]
+[<img class="alignnone size-medium wp-image-1423" alt="router" src="/uploads/2014/01/router-225x300.jpeg" width="225" height="300" />][2]
 
 我买的是WNDR3700v4，发现3800到处都买不到，淘宝的又不放心，所以买了3700。两款主要是软件的差别，所以也没多大关系啦。
 
@@ -78,7 +78,7 @@ tags:
 
 ### <span id="i-2">拓扑图</span>
 
-[<img class="alignnone size-full wp-image-1424" alt="network" src="http://www.dozer.cc/wp-content/uploads/2014/01/network.png" width="629" height="413" />][3]
+[<img class="alignnone size-full wp-image-1424" alt="network" src="/uploads/2014/01/network.png" width="629" height="413" />][3]
 
 &nbsp;
 

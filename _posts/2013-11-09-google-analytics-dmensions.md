@@ -60,7 +60,7 @@ GA 可以自动识别内置的维度，但是自定义维度需要自己在应�
 
 自定义维度很好用，但是最近我们的项目发现了一个问题：
 
-[<img class="alignnone size-full wp-image-1398" alt="ga-10" src="http://www.dozer.cc/wp-content/uploads/2013/11/ga-10.png" width="592" height="235" />][1]
+[<img class="alignnone size-full wp-image-1398" alt="ga-10" src="/uploads/2013/11/ga-10.png" width="592" height="235" />][1]
 
 &nbsp;
 

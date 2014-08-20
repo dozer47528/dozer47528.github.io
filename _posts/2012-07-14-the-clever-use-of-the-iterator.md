@@ -140,9 +140,9 @@ static List&lt;string&gt; GetFromDatabase(int index, int size)
 
 结果如下，上图是用迭代器实现延迟加载与延迟求值查询的结果，下图是全部读到内存中的结果：
 
-[<img class="alignnone size-medium wp-image-809" title="memory1" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/07/memory1-300x80.png" width="300" height="80" />][1]
+[<img class="alignnone size-medium wp-image-809" title="memory1" alt="" src="/uploads/2012/07/memory1-300x80.png" width="300" height="80" />][1]
 
-[<img class="alignnone size-medium wp-image-810" title="memory2" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/07/memory2-300x71.png" width="300" height="71" />][2]
+[<img class="alignnone size-medium wp-image-810" title="memory2" alt="" src="/uploads/2012/07/memory2-300x71.png" width="300" height="71" />][2]
 
 前者内存占用6M，后者为100多M。
 
