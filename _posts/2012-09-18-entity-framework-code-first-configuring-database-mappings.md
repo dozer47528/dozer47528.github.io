@@ -288,7 +288,7 @@ TPC 和 TPT 的区别就是，TPT 的子类只存放比父类多出来的几个�
    m.MapInheritedProperties();
  });</pre>
 
- [1]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-intro/ "Entity Framework Code First 配置介绍"
- [2]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-property/ "Entity Framework Code First 配置介绍：属性"
- [3]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-relationships/ "Entity Framework Code First 配置介绍：引用关系"
- [4]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-database-mappings/ "Entity Framework Code First 配置介绍：数据库映射"
+ [1]: /2012/09/entity-framework-code-first-configuring-intro/ "Entity Framework Code First 配置介绍"
+ [2]: /2012/09/entity-framework-code-first-configuring-property/ "Entity Framework Code First 配置介绍：属性"
+ [3]: /2012/09/entity-framework-code-first-configuring-relationships/ "Entity Framework Code First 配置介绍：引用关系"
+ [4]: /2012/09/entity-framework-code-first-configuring-database-mappings/ "Entity Framework Code First 配置介绍：数据库映射"

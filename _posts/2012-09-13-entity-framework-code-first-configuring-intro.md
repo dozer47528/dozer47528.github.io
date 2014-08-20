@@ -82,7 +82,7 @@ tags:
 
 本系列主要来自于《Programming Entity Framework Code First》，示例代码由本人亲自编写。
 
- [1]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-intro/ "Entity Framework Code First 配置介绍"
- [2]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-property/ "Entity Framework Code First 配置介绍：属性"
- [3]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-relationships/ "Entity Framework Code First 配置介绍：引用关系"
- [4]: http://www.dozer.cc/2012/09/entity-framework-code-first-configuring-database-mappings/ "Entity Framework Code First 配置介绍：数据库映射"
+ [1]: /2012/09/entity-framework-code-first-configuring-intro/ "Entity Framework Code First 配置介绍"
+ [2]: /2012/09/entity-framework-code-first-configuring-property/ "Entity Framework Code First 配置介绍：属性"
+ [3]: /2012/09/entity-framework-code-first-configuring-relationships/ "Entity Framework Code First 配置介绍：引用关系"
+ [4]: /2012/09/entity-framework-code-first-configuring-database-mappings/ "Entity Framework Code First 配置介绍：数据库映射"
