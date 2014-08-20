@@ -435,4 +435,4 @@ public class SalesforceQueryTest
 
 而我的测试项目测试的也都是内置对象，如果你想测试自定义对象，需要引用自己的 API。
 
- [1]: http://www.dozer.cc/wp-content/uploads/2012/10/sln.png
+ [1]: http://www.dozer.cc/uploads/2012/10/sln.png

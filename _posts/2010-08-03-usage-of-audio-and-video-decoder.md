@@ -138,6 +138,6 @@ p.WaitForExit();//如果想等待程序退出后再运行，就加上这条，�
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/01/cmd1.png
- [2]: http://www.dozer.cc/wp-content/uploads/2011/01/cmd2.png
- [3]: http://www.dozer.cc/wp-content/uploads/2011/01/mediacoder.png
+ [1]: http://www.dozer.cc/uploads/2011/01/cmd1.png
+ [2]: http://www.dozer.cc/uploads/2011/01/cmd2.png
+ [3]: http://www.dozer.cc/uploads/2011/01/mediacoder.png

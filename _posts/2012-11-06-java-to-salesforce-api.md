@@ -222,15 +222,15 @@ public class main {
 
 ### <span id="i-7">示例代码</span>
 
-下载地址：<a href="/wp-content/uploads/2012/11/Salesforce1.zip" target="_blank"><strong>http://www.dozer.cc/wp-content/uploads/2012/11/Salesforce1.zip</strong></a>
+下载地址：<a href="/wp-content/uploads/2012/11/Salesforce1.zip" target="_blank"><strong>http://www.dozer.cc/uploads/2012/11/Salesforce1.zip</strong></a>
 
 &nbsp;
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2012/11/lib.png
- [2]: http://www.dozer.cc/wp-content/uploads/2012/11/run.jpg
- [3]: http://www.dozer.cc/wp-content/uploads/2012/11/args.png
- [4]: http://www.dozer.cc/wp-content/uploads/2012/11/src.png
- [5]: http://www.dozer.cc/wp-content/uploads/2012/11/wsdl.png
- [6]: http://www.dozer.cc/wp-content/uploads/2012/11/url.png
+ [1]: http://www.dozer.cc/uploads/2012/11/lib.png
+ [2]: http://www.dozer.cc/uploads/2012/11/run.jpg
+ [3]: http://www.dozer.cc/uploads/2012/11/args.png
+ [4]: http://www.dozer.cc/uploads/2012/11/src.png
+ [5]: http://www.dozer.cc/uploads/2012/11/wsdl.png
+ [6]: http://www.dozer.cc/uploads/2012/11/url.png

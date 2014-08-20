@@ -103,8 +103,8 @@ ezgdi项目目的是为64位应用提供类似gdi++的字体渲染功能，以�
 
 官网：[**http://mactype.themex.net/**][6]
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/01/effect_1.png
- [2]: http://www.dozer.cc/wp-content/uploads/2011/01/effect_2.png
+ [1]: http://www.dozer.cc/uploads/2011/01/effect_1.png
+ [2]: http://www.dozer.cc/uploads/2011/01/effect_2.png
  [3]: http://drwatson.nobody.jp/gdi++/
  [4]: http://hi.baidu.com/fonlan/home
  [5]: http://code.google.com/p/ezgdi/

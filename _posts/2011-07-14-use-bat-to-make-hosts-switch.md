@@ -112,4 +112,4 @@ goto END
 
 所以不可避免的会弹出警告窗口，没办法，忽略之，并添加到白名单即可
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/07/windows.png
+ [1]: http://www.dozer.cc/uploads/2011/07/windows.png

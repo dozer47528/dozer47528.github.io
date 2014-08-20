@@ -204,5 +204,5 @@ N年前，我买 Godaddy 的域名，送到了一个免费的虚拟主机（相�
 
 官方说会有广告，但是我从来没看到，我也很奇怪…
 
- [1]: http://www.dozer.cc/wp-content/uploads/2013/02/godaddy.png
- [2]: http://www.dozer.cc/wp-content/uploads/2013/02/ali.png
+ [1]: http://www.dozer.cc/uploads/2013/02/godaddy.png
+ [2]: http://www.dozer.cc/uploads/2013/02/ali.png

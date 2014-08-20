@@ -119,4 +119,4 @@ tags:
 
 <a href="http://online.cumt.edu.cn/FlyingStudio/?page_id=360" target="_blank"><strong>传送门</strong></a>
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/04/online.png
+ [1]: http://www.dozer.cc/uploads/2011/04/online.png

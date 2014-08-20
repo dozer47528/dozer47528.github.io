@@ -110,6 +110,6 @@ tags:
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2014/01/speed.png
- [2]: http://www.dozer.cc/wp-content/uploads/2014/01/router.jpeg
- [3]: http://www.dozer.cc/wp-content/uploads/2014/01/network.png
+ [1]: http://www.dozer.cc/uploads/2014/01/speed.png
+ [2]: http://www.dozer.cc/uploads/2014/01/router.jpeg
+ [3]: http://www.dozer.cc/uploads/2014/01/network.png

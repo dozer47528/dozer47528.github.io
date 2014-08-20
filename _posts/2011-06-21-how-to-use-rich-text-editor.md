@@ -143,4 +143,4 @@ ii) 下面一步就是直接在编辑器中编辑了，用法和 Word 很相似�
 
 那么怎么解决呢？ 很简单，手动设置下字体大小就行了~因为虽然有继承，但是它也有一个优先级，直接设置优先级高于页面的格式。
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/06/word.png
+ [1]: http://www.dozer.cc/uploads/2011/06/word.png

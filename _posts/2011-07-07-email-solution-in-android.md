@@ -162,7 +162,7 @@ IMAP IDLE 和 Push email 还是有区别的，Push email 是服务器主动把�
 Gmail 目前并不支持 Push email，需要通过第三方支持（如 <a href="http://mobile.emoze.com/" rel="nofollow">http://mobile.emoze.com/</a> ）才能实现 Push email 的功能，这是因为 Gmail 在客端没有登录的情况下不知道如何把邮件推送到你的手机；如果使用 IMAP IDLE 功能，服务器只会通知客端有新邮件，而下载新邮件的工作还是客端完成的，并且这个过程中客端必须一直保持与服务器的连接才能收到通知进而完成下载邮件的工作，严格说这并不是 Push。
 
  [1]: http://code.google.com/p/k9mail/
- [2]: http://www.dozer.cc/wp-content/uploads/2011/07/1.png
- [3]: http://www.dozer.cc/wp-content/uploads/2011/07/2.png
- [4]: http://www.dozer.cc/wp-content/uploads/2011/07/3.png
- [5]: http://www.dozer.cc/wp-content/uploads/2011/07/4.png
+ [2]: http://www.dozer.cc/uploads/2011/07/1.png
+ [3]: http://www.dozer.cc/uploads/2011/07/2.png
+ [4]: http://www.dozer.cc/uploads/2011/07/3.png
+ [5]: http://www.dozer.cc/uploads/2011/07/4.png

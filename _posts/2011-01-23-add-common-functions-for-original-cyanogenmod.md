@@ -75,6 +75,6 @@ CM 官网：[**http://www.cyanogenmod.com/**][2]
  [2]: http://www.cyanogenmod.com/
  [3]: http://goo-inside.me/cm/
  [4]: http://goo-inside.me/gapps/
- [5]: http://www.dozer.cc/wp-content/uploads/2011/01/gapps_dpi.png
+ [5]: http://www.dozer.cc/uploads/2011/01/gapps_dpi.png
  [6]: http://forum.xda-developers.com/showthread.php?t=867049
- [7]: http://www.dozer.cc/wp-content/uploads/2011/01/data2ext.png
+ [7]: http://www.dozer.cc/uploads/2011/01/data2ext.png

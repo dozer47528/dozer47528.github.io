@@ -60,4 +60,4 @@ Discuz 算是很开放的吧（对php程序员而言）
 
 期望得到大家的支持和关注！有需要这个的朋友也可以所示向我求助，一起探讨！
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/01/ucenter.png
+ [1]: http://www.dozer.cc/uploads/2011/01/ucenter.png

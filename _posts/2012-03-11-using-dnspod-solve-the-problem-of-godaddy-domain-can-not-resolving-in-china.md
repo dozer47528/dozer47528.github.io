@@ -121,5 +121,5 @@ Godaddy 的解析速度在国外应该是快的惊人的，它的 NameServer �
 
 另外免费版和收费版的区别只在于速度和稳定性，免费版对于我们这样的个人用户完全够用了。
 
- [1]: http://www.dozer.cc/wp-content/uploads/2012/03/ping.png
- [2]: http://www.dozer.cc/wp-content/uploads/2012/03/a.png
+ [1]: http://www.dozer.cc/uploads/2012/03/ping.png
+ [2]: http://www.dozer.cc/uploads/2012/03/a.png

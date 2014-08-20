@@ -118,7 +118,7 @@ Github 上的版本树
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2013/01/bump.png
- [2]: http://www.dozer.cc/wp-content/uploads/2013/01/server.png
- [3]: http://www.dozer.cc/wp-content/uploads/2013/01/all.png
- [4]: http://www.dozer.cc/wp-content/uploads/2013/01/github.png
+ [1]: http://www.dozer.cc/uploads/2013/01/bump.png
+ [2]: http://www.dozer.cc/uploads/2013/01/server.png
+ [3]: http://www.dozer.cc/uploads/2013/01/all.png
+ [4]: http://www.dozer.cc/uploads/2013/01/github.png

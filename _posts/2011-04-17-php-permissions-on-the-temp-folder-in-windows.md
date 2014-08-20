@@ -117,6 +117,6 @@ NTFS 下的最大文件数是 4,294,967,295个 (2^32 &#8211; 1)
 
 [<img class="alignnone size-medium wp-image-290" title="temp" alt="" src="/uploads/2011/04/temp-248x300.png" width="248" height="300" />][3]
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/04/sess.png
- [2]: http://www.dozer.cc/wp-content/uploads/2011/04/authorate.png
- [3]: http://www.dozer.cc/wp-content/uploads/2011/04/temp.png
+ [1]: http://www.dozer.cc/uploads/2011/04/sess.png
+ [2]: http://www.dozer.cc/uploads/2011/04/authorate.png
+ [3]: http://www.dozer.cc/uploads/2011/04/temp.png

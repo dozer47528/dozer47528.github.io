@@ -110,4 +110,4 @@ tags:
 
 难怪编译器也把它当成源代码的一部分了…
 
- [1]: http://www.dozer.cc/wp-content/uploads/2014/06/vim.png
+ [1]: http://www.dozer.cc/uploads/2014/06/vim.png

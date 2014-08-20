@@ -99,5 +99,5 @@ tags:
 
 笔者电脑内存4G，这两个功能就吃到了我8G的空间，是在是太浪费啦~罪过罪过~
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/02/power.jpg
- [2]: http://www.dozer.cc/wp-content/uploads/2011/02/error.jpg
+ [1]: http://www.dozer.cc/uploads/2011/02/power.jpg
+ [2]: http://www.dozer.cc/uploads/2011/02/error.jpg

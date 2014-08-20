@@ -172,9 +172,9 @@ OK，我们理一下思路：
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2012/01/qdesk.png
- [2]: http://www.dozer.cc/wp-content/uploads/2012/01/launchy.png
- [3]: http://www.dozer.cc/wp-content/uploads/2012/01/index.png
- [4]: http://www.dozer.cc/wp-content/uploads/2012/01/search.png
- [5]: http://www.dozer.cc/wp-content/uploads/2012/01/search_temp.png
- [6]: http://www.dozer.cc/wp-content/uploads/2012/01/mtxx.png
+ [1]: http://www.dozer.cc/uploads/2012/01/qdesk.png
+ [2]: http://www.dozer.cc/uploads/2012/01/launchy.png
+ [3]: http://www.dozer.cc/uploads/2012/01/index.png
+ [4]: http://www.dozer.cc/uploads/2012/01/search.png
+ [5]: http://www.dozer.cc/uploads/2012/01/search_temp.png
+ [6]: http://www.dozer.cc/uploads/2012/01/mtxx.png

@@ -132,4 +132,4 @@ tags:
 
 这个过程真的太复杂了！很难一次成功，别放弃！我前前后后起码搞了几十遍…
 
- [1]: http://www.dozer.cc/wp-content/uploads/2013/06/key.png
+ [1]: http://www.dozer.cc/uploads/2013/06/key.png

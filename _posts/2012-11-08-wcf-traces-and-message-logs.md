@@ -108,5 +108,5 @@ Google 后发现，因为这个工具是 VS2010 自带的，它并不知道你�
 
 因为 .net 里是允许给一个枚举类型赋错误的数字的，但 WCF 在序列化的时候是不允许的，所以导致了我的问题。
 
- [1]: http://www.dozer.cc/wp-content/uploads/2012/11/config.png
- [2]: http://www.dozer.cc/wp-content/uploads/2012/11/error.png
+ [1]: http://www.dozer.cc/uploads/2012/11/config.png
+ [2]: http://www.dozer.cc/uploads/2012/11/error.png

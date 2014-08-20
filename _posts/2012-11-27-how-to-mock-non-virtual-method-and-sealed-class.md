@@ -396,9 +396,9 @@ NUnit 运行结果如下：
 
 但是，在这个过程中，还真的学习到了不少东西！
 
- [1]: http://www.dozer.cc/wp-content/uploads/2012/11/solution.png
- [2]: http://www.dozer.cc/wp-content/uploads/2012/11/test.png
- [3]: http://www.dozer.cc/wp-content/uploads/2012/11/result.png
- [4]: http://www.dozer.cc/wp-content/uploads/2012/11/NUnit.png
- [5]: http://www.dozer.cc/wp-content/uploads/2012/11/error1.png
- [6]: http://www.dozer.cc/wp-content/uploads/2012/11/non-virtual.png
+ [1]: http://www.dozer.cc/uploads/2012/11/solution.png
+ [2]: http://www.dozer.cc/uploads/2012/11/test.png
+ [3]: http://www.dozer.cc/uploads/2012/11/result.png
+ [4]: http://www.dozer.cc/uploads/2012/11/NUnit.png
+ [5]: http://www.dozer.cc/uploads/2012/11/error1.png
+ [6]: http://www.dozer.cc/uploads/2012/11/non-virtual.png

@@ -822,11 +822,11 @@ namespace DS.Web.UCenter.Website.API
 
 另外几个函数是干嘛的呢？ 参考 UCenter 接口**<a href="http://www.ucapi.com/api/" target="_blank">开发手册</a>**中的 API接口 这个章节即可
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/01/ucenter_success.png
- [2]: http://www.dozer.cc/wp-content/uploads/2011/01/connection.png
- [3]: http://www.dozer.cc/wp-content/uploads/2011/01/ucentertest.png
- [4]: http://www.dozer.cc/wp-content/uploads/2011/01/add_app.png
- [5]: http://www.dozer.cc/wp-content/uploads/2011/01/apps_settings.png
- [6]: http://www.dozer.cc/wp-content/uploads/2011/01/app_info.png
- [7]: http://www.dozer.cc/wp-content/uploads/2011/02/solution.png
- [8]: http://www.dozer.cc/wp-content/uploads/2011/02/ashx.png
+ [1]: http://www.dozer.cc/uploads/2011/01/ucenter_success.png
+ [2]: http://www.dozer.cc/uploads/2011/01/connection.png
+ [3]: http://www.dozer.cc/uploads/2011/01/ucentertest.png
+ [4]: http://www.dozer.cc/uploads/2011/01/add_app.png
+ [5]: http://www.dozer.cc/uploads/2011/01/apps_settings.png
+ [6]: http://www.dozer.cc/uploads/2011/01/app_info.png
+ [7]: http://www.dozer.cc/uploads/2011/02/solution.png
+ [8]: http://www.dozer.cc/uploads/2011/02/ashx.png

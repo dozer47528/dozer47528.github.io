@@ -404,9 +404,9 @@ A：客户端只能得到一个会话ID，这个会话ID虽然和真实的验证
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/01/authcode.png
- [2]: http://www.dozer.cc/wp-content/uploads/2011/01/visio.png
- [3]: http://www.dozer.cc/wp-content/uploads/2011/01/uml.png
- [4]: http://www.dozer.cc/wp-content/uploads/2011/01/interface.png
- [5]: http://www.dozer.cc/wp-content/uploads/2011/01/run.png
- [6]: http://www.dozer.cc/wp-content/uploads/2011/01/run2.png
+ [1]: http://www.dozer.cc/uploads/2011/01/authcode.png
+ [2]: http://www.dozer.cc/uploads/2011/01/visio.png
+ [3]: http://www.dozer.cc/uploads/2011/01/uml.png
+ [4]: http://www.dozer.cc/uploads/2011/01/interface.png
+ [5]: http://www.dozer.cc/uploads/2011/01/run.png
+ [6]: http://www.dozer.cc/uploads/2011/01/run2.png

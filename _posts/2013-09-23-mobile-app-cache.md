@@ -211,5 +211,5 @@ Native 的解决思路可能是复用 list 中的 item，那 Html 中为什么�
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2013/09/reopen.png
- [2]: http://www.dozer.cc/wp-content/uploads/2013/09/reload.png
+ [1]: http://www.dozer.cc/uploads/2013/09/reopen.png
+ [2]: http://www.dozer.cc/uploads/2013/09/reload.png

@@ -223,19 +223,19 @@ tags:
 
 &nbsp;
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1979.png
- [2]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1980.png
- [3]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1981.png
- [4]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1982.png
- [5]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1983.png
- [6]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1987.png
- [7]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1984.png
- [8]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1985.png
- [9]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1986.png
- [10]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1988.png
- [11]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1989.png
- [12]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1991.png
- [13]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1992.png
- [14]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_1993.png
- [15]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_20111126_100249.png
- [16]: http://www.dozer.cc/wp-content/uploads/2011/11/IMG_20111126_100300.png
+ [1]: http://www.dozer.cc/uploads/2011/11/IMG_1979.png
+ [2]: http://www.dozer.cc/uploads/2011/11/IMG_1980.png
+ [3]: http://www.dozer.cc/uploads/2011/11/IMG_1981.png
+ [4]: http://www.dozer.cc/uploads/2011/11/IMG_1982.png
+ [5]: http://www.dozer.cc/uploads/2011/11/IMG_1983.png
+ [6]: http://www.dozer.cc/uploads/2011/11/IMG_1987.png
+ [7]: http://www.dozer.cc/uploads/2011/11/IMG_1984.png
+ [8]: http://www.dozer.cc/uploads/2011/11/IMG_1985.png
+ [9]: http://www.dozer.cc/uploads/2011/11/IMG_1986.png
+ [10]: http://www.dozer.cc/uploads/2011/11/IMG_1988.png
+ [11]: http://www.dozer.cc/uploads/2011/11/IMG_1989.png
+ [12]: http://www.dozer.cc/uploads/2011/11/IMG_1991.png
+ [13]: http://www.dozer.cc/uploads/2011/11/IMG_1992.png
+ [14]: http://www.dozer.cc/uploads/2011/11/IMG_1993.png
+ [15]: http://www.dozer.cc/uploads/2011/11/IMG_20111126_100249.png
+ [16]: http://www.dozer.cc/uploads/2011/11/IMG_20111126_100300.png

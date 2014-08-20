@@ -150,6 +150,6 @@ PS.这个功能只有在界面语言设置成英文的情况下才能使用。
 
 注意，Google.cn 的 IP 经常会变，但是一般不影响使用，当你发现什么时候不能用了，再去更新一下即可。
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/11/google_1.png
- [2]: http://www.dozer.cc/wp-content/uploads/2011/11/google_3.png
- [3]: http://www.dozer.cc/wp-content/uploads/2011/11/google_2.png
+ [1]: http://www.dozer.cc/uploads/2011/11/google_1.png
+ [2]: http://www.dozer.cc/uploads/2011/11/google_3.png
+ [3]: http://www.dozer.cc/uploads/2011/11/google_2.png

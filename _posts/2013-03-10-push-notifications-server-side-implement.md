@@ -194,4 +194,4 @@ else
 // Close the connection to the server
 fclose($fp);</pre>
 
- [1]: http://www.dozer.cc/wp-content/uploads/2013/03/push.png
+ [1]: http://www.dozer.cc/uploads/2013/03/push.png

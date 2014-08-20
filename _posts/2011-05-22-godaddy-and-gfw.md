@@ -75,7 +75,7 @@ tags:
 
 [<img class="alignnone size-medium wp-image-342" title="alipay" alt="" src="/uploads/2011/05/alipay-300x48.png" width="300" height="48" />][4]
 
- [1]: http://www.dozer.cc/wp-content/uploads/2011/05/ip.gif
- [2]: http://www.dozer.cc/wp-content/uploads/2011/05/cancel.gif
- [3]: http://www.dozer.cc/wp-content/uploads/2011/05/support.png
- [4]: http://www.dozer.cc/wp-content/uploads/2011/05/alipay.png
+ [1]: http://www.dozer.cc/uploads/2011/05/ip.gif
+ [2]: http://www.dozer.cc/uploads/2011/05/cancel.gif
+ [3]: http://www.dozer.cc/uploads/2011/05/support.png
+ [4]: http://www.dozer.cc/uploads/2011/05/alipay.png

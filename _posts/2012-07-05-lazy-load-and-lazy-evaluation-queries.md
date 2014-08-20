@@ -214,4 +214,4 @@ PS.当然，如果用的是 Entity Framework 等 LINQ for IQueryable<T> 技术�
 
 但是，LINQ 用了这么久，真没出现过因为延迟查询而影响执行结果的情况，可使用这类方法的时候，还是要注意是否会影响影响最终结果！
 
- [1]: http://www.dozer.cc/wp-content/uploads/2012/07/console.png
+ [1]: http://www.dozer.cc/uploads/2012/07/console.png
