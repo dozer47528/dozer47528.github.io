@@ -618,7 +618,7 @@ public class UserMetaData
 
 &nbsp;
 
-演示中的源码（更新至2.0)：<a href="http://www.dozer.cc/wp-content/uploads/2011/01/MVC%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81.zip" target="_blank"><strong>下载</strong></a>
+演示中的源码（更新至2.0)：<a href="/wp-content/uploads/2011/01/MVC%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81.zip" target="_blank"><strong>下载</strong></a>
 
 &nbsp;
 

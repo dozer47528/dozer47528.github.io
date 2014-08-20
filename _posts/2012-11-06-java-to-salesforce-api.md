@@ -222,7 +222,7 @@ public class main {
 
 ### <span id="i-7">示例代码</span>
 
-下载地址：<a href="http://www.dozer.cc/wp-content/uploads/2012/11/Salesforce1.zip" target="_blank"><strong>http://www.dozer.cc/wp-content/uploads/2012/11/Salesforce1.zip</strong></a>
+下载地址：<a href="/wp-content/uploads/2012/11/Salesforce1.zip" target="_blank"><strong>http://www.dozer.cc/wp-content/uploads/2012/11/Salesforce1.zip</strong></a>
 
 &nbsp;
 

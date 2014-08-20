@@ -396,7 +396,7 @@ A：客户端只能得到一个会话ID，这个会话ID虽然和真实的验证
 
 &nbsp;
 
-最后，也是最重要的：**<a href="http://www.dozer.cc/wp-content/uploads/2011/01/AuthCodeManager.zip" target="_blank">源代码&示例程序下载</a>**
+最后，也是最重要的：**<a href="/wp-content/uploads/2011/01/AuthCodeManager.zip" target="_blank">源代码&示例程序下载</a>**
 
 &nbsp;
 

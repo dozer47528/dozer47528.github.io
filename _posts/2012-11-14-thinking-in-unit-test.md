@@ -305,7 +305,7 @@ Mock 一个 <span style="background-color: #eeeeee;">TestClass</span> ，并把�
 
 这里主要考验对业务的理解和一些编码技巧了。
 
-顺便附上之前写的一篇文章：<a title="短函数的优点" href="http://www.dozer.cc/2012/01/the-advantages-of-short-function/" target="_blank"><strong>《短函数的优点》</strong></a>
+顺便附上之前写的一篇文章：<a title="短函数的优点" href="/2012/01/the-advantages-of-short-function/" target="_blank"><strong>《短函数的优点》</strong></a>
 
 &nbsp;
 

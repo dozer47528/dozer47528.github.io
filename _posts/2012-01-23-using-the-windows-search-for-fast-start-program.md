@@ -70,7 +70,7 @@ tags:
 **一张图就能说明问题，但是也需要来解释一下它的特点：**
 
 <div>
-  <a href="http://www.dozer.cc/wp-content/uploads/2012/01/search_windows.png"><img class="alignnone size-full wp-image-602" title="search_windows" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/search_windows.png" width="410" height="476" /></a>
+  <a href="/wp-content/uploads/2012/01/search_windows.png"><img class="alignnone size-full wp-image-602" title="search_windows" alt="" src="http://www.dozer.cc/wp-content/uploads/2012/01/search_windows.png" width="410" height="476" /></a>
 </div>
 
 1.  根据类型分类，程序排第一（因为大部分情况是为了启动程序）

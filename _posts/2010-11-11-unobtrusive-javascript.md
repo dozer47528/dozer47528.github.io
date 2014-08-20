@@ -375,7 +375,7 @@ data : 仅限 OnSuccess
 
 **传统的生成方式**
 
-一下是 **<a href="http://www.dozer.cc/2010/04/mvc-dataannotations/" target="_blank">MVC 数据验证</a>**框架下对于 Model 的描述（这部分不变）
+一下是 **<a href="/2010/04/mvc-dataannotations/" target="_blank">MVC 数据验证</a>**框架下对于 Model 的描述（这部分不变）
 
 &nbsp;
 
@@ -473,4 +473,4 @@ window.mvcClientValidationMetadata.push({"Fields":[{"FieldName":"FirstName","Rep
 
 ### <span id="ENDING">ENDING</span>
 
-最后，还不太了解 MVC 数据验证的朋友可以看一下我的另一篇文章：**<a href="http://www.dozer.cc/2010/04/mvc-dataannotations/" target="_blank">深入浅出 MVC 数据验证 2.0 [附演示源码]</a>**
+最后，还不太了解 MVC 数据验证的朋友可以看一下我的另一篇文章：**<a href="/2010/04/mvc-dataannotations/" target="_blank">深入浅出 MVC 数据验证 2.0 [附演示源码]</a>**

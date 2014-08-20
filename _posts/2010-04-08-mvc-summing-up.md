@@ -54,7 +54,7 @@ tags:
 
 （原创，和微软官方做法不同，可以不修改IIS设置就达到目的）
 
-传送门：<a href="http://www.dozer.cc/2010/02/run-mvc-in-iis6/" target="_blank"><strong>http://www.dozer.cc/2010/02/run-mvc-in-iis6/</strong></a>
+传送门：<a href="/2010/02/run-mvc-in-iis6/" target="_blank"><strong>http://www.dozer.cc/2010/02/run-mvc-in-iis6/</strong></a>
 
 <!--more-->
 

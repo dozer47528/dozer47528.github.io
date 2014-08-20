@@ -16,7 +16,7 @@ tags:
 ---
 ### Cors Proxy 该不该自动重定向
 
-**<a title="利用 Spring MVC 和 RestTemplate 实现 CorsProxy" href="http://www.dozer.cc/2014/03/use-spring-mvc-and-resttemplate-impl-corsproxy/" target="_blank">上篇文章</a> **我用 RestTemplate 实现了 CorsProxy 功能，项目上线后在实际使用的时候遇到了一个很坑爹的问题。
+**<a title="利用 Spring MVC 和 RestTemplate 实现 CorsProxy" href="/2014/03/use-spring-mvc-and-resttemplate-impl-corsproxy/" target="_blank">上篇文章</a> **我用 RestTemplate 实现了 CorsProxy 功能，项目上线后在实际使用的时候遇到了一个很坑爹的问题。
 
 *   Client 通过 CorsProxy 请求了一个页面
 *   CorsProxy 收到请求后，自己去重新请求目标页面

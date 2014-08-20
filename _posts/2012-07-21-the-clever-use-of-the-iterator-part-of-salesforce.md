@@ -38,7 +38,7 @@ tags:
 
 ### <span id="i">上期回顾</span>
 
-在前两篇文章中（<a href="http://www.dozer.cc/2012/07/lazy-load-and-lazy-evaluation-queries/" target="_blank"><strong>延迟加载与延迟求值查询</strong></a>、<a href="http://www.dozer.cc/2012/07/the-clever-use-of-the-iterator/" target="_blank"><strong>迭代器的妙用</strong></a>），介绍了很多延迟加载、延迟求值查询和迭代器的知识。
+在前两篇文章中（<a href="/2012/07/lazy-load-and-lazy-evaluation-queries/" target="_blank"><strong>延迟加载与延迟求值查询</strong></a>、<a href="/2012/07/the-clever-use-of-the-iterator/" target="_blank"><strong>迭代器的妙用</strong></a>），介绍了很多延迟加载、延迟求值查询和迭代器的知识。
 
 本文也是利用了相关技术，巧妙了实现了一个功能。
 

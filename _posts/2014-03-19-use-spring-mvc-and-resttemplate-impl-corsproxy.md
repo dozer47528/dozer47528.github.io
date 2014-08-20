@@ -268,7 +268,7 @@ CORS 标准中有几个 header，其中一个就是\`Access-Control-Allow-Origin
 
 #### <span id="i-3">重定向的问题</span>
 
-这个话题设计的东西比较多，已经自成文章：<a href="http://www.dozer.cc/2014/05/disable-resttemplate-redirect/" target="_blank"><strong>禁用 RestTemplate 的自动重定向功能</strong></a>
+这个话题设计的东西比较多，已经自成文章：<a href="/2014/05/disable-resttemplate-redirect/" target="_blank"><strong>禁用 RestTemplate 的自动重定向功能</strong></a>
 
 &nbsp;
 

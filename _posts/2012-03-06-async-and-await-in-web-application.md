@@ -204,7 +204,7 @@ protected async void Page_Load(object sender, EventArgs e)
     //do more
 }</pre>
 
-<span style="color: #ff0000;">在 asp.net WebForm 的正确用法请参考最新文章，上述方法被证实有错误：<a href="http://www.dozer.cc/2012/03/async-and-await-in-asp-net-beta/" target="_blank"><span style="color: #ff0000;"><strong>传送门</strong></span></a></span>
+<span style="color: #ff0000;">在 asp.net WebForm 的正确用法请参考最新文章，上述方法被证实有错误：<a href="/2012/03/async-and-await-in-asp-net-beta/" target="_blank"><span style="color: #ff0000;"><strong>传送门</strong></span></a></span>
 
 &nbsp;
 
@@ -458,7 +458,7 @@ ab -c 10 -n 10 http://localhost:6360/asyncpage_cpu.aspx</pre>
 
 ### <span id="i-9">源代码和工具下载</span>
 
-<a href="http://www.dozer.cc/wp-content/uploads/2012/03/AsyncSample.zip" target="_blank">AsyncSample</a>
+<a href="/wp-content/uploads/2012/03/AsyncSample.zip" target="_blank">AsyncSample</a>
 
 *请用 Visual Studio 11 打开*
 

@@ -103,7 +103,7 @@ tags:
 
 最近一位同事操作失误，导致线上的队列出了很多错误，每次让我排查的时候我都很痛苦。因为队列表中只有简单的信息，详细的信息要到日志表中才能查看。每次写 sql 脚不能很痛苦。一开始我把可变的东西封装成了变量，然后保存成了一个 sql 脚本文件。后来我又干脆直接做了一个工具，支持 本地、Alpha、Beta 和 线上的队列异常情况分析。然后世界就变得如此美好~
 
-另外，我上一篇文章中（<a href="http://www.dozer.cc/2012/01/using-the-windows-search-for-fast-start-program/" target="_blank"><strong>巧用Windows下的搜索实现快速启动程序</strong></a>）提到了一种快速启动方式，但我每次都要手动去进行这个操作。
+另外，我上一篇文章中（<a href="/2012/01/using-the-windows-search-for-fast-start-program/" target="_blank"><strong>巧用Windows下的搜索实现快速启动程序</strong></a>）提到了一种快速启动方式，但我每次都要手动去进行这个操作。
 
 例如 Visual Studio 2012.lnk 这个快捷方式，我先要手动改成 [VS]Visual Studio 2012.lnk，然后再复制到指定的目录。那这个过程能不能自动化？当然是可以的，后来自己写了一个工具，以后只要“右键发送到”，然后可以只能提取首字母、只能提起中文拼音首字母，也可以手动输入缩写。
 

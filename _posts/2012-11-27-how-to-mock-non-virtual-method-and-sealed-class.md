@@ -76,7 +76,7 @@ tags:
 
 很常见的问题，没有接口，那如何 <a href="http://zh.wikipedia.org/wiki/%E6%A8%A1%E6%8B%9F%E5%AF%B9%E8%B1%A1" target="_blank"><strong>Mock</strong></a> 非虚方法和<a href="http://msdn.microsoft.com/zh-cn/library/ms173150(v=vs.80).aspx" target="_blank"><strong>密封类</strong></a>？
 
-我在上一篇文章（<a title="单元测试有感" href="http://www.dozer.cc/2012/11/thinking-in-unit-test/" target="_blank"><strong>单元测试有感</strong></a>）中介绍了单元测试的原则，也提到了一些技巧，但是代码是以前写的，总会有很多不能克服的地方，还有也不可能把所有的方法改成 <span style="background-color: #eeeeee;">vitrual </span>，或者所有的类都有接口。
+我在上一篇文章（<a title="单元测试有感" href="/2012/11/thinking-in-unit-test/" target="_blank"><strong>单元测试有感</strong></a>）中介绍了单元测试的原则，也提到了一些技巧，但是代码是以前写的，总会有很多不能克服的地方，还有也不可能把所有的方法改成 <span style="background-color: #eeeeee;">vitrual </span>，或者所有的类都有接口。
 
 &nbsp;
 
