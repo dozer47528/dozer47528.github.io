@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/03/async-and-await-in-web-application/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103977143186
 categories:
   - 编程技术
 tags:

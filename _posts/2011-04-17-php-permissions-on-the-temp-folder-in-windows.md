@@ -3,8 +3,6 @@ title: Windows 下 Php 网站 Temp 文件夹的权限问题
 author: Dozer
 layout: post
 permalink: /2011/04/php-permissions-on-the-temp-folder-in-windows/
-duoshuo_thread_id:
-  - 1171159103977075172
 posturl_add_url:
   - yes
 categories:

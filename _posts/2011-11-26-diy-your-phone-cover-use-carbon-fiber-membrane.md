@@ -5,8 +5,6 @@ layout: post
 permalink: /2011/11/diy-your-phone-cover-use-carbon-fiber-membrane/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103977075191
 categories:
   - 大杂烩
 tags:

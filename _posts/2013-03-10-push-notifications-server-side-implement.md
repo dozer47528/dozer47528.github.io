@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/03/push-notifications-server-side-implement/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658360
 categories:
   - 编程技术
 tags:

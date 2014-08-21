@@ -3,8 +3,6 @@ title: 关于一个2.0下实现扩展方法所引发的错误
 author: Dozer
 layout: post
 permalink: /2011/12/the-error-of-extensionattribute/
-duoshuo_thread_id:
-  - 1171159103977075192
 posturl_add_url:
   - yes
 categories:

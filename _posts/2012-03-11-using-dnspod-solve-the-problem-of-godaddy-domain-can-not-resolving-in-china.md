@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/03/using-dnspod-solve-the-problem-of-godaddy-domain-can-not-resolving-in-china/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103977180258
 categories:
   - 互联网
 tags:

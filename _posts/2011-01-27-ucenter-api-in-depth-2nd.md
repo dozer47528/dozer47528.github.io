@@ -3,8 +3,6 @@ title: 深入研究 UCenter API 之 通讯原理
 author: Dozer
 layout: post
 permalink: /2011/01/ucenter-api-in-depth-2nd/
-duoshuo_thread_id:
-  - 1171159103977075155
 posturl_add_url:
   - yes
 categories:

@@ -3,8 +3,6 @@ title: jQuery UI CSS Framework 文档 翻译
 author: Dozer
 layout: post
 permalink: /2011/04/translate-jquery-ui-css-framework-docs/
-duoshuo_thread_id:
-  - 1171159103977075170
 posturl_add_url:
   - yes
 categories:

@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/09/entity-framework-code-first-configuring-relationships/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985008120
 categories:
   - 编程技术
 tags:

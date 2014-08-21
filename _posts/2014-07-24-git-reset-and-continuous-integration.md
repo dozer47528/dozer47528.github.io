@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/07/git-reset-and-continuous-integration/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658392
 categories:
   - 编程技术
 tags:

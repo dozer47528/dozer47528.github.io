@@ -3,8 +3,6 @@ title: 在IIS6下运行MVC架构的网站
 author: Dozer
 layout: post
 permalink: /2010/02/run-mvc-in-iis6/
-duoshuo_thread_id:
-  - 1171159103977075146
 posturl_add_url:
   - yes
 categories:

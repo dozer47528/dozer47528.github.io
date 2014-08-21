@@ -3,8 +3,6 @@ title: 关闭鸡肋功能，彻底清理C盘
 author: Dozer
 layout: post
 permalink: /2011/02/cleaning-disk-c/
-duoshuo_thread_id:
-  - 1171159103977075165
 posturl_add_url:
   - yes
 categories:

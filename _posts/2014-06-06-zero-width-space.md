@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/06/zero-width-space/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658388
 categories:
   - 编程技术
 tags:

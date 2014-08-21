@@ -3,8 +3,6 @@ title: CyanogenMod For Desire 6.1.1 下载
 author: Dozer
 layout: post
 permalink: /2011/01/cyanogenmod-for-desire-6-1-1-download/
-duoshuo_thread_id:
-  - 1171159103977075154
 posturl_add_url:
   - yes
 categories:

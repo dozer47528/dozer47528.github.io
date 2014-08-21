@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/07/dp-hackathon/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658391
 categories:
   - 大杂烩
 tags:

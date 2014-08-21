@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/10/linq-to-salesforce-toolkit/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658345
 categories:
   - 编程技术
 tags:

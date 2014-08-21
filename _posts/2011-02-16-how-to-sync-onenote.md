@@ -3,8 +3,6 @@ title: 如何同步 OneNote ？
 author: Dozer
 layout: post
 permalink: /2011/02/how-to-sync-onenote/
-duoshuo_thread_id:
-  - 1171159103977075164
 posturl_add_url:
   - yes
 categories:

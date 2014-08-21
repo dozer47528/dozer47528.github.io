@@ -3,8 +3,6 @@ title: 深入研究 UCenter API 之 加密与解密
 author: Dozer
 layout: post
 permalink: /2011/01/ucenter-api-in-depth-3rd/
-duoshuo_thread_id:
-  - 1171159103977075163
 posturl_add_url:
   - yes
 categories:

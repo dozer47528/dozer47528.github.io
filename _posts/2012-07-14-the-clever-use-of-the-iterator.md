@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/07/the-clever-use-of-the-iterator/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103981243063
 categories:
   - 编程技术
 tags:

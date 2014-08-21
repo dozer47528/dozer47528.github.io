@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/02/site-domain/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658355
 categories:
   - 互联网
 tags:

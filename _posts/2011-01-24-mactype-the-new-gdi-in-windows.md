@@ -3,8 +3,6 @@ title: MacType！让Windows下的字体渲染效果超越MAC！
 author: Dozer
 layout: post
 permalink: /2011/01/mactype-the-new-gdi-in-windows/
-duoshuo_thread_id:
-  - 1171159103977075158
 posturl_add_url:
   - yes
 categories:

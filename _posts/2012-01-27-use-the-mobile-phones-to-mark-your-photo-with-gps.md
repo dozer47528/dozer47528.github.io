@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/01/use-the-mobile-phones-to-mark-your-photo-with-gps/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103977075198
 categories:
   - 手机
   - 软件

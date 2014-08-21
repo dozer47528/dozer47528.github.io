@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/05/phonegap-and-application-cache/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658363
 categories:
   - 编程技术
 tags:

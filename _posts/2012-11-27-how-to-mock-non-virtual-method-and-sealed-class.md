@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/11/how-to-mock-non-virtual-method-and-sealed-class/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658351
 categories:
   - 编程技术
 tags:

@@ -3,8 +3,6 @@ title: 翔工作室皇藏峪之行
 author: Dozer
 layout: post
 permalink: /2011/08/huangcangyu/
-duoshuo_thread_id:
-  - 1171159103977075186
 posturl_add_url:
   - yes
 categories:

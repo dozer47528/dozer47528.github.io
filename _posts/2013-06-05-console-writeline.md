@@ -11,8 +11,6 @@ wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
   - 
-duoshuo_thread_id:
-  - 1171159103985658368
 categories:
   - 编程技术
 tags:

@@ -11,8 +11,6 @@ wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
   - 
-duoshuo_thread_id:
-  - 1171159103985658372
 categories:
   - 大杂烩
 tags:

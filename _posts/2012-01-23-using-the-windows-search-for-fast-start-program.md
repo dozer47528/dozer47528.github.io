@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/01/using-the-windows-search-for-fast-start-program/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103977075196
 categories:
   - 操作系统
 tags:

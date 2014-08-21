@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/07/use-git-to-share-config/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658390
 categories:
   - 操作系统
 tags:

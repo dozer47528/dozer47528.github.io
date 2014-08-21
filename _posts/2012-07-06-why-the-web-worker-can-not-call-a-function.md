@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/07/why-the-web-worker-can-not-call-a-function/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103980681366
 categories:
   - 编程技术
 tags:

@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/01/the-advantages-of-short-function/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103977075195
 categories:
   - 编程技术
 tags:

@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/03/sync-multi-calendar-in-wp/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103977574155
 categories:
   - 手机
 tags:

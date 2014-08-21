@@ -3,8 +3,6 @@ title: Android系统中电子邮件的解决方案
 author: Dozer
 layout: post
 permalink: /2011/07/email-solution-in-android/
-duoshuo_thread_id:
-  - 1171159103977075180
 posturl_add_url:
   - yes
 categories:

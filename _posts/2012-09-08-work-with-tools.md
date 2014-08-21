@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/09/work-with-tools/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103984683650
 categories:
   - 大杂烩
 tags:

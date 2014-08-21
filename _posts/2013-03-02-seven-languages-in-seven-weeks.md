@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/03/seven-languages-in-seven-weeks/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658359
 categories:
   - 大杂烩
 tags:

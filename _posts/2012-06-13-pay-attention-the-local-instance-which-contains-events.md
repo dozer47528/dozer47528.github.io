@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/06/pay-attention-the-local-instance-which-contains-events/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103979703995
 categories:
   - 编程技术
 tags:

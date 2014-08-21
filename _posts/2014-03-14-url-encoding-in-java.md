@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/03/url-encoding-in-java/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658383
 categories:
   - 编程技术
 tags:

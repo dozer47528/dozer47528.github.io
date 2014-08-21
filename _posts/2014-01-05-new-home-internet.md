@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/01/new-home-internet/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658379
 categories:
   - 互联网
 tags:

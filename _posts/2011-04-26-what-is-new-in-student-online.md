@@ -3,8 +3,6 @@ title: 学生在线更新了什么？
 author: Dozer
 layout: post
 permalink: /2011/04/what-is-new-in-student-online/
-duoshuo_thread_id:
-  - 1171159103977075173
 posturl_add_url:
   - yes
 categories:

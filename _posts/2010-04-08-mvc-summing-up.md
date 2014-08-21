@@ -3,8 +3,6 @@ title: MVC 小技巧总结
 author: Dozer
 layout: post
 permalink: /2010/04/mvc-summing-up/
-duoshuo_thread_id:
-  - 1171159103977075148
 posturl_add_url:
   - yes
 categories:

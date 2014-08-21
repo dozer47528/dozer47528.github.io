@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/11/google-analytics-dmensions/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658377
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

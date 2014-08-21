@@ -3,8 +3,6 @@ title: 技术人如何提升自己
 author: Dozer
 layout: post
 permalink: /2011/10/how-to-improve-your-own/
-duoshuo_thread_id:
-  - 1171159103977075187
 posturl_add_url:
   - yes
 categories:

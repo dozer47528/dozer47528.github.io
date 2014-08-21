@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/07/lazy-load-and-lazy-evaluation-queries/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103980592383
 categories:
   - 编程技术
 tags:

@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/10/dynamic-query/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658346
 categories:
   - 编程技术
 tags:

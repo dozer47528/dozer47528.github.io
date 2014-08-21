@@ -3,8 +3,6 @@ title: 深入研究 UCenter API 之 MVC 网站下的用法
 author: Dozer
 layout: post
 permalink: /2011/04/ucenter-api-in-depth-5th/
-duoshuo_thread_id:
-  - 1171159103977075174
 posturl_add_url:
   - yes
 categories:

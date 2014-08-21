@@ -3,8 +3,6 @@ title: 利用 bat 文件制作 HOSTS 快速切换器
 author: Dozer
 layout: post
 permalink: /2011/07/use-bat-to-make-hosts-switch/
-duoshuo_thread_id:
-  - 1171159103977075181
 posturl_add_url:
   - yes
 categories:

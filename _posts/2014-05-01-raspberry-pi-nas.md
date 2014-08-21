@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/05/raspberry-pi-nas/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658386
 categories:
   - 数码产品
 tags:

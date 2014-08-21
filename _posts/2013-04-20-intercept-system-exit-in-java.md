@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/04/intercept-system-exit-in-java/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658362
 categories:
   - 编程技术
 tags:

@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/01/hack-a-new-year/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658353
 categories:
   - 大杂烩
 tags:

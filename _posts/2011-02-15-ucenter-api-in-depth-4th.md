@@ -3,8 +3,6 @@ title: 深入研究 UCenter API 之 网站搭建
 author: Dozer
 layout: post
 permalink: /2011/02/ucenter-api-in-depth-4th/
-duoshuo_thread_id:
-  - 1171159103977075162
 posturl_add_url:
   - yes
 categories:

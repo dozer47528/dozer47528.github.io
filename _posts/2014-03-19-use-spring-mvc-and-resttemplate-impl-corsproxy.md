@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/03/use-spring-mvc-and-resttemplate-impl-corsproxy/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658384
 categories:
   - 编程技术
 tags:

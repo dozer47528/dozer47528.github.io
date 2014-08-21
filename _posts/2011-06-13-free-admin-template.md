@@ -3,8 +3,6 @@ title: '免费后台模板 推荐&#038;下载'
 author: Dozer
 layout: post
 permalink: /2011/06/free-admin-template/
-duoshuo_thread_id:
-  - 1171159103977075178
 posturl_add_url:
   - yes
 categories:

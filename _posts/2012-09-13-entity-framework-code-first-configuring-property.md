@@ -5,8 +5,6 @@ layout: post
 permalink: /2012/09/entity-framework-code-first-configuring-property/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103984950560
 categories:
   - 编程技术
 tags:

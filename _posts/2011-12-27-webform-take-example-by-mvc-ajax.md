@@ -3,8 +3,6 @@ title: 那些 WebForm 可以从 MVC 借鉴的东西 —— Ajax
 author: Dozer
 layout: post
 permalink: /2011/12/webform-take-example-by-mvc-ajax/
-duoshuo_thread_id:
-  - 1171159103977075193
 posturl_add_url:
   - yes
 categories:

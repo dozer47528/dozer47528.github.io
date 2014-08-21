@@ -5,8 +5,6 @@ layout: post
 permalink: /2013/02/site-hosting-and-vps/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658356
 categories:
   - 互联网
 tags:

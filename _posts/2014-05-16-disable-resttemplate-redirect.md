@@ -5,8 +5,6 @@ layout: post
 permalink: /2014/05/disable-resttemplate-redirect/
 posturl_add_url:
   - yes
-duoshuo_thread_id:
-  - 1171159103985658387
 categories:
   - 编程技术
 tags:

@@ -3,8 +3,6 @@ title: 用好 Google.com
 author: Dozer
 layout: post
 permalink: /2011/11/use-google-in-china/
-duoshuo_thread_id:
-  - 1171159103977075190
 posturl_add_url:
   - yes
 categories:
