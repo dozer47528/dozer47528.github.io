@@ -17,34 +17,6 @@ tags:
   - 值类型
   - 引用类型
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#ref_out"><span class="toc_number toc_depth_1">1</span> ref 和 out 的区别</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 几个简单的演示</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 问题一：关于值类型</a><ul>
-        <li>
-          <a href="#i-3"><span class="toc_number toc_depth_2">3.1</span> 个人总结有几个原则：</a>
-        </li>
-        <li>
-          <a href="#i-4"><span class="toc_number toc_depth_2">3.2</span> 总结：</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#i-5"><span class="toc_number toc_depth_1">4</span> 问题二：关于引用类型</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="ref_out">ref 和 out 的区别</span>
 

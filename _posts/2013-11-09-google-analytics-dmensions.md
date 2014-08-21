@@ -19,26 +19,6 @@ tags:
   - Google
   - Google Analytics
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 什么是自定义维度</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 维度的坑</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 适用范围和优先级</a>
-    </li>
-    <li>
-      <a href="#_Session"><span class="toc_number toc_depth_1">4</span> 让你的 Session 不再被遗漏</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">什么是自定义维度</span>
 

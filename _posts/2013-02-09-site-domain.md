@@ -13,32 +13,6 @@ tags:
   - DNS
   - 域名
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 漫漫长路</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 域名在哪买？</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 那种域名好？</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">4</span> 域名需要多少钱？</a>
-    </li>
-    <li>
-      <a href="#i-5"><span class="toc_number toc_depth_1">5</span> 买了域名可以做什么？</a>
-    </li>
-    <li>
-      <a href="#_NameServer"><span class="toc_number toc_depth_1">6</span> 关于 NameServer</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">漫漫长路</span>
 

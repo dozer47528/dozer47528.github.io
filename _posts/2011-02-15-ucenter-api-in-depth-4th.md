@@ -14,23 +14,6 @@ tags:
   - Discuz
   - Ucenter
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 康盛旗下产品的搭建</a>
-    </li>
-    <li>
-      <a href="#Aspnet"><span class="toc_number toc_depth_1">2</span> Asp.net 测试网站的搭建</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 类库的使用方法</a>
-    </li>
-  </ul>
-</div>
 
 <div>
   <blockquote>

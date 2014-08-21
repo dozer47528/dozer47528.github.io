@@ -14,23 +14,6 @@ tags:
   - Discuz
   - Ucenter
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#UCenter"><span class="toc_number toc_depth_1">1</span> UCenter 通讯基本原理</a>
-    </li>
-    <li>
-      <a href="#UCenter-2"><span class="toc_number toc_depth_1">2</span> UCenter 多点登录的原理及过程</a>
-    </li>
-    <li>
-      <a href="#AuthCode"><span class="toc_number toc_depth_1">3</span> AuthCode函数</a>
-    </li>
-  </ul>
-</div>
 
 > **目录：**
 > 

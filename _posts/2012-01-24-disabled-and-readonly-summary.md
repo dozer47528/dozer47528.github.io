@@ -15,31 +15,6 @@ tags:
   - javascript
   - WebForm
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 问题重现</a><ul>
-        <li>
-          <a href="#disabled_readonly"><span class="toc_number toc_depth_2">1.1</span> disabled 和 readonly 的提交问题</a>
-        </li>
-        <li>
-          <a href="#readonly_Aspnet"><span class="toc_number toc_depth_2">1.2</span> readonly 在 Asp.net 中的问题</a>
-        </li>
-        <li>
-          <a href="#checkbox_radio_readonly"><span class="toc_number toc_depth_2">1.3</span> checkbox, radio 等控件无法设置 readonly 的问题</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 总结</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">问题重现</span>
 

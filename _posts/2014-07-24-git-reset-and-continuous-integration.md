@@ -14,34 +14,6 @@ tags:
   - Jenkins
   - 持续集成
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 持续集成</a>
-    </li>
-    <li>
-      <a href="#reset_and_revert"><span class="toc_number toc_depth_1">2</span> reset and revert</a><ul>
-        <li>
-          <a href="#commit"><span class="toc_number toc_depth_2">2.1</span> 如果`commit`没有提交</a>
-        </li>
-        <li>
-          <a href="#i-2"><span class="toc_number toc_depth_2">2.2</span> 如果回退到了比远程更早的版本</a>
-        </li>
-        <li>
-          <a href="#i-3"><span class="toc_number toc_depth_2">2.3</span> 如果别人拉取了你回退的版本</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#CI"><span class="toc_number toc_depth_1">3</span> 别把CI不当人</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">持续集成</span>
 

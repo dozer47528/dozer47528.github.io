@@ -14,23 +14,6 @@ tags:
   - 磁盘
   - 缓存
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 大内存如何设置虚拟内存</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 用内存做磁盘</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 用内存做磁盘缓存</a>
-    </li>
-  </ul>
-</div>
 
 现在的内存啊，主流都是4G，两根4G的DDR3 1333内存也才300元，150就可以买一根了~真是白菜价啊~
 

@@ -20,23 +20,6 @@ tags:
   - IIS
   - IIS6
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 错误现象</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 为什么会出错？</a>
-    </li>
-    <li>
-      <a href="#100_Continue_Status"><span class="toc_number toc_depth_1">3</span> 100 (Continue) Status</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">错误现象</span>
 

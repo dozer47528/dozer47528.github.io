@@ -14,26 +14,6 @@ tags:
   - MVC
   - WebForm
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 前言</a>
-    </li>
-    <li>
-      <a href="#Routing"><span class="toc_number toc_depth_1">2</span> Routing</a>
-    </li>
-    <li>
-      <a href="#_WebForm_Routing"><span class="toc_number toc_depth_1">3</span> 在 WebForm 中使用 Routing 功能</a>
-    </li>
-    <li>
-      <a href="#_Routing_Url"><span class="toc_number toc_depth_1">4</span> 根据 Routing 设定生成 Url</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">前言</span>
 

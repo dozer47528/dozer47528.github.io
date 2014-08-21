@@ -13,23 +13,6 @@ tags:
   - GFW
   - Google
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 墙内墙外</a>
-    </li>
-    <li>
-      <a href="#_Googlecom_Googlecomhk"><span class="toc_number toc_depth_1">2</span> 用好 Google.com 而不是 Google.com.hk</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 如何防止关键字屏蔽</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">墙内墙外</span>
 

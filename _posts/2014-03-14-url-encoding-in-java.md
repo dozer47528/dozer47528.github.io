@@ -12,23 +12,6 @@ categories:
 tags:
   - java
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#URL"><span class="toc_number toc_depth_1">1</span> URL编码</a>
-    </li>
-    <li>
-      <a href="#encodeURI_encodeURIComponent"><span class="toc_number toc_depth_1">2</span> encodeURI 和 encodeURIComponent</a>
-    </li>
-    <li>
-      <a href="#Java"><span class="toc_number toc_depth_1">3</span> Java 中遇到的问题</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="URL">URL编码</span>
 

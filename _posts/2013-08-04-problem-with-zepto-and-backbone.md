@@ -19,23 +19,6 @@ tags:
   - javascript
   - zepto
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 问题代码</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 问题根源</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 解决办法</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">问题代码</span>
 

@@ -14,26 +14,6 @@ categories:
 tags:
   - html
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 开篇</a>
-    </li>
-    <li>
-      <a href="#_Word"><span class="toc_number toc_depth_1">2</span> 为什么网页上的富文本编辑器不识 Word ？</a>
-    </li>
-    <li>
-      <a href="#_Word-2"><span class="toc_number toc_depth_1">3</span> 为什么 Word 中的图片不能粘贴进去？</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">4</span> 为什么在编辑器里好好的，在网页中却会变？</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">开篇</span>
 

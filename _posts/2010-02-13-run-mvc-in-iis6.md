@@ -13,26 +13,6 @@ tags:
   - IIS6
   - MVC
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#1bin"><span class="toc_number toc_depth_1">1</span> 1、复制几个缺失的运行库到bin文件夹</a>
-    </li>
-    <li>
-      <a href="#2Defaultaspx"><span class="toc_number toc_depth_1">2</span> 2、在根目录新建Default.aspx页面，并在后台写入代码</a>
-    </li>
-    <li>
-      <a href="#3Route"><span class="toc_number toc_depth_1">3</span> 3、设置Route路由表</a>
-    </li>
-    <li>
-      <a href="#4"><span class="toc_number toc_depth_1">4</span> 4、结束语</a>
-    </li>
-  </ul>
-</div>
 
 > 我为什么要写这个教程呢？
 > 

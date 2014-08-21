@@ -12,26 +12,6 @@ categories:
 tags:
   - Hackathon
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 极客世界杯</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 阿根廷代表队</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 墨西哥代表队</a>
-    </li>
-    <li>
-      <a href="#Just_for_Fun"><span class="toc_number toc_depth_1">4</span> Just for Fun</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">极客世界杯</span>
 

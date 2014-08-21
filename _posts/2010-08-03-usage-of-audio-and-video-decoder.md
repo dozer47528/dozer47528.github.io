@@ -13,26 +13,6 @@ tags:
   - Mediacoder
   - 解码器
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 一、开源？免费？怎么用啊…</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 二、如何获得帮助文档</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 三、是否有捷径？</a>
-    </li>
-    <li>
-      <a href="#C"><span class="toc_number toc_depth_1">4</span> 四、C#中调用</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i"><strong>一、开源？免费？怎么用啊…</strong></span>
 

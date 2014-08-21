@@ -15,38 +15,6 @@ tags:
   - jQuery
   - jQuery UI
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#jQuery_UI_CSS_Framework"><span class="toc_number toc_depth_1">1</span> jQuery UI CSS Framework</a>
-    </li>
-    <li>
-      <a href="#Framework_Classes"><span class="toc_number toc_depth_1">2</span> Framework Classes</a>
-    </li>
-    <li>
-      <a href="#Layout_Helpers"><span class="toc_number toc_depth_1">3</span> Layout Helpers</a>
-    </li>
-    <li>
-      <a href="#Widget_Containers"><span class="toc_number toc_depth_1">4</span> Widget Containers</a>
-    </li>
-    <li>
-      <a href="#Interaction_States"><span class="toc_number toc_depth_1">5</span> Interaction States</a>
-    </li>
-    <li>
-      <a href="#Interaction_Cues"><span class="toc_number toc_depth_1">6</span> Interaction Cues</a>
-    </li>
-    <li>
-      <a href="#Icons"><span class="toc_number toc_depth_1">7</span> Icons</a>
-    </li>
-    <li>
-      <a href="#Misc_Visuals"><span class="toc_number toc_depth_1">8</span> Misc Visuals</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="jQuery_UI_CSS_Framework">jQuery UI CSS Framework</span>
 

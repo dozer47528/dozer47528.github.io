@@ -14,39 +14,6 @@ tags:
   - java
   - Spring
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#CORS_PROXY"><span class="toc_number toc_depth_1">1</span> CORS PROXY 是什么</a>
-    </li>
-    <li>
-      <a href="#CORS_PROXY-2"><span class="toc_number toc_depth_1">2</span> CORS PROXY 实现原理</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">3</span> 一些注意事项</a><ul>
-        <li>
-          <a href="#i-2"><span class="toc_number toc_depth_2">3.1</span> 编码问题</a>
-        </li>
-        <li>
-          <a href="#Transfer-Encoding"><span class="toc_number toc_depth_2">3.2</span> Transfer-Encoding</a>
-        </li>
-        <li>
-          <a href="#Content-Length"><span class="toc_number toc_depth_2">3.3</span> Content-Length</a>
-        </li>
-        <li>
-          <a href="#Access-Control-Allow-Origin"><span class="toc_number toc_depth_2">3.4</span> Access-Control-Allow-Origin</a>
-        </li>
-        <li>
-          <a href="#i-3"><span class="toc_number toc_depth_2">3.5</span> 重定向的问题</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
 
 ### <span id="CORS_PROXY">CORS PROXY 是什么</span>
 

@@ -12,23 +12,6 @@ categories:
 tags:
   - HOSTS
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#_HOSTS"><span class="toc_number toc_depth_1">1</span> 切换 HOSTS 文件的困扰</a>
-    </li>
-    <li>
-      <a href="#HOSTS"><span class="toc_number toc_depth_1">2</span> HOSTS 切换软件</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">3</span> 解决方案</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="_HOSTS">切换 HOSTS 文件的困扰</span>
 

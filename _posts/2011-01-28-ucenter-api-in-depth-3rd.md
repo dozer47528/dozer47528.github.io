@@ -14,23 +14,6 @@ tags:
   - Discuz
   - Ucenter
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#AuthCode"><span class="toc_number toc_depth_1">1</span> AuthCode</a>
-    </li>
-    <li>
-      <a href="#PHP"><span class="toc_number toc_depth_1">2</span> PHP 版详解</a>
-    </li>
-    <li>
-      <a href="#C"><span class="toc_number toc_depth_1">3</span> C# 版</a>
-    </li>
-  </ul>
-</div>
 
 <div>
   <blockquote>

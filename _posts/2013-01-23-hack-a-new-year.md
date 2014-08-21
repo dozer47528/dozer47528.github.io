@@ -12,26 +12,6 @@ categories:
 tags:
   - Hackathon
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#Hack_a_New_Year"><span class="toc_number toc_depth_1">1</span> Hack a New Year</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 我们做了什么？</a>
-    </li>
-    <li>
-      <a href="#24"><span class="toc_number toc_depth_1">3</span> 24小时</a>
-    </li>
-    <li>
-      <a href="#_Hackathon"><span class="toc_number toc_depth_1">4</span> 说说上次的 Hackathon</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="Hack_a_New_Year">Hack a New Year</span>
 

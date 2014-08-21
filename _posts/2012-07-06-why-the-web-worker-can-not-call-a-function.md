@@ -13,26 +13,6 @@ tags:
   - HTML5
   - javascript
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#Web_Worker"><span class="toc_number toc_depth_1">1</span> Web Worker 的奇怪用法</a>
-    </li>
-    <li>
-      <a href="#Web_Worker-2"><span class="toc_number toc_depth_1">2</span> Web Worker 实现原理猜想</a>
-    </li>
-    <li>
-      <a href="#Web_Worker-3"><span class="toc_number toc_depth_1">3</span> Web Worker 实现原理猜想试验</a>
-    </li>
-    <li>
-      <a href="#Web_Worker-4"><span class="toc_number toc_depth_1">4</span> Web Worker 设计原理</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="Web_Worker">Web Worker 的奇怪用法</span>
 

@@ -15,29 +15,6 @@ tags:
   - PushMail
   - QQ邮箱
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 纠结的电子邮件使用体验</a>
-    </li>
-    <li>
-      <a href="#K-9_Mail"><span class="toc_number toc_depth_1">2</span> K-9 Mail</a>
-    </li>
-    <li>
-      <a href="#K-9_Mail-2"><span class="toc_number toc_depth_1">3</span> K-9 Mail 特色</a>
-    </li>
-    <li>
-      <a href="#K-9_Mail-3"><span class="toc_number toc_depth_1">4</span> K-9 Mail 设置指点</a>
-    </li>
-    <li>
-      <a href="#_IMAP_IDLE"><span class="toc_number toc_depth_1">5</span> 什么是 IMAP IDLE</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">纠结的电子邮件使用体验</span>
 

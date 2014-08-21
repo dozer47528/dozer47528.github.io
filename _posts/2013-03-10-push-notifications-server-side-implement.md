@@ -19,26 +19,6 @@ tags:
   - Push Notifications
   - 推送
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#Apple_Push_Notification_Service"><span class="toc_number toc_depth_1">1</span> Apple Push Notification Service</a>
-    </li>
-    <li>
-      <a href="#Push_Sharp"><span class="toc_number toc_depth_1">2</span> Push Sharp</a>
-    </li>
-    <li>
-      <a href="#APNS_Java"><span class="toc_number toc_depth_1">3</span> APNS Java</a>
-    </li>
-    <li>
-      <a href="#Php"><span class="toc_number toc_depth_1">4</span> Php 实现</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="Apple_Push_Notification_Service">Apple Push Notification Service</span>
 

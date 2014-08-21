@@ -14,29 +14,6 @@ tags:
   - MVC
   - 数据验证
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#Unobtrusive_JavaScript"><span class="toc_number toc_depth_1">1</span> Unobtrusive JavaScript 是什么？</a>
-    </li>
-    <li>
-      <a href="#Unobtrusive_JavaScriptin_ASPNET_MVC_3"><span class="toc_number toc_depth_1">2</span> Unobtrusive JavaScriptin ASP.NET MVC 3</a>
-    </li>
-    <li>
-      <a href="#Unobtrusive_Ajax_in_ASPNET_MVC_3"><span class="toc_number toc_depth_1">3</span> Unobtrusive Ajax in ASP.NET MVC 3</a>
-    </li>
-    <li>
-      <a href="#Unobtrusive_Client_Validation_in_ASPNET_MVC_3"><span class="toc_number toc_depth_1">4</span> Unobtrusive Client Validation in ASP.NET MVC 3</a>
-    </li>
-    <li>
-      <a href="#ENDING"><span class="toc_number toc_depth_1">5</span> ENDING</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="Unobtrusive_JavaScript">Unobtrusive JavaScript 是什么？</span>
 

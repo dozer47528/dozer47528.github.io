@@ -13,32 +13,6 @@ tags:
   - Asp.net
   - MVC
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#1IISIIS6MVC"><span class="toc_number toc_depth_1">1</span> 1、不对IIS做任何修改，如何在IIS6下运行MVC？</a>
-    </li>
-    <li>
-      <a href="#2AreasController"><span class="toc_number toc_depth_1">2</span> 2、不同Areas的Controller重复导致的问题</a>
-    </li>
-    <li>
-      <a href="#3Filter"><span class="toc_number toc_depth_1">3</span> 3、关于Filter</a>
-    </li>
-    <li>
-      <a href="#4MVCjs"><span class="toc_number toc_depth_1">4</span> 4、MVC中控制js代码（修改版）</a>
-    </li>
-    <li>
-      <a href="#5WebDebugconfig_WebReleaseconfig"><span class="toc_number toc_depth_1">5</span> 5、Web.Debug.config 和 Web.Release.config 的用法</a>
-    </li>
-    <li>
-      <a href="#6MVC"><span class="toc_number toc_depth_1">6</span> 6、MVC中捕捉错误</a>
-    </li>
-  </ul>
-</div>
 
 > 刚用MVC完成了一个小项目，MVC技术又有了一次提升，所以，再次写一点总结性的东西。
 > 

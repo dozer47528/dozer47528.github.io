@@ -18,23 +18,6 @@ tags:
   - 延迟求值查询
   - 迭代器
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 上期回顾</a>
-    </li>
-    <li>
-      <a href="#Salesforce_API"><span class="toc_number toc_depth_1">2</span> Salesforce API 的调用</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 利用迭代器封装细节</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">上期回顾</span>
 

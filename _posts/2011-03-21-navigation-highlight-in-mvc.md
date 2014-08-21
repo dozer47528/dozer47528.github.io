@@ -14,26 +14,6 @@ tags:
   - MVC
   - 导航
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 前言</a>
-    </li>
-    <li>
-      <a href="#_eval"><span class="toc_number toc_depth_1">2</span> 神奇的 eval 函数</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 解决方案</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">4</span> 高级应用</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">前言</span>
 

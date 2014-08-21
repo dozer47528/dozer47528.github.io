@@ -14,29 +14,6 @@ tags:
   - MVC
   - WebForm
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 前言</a>
-    </li>
-    <li>
-      <a href="#MVC"><span class="toc_number toc_depth_1">2</span> MVC 和 三层架构的区别</a>
-    </li>
-    <li>
-      <a href="#_WebForm_MVC"><span class="toc_number toc_depth_1">3</span> 为什么要在 WebForm 中借鉴 MVC 的思想</a>
-    </li>
-    <li>
-      <a href="#_WebForm_MVC-2"><span class="toc_number toc_depth_1">4</span> 怎么在 WebForm 借鉴 MVC</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">5</span> 更多…</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">前言</span>
 

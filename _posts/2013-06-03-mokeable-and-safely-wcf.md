@@ -20,23 +20,6 @@ tags:
   - Mock
   - WCF
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#WCF_using"><span class="toc_number toc_depth_1">1</span> WCF 的问题和 using 语句块</a>
-    </li>
-    <li>
-      <a href="#WCF_Mock"><span class="toc_number toc_depth_1">2</span> WCF 与 Mock</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">3</span> 改良版</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="WCF_using">WCF 的问题和 using 语句块</span>
 

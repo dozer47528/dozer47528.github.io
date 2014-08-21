@@ -17,26 +17,6 @@ tags:
   - VisualSVN
   - 版本控制
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#SVN"><span class="toc_number toc_depth_1">1</span> SVN 是什么？</a>
-    </li>
-    <li>
-      <a href="#SVN-2"><span class="toc_number toc_depth_1">2</span> SVN 从哪里下载？</a>
-    </li>
-    <li>
-      <a href="#_VisualSVN"><span class="toc_number toc_depth_1">3</span> 利用 VisualSVN 搭建服务端</a>
-    </li>
-    <li>
-      <a href="#_ankhsvn_SVN_Visual_Studio"><span class="toc_number toc_depth_1">4</span> 利用 ankhsvn 将 SVN 与 Visual Studio 结合</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="SVN">SVN 是什么？</span>
 

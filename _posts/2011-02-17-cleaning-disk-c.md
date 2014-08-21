@@ -13,23 +13,6 @@ tags:
   - Windows
   - Windows7
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 前言</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 关闭休眠</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 关闭错误转储文件</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">前言</span>
 

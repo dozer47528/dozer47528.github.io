@@ -13,36 +13,6 @@ tags:
   - DNS
   - Godaddy
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 我们是共产主义的接班人</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 出了什么问题</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 如何解决</a>
-    </li>
-    <li>
-      <a href="#DNSPod"><span class="toc_number toc_depth_1">4</span> DNSPod</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">5</span> 使用感受</a><ul>
-        <li>
-          <a href="#i-5"><span class="toc_number toc_depth_2">5.1</span> 界面：</a>
-        </li>
-        <li>
-          <a href="#i-6"><span class="toc_number toc_depth_2">5.2</span> 附加功能：</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">我们是共产主义的接班人</span>
 

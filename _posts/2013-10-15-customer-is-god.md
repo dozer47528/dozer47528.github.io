@@ -18,32 +18,6 @@ categories:
 tags:
   - 心灵鸡汤
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 一次不愉快的体验</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 给出解决方案，而不是抱怨</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 你是在造大楼，而不是在砌砖头</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">4</span> 人有分工，但请专业一点</a>
-    </li>
-    <li>
-      <a href="#i-5"><span class="toc_number toc_depth_1">5</span> 最后怎么解决？</a>
-    </li>
-    <li>
-      <a href="#i-6"><span class="toc_number toc_depth_1">6</span> 和工作联系起来</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">一次不愉快的体验</span>
 

@@ -13,26 +13,6 @@ tags:
   - Office
   - OneNote
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#OneNote"><span class="toc_number toc_depth_1">1</span> OneNote是什么？</a>
-    </li>
-    <li>
-      <a href="#_OneNote"><span class="toc_number toc_depth_1">2</span> 如何同步 OneNote</a>
-    </li>
-    <li>
-      <a href="#_OneNote-2"><span class="toc_number toc_depth_1">3</span> 利用内置的同步功能同步 OneNote</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">4</span> 利用其他同步工具</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="OneNote">OneNote是什么？</span>
 

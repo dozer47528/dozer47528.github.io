@@ -16,29 +16,6 @@ tags:
   - 虚拟主机
   - 阿里云
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 何处来安放你，我的网站？</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 家里电脑开着当主机</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 虚拟主机</a>
-    </li>
-    <li>
-      <a href="#VPS"><span class="toc_number toc_depth_1">4</span> VPS</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">5</span> 我的方案</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">何处来安放你，我的网站？</span>
 

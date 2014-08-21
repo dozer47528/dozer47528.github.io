@@ -19,31 +19,6 @@ tags:
   - TDD
   - 重构
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#NB"><span class="toc_number toc_depth_1">1</span> 怎么样才是NB的工程师</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 生活与重构</a><ul>
-        <li>
-          <a href="#Just_Trying_To_Make_IT_Work"><span class="toc_number toc_depth_2">2.1</span> Just Trying To Make IT Work</a>
-        </li>
-        <li>
-          <a href="#Continuous_Improvement"><span class="toc_number toc_depth_2">2.2</span> Continuous Improvement</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 关于效率</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="NB">怎么样才是NB的工程师</span>
 

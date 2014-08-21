@@ -14,35 +14,6 @@ tags:
   - html
   - javascript
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 场景</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 查询设计方案</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 数据结构</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">4</span> 前端设计交互</a>
-    </li>
-    <li>
-      <a href="#i-5"><span class="toc_number toc_depth_1">5</span> 前端数据处理</a>
-    </li>
-    <li>
-      <a href="#i-6"><span class="toc_number toc_depth_1">6</span> 后端数据处理</a>
-    </li>
-    <li>
-      <a href="#i-7"><span class="toc_number toc_depth_1">7</span> 后记</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">场景</span>
 

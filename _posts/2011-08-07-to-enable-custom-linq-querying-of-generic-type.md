@@ -15,26 +15,6 @@ tags:
   - IL
   - LINQ
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#_LINQ"><span class="toc_number toc_depth_1">1</span> 什么类型可以进行 LINQ 查询？</a>
-    </li>
-    <li>
-      <a href="#IL"><span class="toc_number toc_depth_1">2</span> 反编译看IL代码</a>
-    </li>
-    <li>
-      <a href="#_LINQ-2"><span class="toc_number toc_depth_1">3</span> 为自定义类型提供 LINQ 查询</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">4</span> 反思</a>
-    </li>
-  </ul>
-</div>
 
 最近想研究如何自定义 LINQ Provider ，但是一直无法入手，先写点收获吧~
 

@@ -13,29 +13,6 @@ tags:
   - 学生在线
   - 翔工作室
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 新的学生在线</a>
-    </li>
-    <li>
-      <a href="#IPV6"><span class="toc_number toc_depth_1">2</span> IPV6</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 布局调整</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">4</span> 手机版</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">5</span> 结束语</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">新的学生在线</span>
 

@@ -15,32 +15,6 @@ tags:
   - javascript
   - MVC
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#MVC"><span class="toc_number toc_depth_1">1</span> MVC 的优雅</a>
-    </li>
-    <li>
-      <a href="#WebForm"><span class="toc_number toc_depth_1">2</span> WebForm 中就不行了吗？</a>
-    </li>
-    <li>
-      <a href="#_MVC_Ajax"><span class="toc_number toc_depth_1">3</span> 如何实现 MVC 中的 Ajax 用法</a>
-    </li>
-    <li>
-      <a href="#_UserControl"><span class="toc_number toc_depth_1">4</span> 后端输出 UserControl：方法一</a>
-    </li>
-    <li>
-      <a href="#_UserControl-2"><span class="toc_number toc_depth_1">5</span> 后端输出 UserControl：方法二</a>
-    </li>
-    <li>
-      <a href="#_WebForm_MVC_Unobtrusive_JavaScript"><span class="toc_number toc_depth_1">6</span> 如何在 WebForm 中使用 MVC 的 Unobtrusive JavaScript</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="MVC">MVC 的优雅</span>
 

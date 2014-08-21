@@ -20,26 +20,6 @@ tags:
   - Google Analytics
   - PhoneGap
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#_GA"><span class="toc_number toc_depth_1">1</span> 怎么整合 GA</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 移动应用分析</a>
-    </li>
-    <li>
-      <a href="#_PhoneGap"><span class="toc_number toc_depth_1">3</span> 和 PhoneGap 整合</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">4</span> 自定义维度</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="_GA">怎么整合 GA</span>
 

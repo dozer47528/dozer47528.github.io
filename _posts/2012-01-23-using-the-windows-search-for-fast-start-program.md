@@ -13,29 +13,6 @@ tags:
   - Windows
   - 搜索
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 怎么快速启动程序？</a>
-    </li>
-    <li>
-      <a href="#Windows_Vista_Windows_7"><span class="toc_number toc_depth_1">2</span> Windows Vista & Windows 7 内置搜索功能</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 配置内置搜索功能</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">4</span> 让不是开始菜单中的程序也能搜索到</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">5</span> 用中文首字母来搜索应用程序</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">怎么快速启动程序？</span>
 

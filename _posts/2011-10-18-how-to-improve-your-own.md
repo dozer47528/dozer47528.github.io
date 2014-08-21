@@ -15,37 +15,6 @@ tags:
   - 学习能力
   - 面试
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 技术人如何提升自己？</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 三个关键字</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 思维片段</a><ul>
-        <li>
-          <a href="#Q"><span class="toc_number toc_depth_2">3.1</span> Q：我爱好编程，作为初学者我该学什么语言？什么语言有前途？</a>
-        </li>
-        <li>
-          <a href="#Q-2"><span class="toc_number toc_depth_2">3.2</span> Q：相关经验有什么用？企业是怎么看待自己的相关经验的？</a>
-        </li>
-        <li>
-          <a href="#Q-3"><span class="toc_number toc_depth_2">3.3</span> Q：既然说能力是核心，那这里的能力到底有哪些？哪些是最重要的？</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">4</span> 总结</a>
-    </li>
-  </ul>
-</div>
 
 好久没写博客了，从八月底开始一直忙着找招聘、实习、回校、找租房等事情…
 

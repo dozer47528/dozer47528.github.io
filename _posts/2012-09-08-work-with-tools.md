@@ -13,37 +13,6 @@ tags:
   - Facebook
   - 工具
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#Facebook"><span class="toc_number toc_depth_1">1</span> Facebook 的工具思维</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 公司的工具思维</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 我的工具思维</a><ul>
-        <li>
-          <a href="#_bat"><span class="toc_number toc_depth_2">3.1</span> 利用 bat 脚本</a>
-        </li>
-        <li>
-          <a href="#i-3"><span class="toc_number toc_depth_2">3.2</span> 写成软件</a>
-        </li>
-        <li>
-          <a href="#i-4"><span class="toc_number toc_depth_2">3.3</span> 利用脚本语言</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#i-5"><span class="toc_number toc_depth_1">4</span>  结束语</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="Facebook">Facebook 的工具思维</span>
 

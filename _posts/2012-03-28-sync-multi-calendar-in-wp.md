@@ -13,33 +13,6 @@ tags:
   - Google
   - WP7
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#WP7_Google"><span class="toc_number toc_depth_1">1</span> WP7 上同步 Google 服务</a>
-    </li>
-    <li>
-      <a href="#_Google_Calendar"><span class="toc_number toc_depth_1">2</span> 同步多个 Google Calendar</a><ul>
-        <li>
-          <a href="#_WP7_Internet_Explorer_httpmgooglecomsync"><span class="toc_number toc_depth_2">2.1</span> 在 WP7 上的 Internet Explorer 上打开 http://m.google.com/sync</a>
-        </li>
-        <li>
-          <a href="#_Google_Account"><span class="toc_number toc_depth_2">2.2</span> 登陆 Google Account</a>
-        </li>
-        <li>
-          <a href="#_Windows_Phone"><span class="toc_number toc_depth_2">2.3</span> 选择 Windows Phone</a>
-        </li>
-        <li>
-          <a href="#i"><span class="toc_number toc_depth_2">2.4</span> 勾上你需要同步的日历</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
 
 ### <span id="WP7_Google">WP7 上同步 Google 服务</span>
 

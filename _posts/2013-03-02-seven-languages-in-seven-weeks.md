@@ -15,29 +15,6 @@ tags:
   - java
   - 并行
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 七周七语言</a>
-    </li>
-    <li>
-      <a href="#Prolog"><span class="toc_number toc_depth_1">2</span> 约束—逻辑编程(Prolog)</a>
-    </li>
-    <li>
-      <a href="#ScalaErlangClojureHaskell"><span class="toc_number toc_depth_1">3</span> 函数式编程(Scala、Erlang、Clojure、Haskell)</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">4</span> 并发</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">5</span> 范型演进之路</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">七周七语言</span>
 

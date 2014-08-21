@@ -14,23 +14,6 @@ tags:
   - CSharp
   - 读书笔记
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 申明</a>
-    </li>
-    <li>
-      <a href="#C"><span class="toc_number toc_depth_1">2</span> C# 中的相等关系</a>
-    </li>
-    <li>
-      <a href="#Object"><span class="toc_number toc_depth_1">3</span> Object 类型中的两个静态方法</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">申明</span>
 

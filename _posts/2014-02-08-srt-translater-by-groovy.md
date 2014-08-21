@@ -15,26 +15,6 @@ tags:
   - groovy
   - java
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#Google_Translate_Toolkit"><span class="toc_number toc_depth_1">1</span> Google Translate Toolkit</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 思路</a>
-    </li>
-    <li>
-      <a href="#Groovy"><span class="toc_number toc_depth_1">3</span> Groovy</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">4</span> 源代码</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="Google_Translate_Toolkit">Google Translate Toolkit</span>
 

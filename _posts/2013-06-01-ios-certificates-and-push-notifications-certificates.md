@@ -20,37 +20,6 @@ tags:
   - 推送
   - 证书
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#iOS"><span class="toc_number toc_depth_1">1</span> iOS 证书与推送证书</a>
-    </li>
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 基本流程和各个环节的文件</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">3</span> 注意事项</a><ul>
-        <li>
-          <a href="#i-3"><span class="toc_number toc_depth_2">3.1</span> 下载根证书</a>
-        </li>
-        <li>
-          <a href="#i-4"><span class="toc_number toc_depth_2">3.2</span> 一定要把证书放在“登陆”分类中</a>
-        </li>
-        <li>
-          <a href="#i-5"><span class="toc_number toc_depth_2">3.3</span> 别忘了重新生成描述文件</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#i-6"><span class="toc_number toc_depth_1">4</span> 最后</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="iOS">iOS 证书与推送证书</span>
 

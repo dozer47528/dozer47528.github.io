@@ -19,32 +19,6 @@ tags:
   - .Net
   - log4net
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 坑坑坑</a>
-    </li>
-    <li>
-      <a href="#log4net"><span class="toc_number toc_depth_1">2</span> log4net 加载配置的几种方式</a>
-    </li>
-    <li>
-      <a href="#Assembly_Attribute"><span class="toc_number toc_depth_1">3</span> Assembly Attribute</a>
-    </li>
-    <li>
-      <a href="#appconfig"><span class="toc_number toc_depth_1">4</span> app.config 中配置</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">5</span> 显示调用</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">6</span> 最终方案</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">坑坑坑</span>
 

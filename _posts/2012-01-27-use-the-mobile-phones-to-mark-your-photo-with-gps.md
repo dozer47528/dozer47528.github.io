@@ -15,36 +15,6 @@ tags:
   - GPS
   - 摄影
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#Android"><span class="toc_number toc_depth_1">1</span> Android 上记录位置信息的软件</a><ul>
-        <li>
-          <a href="#GeoRecorder"><span class="toc_number toc_depth_2">1.1</span> GeoRecorder</a>
-        </li>
-        <li>
-          <a href="#My_Tracks"><span class="toc_number toc_depth_2">1.2</span> My Tracks</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">2</span> 把地理位置信息写入照片中</a><ul>
-        <li>
-          <a href="#GeoSetter"><span class="toc_number toc_depth_2">2.1</span> GeoSetter</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="#_Google_Earth"><span class="toc_number toc_depth_1">3</span> 在 Google Earth 中回味旅途</a>
-    </li>
-  </ul>
-</div>
 
 现在智能手机上的相机都有一个功能：地理位置标记
 

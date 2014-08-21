@@ -15,35 +15,6 @@ tags:
   - 延迟加载
   - 延迟求值查询
 ---
-<div id="toc_container" class="no_bullets">
-  <p class="toc_title">
-    文章导航
-  </p>
-  
-  <ul class="toc_list">
-    <li>
-      <a href="#i"><span class="toc_number toc_depth_1">1</span> 对延迟加载的片面认识</a>
-    </li>
-    <li>
-      <a href="#i-2"><span class="toc_number toc_depth_1">2</span> 延迟加载的实现原理</a>
-    </li>
-    <li>
-      <a href="#i-3"><span class="toc_number toc_depth_1">3</span> 迭代器与延迟求值查询</a>
-    </li>
-    <li>
-      <a href="#i-4"><span class="toc_number toc_depth_1">4</span> 延迟加载和延迟求值查询的思考</a>
-    </li>
-    <li>
-      <a href="#IQueryableltTgt_IEnumerableltTgt"><span class="toc_number toc_depth_1">5</span> IQueryable<T> 显示转换为 IEnumerable<T> 时出现的问题</a>
-    </li>
-    <li>
-      <a href="#i-5"><span class="toc_number toc_depth_1">6</span> 自己实现延迟求值查询</a>
-    </li>
-    <li>
-      <a href="#i-6"><span class="toc_number toc_depth_1">7</span> 不适用场景</a>
-    </li>
-  </ul>
-</div>
 
 ### <span id="i">对延迟加载的片面认识</span>
 
