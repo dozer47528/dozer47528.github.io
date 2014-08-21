@@ -12,7 +12,7 @@ wpzoom_post_url:
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - IIS
   - IIS6
 ---

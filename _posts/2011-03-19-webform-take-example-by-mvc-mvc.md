@@ -6,7 +6,7 @@ permalink: /2011/03/webform-take-example-by-mvc-mvc/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - MVC
   - WebForm
 ---

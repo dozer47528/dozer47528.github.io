@@ -6,7 +6,7 @@ permalink: /2012/01/disabled-and-readonly-summary/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - html
   - javascript
   - WebForm

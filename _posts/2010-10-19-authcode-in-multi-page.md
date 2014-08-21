@@ -6,7 +6,7 @@ permalink: /2010/10/authcode-in-multi-page/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - MVC
   - 验证码
 ---

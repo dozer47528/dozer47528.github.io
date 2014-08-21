@@ -7,7 +7,7 @@ categories:
   - 编程技术
 tags:
   - Ajax
-  - Asp.net
+  - AspDotNet
   - javascript
   - MVC
 ---

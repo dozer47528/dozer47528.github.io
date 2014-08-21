@@ -6,7 +6,7 @@ permalink: /2011/05/ucenter-api-for-net-on-codeplex/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - Discuz
   - Ucenter
 ---

@@ -6,7 +6,7 @@ permalink: /2012/03/async-and-await-in-asp-net-beta/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - async
   - await
   - MVC

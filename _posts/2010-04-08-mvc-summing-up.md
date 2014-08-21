@@ -6,7 +6,7 @@ permalink: /2010/04/mvc-summing-up/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - MVC
 ---
 

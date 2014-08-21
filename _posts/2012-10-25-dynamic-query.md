@@ -6,7 +6,7 @@ permalink: /2012/10/dynamic-query/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - html
   - javascript
 ---

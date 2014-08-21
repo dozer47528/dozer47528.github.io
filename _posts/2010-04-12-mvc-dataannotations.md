@@ -6,7 +6,7 @@ permalink: /2010/04/mvc-dataannotations/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - Entiy Framework
   - MVC
   - 数据验证

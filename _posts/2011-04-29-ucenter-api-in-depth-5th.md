@@ -6,7 +6,7 @@ permalink: /2011/04/ucenter-api-in-depth-5th/
 categories:
   - 编程技术
 tags:
-  - Asp.net
+  - AspDotNet
   - Discuz
   - MVC
   - Ucenter
