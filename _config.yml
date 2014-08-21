@@ -20,7 +20,7 @@ author:
 # Build settings
 paginate: 10
 paginate_path: "page:num"
-pygments: true
+highlighter: pygments
 markdown: kramdown
 rss_path: feed.xml
 categories_path: categories.html
