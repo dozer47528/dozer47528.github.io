@@ -22,7 +22,7 @@ tags:
 
 工作的时候，常常在 Mac, Linux 和 Windows(Cygwin) 之间切换，它们都是 *nix，很多配置都是可以共享的。
 
-例如\`.zshrc\`, \`.gitconfig\`, \`.tmux.conf\` 等等。
+例如`.zshrc`, `.gitconfig`, `.tmux.conf` 等等。
 
 公司回家后用 Windows(Cygwin) 办公，很多配置和 Mac 不一样，非常不顺手，但是又怎么同步能？
 
@@ -49,9 +49,9 @@ bitbucket 可以新建私有项目，我的配置里没什么敏感信息，所�
 
 &nbsp;
 
-第二步：立刻建议一个\`.gitignore\`文件，并手动添加你需要同步的文件
+第二步：立刻建议一个`.gitignore`文件，并手动添加你需要同步的文件
 
-在\`.gitignore\`中直接忽略所有文件\`*\`。
+在`.gitignore`中直接忽略所有文件`*`。
 
 为什么这么做？Home 目录里大部分是不需要同步的，需要同步的文件你可以强制加入 git 中：
 
@@ -61,7 +61,7 @@ bitbucket 可以新建私有项目，我的配置里没什么敏感信息，所�
 
 第三步：整理各种配置的继承关系并建立分支
 
-我用的是\`ohmyzsh\`，所以主要的配置都在\`.zshrc\`中，为了实现各个环境的特殊配置，可以加入如下代码在\`master\`分支中：
+我用的是`ohmyzsh`，所以主要的配置都在`.zshrc`中，为了实现各个环境的特殊配置，可以加入如下代码在`master`分支中：
 
 <pre class="lang:sh decode:true"># Include
 if [ -f ~/.env_profile ]; then
@@ -77,7 +77,7 @@ if [ -f ~/.cygwin_profile ]; then
         . ~/.cygwin_profile
 fi</pre>
 
-然后新建一个\`cygwin\`分支，并新建\`.cygwin_profile\`文件：
+然后新建一个`cygwin`分支，并新建`.cygwin_profile`文件：
 
 <pre class="lang:sh decode:true"># 解决tmux在cygwin下的问题
 alias tmux='rm -rf /tmp/tmux* && tmux'
@@ -86,19 +86,19 @@ alias tmux='rm -rf /tmp/tmux* && tmux'
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u</pre>
 
-这几行脚本只有在\`cygwin\`中才需要，而其他平台并不需要。
+这几行脚本只有在`cygwin`中才需要，而其他平台并不需要。
 
 &nbsp;
 
 第四步：全局配置变更
 
-将来有全局的配置变更，直接在\`master\`分支提交一下，再\`merge\`到各个平台即可。
+将来有全局的配置变更，直接在`master`分支提交一下，再`merge`到各个平台即可。
 
 &nbsp;
 
 第五步：环境变量
 
-上面的配置中还有一个\`.env\_profile\`文件，我的设计中，这个文件是用来放环境变量的，因为这个通用性非常差，例如\`JAVA\_HOME\`，就算是都是 Mac 也会有不同的版本。
+上面的配置中还有一个`.env\_profile`文件，我的设计中，这个文件是用来放环境变量的，因为这个通用性非常差，例如`JAVA\_HOME`，就算是都是 Mac 也会有不同的版本。
 
 总之策略是你自己设定的，根据自己的习惯来就行了。
 
@@ -108,7 +108,7 @@ autoload -U compinit && compinit -u</pre>
 
 目标完成，基本策略也很清晰，还差什么呢？好像还有点不方便！
 
-能不能自动\`merge\`？能不能一键在新电脑上初始化？
+能不能自动`merge`？能不能一键在新电脑上初始化？
 
 这些都不是问题，待我写几个脚本~
 

@@ -89,24 +89,24 @@ sudo apt-get install exfat-nofuse</pre>
 
 <pre class="lang:sh decode:true">mkdir -p /home/pi/Share/usb</pre>
 
-编辑\`/etc/fstab\`文件，就可以进行开机自动挂在配置了：
+编辑`/etc/fstab`文件，就可以进行开机自动挂在配置了：
 
 <pre class="lang:default decode:true">/dev/sda1       /home/pi/Share/usb      ext4    defaults,noatime        0       0
 /dev/sda1       /home/pi/Share/usb      ntfs    defaults,noatime,uid=1000,gid=1000        0       0
 /dev/sda1       /home/pi/Share/usb      exfat    defaults,noatime,uid=1000,gid=1000        0       0</pre>
 
-在\`/etc/fstab\`文件后面加上一行，只要一行就行了，上面3行分别对应着三种不同的硬盘格式。
+在`/etc/fstab`文件后面加上一行，只要一行就行了，上面3行分别对应着三种不同的硬盘格式。
 
 解释一下：
 
-*   \`noatime\`代表不记录文件访问时间，可以大大提升性能。
-*   NTFS 和 exFAT 并没有 Linux/Unix 权限系统，所以需要加上\`uid=1000,gid=1000\`指定这个文件的拥有者。
+*   `noatime`代表不记录文件访问时间，可以大大提升性能。
+*   NTFS 和 exFAT 并没有 Linux/Unix 权限系统，所以需要加上`uid=1000,gid=1000`指定这个文件的拥有者。
 
 编辑完后，重启即可生效，不重启的话，可以执行以下命令：
 
 <pre class="lang:sh decode:true">sudo mount -a</pre>
 
-挂在完成后输入\`mount\`就可以看到当前系统所有的挂载记录，找找\`/dev/sda1\`是否在这个列表中，是的话就代表挂载成功了。
+挂在完成后输入`mount`就可以看到当前系统所有的挂载记录，找找`/dev/sda1`是否在这个列表中，是的话就代表挂载成功了。
 
 &nbsp;
 
@@ -118,7 +118,7 @@ sudo apt-get install exfat-nofuse</pre>
 
 树莓派当然也是支持的！
 
-到论坛下载固件，树莓派需要下载这个版本：\`<span style="color: #555555;">armel_v5te_glibc</span>\`，具体选择什么版本和 CPU 架构有关。
+到论坛下载固件，树莓派需要下载这个版本：`<span style="color: #555555;">armel_v5te_glibc</span>`，具体选择什么版本和 CPU 架构有关。
 
 因为迅雷没有开源，所以它只能针对各种架构和库，编译了各种版本。
 
@@ -136,13 +136,13 @@ sudo apt-get install exfat-nofuse</pre>
 
 &nbsp;
 
-下面到安装步骤了，我们先把上面的压缩包放到任何一个目录中，我这里放到了\`/home/pi/xunlei\`中。
+下面到安装步骤了，我们先把上面的压缩包放到任何一个目录中，我这里放到了`/home/pi/xunlei`中。
 
 启动方式：
 
 <pre class="lang:sh decode:true">/home/pi/xunlei/portal</pre>
 
-如果没什么问题的话，就会在看到它输出了一串激活码，类似\`H2DS72\`。
+如果没什么问题的话，就会在看到它输出了一串激活码，类似`H2DS72`。
 
 打开 <a href="http://yuancheng.xunlei.com/" target="_blank">http://yuancheng.xunlei.com/</a> 后点添加，输入激活码即可。
 
@@ -209,7 +209,7 @@ Samba 是最常用的了，Windows、Linux、小米电视都支持！
 
 <pre class="lang:sh decode:true">sudo apt-get install samba samba-common-bin</pre>
 
-编辑配置文件\`/etc/samba/smb.conf\`：
+编辑配置文件`/etc/samba/smb.conf`：
 
 <pre class="lang:default decode:true ">[global]
     workgroup = WORKGROUP
@@ -257,7 +257,7 @@ DLNA 管理各种媒体文件比较好，性能和 Samba 也差不多，反正�
 
 <pre class="lang:sh decode:true">sudo apt-get install minidlna</pre>
 
-编辑配置文件\`/etc/minidlna.conf\`，主要就是修改一下媒体文件路径：
+编辑配置文件`/etc/minidlna.conf`，主要就是修改一下媒体文件路径：
 
 <pre class="lang:default decode:true">#监视所有类型
 media_dir=/home/pi/Share

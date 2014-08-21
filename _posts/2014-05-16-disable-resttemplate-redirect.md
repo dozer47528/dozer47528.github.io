@@ -76,11 +76,11 @@ public RestTemplate(ClientHttpRequestFactory requestFactory) {
 	setRequestFactory(requestFactory);
 }</pre>
 
-切入点就在这里了！ 上面提到了两种 \`ClientHttpRequestFactory\`，网上很多教程是按照\`HttpComponentsClientHttpRequestFactory\`做的，但是实现起来机器复杂，而且我试了一下失败了…
+切入点就在这里了！ 上面提到了两种 `ClientHttpRequestFactory`，网上很多教程是按照`HttpComponentsClientHttpRequestFactory`做的，但是实现起来机器复杂，而且我试了一下失败了…
 
 &nbsp;
 
-后来看了一下上面文章中提到的\`SimpleClientHttpRequestFactory\`中的一个方法：
+后来看了一下上面文章中提到的`SimpleClientHttpRequestFactory`中的一个方法：
 
 <pre class="lang:java decode:true">protected void prepareConnection(HttpURLConnection connection, String httpMethod) throws IOException {
 	if (this.connectTimeout &gt;= 0) {
@@ -105,7 +105,7 @@ public RestTemplate(ClientHttpRequestFactory requestFactory) {
 	connection.setRequestMethod(httpMethod);
 }</pre>
 
-看到玄机了吗？这里发现是 GET 请求的话，就自动\`setInstanceFollowRedirects\`为\`true\`了。
+看到玄机了吗？这里发现是 GET 请求的话，就自动`setInstanceFollowRedirects`为`true`了。
 
 &nbsp;
 
@@ -122,11 +122,11 @@ public RestTemplate(ClientHttpRequestFactory requestFactory) {
 	}
 }</pre>
 
-每次执行完\`super.prepareConnection\`后，我再把\`setInstanceFollowRedirects\`强制设置成\`false\`。
+每次执行完`super.prepareConnection`后，我再把`setInstanceFollowRedirects`强制设置成`false`。
 
 &nbsp;
 
-最后是\`bean\`配置：
+最后是`bean`配置：
 
 <pre class="lang:xhtml decode:true">&lt;bean id="proxyRestTemplate" class="org.springframework.web.client.RestTemplate"&gt;
 	&lt;constructor-arg&gt;
@@ -138,6 +138,6 @@ public RestTemplate(ClientHttpRequestFactory requestFactory) {
 	&lt;/constructor-arg&gt;
 &lt;/bean&gt;</pre>
 
-注入你自己的\`ClientHttpRequestFactory\`就行了！
+注入你自己的`ClientHttpRequestFactory`就行了！
 
 对了，这里也可以设置连接时间和超时时间。

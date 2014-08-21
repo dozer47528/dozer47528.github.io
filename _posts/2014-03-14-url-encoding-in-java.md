@@ -61,7 +61,7 @@ MDN文档：
 
 如果你的 Java 程序作为服务端，不管客户端用了哪种编码方式，你只要一个方法就搞定了。
 
-那就是\`URLDecoder.decode\`。
+那就是`URLDecoder.decode`。
 
 &nbsp;
 
@@ -69,9 +69,9 @@ MDN文档：
 
 我这里有一个需求：
 
-用 Spring 的 RestTemplate 去掉一个 RestFul 接口，URL 是这样的：\`http://www.test.com/?q=select count(*) from user where date >= 2014\`。
+用 Spring 的 RestTemplate 去掉一个 RestFul 接口，URL 是这样的：`http://www.test.com/?q=select count(*) from user where date >= 2014`。
 
-和明显我不能直接把这个 URL 传给 RestTemplate ，所以我先用\`URLEncoder.encode\`对后面那串 SQL 进行了编码，然后再传给了 RestTemplate。
+和明显我不能直接把这个 URL 传给 RestTemplate ，所以我先用`URLEncoder.encode`对后面那串 SQL 进行了编码，然后再传给了 RestTemplate。
 
 &nbsp;
 
@@ -107,11 +107,11 @@ MDN文档：
 
 第一个问题解决后，第二个问题来了：
 
-\`RestTemplate\`对我的 URL 又进行了一个\`URLEncoder.encode\` ，可我的 URL 是已经编码过的，再编码一次明显就出错了。
+`RestTemplate`对我的 URL 又进行了一个`URLEncoder.encode` ，可我的 URL 是已经编码过的，再编码一次明显就出错了。
 
 这个问题纠结了好久，后来发现可以这么解决：
 
-先创建一个\`URI\` 对象，然后不要传\`String\`类型的 URL，而是传一个对象，这样\`RestTemplate\`就不会对此一举了。
+先创建一个`URI` 对象，然后不要传`String`类型的 URL，而是传一个对象，这样`RestTemplate`就不会对此一举了。
 
 &nbsp;
 

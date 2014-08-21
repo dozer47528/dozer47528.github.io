@@ -18,7 +18,7 @@ tags:
 
 最近我们的站点准备正式上 Application Cache 了！
 
-但是在测试的时候发现了一些问题，\`history.back()\`方法好像有点问题，\`history.length\`也永远是1。
+但是在测试的时候发现了一些问题，`history.back()`方法好像有点问题，`history.length`也永远是1。
 
 后来搜了一下，找到了一篇文章：<a href="http://www.imore.com/ios-7-safari-features-and-bugs-html5-developers-need-be-aware" target="_blank">iOS 7 Safari: Features and bugs HTML5 developers need to be aware of</a>
 
@@ -34,7 +34,7 @@ tags:
 
 1.  使用了单页面应用程序
 2.  使用了 Application Cache
-3.  使用了\`history.back()\`做后退功能
+3.  使用了`history.back()`做后退功能
 
 看上去很苛刻，但是这样的网站应该不少啊！
 
@@ -49,7 +49,7 @@ tags:
 其实想想也很简单，关键就2点：
 
 1.  捕捉页面跳转事件
-2.  拦截\`history.back()\`方法
+2.  拦截`history.back()`方法
 
 &nbsp;
 
