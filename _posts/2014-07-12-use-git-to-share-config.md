@@ -8,7 +8,7 @@ categories:
 tags:
   - cygwin
   - git
-  - github
+  - Github
   - Linux
   - Mac
   - Windows

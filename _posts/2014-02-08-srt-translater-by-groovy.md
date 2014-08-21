@@ -6,7 +6,7 @@ permalink: /2014/02/srt-translater-by-groovy/
 categories:
   - 编程技术
 tags:
-  - github
+  - Github
   - Google
   - groovy
   - java
