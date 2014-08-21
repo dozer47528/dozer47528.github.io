@@ -3,8 +3,6 @@ title: 延迟加载与延迟求值查询
 author: Dozer
 layout: post
 permalink: /2012/07/lazy-load-and-lazy-evaluation-queries/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

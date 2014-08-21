@@ -3,8 +3,6 @@ title: 利用手机，为你的相机照片加上地理位置标记
 author: Dozer
 layout: post
 permalink: /2012/01/use-the-mobile-phones-to-mark-your-photo-with-gps/
-posturl_add_url:
-  - yes
 categories:
   - 手机
   - 软件

@@ -3,8 +3,6 @@ title: disabled 和 readonly 总结
 author: Dozer
 layout: post
 permalink: /2012/01/disabled-and-readonly-summary/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

@@ -3,8 +3,6 @@ title: 利用 git 共享 Home 目录下的各种配置
 author: Dozer
 layout: post
 permalink: /2014/07/use-git-to-share-config/
-posturl_add_url:
-  - yes
 categories:
   - 操作系统
 tags:

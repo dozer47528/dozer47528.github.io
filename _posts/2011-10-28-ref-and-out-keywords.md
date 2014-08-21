@@ -3,8 +3,6 @@ title: 把 ref 和 out 关键字说透
 author: Dozer
 layout: post
 permalink: /2011/10/ref-and-out-keywords/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

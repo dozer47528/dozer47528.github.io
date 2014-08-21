@@ -3,8 +3,6 @@ title: 工具思维
 author: Dozer
 layout: post
 permalink: /2012/09/work-with-tools/
-posturl_add_url:
-  - yes
 categories:
   - 大杂烩
 tags:

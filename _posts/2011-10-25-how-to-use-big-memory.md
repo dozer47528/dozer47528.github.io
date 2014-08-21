@@ -3,8 +3,6 @@ title: 大内存有大用处
 author: Dozer
 layout: post
 permalink: /2011/10/how-to-use-big-memory/
-posturl_add_url:
-  - yes
 categories:
   - 操作系统
 tags:

@@ -3,8 +3,6 @@ title: '[翻译] jQuery UI CSS Framework &#8211; Part1:Intro and How To Style a 
 author: Dozer
 layout: post
 permalink: /2011/03/translate-jquery-ui-css-framework-part1-intro-and-how-to-style-a-button/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

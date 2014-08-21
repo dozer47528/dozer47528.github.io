@@ -3,8 +3,6 @@ title: Groovy 版字幕批量翻译脚本
 author: Dozer
 layout: post
 permalink: /2014/02/srt-translater-by-groovy/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

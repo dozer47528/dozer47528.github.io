@@ -3,8 +3,6 @@ title: Web Worker 为何不能直接调用函数？
 author: Dozer
 layout: post
 permalink: /2012/07/why-the-web-worker-can-not-call-a-function/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

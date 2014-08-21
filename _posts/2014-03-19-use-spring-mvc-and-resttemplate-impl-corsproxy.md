@@ -3,8 +3,6 @@ title: 利用 Spring MVC 和 RestTemplate 实现 CorsProxy
 author: Dozer
 layout: post
 permalink: /2014/03/use-spring-mvc-and-resttemplate-impl-corsproxy/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

@@ -3,8 +3,6 @@ title: WCF 调用的那些事
 author: Dozer
 layout: post
 permalink: /2013/06/mokeable-and-safely-wcf/
-posturl_add_url:
-  - yes
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

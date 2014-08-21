@@ -3,8 +3,6 @@ title: '理解 .Net 中的各种“相等”关系 &#8211; Part1'
 author: Dozer
 layout: post
 permalink: /2011/07/understand-the-relationships-among-the-many-different-concepts-of-equality-part1/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

@@ -3,8 +3,6 @@ title: java 访问 Salesforce API
 author: Dozer
 layout: post
 permalink: /2012/11/java-to-salesforce-api/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

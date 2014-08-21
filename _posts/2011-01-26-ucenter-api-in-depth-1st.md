@@ -3,8 +3,6 @@ title: 深入研究 UCenter API 之 开篇
 author: Dozer
 layout: post
 permalink: /2011/01/ucenter-api-in-depth-1st/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

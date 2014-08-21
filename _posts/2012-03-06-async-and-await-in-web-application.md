@@ -3,8 +3,6 @@ title: async 与 await 在 Web 下的应用
 author: Dozer
 layout: post
 permalink: /2012/03/async-and-await-in-web-application/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

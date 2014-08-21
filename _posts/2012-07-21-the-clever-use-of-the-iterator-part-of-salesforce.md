@@ -3,8 +3,6 @@ title: 迭代器的妙用之 Salesforce API
 author: Dozer
 layout: post
 permalink: /2012/07/the-clever-use-of-the-iterator-part-of-salesforce/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

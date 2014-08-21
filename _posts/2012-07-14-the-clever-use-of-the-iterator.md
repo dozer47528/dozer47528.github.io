@@ -3,8 +3,6 @@ title: 迭代器的妙用
 author: Dozer
 layout: post
 permalink: /2012/07/the-clever-use-of-the-iterator/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

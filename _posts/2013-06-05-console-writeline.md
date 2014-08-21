@@ -3,8 +3,6 @@ title: Console.WriteLine 的坑
 author: Dozer
 layout: post
 permalink: /2013/06/console-writeline/
-posturl_add_url:
-  - yes
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

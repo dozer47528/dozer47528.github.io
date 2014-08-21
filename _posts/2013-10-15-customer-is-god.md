@@ -3,8 +3,6 @@ title: 你是怎么对待上帝的？
 author: Dozer
 layout: post
 permalink: /2013/10/customer-is-god/
-posturl_add_url:
-  - yes
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

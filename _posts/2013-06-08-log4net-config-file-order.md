@@ -3,8 +3,6 @@ title: log4net 配置文件加载优先级
 author: Dozer
 layout: post
 permalink: /2013/06/log4net-config-file-order/
-posturl_add_url:
-  - yes
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

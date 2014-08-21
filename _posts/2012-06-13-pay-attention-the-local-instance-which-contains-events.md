@@ -3,8 +3,6 @@ title: 请注意绑定了事件的局部对象
 author: Dozer
 layout: post
 permalink: /2012/06/pay-attention-the-local-instance-which-contains-events/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

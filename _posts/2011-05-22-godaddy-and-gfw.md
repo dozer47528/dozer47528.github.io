@@ -3,8 +3,6 @@ title: 悲催的 Godaddy，万恶的 GFW
 author: Dozer
 layout: post
 permalink: /2011/05/godaddy-and-gfw/
-posturl_add_url:
-  - yes
 categories:
   - 互联网
 tags:

@@ -3,8 +3,6 @@ title: Windows 下 SVN 环境的搭建
 author: Dozer
 layout: post
 permalink: /2011/04/svn-environment-under-windows/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

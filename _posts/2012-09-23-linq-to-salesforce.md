@@ -3,8 +3,6 @@ title: Linq To Salesforce
 author: Dozer
 layout: post
 permalink: /2012/09/linq-to-salesforce/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

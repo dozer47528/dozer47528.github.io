@@ -3,8 +3,6 @@ title: Unobtrusive JavaScript in ASP.NET MVC 3
 author: Dozer
 layout: post
 permalink: /2010/11/unobtrusive-javascript/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

@@ -3,8 +3,6 @@ title: 网页动态查询条件的实现
 author: Dozer
 layout: post
 permalink: /2012/10/dynamic-query/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

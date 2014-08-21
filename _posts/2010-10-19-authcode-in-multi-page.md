@@ -3,8 +3,6 @@ title: 多页面验证码冲突的解决办法
 author: Dozer
 layout: post
 permalink: /2010/10/authcode-in-multi-page/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

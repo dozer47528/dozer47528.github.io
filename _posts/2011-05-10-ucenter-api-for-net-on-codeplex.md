@@ -3,8 +3,6 @@ title: UCenter API For .Net 在 CodePlex 上发布啦！
 author: Dozer
 layout: post
 permalink: /2011/05/ucenter-api-for-net-on-codeplex/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

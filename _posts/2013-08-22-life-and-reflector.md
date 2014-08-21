@@ -3,8 +3,6 @@ title: 生活与重构
 author: Dozer
 layout: post
 permalink: /2013/08/life-and-reflector/
-posturl_add_url:
-  - yes
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

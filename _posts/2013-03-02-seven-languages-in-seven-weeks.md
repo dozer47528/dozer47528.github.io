@@ -3,8 +3,6 @@ title: 《七周七语言》有感
 author: Dozer
 layout: post
 permalink: /2013/03/seven-languages-in-seven-weeks/
-posturl_add_url:
-  - yes
 categories:
   - 大杂烩
 tags:

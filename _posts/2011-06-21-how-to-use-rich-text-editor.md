@@ -5,8 +5,6 @@ layout: post
 permalink: /2011/06/how-to-use-rich-text-editor/
 sfw_comment_form_password:
   - ils6Nebhaw5e
-posturl_add_url:
-  - yes
 categories:
   - 互联网
 tags:

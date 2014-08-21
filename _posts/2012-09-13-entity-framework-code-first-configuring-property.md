@@ -3,8 +3,6 @@ title: Entity Framework Code First 配置介绍：属性
 author: Dozer
 layout: post
 permalink: /2012/09/entity-framework-code-first-configuring-property/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

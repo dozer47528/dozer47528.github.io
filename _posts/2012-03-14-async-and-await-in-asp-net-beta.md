@@ -3,8 +3,6 @@ title: 不要在 ASP.NET 4.5 Beta 的 Page 类事件上直接使用 async 与 aw
 author: Dozer
 layout: post
 permalink: /2012/03/async-and-await-in-asp-net-beta/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

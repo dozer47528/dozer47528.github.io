@@ -3,8 +3,6 @@ title: 新家，100M！
 author: Dozer
 layout: post
 permalink: /2014/01/new-home-internet/
-posturl_add_url:
-  - yes
 categories:
   - 互联网
 tags:

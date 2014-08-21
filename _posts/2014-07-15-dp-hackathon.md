@@ -3,8 +3,6 @@ title: 点评校园极客大赛
 author: Dozer
 layout: post
 permalink: /2014/07/dp-hackathon/
-posturl_add_url:
-  - yes
 categories:
   - 大杂烩
 tags:

@@ -3,8 +3,6 @@ title: 巧用Windows下的搜索实现快速启动程序
 author: Dozer
 layout: post
 permalink: /2012/01/using-the-windows-search-for-fast-start-program/
-posturl_add_url:
-  - yes
 categories:
   - 操作系统
 tags:

@@ -3,8 +3,6 @@ title: 为原版 CyanogenMod 添加常用功能
 author: Dozer
 layout: post
 permalink: /2011/01/add-common-functions-for-original-cyanogenmod/
-posturl_add_url:
-  - yes
 categories:
   - 手机
 tags:

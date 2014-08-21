@@ -3,8 +3,6 @@ title: 利用树莓派组建支持迅雷离线下载的NAS
 author: Dozer
 layout: post
 permalink: /2014/05/raspberry-pi-nas/
-posturl_add_url:
-  - yes
 categories:
   - 数码产品
 tags:

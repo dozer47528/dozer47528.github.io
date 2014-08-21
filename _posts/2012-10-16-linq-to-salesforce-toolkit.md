@@ -3,8 +3,6 @@ title: Linq To Salesforce Toolkit
 author: Dozer
 layout: post
 permalink: /2012/10/linq-to-salesforce-toolkit/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:

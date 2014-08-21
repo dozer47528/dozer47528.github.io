@@ -3,8 +3,6 @@ title: 那些 WebForm 可以从 MVC 借鉴的东西 —— Routing
 author: Dozer
 layout: post
 permalink: /2011/03/webform-take-example-by-mvc-routin/
-posturl_add_url:
-  - yes
 categories:
   - 编程技术
 tags:
