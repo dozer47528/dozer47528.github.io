@@ -24,12 +24,7 @@ tagline:
   </h2>
 
   <div>
-    {{ post.content | split:"<!--more-->" | first | truncate:300 }}
-    {% if post.content | size > 300 %}
-        <br/>
-        <br/>
-        <a href="{{ site.BASE_PATH }}{{ post.url }}"><strong>Read more</strong></a>
-    {% endif %}
+    {{ post.content | split:"<!--more-->" | first }}
   </div>
 
 </article>
