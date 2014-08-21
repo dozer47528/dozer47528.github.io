@@ -6,7 +6,7 @@ permalink: /2012/07/the-clever-use-of-the-iterator-part-of-salesforce/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CSharp
   - Salesforce
   - yield

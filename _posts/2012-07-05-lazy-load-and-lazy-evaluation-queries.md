@@ -6,7 +6,7 @@ permalink: /2012/07/lazy-load-and-lazy-evaluation-queries/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CSharp
   - 延迟加载
   - 延迟求值查询

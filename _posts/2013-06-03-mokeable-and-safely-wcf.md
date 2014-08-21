@@ -12,7 +12,7 @@ wpzoom_post_url:
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - Mock
   - WCF
 ---

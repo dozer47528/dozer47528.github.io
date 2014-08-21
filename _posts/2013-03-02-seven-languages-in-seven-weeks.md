@@ -6,7 +6,7 @@ permalink: /2013/03/seven-languages-in-seven-weeks/
 categories:
   - 大杂烩
 tags:
-  - .Net
+  - DotNet
   - CSharp
   - java
   - 并行

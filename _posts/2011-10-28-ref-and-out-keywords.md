@@ -6,7 +6,7 @@ permalink: /2011/10/ref-and-out-keywords/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CSharp
   - out
   - ref

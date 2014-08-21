@@ -6,7 +6,7 @@ permalink: /2012/06/pay-attention-the-local-instance-which-contains-events/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CSharp
   - GC
   - 垃圾回收

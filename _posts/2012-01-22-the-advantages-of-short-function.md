@@ -6,7 +6,7 @@ permalink: /2012/01/the-advantages-of-short-function/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
 ---
 
 ### <span id="i">函数最初的用处</span>

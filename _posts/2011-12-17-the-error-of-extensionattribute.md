@@ -6,7 +6,7 @@ permalink: /2011/12/the-error-of-extensionattribute/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CSharp
 ---
 

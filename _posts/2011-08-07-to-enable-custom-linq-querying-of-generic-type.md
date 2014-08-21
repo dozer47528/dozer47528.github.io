@@ -6,7 +6,7 @@ permalink: /2011/08/to-enable-custom-linq-querying-of-generic-type/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CLR
   - IL
   - LINQ

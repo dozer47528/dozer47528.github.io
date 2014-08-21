@@ -6,7 +6,7 @@ permalink: /2011/07/understand-the-relationships-among-the-many-different-concep
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CSharp
   - 读书笔记
 ---

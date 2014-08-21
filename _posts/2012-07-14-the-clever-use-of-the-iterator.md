@@ -6,7 +6,7 @@ permalink: /2012/07/the-clever-use-of-the-iterator/
 categories:
   - 编程技术
 tags:
-  - .Net
+  - DotNet
   - CSharp
   - yield
   - 延迟加载
