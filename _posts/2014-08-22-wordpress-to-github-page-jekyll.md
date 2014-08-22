@@ -65,7 +65,7 @@ Github Page + Jekyll 的方案很早就有了，我为什么到现在才迁移�
 
 下载地址：[传送门](https://github.com/benbalter/wordpress-to-jekyll-exporter)
 
-使用方法就不介绍了，文章导出来后会包含一个`_posts`文件夹和你的静态文件。直接复制到你新建的 jekyll 项目中即可。
+使用方法就不介绍了，文章导出来后会包含一个`_posts`文件夹和你的静态文件。直接复制到你新建的 Jekyll 项目中即可。
 
 `_posts`是 Jekyll 放文章的地方，导出的文章是`.md`后缀名的，可是为什么还是 html？
 
