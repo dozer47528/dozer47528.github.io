@@ -12,7 +12,7 @@ tags:
   - MVC
 ---
 
-### <span id="MVC">MVC 的优雅</span>
+### MVC 的优雅
 
 用过 MVC 中局部更新的同学肯定会觉得其中的写法真的是非常的优雅：
 
@@ -35,7 +35,7 @@ tags:
 
 <!--more-->
 
-### <span id="WebForm">WebForm 中就不行了吗？</span>
+### WebForm 中就不行了吗？
 
 不是说 WebForm 中就不能实现类似的功能了，其实同样的功能完全可以通过 Ajax 或 UpdatePannel 来实现，并且也可以公用逻辑代码。
 
@@ -77,7 +77,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 &nbsp;
 
-### <span id="_MVC_Ajax">如何实现 MVC 中的 Ajax 用法</span>
+### 如何实现 MVC 中的 Ajax 用法
 
 想在 WebForm 中使用类似 MVC 中的 Ajax 写法，难点主要就是两个：后端输出 UserControl + 前端代码
 
@@ -99,7 +99,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 &nbsp;
 
-### <span id="_UserControl">后端输出 UserControl：方法一</span>
+### 后端输出 UserControl：方法一
 
 怎么输出 UserControl？如果你不理解 Asp.net 核心的一些对象，也完全可以实现。
 
@@ -131,7 +131,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 &nbsp;
 
-### <span id="_UserControl-2">后端输出 UserControl：方法二</span>
+### 后端输出 UserControl：方法二
 
 上面的那个方法虽然好用，但是总感觉的怪怪的，也略显麻烦。
 
@@ -200,7 +200,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 &nbsp;
 
-### <span id="_WebForm_MVC_Unobtrusive_JavaScript">如何在 WebForm 中使用 MVC 的 Unobtrusive JavaScript</span>
+### 如何在 WebForm 中使用 MVC 的 Unobtrusive JavaScript
 
 看过 <a href="/2010/11/unobtrusive-javascript/" target="_blank"><strong>Unobtrusive JavaScript</strong></a> 的人都知道，这种方式可以让 js 代码和 html 完全分离。也就是说，只要 WebForm 输出了同样格式的 html，并引用了相关的 js，就可以实现这个功能了！让我们一步步实现它。
 

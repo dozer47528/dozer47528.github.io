@@ -18,7 +18,7 @@ tags:
 
 &nbsp;
 
-### <span id="1MVC">1、MVC中的数据验证框架有何优点？</span>
+### 1、MVC中的数据验证框架有何优点？
 
 &nbsp;
 
@@ -40,7 +40,7 @@ tags:
 
 &nbsp;
 
-### <span id="2">2、深入浅出？</span>
+### 2、深入浅出？
 
 &nbsp;
 
@@ -64,7 +64,7 @@ iii)写在Model中：一些底层的标准应该写在这一层，因为这些�
 
 &nbsp;
 
-### <span id="3">3、前端和后端的结合</span>
+### 3、前端和后端的结合
 
 &nbsp;
 
@@ -141,7 +141,7 @@ OK，下面我可以运行了。。。
 
 &nbsp;
 
-### <span id="4">4、如何将数据验证代码放入业务逻辑层？</span>
+### 4、如何将数据验证代码放入业务逻辑层？
 
 &nbsp;
 
@@ -334,7 +334,7 @@ public static void Edit(Models.UserModel user)
 
 &nbsp;
 
-### <span id="5Model">5、如何将数据验证代码放入Model中？</span>
+### 5、如何将数据验证代码放入Model中？
 
 &nbsp;
 
@@ -474,7 +474,7 @@ public static void Edit(Models.UserModel user,bool IsValid)
 
 &nbsp;
 
-### <span id="6">6、如何更改错误提示的样式？</span>
+### 6、如何更改错误提示的样式？
 
 &nbsp;
 
@@ -496,7 +496,7 @@ public static void Edit(Models.UserModel user,bool IsValid)
 
 &nbsp;
 
-### <span id="7Entity_FrameworkModel">7、Entity Framework中，如何在Model中编写数据验证？</span>
+### 7、Entity Framework中，如何在Model中编写数据验证？
 
 &nbsp;
 
@@ -533,7 +533,7 @@ public class UserMetaData
 
 &nbsp;
 
-### <span id="8">8、如何使用客户端验证</span>
+### 8、如何使用客户端验证
 
 &nbsp;
 
@@ -571,7 +571,7 @@ public class UserMetaData
 
 &nbsp;
 
-### <span id="9Ending">9、Ending</span>
+### 9、Ending
 
 &nbsp;
 

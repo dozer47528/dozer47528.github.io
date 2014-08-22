@@ -11,7 +11,7 @@ tags:
   - Fluent API
 ---
 
-### <span id="i">目录</span>
+### 目录
 
 [**简介**][1]
 
@@ -23,7 +23,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">映射表名和组织架构名</span>
+### 映射表名和组织架构名
 
 <pre class="brush: csharp; gutter: true">//Data Annotations
 [Table("PersonPhotos")]
@@ -37,7 +37,7 @@ modelBuilder.Entity&lt;Destination&gt;().ToTable("Locations", "dbo");</pre>
 
 <!--more-->
 
-### <span id="i-3">映射数据库列</span>
+### 映射数据库列
 
 <pre class="brush: csharp; gutter: true">//Data Annotations
 [Column("LocationID")]
@@ -57,7 +57,7 @@ public class DestinationConfiguration :
 
 &nbsp;
 
-### <span id="i-4">映射两个实体到同一张表</span>
+### 映射两个实体到同一张表
 
 <pre class="brush: csharp; gutter: true">//Data Annotations
 [Table("People")]
@@ -84,7 +84,7 @@ SomeCustomMethodToDisplay(firstPerson.Photo.Caption);</pre>
 
 &nbsp;
 
-### <span id="i-5">映射两个表到同一个实体</span>
+### 映射两个表到同一个实体
 
 当两个实体有引用关系的时候，一般都会在这个实体A上定义一个实体B的引用。
 
@@ -117,7 +117,7 @@ SomeCustomMethodToDisplay(firstPerson.Photo.Caption);</pre>
 
 &nbsp;
 
-### <span id="i-6">控制实体是否映射到数据库</span>
+### 控制实体是否映射到数据库
 
 在 DbContext 中，如果你新增了一个 <span style="background-color: #eeeeee;">DbSet<Entity></span> 属性，这个实体就会被映射到数据库中；
 
@@ -127,7 +127,7 @@ SomeCustomMethodToDisplay(firstPerson.Photo.Caption);</pre>
 
 &nbsp;
 
-### <span id="i-7">控制实体不被映射到数据库</span>
+### 控制实体不被映射到数据库
 
 <pre class="brush: csharp; gutter: true">//Data Annotations
 [NotMapped]
@@ -140,7 +140,7 @@ modelBuilder.Ignore&lt;MyInMemoryOnlyClass&gt;();</pre>
 
 &nbsp;
 
-### <span id="i-8">控制属性不被否映射到数据库</span>
+### 控制属性不被否映射到数据库
 
 <pre class="brush: csharp; gutter: true">//Data Annotations
 [NotMapped]
@@ -151,9 +151,9 @@ Ignore(d =&gt; d.TodayForecast);</pre>
 
 &nbsp;
 
-### <span id="i-9">映射继承关系</span>
+### 映射继承关系
 
-#### <span id="Code_First_Table_Per_Hierarchy_TPH">Code First 的默认层级关系：每个层级关系一张表[Table Per Hierarchy (TPH)]</span>
+#### Code First 的默认层级关系：每个层级关系一张表[Table Per Hierarchy (TPH)]
 
 如果定义了如下两个类：
 
@@ -197,7 +197,7 @@ Map(m =&gt;
 
 &nbsp;
 
-#### <span id="Code_First_Table_Per_TpyeTPT">Code First 的另一种层级关系：每个类型一张表[Table Per Tpye(TPT)]</span>
+#### Code First 的另一种层级关系：每个类型一张表[Table Per Tpye(TPT)]
 
 另外，也可以配制成每一种类型一张表：
 
@@ -224,7 +224,7 @@ modelBuilder.Entity&lt;Lodging&gt;().Map(m =&gt;
 
 &nbsp;
 
-#### <span id="_TPT_Table_Per_Concrete_Type_TPC">和 TPT 类似的一种关系：每个类型完整地映射在一张表中[Table Per Concrete Type (TPC)]</span>
+#### 和 TPT 类似的一种关系：每个类型完整地映射在一张表中[Table Per Concrete Type (TPC)]
 
 TPC 和 TPT 的区别就是，TPT 的子类只存放比父类多出来的几个字段，而 TPC 会存放所有的字段。
 

@@ -30,7 +30,7 @@ tags:
 
 <!--more-->
 
-### <span id="1bin">1、复制几个缺失的运行库到bin文件夹</span>
+### 1、复制几个缺失的运行库到bin文件夹
 
 老版本不能运行主要原因当然是因为缺失dll文件啦，其中最重要的是mvc核心库
 
@@ -50,7 +50,7 @@ System.Web.Abstractions.dll
 
 &nbsp;
 
-### <span id="2Defaultaspx">2、在根目录新建Default.aspx页面，并在后台写入代码</span>
+### 2、在根目录新建Default.aspx页面，并在后台写入代码
 
 老版本IIS会验证文件是否存在，所以必须新建一个页面，然后在写上代码就可以了
 
@@ -66,7 +66,7 @@ System.Web.Abstractions.dll
 
 &nbsp;
 
-### <span id="3Route">3、设置Route路由表</span>
+### 3、设置Route路由表
 
 为了充分利用mvc的新特性，强烈建议你在建设网站的时候全部采用 controller\[/action\]\[/id\].aspx 这样的形式
 
@@ -88,7 +88,7 @@ routes.MapRoute("Root", "", new { controller = "home", action = "index", id = ""
 
 &nbsp;
 
-### <span id="4">4、结束语</span>
+### 4、结束语
 
 这样配置后，别人访问你的网站还是想以前的asp.net一样，全部是以aspx为后缀名。
 

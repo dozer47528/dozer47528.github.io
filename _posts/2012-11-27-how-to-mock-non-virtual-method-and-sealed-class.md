@@ -14,7 +14,7 @@ tags:
   - 非虚函数
 ---
 
-### <span id="i">问题</span>
+### 问题
 
 很常见的问题，没有接口，那如何 <a href="http://zh.wikipedia.org/wiki/%E6%A8%A1%E6%8B%9F%E5%AF%B9%E8%B1%A1" target="_blank"><strong>Mock</strong></a> 非虚方法和<a href="http://msdn.microsoft.com/zh-cn/library/ms173150(v=vs.80).aspx" target="_blank"><strong>密封类</strong></a>？
 
@@ -22,7 +22,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">寻找</span>
+### 寻找
 
 一开始搜索：mock non-virtual ，找到了一篇文章：<a href="http://stackoverflow.com/questions/1073684/mocking-non-virtual-methods-in-c-sharp" target="_blank"><strong>传送门</strong></a>
 
@@ -45,7 +45,7 @@ tags:
 
 <!--more-->
 
-### <span id="i-3">实现思路和技术细节</span>
+### 实现思路和技术细节
 
 实现思路其实收费的 Mock 工具已经提供了：
 
@@ -105,9 +105,9 @@ Mono.Cecil 可以帮助你修改编译好的 dll 文件。
 
 &nbsp;
 
-### <span id="i-4">具体实现步骤</span>
+### 具体实现步骤
 
-#### <span id="i-5">源代码解决方案结构</span>
+#### 源代码解决方案结构
 
 [<img class="alignnone size-full wp-image-999" title="solution" alt="" src="/uploads/2012/11/solution.png" width="300" height="234" />][1]
 
@@ -121,7 +121,7 @@ NUnit 项目同样是一个演示的测试项目，但是用的是 <a href="http
 
 &nbsp;
 
-#### <span id="MockHelper">MockHelper 的使用</span>
+#### MockHelper 的使用
 
 这个控制台应用程序其实没有什么难度，核心代码上面已经贴出来了。
 
@@ -135,7 +135,7 @@ NUnit 项目同样是一个演示的测试项目，但是用的是 <a href="http
 
 &nbsp;
 
-#### <span id="_MockHelper">配置自动运行 MockHelper</span>
+#### 配置自动运行 MockHelper
 
 把 MockHelper 复制过去后的关键就是要让这个 exe 可以自动运行啦！
 
@@ -149,7 +149,7 @@ NUnit 项目同样是一个演示的测试项目，但是用的是 <a href="http
 
 &nbsp;
 
-#### <span id="i-6">编写测试代码</span>
+#### 编写测试代码
 
 TestDll 是非虚函数，而且是密封类：
 
@@ -234,13 +234,13 @@ NUnit 运行结果如下：
 
 &nbsp;
 
-### <span id="i-7">注意事项</span>
+### 注意事项
 
 不要看上面的步骤简单，我在配置这个的时候走了很多弯路，这里也跟大家分享一下：
 
 &nbsp;
 
-#### <span id="_Moq_Mock">一定要用 Moq 等 Mock 框架</span>
+#### 一定要用 Moq 等 Mock 框架
 
 为什么一定要自动 Mock 框架？它的核心不就是继承一个类吗？
 
@@ -254,7 +254,7 @@ NUnit 运行结果如下：
 
 &nbsp;
 
-#### <span id="_MSTest">注意配置一下 MSTest</span>
+#### 注意配置一下 MSTest
 
 我在一开始研究这个的时候，遇到了一个很纠结的问题。
 
@@ -274,7 +274,7 @@ NUnit 运行结果如下：
 
 &nbsp;
 
-#### <span id="i-8">所有测试框架都支持吗？</span>
+#### 所有测试框架都支持吗？
 
 原则上，只要你有办法在运行测试之前跑一下这个工具就可以支持所有的测试框架。
 
@@ -284,7 +284,7 @@ NUnit 运行结果如下：
 
 &nbsp;
 
-### <span id="i-9">最后</span>
+### 最后
 
 项目地址：<a href="https://github.com/dozer47528/MockHelper" target="_blank">https://github.com/dozer47528/MockHelper</a>
 
@@ -294,7 +294,7 @@ NUnit 运行结果如下：
 
 &nbsp;
 
-### <span id="i-10">缺陷</span>
+### 缺陷
 
 这两天我在继续研究 Mock Private 方法，思路很简单，就是把这个 Private 方法改成 Virtual + Protected。
 

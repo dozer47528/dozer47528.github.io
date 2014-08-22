@@ -11,7 +11,7 @@ tags:
   - WebForm
 ---
 
-### <span id="i">前言</span>
+### 前言
 
 最近 MVC 一直很火，我在做项目的时候也一直想用 MVC 做，但是考虑到传承问题（不是所有人都回去学 MVC 的），最后还是没有使用 MVC。
 
@@ -21,7 +21,7 @@ tags:
 
 &nbsp;
 
-### <span id="Routing">Routing</span>
+### Routing
 
 Routing，MVC 中的路由功能，和 Url 重写类似，但是更高层一点~
 
@@ -34,7 +34,7 @@ Routing，MVC 中的路由功能，和 Url 重写类似，但是更高层一点~
 
 <!--more-->
 
-### <span id="_WebForm_Routing">在 WebForm 中使用 Routing 功能</span>
+### 在 WebForm 中使用 Routing 功能
 
 1、引用 System.Web.Routing
 
@@ -94,7 +94,7 @@ namespace Utility
 
 &nbsp;
 
-### <span id="_Routing_Url">根据 Routing 设定生成 Url</span>
+### 根据 Routing 设定生成 Url
 
 MVC 中有了 Controller 和 Action 后生成链接非常方便，其实在 Asp.net 4.0 中也有这样的功能
 

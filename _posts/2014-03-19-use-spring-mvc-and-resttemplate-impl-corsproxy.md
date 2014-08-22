@@ -11,7 +11,7 @@ tags:
   - Spring
 ---
 
-### <span id="CORS_PROXY">CORS PROXY 是什么</span>
+### CORS PROXY 是什么
 
 跨域的问题大家应该都知道了，ajax 请求是不能直接调用另一个域名下的接口的，虽然 jsonp 可以解决一定的问题，但是对于 Post、PUT、DELETE 等高级功能的支持上就无能为力了。
 
@@ -47,7 +47,7 @@ CORS Proxy 内部再用 Http Client 来请求第三方服务器。
 
 &nbsp;
 
-### <span id="CORS_PROXY-2">CORS PROXY 实现原理</span>
+### CORS PROXY 实现原理
 
 CORS Proxy 的原理其实很简单，主要就做三件事情：
 
@@ -165,11 +165,11 @@ public class CorsProxyController {
 
 &nbsp;
 
-### <span id="i">一些注意事项</span>
+### 一些注意事项
 
 这个实现没有难度，但是其中有一个部分算是一个大坑。
 
-#### <span id="i-2">编码问题</span>
+#### 编码问题
 
 一开始我的 CORS Proxy 接受的`RequestBody`是`String`，用`RestTemplate`请求的返回值也是`String`，但是后来发现其中会有很多问题。client 和 server 的编码规范不一定标准，其实你作为代理服务器，根本不需要去进行编码，client 端给你的是什么，你就原封不动传给 server 就行了，所以我们编写的时候全部用了`byte[]`，从此就再无问题了。
 
@@ -181,7 +181,7 @@ public class CorsProxyController {
 
 &nbsp;
 
-#### <span id="Transfer-Encoding">Transfer-Encoding</span>
+#### Transfer-Encoding
 
 一开始做的时候，我把 server 端返回的 body 和 headers 原封不动地给了 client，但是 client 一直会中断连接！完全收不到数据。
 
@@ -195,7 +195,7 @@ public class CorsProxyController {
 
 &nbsp;
 
-#### <span id="Content-Length">Content-Length</span>
+#### Content-Length
 
 `Content-Length`也是一个坑，为什么呢？因为 server 端传过来的`Content-Length`是不能直接传给 client 的。
 
@@ -207,7 +207,7 @@ public class CorsProxyController {
 
 &nbsp;
 
-#### <span id="Access-Control-Allow-Origin">Access-Control-Allow-Origin</span>
+#### Access-Control-Allow-Origin
 
 CORS 标准中有几个 header，其中一个就是`Access-Control-Allow-Origin`，它代表着你可以让哪个域名跨域请求你的地址。
 
@@ -229,7 +229,7 @@ CORS 标准中有几个 header，其中一个就是`Access-Control-Allow-Origin`
 
 &nbsp;
 
-#### <span id="i-3">重定向的问题</span>
+#### 重定向的问题
 
 这个话题设计的东西比较多，已经自成文章：<a href="/2014/05/disable-resttemplate-redirect/" target="_blank"><strong>禁用 RestTemplate 的自动重定向功能</strong></a>
 

@@ -12,13 +12,13 @@ tags:
   - jQuery UI
 ---
 
-### <span id="jQuery_UI_CSS_Framework">jQuery UI CSS Framework</span>
+### jQuery UI CSS Framework
 
 jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件，这个框架包含了许多普通用户经常会用到的 class，并且还可以利用 jQuery UI 主题编辑器来方便地修改主题。当你在使用 jQuery UI CSS 框架来构建你网站的 UI 时，你必须要遵守一些约定，这样才能更好地使用 jQuery UI  CSS 框架。
 
 &nbsp;
 
-### <span id="Framework_Classes">Framework Classes</span>
+### Framework Classes
 
 一下的几个 class 分别在 ui.core.css 和 ui.theme.css 文件中，你可以直接下载一个完整的 css 文件，也可以几个部分。
 
@@ -26,7 +26,7 @@ jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件
 
 <!--more-->
 
-### <span id="Layout_Helpers">Layout Helpers</span>
+### Layout Helpers
 
 .ui-helper-hidden: 给元素设置 display: none 属性。
 
@@ -40,7 +40,7 @@ jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件
 
 &nbsp;
 
-### <span id="Widget_Containers">Widget Containers</span>
+### Widget Containers
 
 .ui-widget: 这个 class 会被用在外部容器上，它会给内部的部件统一字体、字号。这个主要是为了解决浏览器继承问题的
 
@@ -50,7 +50,7 @@ jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件
 
 &nbsp;
 
-### <span id="Interaction_States">Interaction States</span>
+### Interaction States
 
 .ui-state-default: 这个 class 会被用在类似于 button 的小部件上，用来显示这个部件在默认状态下的样式
 
@@ -62,7 +62,7 @@ jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件
 
 &nbsp;
 
-### <span id="Interaction_Cues">Interaction Cues</span>
+### Interaction Cues
 
 .ui-state-highlight: 设置高亮样式
 
@@ -78,7 +78,7 @@ jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件
 
 &nbsp;
 
-### <span id="Icons">Icons</span>
+### Icons
 
 **States and images**
 
@@ -98,7 +98,7 @@ jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件
 
 &nbsp;
 
-### <span id="Misc_Visuals">Misc Visuals</span>
+### Misc Visuals
 
 **Corner Radius helpers**
 

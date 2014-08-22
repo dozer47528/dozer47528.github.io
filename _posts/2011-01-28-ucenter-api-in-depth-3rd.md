@@ -42,7 +42,7 @@ tags:
 
 &nbsp;
 
-### <span id="AuthCode">AuthCode</span>
+### AuthCode
 
 UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也是康盛公司为 php 做的一大贡献
 
@@ -56,7 +56,7 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
 
 &nbsp;
 
-### <span id="PHP">PHP 版详解</span>
+### PHP 版详解
 
 <pre class="brush:php">// $string： 明文 或 密文
 // $operation：DECODE表示解密,其它表示加密
@@ -134,7 +134,7 @@ function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
 
 &nbsp;
 
-### <span id="C">C# 版</span>
+### C# 版
 
 <pre class="brush:csharp">/// &lt;summary&gt;
 /// AuthCode解码&编码

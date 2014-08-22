@@ -10,7 +10,7 @@ tags:
   - Google
 ---
 
-### <span id="i">墙内墙外</span>
+### 墙内墙外
 
 GFW现在真的是越来越过分了，以前用 Google 搜索，只不过是会屏蔽关键字，现在正常情况下也会经常上不去！
 
@@ -18,7 +18,7 @@ GFW现在真的是越来越过分了，以前用 Google 搜索，只不过是会
 
 &nbsp;
 
-### <span id="_Googlecom_Googlecomhk">用好 Google.com 而不是 Google.com.hk</span>
+### 用好 Google.com 而不是 Google.com.hk
 
 话说这两个有区别吗？看上去只是 Google 在不同国家设定一个网站镜像，使用的数据不应该是一样的嘛？
 
@@ -78,7 +78,7 @@ PS.这个功能只有在界面语言设置成英文的情况下才能使用。
 
 &nbsp;
 
-### <span id="i-2">如何防止关键字屏蔽</span>
+### 如何防止关键字屏蔽
 
 虽然没有研究过，但是从目前的症状来看，GFW 在屏蔽关键字的时候使用了 DNS 挟持。
 

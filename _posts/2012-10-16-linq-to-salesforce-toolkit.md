@@ -11,7 +11,7 @@ tags:
   - Salesforce
 ---
 
-### <span id="i">简介</span>
+### 简介
 
 上篇文章中（**<a title="Linq To Salesforce" href="/2012/09/linq-to-salesforce/" target="_blank">Linq To Salesforce</a>**），我只要介绍了 Linq To Salesforce 的基本原理。
 
@@ -19,9 +19,9 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">使用指引</span>
+### 使用指引
 
-#### <span id="i-3">下载项目</span>
+#### 下载项目
 
 首先到 Github 上下载 <a href="https://github.com/dozer47528/LinqToSalesforce" target="_blank"><strong>Linq To Salesforce</strong></a> 项目。
 
@@ -29,13 +29,13 @@ tags:
 
 &nbsp;
 
-#### <span id="i-4">编译整个项目</span>
+#### 编译整个项目
 
 [<img class="alignnone size-full wp-image-888" title="sln" alt="" src="/uploads/2012/10/sln.png" width="349" height="171" />][1]
 
 &nbsp;
 
-#### <span id="_LinqToSalesforce_dll">使用 LinqToSalesforce 的 dll</span>
+#### 使用 LinqToSalesforce 的 dll
 
 dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
@@ -45,7 +45,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 &nbsp;
 
-#### <span id="_LinqToSalesforceToolkit">使用 LinqToSalesforce.Toolkit 项目中的代码</span>
+#### 使用 LinqToSalesforce.Toolkit 项目中的代码
 
 复制 <span style="background-color: #eeeeee;">SalesforceHelper.cs</span> 和 <span style="background-color: #eeeeee;">SalesforceProvider.cs</span> 两个文件到你自己的项目中。
 
@@ -55,7 +55,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 &nbsp;
 
-#### <span id="_Salesforce_API">在你的项目中引用 Salesforce API</span>
+#### 在你的项目中引用 Salesforce API
 
 使用过 Salesforce API 的人应该知道，这里就不阐述了，引用 Salesforce 网站上下载下来的强类型 wsdl 文件即可。
 
@@ -65,7 +65,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 &nbsp;
 
-#### <span id="i-5">开始使用吧！</span>
+#### 开始使用吧！
 
 具体使用方法可以参考 Test 项目，Test 中同样用到了 Toolkit 项目中的代码，后面的使用已经非常简单了！
 
@@ -73,7 +73,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 &nbsp;
 
-### <span id="i-6">示例代码</span>
+### 示例代码
 
 偷懒了，为了让大家感受一下 LinqToSalesforce 强大的功能，免去直接下载后查看的麻烦，我这里直接贴出测试类吧。
 
@@ -380,7 +380,7 @@ public class SalesforceQueryTest
 
 &nbsp;
 
-### <span id="_Test">如何使用 Test 项目</span>
+### 如何使用 Test 项目
 
 测试项目是可以连上真实环境运行的，你只要修改配置文件，即可直接运行：
 

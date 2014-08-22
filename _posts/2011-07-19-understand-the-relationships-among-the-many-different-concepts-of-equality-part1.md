@@ -11,7 +11,7 @@ tags:
   - 读书笔记
 ---
 
-### <span id="i">申明</span>
+### 申明
 
 原文为《<a href="http://books.google.com/books?id=6qkSQQAACAAJ" target="_blank"><strong>Effective C#</strong></a>》中内容，作者为 <a href="http://www.google.com/search?q=Addison+Wesley" target="_blank"><strong>Addison Wesley</strong></a>
 
@@ -19,7 +19,7 @@ tags:
 
 &nbsp;
 
-### <span id="C">C# 中的相等关系</span>
+### C# 中的相等关系
 
 当你定义了一个自己的类型后，你需要明确一下“相等”关系对你的类型来说意味着什么。
 
@@ -48,7 +48,7 @@ C#中，判断引用类型是否相等是看他们是不是被引用到了同一
 
 &nbsp;
 
-### <span id="Object">Object 类型中的两个静态方法</span>
+### Object 类型中的两个静态方法
 
 **首先要明确一下，这两个方法你比应该去重新定义它**
 

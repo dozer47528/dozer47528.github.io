@@ -11,7 +11,7 @@ tags:
   - wsdl
 ---
 
-### <span id="net_to_java">.net to java</span>
+### .net to java
 
 最近部门准备转 java 了，大家都积极性很高，看上去 .net 还是不受待见啊～
 
@@ -29,7 +29,7 @@ tags:
 
 &nbsp;
 
-### <span id="i">调用步骤</span>
+### 调用步骤
 
 不管是用什么语言调用，其实总是那么几步，只是有的语言简单一点，有的语言复杂一点罢了。
 
@@ -47,7 +47,7 @@ tags:
 
 &nbsp;
 
-### <span id="_wsdl">根据 wsdl 文件生成对应的代码</span>
+### 根据 wsdl 文件生成对应的代码
 
 这一步就折腾了我很久，因为网上有各种方法，但每个教程都是不可用的，可能过时了。
 
@@ -59,13 +59,13 @@ tags:
 
 &nbsp;
 
-#### <span id="i-2">方案一</span>
+#### 方案一
 
 第一个工具是官方的，根据教程，一直报错，我下的明明是 jdk 1.7 的版本，电脑上也是 1.7 的，但一直提示版本错误…
 
 &nbsp;
 
-#### <span id="i-3">方案二</span>
+#### 方案二
 
 第二个方案用的是一个开源的框架：Axis
 
@@ -97,7 +97,7 @@ tags:
 
 &nbsp;
 
-#### <span id="i-4">方案三</span>
+#### 方案三
 
 eclipse 其实可以自动生成，底层其实就是调用了 Axis。
 
@@ -111,7 +111,7 @@ eclipse 其实可以自动生成，底层其实就是调用了 Axis。
 
 &nbsp;
 
-### <span id="i-5">登录 & 后续操作</span>
+### 登录 & 后续操作
 
 上面 wsdl to java 完成后，就可以开始写 hello world 了。
 
@@ -167,7 +167,7 @@ public class main {
 
 &nbsp;
 
-### <span id="i-6">注意点</span>
+### 注意点
 
 最后还有一个注意点， 调用 salesforce API 时，线上的 wsdl 和 开发环境的 wsdl 是一样的，除了一个配置不同。
 
@@ -179,7 +179,7 @@ public class main {
 
 &nbsp;
 
-### <span id="i-7">示例代码</span>
+### 示例代码
 
 下载地址：<a href="/wp-content/uploads/2012/11/Salesforce1.zip" target="_blank"><strong>http://www.dozer.cc/uploads/2012/11/Salesforce1.zip</strong></a>
 

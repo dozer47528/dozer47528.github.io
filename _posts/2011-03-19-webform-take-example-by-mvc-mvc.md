@@ -11,7 +11,7 @@ tags:
   - WebForm
 ---
 
-### <span id="i">前言</span>
+### 前言
 
 WebForm 可以从 MVC 中借鉴 MVC？放心，这并不是病句~
 
@@ -23,7 +23,7 @@ MVC 其实是 Model, View, Controller 的意思，它是一种思想~
 
 <!--more-->
 
-### <span id="MVC">MVC 和 三层架构的区别</span>
+### MVC 和 三层架构的区别
 
 个人觉得，MVC 中的 Model, View, Controller 三者和在一起，就成为了三层架构中的 Web 层，是三层架构中（Dal, BLL, Web）中 Web 层的再次分化。
 
@@ -37,7 +37,7 @@ MVC 其实是 Model, View, Controller 的意思，它是一种思想~
 
 &nbsp;
 
-### <span id="_WebForm_MVC">为什么要在 WebForm 中借鉴 MVC 的思想</span>
+### 为什么要在 WebForm 中借鉴 MVC 的思想
 
 前面说了，MVC 和 WebForm 最大的区别就是让后端代码和前端页面之间实现了更彻底的分离。
 
@@ -49,7 +49,7 @@ MVC 其实是 Model, View, Controller 的意思，它是一种思想~
 
 &nbsp;
 
-### <span id="_WebForm_MVC-2">怎么在 WebForm 借鉴 MVC</span>
+### 怎么在 WebForm 借鉴 MVC
 
 其实，MVC 的优势主要在于有了 ViewData，那么只要在 WebForm 中实现这个功能即可。
 
@@ -106,7 +106,7 @@ MVC 其实是 Model, View, Controller 的意思，它是一种思想~
 
 &nbsp;
 
-### <span id="i-2">更多…</span>
+### 更多…
 
 其实除了这个以外，MVC 中还有很多值得借鉴的地方，例如上面一篇文章提到的 Routing 功能。
 

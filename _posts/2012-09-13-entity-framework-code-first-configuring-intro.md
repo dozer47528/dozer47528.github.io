@@ -11,7 +11,7 @@ tags:
   - Fluent API
 ---
 
-### <span id="i">目录</span>
+### 目录
 
 [**简介**][1]
 
@@ -23,7 +23,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">简介</span>
+### 简介
 
 自从 Code First 推出后，大家慢慢地把开发模式转换了过来，也从中发现了很多优点。
 
@@ -57,7 +57,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-3">备注</span>
+### 备注
 
 本系列主要来自于《Programming Entity Framework Code First》，示例代码由本人亲自编写。
 

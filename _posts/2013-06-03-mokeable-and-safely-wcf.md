@@ -17,7 +17,7 @@ tags:
   - WCF
 ---
 
-### <span id="WCF_using">WCF 的问题和 using 语句块</span>
+### WCF 的问题和 using 语句块
 
 WCF 这个问题已经纠结了很久了：
 
@@ -29,7 +29,7 @@ WCF 这个问题已经纠结了很久了：
 
 &nbsp;
 
-### <span id="WCF_Mock">WCF 与 Mock</span>
+### WCF 与 Mock
 
 WCF 太让人纠结了！不仅用 using 会有问题， Mock 这方面设计的也很糟糕！
 
@@ -41,7 +41,7 @@ WCF 太让人纠结了！不仅用 using 会有问题， Mock 这方面设计的
 
 &nbsp;
 
-### <span id="i">改良版</span>
+### 改良版
 
 网上的改进方案很多，但是只针对 using 进行了改善，另外需求可能也和我有所不同，所以自己弄了一种实现方案：
 

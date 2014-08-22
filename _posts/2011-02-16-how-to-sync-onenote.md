@@ -10,7 +10,7 @@ tags:
   - OneNote
 ---
 
-### <span id="OneNote">OneNote是什么？</span>
+### OneNote是什么？
 
 
 
@@ -18,7 +18,7 @@ tags:
 
 &nbsp;
 
-### <span id="_OneNote">如何同步 OneNote</span>
+### 如何同步 OneNote
 
 **同步 OneNote 有两种方法：**
 
@@ -63,7 +63,7 @@ tags:
 
 &nbsp;
 
-### <span id="_OneNote-2">利用内置的同步功能同步 OneNote</span>
+### 利用内置的同步功能同步 OneNote
 
 **如果你还没有笔记本？那么新建 OneNote 笔记本**
 
@@ -113,7 +113,7 @@ tags:
 
 &nbsp;
 
-### <span id="i">利用其他同步工具</span>
+### 利用其他同步工具
 
 在本地的 OneNote 默认创建在 我的文档\OneNote 笔记本 中
 

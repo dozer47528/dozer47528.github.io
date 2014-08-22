@@ -16,7 +16,7 @@ tags:
   - log4net
 ---
 
-### <span id="i">坑坑坑</span>
+### 坑坑坑
 
 最近把项目中所有的日志都改成了 <a href="http://logging.apache.org/log4net/" target="_blank">log4net</a> ，同事也蠢蠢欲动，用起了 log4net。
 
@@ -52,7 +52,7 @@ tags:
 
 &nbsp;
 
-### <span id="log4net">log4net 加载配置的几种方式</span>
+### log4net 加载配置的几种方式
 
 官方文档非常详细：<a href="http://logging.apache.org/log4net/release/manual/configuration.html" target="_blank">http://logging.apache.org/log4net/release/manual/configuration.html</a>
 
@@ -68,7 +68,7 @@ tags:
 
 &nbsp;
 
-### <span id="Assembly_Attribute">Assembly Attribute</span>
+### Assembly Attribute
 
 上面的三种方式并非独立，而是在隐约之中有着一些关联。
 
@@ -100,7 +100,7 @@ log4net 认为你根本就没想配置它…
 
 &nbsp;
 
-### <span id="appconfig">app.config 中配置</span>
+### app.config 中配置
 
 下面说说第二种方式，在配置文件中加配置：
 
@@ -117,7 +117,7 @@ log4net 认为你根本就没想配置它…
 
 &nbsp;
 
-### <span id="i-2">显示调用</span>
+### 显示调用
 
 最后说说显示调用的方式：
 
@@ -133,7 +133,7 @@ log4net 认为你根本就没想配置它…
 
 &nbsp;
 
-### <span id="i-3">最终方案</span>
+### 最终方案
 
 OK，了解了他们的优先级和各种关系后，就要想想最终方案了。
 

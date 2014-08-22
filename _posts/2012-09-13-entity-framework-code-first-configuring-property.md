@@ -11,7 +11,7 @@ tags:
   - Fluent API
 ---
 
-### <span id="i">目录</span>
+### 目录
 
 [**简介**][1]
 
@@ -23,7 +23,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">配置方法介绍</span>
+### 配置方法介绍
 
 在 Code First 之前，其实大家都知道一种配置方法：
 
@@ -73,7 +73,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-3">属性长度</span>
+### 属性长度
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -111,7 +111,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-4">数据类型</span>
+### 数据类型
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -147,7 +147,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-5">可空配置</span>
+### 可空配置
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -183,7 +183,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-6">主键映射</span>
+### 主键映射
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -219,7 +219,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-7">配置标识规范属性</span>
+### 配置标识规范属性
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -255,7 +255,7 @@ tags:
 
 &nbsp;
 
-### <span id="TimeStampRowVersion">为乐观并发配置 TimeStamp/RowVersion 字段</span>
+### 为乐观并发配置 TimeStamp/RowVersion 字段
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -291,7 +291,7 @@ tags:
 
 &nbsp;
 
-### <span id="Timestamp">为没有 Timestamp 的字段配置乐观并发</span>
+### 为没有 Timestamp 的字段配置乐观并发
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -327,7 +327,7 @@ tags:
 
 &nbsp;
 
-### <span id="Unicode">配置非Unicode的数据库类型</span>
+### 配置非Unicode的数据库类型
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -363,7 +363,7 @@ tags:
 
 &nbsp;
 
-### <span id="_Decimals">配置 Decimals</span>
+### 配置 Decimals
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -399,7 +399,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-8">配置复杂类型</span>
+### 配置复杂类型
 
 这块比较复杂，也比较少用，感兴趣的可以去翻阅原文。
 

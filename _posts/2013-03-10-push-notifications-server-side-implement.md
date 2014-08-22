@@ -16,7 +16,7 @@ tags:
   - 推送
 ---
 
-### <span id="Apple_Push_Notification_Service">Apple Push Notification Service</span>
+### Apple Push Notification Service
 
 最近研究手机开发，iOS 的 <a href="http://en.wikipedia.org/wiki/Apple_Push_Notification_Service" target="_blank"><strong>APNS</strong></a> 真的是比 Android 先进很多啊～
 
@@ -37,7 +37,7 @@ APNS 原理和 iOS 设备上的实现，可以在下文中获得答案：（右�
 
 &nbsp;
 
-### <span id="Push_Sharp">Push Sharp</span>
+### Push Sharp
 
 .Net 实现：<a href="https://github.com/Redth/PushSharp" target="_blank"><strong>https://github.com/Redth/PushSharp</strong></a>
 
@@ -89,7 +89,7 @@ private static void Events_OnNotificationSent(PushSharp.Common.Notification noti
 
 &nbsp;
 
-### <span id="APNS_Java">APNS Java</span>
+### APNS Java
 
 Java 实现：<a href="https://github.com/notnoop/java-apns" target="_blank"><strong>https://github.com/notnoop/java-apns</strong></a>
 
@@ -114,7 +114,7 @@ Java 实现起来也非常简单，同样是用一个开源的类库。作者已
 
 &nbsp;
 
-### <span id="Php">Php 实现</span>
+### Php 实现
 
 最上面的那篇教程中有哦～
 

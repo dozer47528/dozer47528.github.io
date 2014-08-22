@@ -17,7 +17,7 @@ tags:
   - IIS6
 ---
 
-### <span id="i">错误现象</span>
+### 错误现象
 
 现象很简单，调用某个 WebService 的时候返回了如下的错误信息：
 
@@ -33,7 +33,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">为什么会出错？</span>
+### 为什么会出错？
 
 看了上面的解决方案，总感觉这是一种兼容，而不是真正地解决问题。
 
@@ -49,7 +49,7 @@ tags:
 
 &nbsp;
 
-### <span id="100_Continue_Status">100 (Continue) Status</span>
+### 100 (Continue) Status
 
 另外，这个问题中反复出现一个词：100 (Continue) Status
 

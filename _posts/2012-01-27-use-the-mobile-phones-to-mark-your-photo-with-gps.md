@@ -43,7 +43,7 @@ tags:
 
 <!--more-->
 
-### <span id="Android">Android 上记录位置信息的软件</span>
+### Android 上记录位置信息的软件
 
 这类软件很多，大多是一些运动类的软件，可以在你跑步的时候记录你的运动轨迹。
 
@@ -51,7 +51,7 @@ tags:
 
 &nbsp;
 
-#### <span id="GeoRecorder"><a href="https://market.android.com/details?id=com.miian.android.logger" target="_blank">GeoRecorder</a></span>
+#### <a href="https://market.android.com/details?id=com.miian.android.logger" target="_blank">GeoRecorder</a>
 
 这是一款免费好用的软件，唯一的缺点是界面略丑… 但平时它都运行在后台，要求就放低一点吧。
 
@@ -77,7 +77,7 @@ tags:
 
 &nbsp;
 
-#### <span id="My_Tracks"><a href="https://market.android.com/details?id=com.google.android.maps.mytracks" target="_blank">My Tracks</a></span>
+#### <a href="https://market.android.com/details?id=com.google.android.maps.mytracks" target="_blank">My Tracks</a>
 
 后来试用了一下这款软件，整体也很不错！
 
@@ -89,13 +89,13 @@ tags:
 
 &nbsp;
 
-### <span id="i">把地理位置信息写入照片中</span>
+### 把地理位置信息写入照片中
 
 地理位置记录好了，照片也拍好了，下面就让我们把数据写入照片吧！
 
 &nbsp;
 
-#### <span id="GeoSetter"><a href="http://www.geosetter.de/en/" target="_blank">GeoSetter</a></span>
+#### <a href="http://www.geosetter.de/en/" target="_blank">GeoSetter</a>
 
 这个软件支持中文，绿色免费！也非常好用，不仅可以自己设置位置，也可以根据数据写入照片！
 
@@ -127,7 +127,7 @@ tags:
 
 &nbsp;
 
-### <span id="_Google_Earth">在 <a href="http://www.google.com/earth/index.html" target="_blank">Google Earth</a> 中回味旅途</span>
+### 在 <a href="http://www.google.com/earth/index.html" target="_blank">Google Earth</a> 中回味旅途
 
 当图片成功导入照片后，还能有什么用途呢？其实，利用** <a href="http://www.google.com/earth/index.html" target="_blank">Google Earth</a>** 还可以进行旅行回顾哦！
 

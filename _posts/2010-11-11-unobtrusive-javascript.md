@@ -11,7 +11,7 @@ tags:
   - 数据验证
 ---
 
-### <span id="Unobtrusive_JavaScript">Unobtrusive JavaScript 是什么？</span>
+### Unobtrusive JavaScript 是什么？
 
 <pre class="brush:xml">&lt;!--以下是常规Javascript下写出来的Ajax--&gt;
 &lt;div id="test"&gt;
@@ -35,7 +35,7 @@ tags:
 
 &nbsp;
 
-### <span id="Unobtrusive_JavaScriptin_ASPNET_MVC_3">Unobtrusive JavaScriptin ASP.NET MVC 3</span>
+### Unobtrusive JavaScriptin ASP.NET MVC 3
 
 &nbsp;
 
@@ -95,7 +95,7 @@ HtmlHelper.UnobtrusiveJavaScriptEnabled = true;</pre>
 
 &nbsp;
 
-### <span id="Unobtrusive_Ajax_in_ASPNET_MVC_3">Unobtrusive Ajax in ASP.NET MVC 3</span>
+### Unobtrusive Ajax in ASP.NET MVC 3
 
 原文：<a href="http://bradwilson.typepad.com/blog/2010/10/mvc3-unobtrusive-ajax.html" target="_blank"><strong>《Unobtrusive Ajax in ASP.NET MVC 3》</strong></a>
 
@@ -340,7 +340,7 @@ data : 仅限 OnSuccess
 
 &nbsp;
 
-### <span id="Unobtrusive_Client_Validation_in_ASPNET_MVC_3">Unobtrusive Client Validation in ASP.NET MVC 3</span>
+### Unobtrusive Client Validation in ASP.NET MVC 3
 
 原文：**<a href="http://bradwilson.typepad.com/blog/2010/10/mvc3-unobtrusive-validation.html" target="_blank">《Unobtrusive Client Validation in ASP.NET MVC 3》</a>**
 
@@ -444,6 +444,6 @@ window.mvcClientValidationMetadata.push({"Fields":[{"FieldName":"FirstName","Rep
 
 &nbsp;
 
-### <span id="ENDING">ENDING</span>
+### ENDING
 
 最后，还不太了解 MVC 数据验证的朋友可以看一下我的另一篇文章：**<a href="/2010/04/mvc-dataannotations/" target="_blank">深入浅出 MVC 数据验证 2.0 [附演示源码]</a>**

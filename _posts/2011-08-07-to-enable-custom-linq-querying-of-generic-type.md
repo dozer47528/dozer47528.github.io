@@ -27,7 +27,7 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
 
 &nbsp;
 
-### <span id="_LINQ">什么类型可以进行 LINQ 查询？</span>
+### 什么类型可以进行 LINQ 查询？
 
 <pre class="brush:csharp">var queryLondonCustomers = from cust in customers
                            where cust.City == "London"
@@ -60,7 +60,7 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
 
 &nbsp;
 
-### <span id="IL">反编译看IL代码</span>
+### 反编译看IL代码
 
 一段代码
 
@@ -131,7 +131,7 @@ var q2 = data.Where(_ =&gt; _ &gt; 3);//等效于上面一行代码</pre>
 
 &nbsp;
 
-### <span id="_LINQ-2">为自定义类型提供 LINQ 查询</span>
+### 为自定义类型提供 LINQ 查询
 
 按照刚才分析的，是不是只要给自己的类型提供几个方法就行了呢？
 
@@ -208,7 +208,7 @@ School 类型，并不是什么枚举类型，但是需要用 where 做一些过
 
 &nbsp;
 
-### <span id="i">反思</span>
+### 反思
 
 从上面的种种迹象表明，LINQ 应该是编译器级别的东西，而不是 .net CLR 级的东西（这个仅仅是个人猜测）
 

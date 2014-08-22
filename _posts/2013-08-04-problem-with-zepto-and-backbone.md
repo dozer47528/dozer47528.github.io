@@ -16,7 +16,7 @@ tags:
   - zepto
 ---
 
-### <span id="i">问题代码</span>
+### 问题代码
 
 最近有那么一段 js 代码，困扰了很久很久，开发环境又是 PhoneGap，所以没办法调试 js…
 
@@ -49,7 +49,7 @@ Backbone.sync(method, model, options)</pre>
 
 &nbsp;
 
-### <span id="i-2">问题根源</span>
+### 问题根源
 
 看了一下 backbone 和 zepto 的源代码后，发现了这个问题的根源！
 
@@ -63,7 +63,7 @@ backbone 会把请求的 xhr 对象赋值到传入的 options 对象上，所以
 
 &nbsp;
 
-### <span id="i-3">解决办法</span>
+### 解决办法
 
 解决办法其实也非常简单啦，在第二次调用的时候把 options 里的 xhr 对象删除即可。
 

@@ -14,7 +14,7 @@ tags:
   - 版本控制
 ---
 
-### <span id="SVN">SVN 是什么？</span>
+### SVN 是什么？
 
 SVN(Subversion) 是近年来崛起的版本管理工具，是 CVS 的接班人。目前，绝大多数开源软件都使用 SVN 作为代码版本管理软件。
 
@@ -36,7 +36,7 @@ SVN是其替代品，优于 CVS
 
 <!--more-->
 
-### <span id="SVN-2">SVN 从哪里下载？</span>
+### SVN 从哪里下载？
 
 正因为 SVN 其实是一个协议，所以没有官方的产品，所以你可以选择各种第三方开发的产品。
 
@@ -52,7 +52,7 @@ Visual Studio 插件：<a href="http://ankhsvn.open.collab.net/" target="_blank"
 
 &nbsp;
 
-### <span id="_VisualSVN">利用 VisualSVN 搭建服务端</span>
+### 利用 VisualSVN 搭建服务端
 
 **安装：**
 
@@ -114,7 +114,7 @@ Visual Studio 插件：<a href="http://ankhsvn.open.collab.net/" target="_blank"
 
 &nbsp;
 
-### <span id="_ankhsvn_SVN_Visual_Studio">利用 ankhsvn 将 SVN 与 Visual Studio 结合</span>
+### 利用 ankhsvn 将 SVN 与 Visual Studio 结合
 
 安装完 ankhsvn 的 Visual Studio 在解决方案管理器中年，可以看到版本控制状态图标，具体的使用方法和 TortoiseSVN 其实是相同的。
 

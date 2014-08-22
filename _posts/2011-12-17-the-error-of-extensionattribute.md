@@ -10,7 +10,7 @@ tags:
   - CSharp
 ---
 
-### <span id="i">错误产生环境及非完美解决办法</span>
+### 错误产生环境及非完美解决办法
 
 错误提示：<span style="color: #ff0000;">缺少编译器要求的成员“System.Runtime.CompilerServices.ExtensionAttribute..ctor”</span>
 
@@ -24,7 +24,7 @@ tags:
 
 <!--more-->
 
-### <span id="i-2">问题产生的原因</span>
+### 问题产生的原因
 
 既然是这个类库导致的，那当然要研究下这个类库啦。
 
@@ -65,7 +65,7 @@ Google 后发现其实老外早有研究过了：
 
 &nbsp;
 
-### <span id="i-3">解决办法</span>
+### 解决办法
 
 1.  <span class="Apple-style-span" style="line-height: 18px;">在 3.0 或以上的程序中引用高版本的 Newtonsoft.Json.Net20.dll</span>
 2.  <span class="Apple-style-span" style="line-height: 18px;">删除 Newtonsoft.Json.Net20.dll 的引用后重新引用（如果你担心升级 dll 会出现问题的话，可以采用这招，但在编译的时候会不定时出错）</span>

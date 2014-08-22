@@ -12,7 +12,7 @@ tags:
   - PhoneGap
 ---
 
-### <span id="i">一个想法</span>
+### 一个想法
 
 在研究 PhoneGap 的时候一直在想一个问题，怎么提高移动网络下的网络性能？特别是静态文件，多次加载完全是浪费。
 
@@ -24,7 +24,7 @@ HTTP 协议中控制缓存也比较纠结，总会有个 <a href="http://www.w3.
 
 &nbsp;
 
-### <span id="HTML_Application_Cache">HTML Application Cache</span>
+### HTML Application Cache
 
 正当我纠结怎么实现的时候，发现了 HTML5 种已经有类似的东西了，而且实现的功能和我的需求一模一样。因为它就是为离线应用设计的。
 
@@ -42,9 +42,9 @@ HTTP 协议中控制缓存也比较纠结，总会有个 <a href="http://www.w3.
 
 &nbsp;
 
-### <span id="i-2">一些坑</span>
+### 一些坑
 
-#### <span id="_mime_type">后缀与 mime type：</span>
+#### 后缀与 mime type：
 
 上面的那篇文章说，缓存清单文件并没有标准的后缀名，你可以自定义一个后缀名并在你的 Web 服务器上指定 mime type。
 
@@ -62,7 +62,7 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
 
 &nbsp;
 
-#### <span id="i-3">请注意引用缓存清单的页面：</span>
+#### 请注意引用缓存清单的页面：
 
 在折腾的过程中，发现了一个很纠结的问题。
 
@@ -89,7 +89,7 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
 
 &nbsp;
 
-#### <span id="Android_PhoneGap">Android 下 PhoneGap 应用程序的问题：</span>
+#### Android 下 PhoneGap 应用程序的问题：
 
 又是 Android 下，我在 iPhone 中，PhoneGap 跑起来后一点问题都没，上了 Android 就死活不成功。
 
@@ -123,7 +123,7 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
 
 &nbsp;
 
-#### <span id="i-4">跨域：</span>
+#### 跨域：
 
 Application Cache 和 ajax 请求一样无法跨域，PhoneGap 中一般是用一个本地的 <span style="background-color: #eeeeee;">index</span> 文件，然后把类库也打包在本地，而一些业务的 <span style="background-color: #eeeeee;">js</span> 和经常变的 <span style="background-color: #eeeeee;">css</span> 就放在服务器上。这样的话，就遇到跨域的问题了，<span style="background-color: #eeeeee;">index</span> 文件和 <span style="background-color: #eeeeee;">.appcache</span> 文件不在同一个域下。
 
@@ -133,7 +133,7 @@ Application Cache 和 ajax 请求一样无法跨域，PhoneGap 中一般是用�
 
 &nbsp;
 
-#### <span id="_Application_Cache">禁用 Application Cache：</span>
+#### 禁用 Application Cache：
 
 在折腾的过程中，我想把缓存去掉了。于是我把 <span style="background-color: #eeeeee;">index.html</span> 中对缓存清单的引用去掉了，但是却没有效果！
 
@@ -145,7 +145,7 @@ Application Cache 和 ajax 请求一样无法跨域，PhoneGap 中一般是用�
 
 &nbsp;
 
-#### <span id="i-5">完整更新和二次刷新：</span>
+#### 完整更新和二次刷新：
 
 下面说的是两个暂时无法解决的问题，是 Application Cache 的机制所决定的。
 

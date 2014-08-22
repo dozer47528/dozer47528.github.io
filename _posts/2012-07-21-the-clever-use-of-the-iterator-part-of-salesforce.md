@@ -15,7 +15,7 @@ tags:
   - 迭代器
 ---
 
-### <span id="i">上期回顾</span>
+### 上期回顾
 
 在前两篇文章中（<a href="/2012/07/lazy-load-and-lazy-evaluation-queries/" target="_blank"><strong>延迟加载与延迟求值查询</strong></a>、<a href="/2012/07/the-clever-use-of-the-iterator/" target="_blank"><strong>迭代器的妙用</strong></a>），介绍了很多延迟加载、延迟求值查询和迭代器的知识。
 
@@ -23,7 +23,7 @@ tags:
 
 &nbsp;
 
-### <span id="Salesforce_API">Salesforce API 的调用</span>
+### Salesforce API 的调用
 
 最近会进行 <a href="http://zh.wikipedia.org/wiki/Salesforce.com" target="_blank"><strong>Salesforce</strong> </a>开发，过程中需要在 C# 中调用 Salesforce 提供的 API。
 
@@ -45,7 +45,7 @@ var qResult3 = connection.queryMore(qResult2.getQueryLocator());</pre>
 
 &nbsp;
 
-### <span id="i-2">利用迭代器封装细节</span>
+### 利用迭代器封装细节
 
 <pre class="brush: csharp; gutter: true">public IEnumerable&lt;Contact&gt; GetAllContact()
 {

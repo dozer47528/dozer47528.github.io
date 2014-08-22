@@ -14,7 +14,7 @@ tags:
   - Windows
 ---
 
-### <span id="_git">为什么是 git</span>
+### 为什么是 git
 
 工作的时候，常常在 Mac, Linux 和 Windows(Cygwin) 之间切换，它们都是 *nix，很多配置都是可以共享的。
 
@@ -37,7 +37,7 @@ tags:
 
 &nbsp;
 
-### <span id="i">实现步骤</span>
+### 实现步骤
 
 第一步：在 github 或者 bitbucket 上新建一个项目
 
@@ -100,7 +100,7 @@ autoload -U compinit && compinit -u</pre>
 
 &nbsp;
 
-### <span id="i-2">自动化脚本</span>
+### 自动化脚本
 
 目标完成，基本策略也很清晰，还差什么呢？好像还有点不方便！
 

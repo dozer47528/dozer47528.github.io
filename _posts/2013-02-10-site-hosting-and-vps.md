@@ -13,7 +13,7 @@ tags:
   - 阿里云
 ---
 
-### <span id="i">何处来安放你，我的网站？</span>
+### 何处来安放你，我的网站？
 
 买了域名以后第二件事情就是需要找一个空间放你的网站了。
 
@@ -21,7 +21,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">家里电脑开着当主机</span>
+### 家里电脑开着当主机
 
 这个方案不用我教，大家都是做这行的，虽然不是运维但基本也肯定都懂吧？
 
@@ -37,7 +37,7 @@ tags:
 
 <!--more-->
 
-### <span id="i-3">虚拟主机</span>
+### 虚拟主机
 
 <a href="http://zh.wikipedia.org/zh/%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA" target="_blank"><strong>虚拟主机</strong></a>相当于给你一个 IIS 或者 Apache 服务器，国内的服务商都很抠门，一般都只允许创建一个网站；而国外的虚拟主机岂止是一个大方啊。
 
@@ -133,7 +133,7 @@ Godaddy 也有缺点：
 
 &nbsp;
 
-### <span id="VPS">VPS</span>
+### VPS
 
 <a href="http://zh.wikipedia.org/wiki/%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank"><strong>虚拟专用服务器</strong></a>，在国内一般简称 VPS。
 
@@ -169,7 +169,7 @@ Godaddy 也有缺点：
 
 &nbsp;
 
-### <span id="i-4">我的方案</span>
+### 我的方案
 
 我不会告诉你我的空间一分钱不要的，哈哈。
 

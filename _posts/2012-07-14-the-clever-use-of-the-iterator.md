@@ -14,7 +14,7 @@ tags:
   - 迭代器
 ---
 
-### <span id="i">延迟查询与延迟求值查询</span>
+### 延迟查询与延迟求值查询
 
 在我的<a href="/2012/07/lazy-load-and-lazy-evaluation-queries/" target="_blank"><strong>上一篇文章</strong></a>中，给大家介绍了延迟查询与延迟求值查询的实现原理和注意事项。
 
@@ -22,7 +22,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">业务场景与常规解决办法</span>
+### 业务场景与常规解决办法
 
 大家平时是否经常有这样的一个场景？
 
@@ -60,7 +60,7 @@ public List&lt;string&gt; GetFromDatabase(int index, int size)
 
 &nbsp;
 
-### <span id="i-3">迭代器的妙用</span>
+### 迭代器的妙用
 
 什么叫封装起来？封装就是隐藏实现细节，这块的逻辑代码实在不应该暴露给业务逻辑层。
 
@@ -107,7 +107,7 @@ static List&lt;string&gt; GetFromDatabase(int index, int size)
 
 &nbsp;
 
-### <span id="i-4">性能测试</span>
+### 性能测试
 
 理论上，这样子读取的话，每次只会有200条数据在内存中，我将这种方式和直接全部独到内存中的方式进行了内存占用对比。
 
@@ -123,7 +123,7 @@ static List&lt;string&gt; GetFromDatabase(int index, int size)
 
 &nbsp;
 
-### <span id="i-5">总结</span>
+### 总结
 
 如果大家的业务场景中，也需要用到遍历整张表的数据且数据很大的时候，都可以利用这种方式批量处理。其实每次处理200个并不是最优方案，具体的需要根据你单个数据的大小进行调整。
 

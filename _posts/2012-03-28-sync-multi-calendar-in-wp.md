@@ -10,7 +10,7 @@ tags:
   - WP7
 ---
 
-### <span id="WP7_Google">WP7 上同步 Google 服务</span>
+### WP7 上同步 Google 服务
 
 Android 上的 Google 服务没的话说，好用的不得了。到了 <a href="http://www.google.com/search?q=WP7" target="_blank"><strong>WP7</strong></a> 平台上，只能用 <a href="http://www.google.com/search?q=Mail+For+Exchange" target="_blank"><strong>Mail For Exchange</strong></a> 来同步 Google 服务了。
 
@@ -20,11 +20,11 @@ Android 上的 Google 服务没的话说，好用的不得了。到了 <a href="
 
 <!--more-->
 
-### <span id="_Google_Calendar">同步多个 Google Calendar</span>
+### 同步多个 Google Calendar
 
 通过搜索后，终于解决了这个问题。
 
-#### <span id="_WP7_Internet_Explorer_httpmgooglecomsync">在 WP7 上的 Internet Explorer 上打开 http://m.google.com/sync</span>
+#### 在 WP7 上的 Internet Explorer 上打开 http://m.google.com/sync
 
 微软官方其实有教程，虽然翻译了，但是却没考虑到中国用户。因为这个页面在中国打开是会有问题的。
 
@@ -34,19 +34,19 @@ Android 上的 Google 服务没的话说，好用的不得了。到了 <a href="
 
 &nbsp;
 
-#### <span id="_Google_Account">登陆 Google Account</span>
+#### 登陆 Google Account
 
 [<img class="alignnone size-medium wp-image-728" title="login" alt="" src="/uploads/2012/03/login-180x300.png" width="180" height="300" />][2]
 
 &nbsp;
 
-#### <span id="_Windows_Phone">选择 Windows Phone</span>
+#### 选择 Windows Phone
 
 [<img class="alignnone size-medium wp-image-729" title="platform" alt="" src="/uploads/2012/03/platform-180x300.png" width="180" height="300" />][3]
 
 &nbsp;
 
-#### <span id="i">勾上你需要同步的日历</span>
+#### 勾上你需要同步的日历
 
 [<img class="alignnone size-medium wp-image-730" title="save" alt="" src="/uploads/2012/03/save-180x300.png" width="180" height="300" />][4]
 

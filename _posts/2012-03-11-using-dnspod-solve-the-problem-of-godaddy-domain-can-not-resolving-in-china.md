@@ -10,7 +10,7 @@ tags:
   - Godaddy
 ---
 
-### <span id="i">我们是共产主义的接班人</span>
+### 我们是共产主义的接班人
 
 “我们是共产主义的接班人，继承革命先烈的光荣传统…”
 
@@ -24,7 +24,7 @@ tags:
 
 <!--more-->
 
-### <span id="i-2">出了什么问题</span>
+### 出了什么问题
 
 搜索后发现，其实有大量的网友遇到了这个问题。<a href="http://www.google.com/search?q=godaddy+域名+无法解析" target="_blank"><strong>传送门</strong></a>
 
@@ -42,7 +42,7 @@ Godaddy 的解析速度在国外应该是快的惊人的，它的 NameServer �
 
 &nbsp;
 
-### <span id="i-3">如何解决</span>
+### 如何解决
 
 虽然手动换个 Godaddy 的 NameServer 就可以了，但是谁知道它什么时候又会被屏蔽呢？
 
@@ -50,7 +50,7 @@ Godaddy 的解析速度在国外应该是快的惊人的，它的 NameServer �
 
 &nbsp;
 
-### <span id="DNSPod">DNSPod</span>
+### DNSPod
 
 网上搜索后知道，<a href="https://www.dnspod.cn/" target="_blank"><strong>DNSPod</strong></a> 是国内最牛的域名解析服务商，而且有个人永久免费套餐，提供的服务不比 Godaddy 差。
 
@@ -60,11 +60,11 @@ Godaddy 的解析速度在国外应该是快的惊人的，它的 NameServer �
 
 &nbsp;
 
-### <span id="i-4">使用感受</span>
+### 使用感受
 
 别的不多说，就简单介绍下 DNSPod 的界面、功能和优势吧！
 
-#### <span id="i-5">界面：</span>
+#### 界面：
 
 整体界面非常清爽，记录类型全都支持，免费帐户也没有任何限制，比 Godaddy 的更好用哦！
 
@@ -74,7 +74,7 @@ Godaddy 的解析速度在国外应该是快的惊人的，它的 NameServer �
 
 &nbsp;
 
-#### <span id="i-6">附加功能：</span>
+#### 附加功能：
 
 除此之外，DPNPod 还有很多 Godaddy 都没有的附加功能。
 

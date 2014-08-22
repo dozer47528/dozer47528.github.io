@@ -17,7 +17,7 @@ tags:
   - PhoneGap
 ---
 
-### <span id="_GA">怎么整合 GA</span>
+### 怎么整合 GA
 
 PhoneGap 整合 <a href="http://www.google.com/analytics" target="_blank"><strong>GA</strong></a> 的时候会遇到这几个问题：
 
@@ -31,7 +31,7 @@ PhoneGap 整合 <a href="http://www.google.com/analytics" target="_blank"><stron
 
 &nbsp;
 
-### <span id="i">移动应用分析</span>
+### 移动应用分析
 
 其实，Google 早就发布了移动版的 GA SDK，只要下载 SDK，就可以在页面中进行统计分析了。
 
@@ -45,7 +45,7 @@ PhoneGap 整合 <a href="http://www.google.com/analytics" target="_blank"><stron
 
 &nbsp;
 
-### <span id="_PhoneGap">和 PhoneGap 整合</span>
+### 和 PhoneGap 整合
 
 既然有了 native 版本的 GA，那为 PhoneGap 写一个插件，把所有的方法包装成 js 不就行了？
 
@@ -78,7 +78,7 @@ iOS 下的方法定义
 
 &nbsp;
 
-### <span id="i-2">自定义维度</span>
+### 自定义维度
 
 GA 官方有很多维度，例如：版本号、地区、操作系统 等等…
 

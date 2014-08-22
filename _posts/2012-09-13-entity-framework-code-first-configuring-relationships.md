@@ -11,7 +11,7 @@ tags:
   - Fluent API
 ---
 
-### <span id="i">目录</span>
+### 目录
 
 [**简介**][1]
 
@@ -23,7 +23,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">引用关系</span>
+### 引用关系
 
 Entity Framework 中配置了对象之间的引用关系后，在查询数据的时候会非常方便。
 
@@ -35,7 +35,7 @@ Entity Framework 中配置了对象之间的引用关系后，在查询数据的
 
 <!--more-->
 
-### <span id="i-3">默认规则</span>
+### 默认规则
 
 当你不配置任何东西的时候，Entity Framework 默认会认为你的数据库是这样的：
 
@@ -49,7 +49,7 @@ Entity Framework 中配置了对象之间的引用关系后，在查询数据的
 
 &nbsp;
 
-### <span id="_Fluent_API">利用 Fluent API 来配置引用关系</span>
+### 利用 Fluent API 来配置引用关系
 
 Attribute 配置法（Data Annotations）无法 实现所有功能，建议使用 Fluent API 来实现，具体配置遵循一下标准：
 
@@ -78,7 +78,7 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 &nbsp;
 
-### <span id="i-4">配置一对多与一对一关系</span>
+### 配置一对多与一对一关系
 
 <pre class="brush: csharp; gutter: true">public class User
 {
@@ -175,7 +175,7 @@ public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
 
 &nbsp;
 
-### <span id="i-5">配置多对多关系</span>
+### 配置多对多关系
 
 多对多关系的语义非常简单：我有很多 XXX，它有很多XXX……
 
@@ -195,7 +195,7 @@ public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
 
 &nbsp;
 
-### <span id="i-6">总结</span>
+### 总结
 
 以上就是 Code First 中配置引用关系的基本方法，涵盖了一对一、一对多和多对多三种关系，非常地灵活。
 

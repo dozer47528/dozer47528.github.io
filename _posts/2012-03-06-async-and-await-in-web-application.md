@@ -13,7 +13,7 @@ tags:
   - 异步
 ---
 
-### <span id="net">.net 中的异步</span>
+### .net 中的异步
 
 关于 .net 的异步，一篇文章是讲不完的，我这里就贴两篇文章让大家看一下：
 
@@ -35,13 +35,13 @@ tags:
 
 <!--more-->
 
-### <span id="async_await">async 与 await 的简单介绍</span>
+### async 与 await 的简单介绍
 
 仔细看完老赵的《C#与Visual Basic的未来》大家应该都能明白这两个关键字的作用是什么了。
 
 &nbsp;
 
-#### <span id="TPL">适用条件：只能适用于TPL异步模式</span>
+#### 适用条件：只能适用于TPL异步模式
 
 传统的方法返回的就是需要返回的内容，而基于TPL模式的异步，返回的都是 Task<T>，其中的 T 类型就是你需要返回内容的类型。
 
@@ -53,7 +53,7 @@ tags:
 
 &nbsp;
 
-#### <span id="i">场景：解决基于事件的异步中回调函数嵌套使用中的问题</span>
+#### 场景：解决基于事件的异步中回调函数嵌套使用中的问题
 
 假设有这样一个场景，一个 C# 应用程序中（WinForm Or WPF）我需要从一个网站上下载一个内容，然后再根据内容里的网址再下载里面的内容。
 
@@ -95,11 +95,11 @@ void client_DownloadStringCompleted2(object sender, DownloadStringCompletedEvent
 
 &nbsp;
 
-### <span id="_WebForm_MVC_async_await">在 WebForm 和 MVC 中使用 async 和 await</span>
+### 在 WebForm 和 MVC 中使用 async 和 await
 
 在 .net 4.5 中，最新的 WebForm 和 MVC 都已经支持这两个关键字了。
 
-#### <span id="_aspnet_WebForm">在 asp.net WebForm 中：</span>
+#### 在 asp.net WebForm 中：
 
 1.  <del>首先新建一个页面</del>
 2.  <del>打开 aspx 文件，然后再顶部的属性中加入：Async=&#8221;true&#8221;</del>
@@ -120,7 +120,7 @@ protected async void Page_Load(object sender, EventArgs e)
 
 &nbsp;
 
-#### <span id="_aspnet_MVC">在 asp.net MVC 中：</span>
+#### 在 asp.net MVC 中：
 
 把原来继承于 Controller 改成继承于 AsyncController
 
@@ -141,7 +141,7 @@ protected async void Page_Load(object sender, EventArgs e)
 
 &nbsp;
 
-#### <span id="_IHttpHandlder">在 IHttpHandlder 中：</span>
+#### 在 IHttpHandlder 中：
 
 微软官方的 .net 4.5 <a href="http://www.asp.net/vnext/overview/whitepapers/whats-new#_Toc318097378" target="_blank"><strong>releace note</strong></a> 中已经提到了：
 
@@ -162,13 +162,13 @@ protected async void Page_Load(object sender, EventArgs e)
 
 &nbsp;
 
-#### <span id="_IHttpModule"> 在 IHttpModule 中：</span>
+####  在 IHttpModule 中：
 
 同样是微软官方的 .net 4.5 <a href="http://www.asp.net/vnext/overview/whitepapers/whats-new#_Toc318097377" target="_blank"><strong>releace note</strong></a> 中，实现起来有点复杂，大家可以自己去看看。
 
 &nbsp;
 
-### <span id="_Web_async_await">在 Web 应用程序中使用 async 和 await 的注意事项</span>
+### 在 Web 应用程序中使用 async 和 await 的注意事项
 
 其实不仅仅是使用这两个关键字的注意事项，而是在 Web 中只要用到了异步页，就要注意一下问题！
 
@@ -186,25 +186,25 @@ protected async void Page_Load(object sender, EventArgs e)
 
 但是，如果你真的想要提升效率，还需要你亲自去测试一下，因为要实现“IO-Bound Operation”有一定的条件。
 
-#### <span id="WebClientWebService_WCF">WebClient、WebService 和 WCF 支持吗？</span>
+#### WebClient、WebService 和 WCF 支持吗？
 
 经过测试，上面这三种 Web 应用程序中使用最多的，是支持“IO-Bound Operation”的。其中，在 .net 4.5 中，WebClient 和 WCF 可以直接支持 async 和 await 关键字。（因为它们有相关的方法可以返回 Task 对象）
 
 而 WebService（微软不建议使用，但实际上还在被大量的应用），却不支持，但是可以通过写一些代码后让它支持。
 
-#### <span id="i-2">数据库操作支持吗？</span>
+#### 数据库操作支持吗？
 
 经过一定的配置后，它是可以支持的，但是具体的还需要进行大量的测试，毕竟不是调用几个方法那么简单。
 
 &nbsp;
 
-### <span id="_TPL_async_await">如何把传统的异步模式转换成 TPL 模式，以实现 async 和 await</span>
+### 如何把传统的异步模式转换成 TPL 模式，以实现 async 和 await
 
 上面提到了 WebService 并没有实现 TPL 模式，在 .net 4.5 中引用 WebService 后实现的是基于事件的异步。
 
 <span style="color: #ff0000;">（.net 2.0 以上程序在引用 WebService 的时候，需要点“添加服务引用”——“高级”——“添加Web引用”，如果直接在服务引用中添加，会出现一定的问题。并且，就算你添加了，它也没有帮你实现基于 TPL 的异步。）</span>
 
-#### <span id="_APM_TPL">如何把 APM 模式转换成 TPL 模式？</span>
+#### 如何把 APM 模式转换成 TPL 模式？
 
 其实微软在这篇文章中已经写过如何把传统的异步模式转换成 TPL 模式了：<a href="http://msdn.microsoft.com/ZH-CN/library/dd997423(VS.110).aspx" target="_blank"><strong>TPL 和传统 .NET 异步编程</strong></a>
 
@@ -212,7 +212,7 @@ protected async void Page_Load(object sender, EventArgs e)
 
 &nbsp;
 
-#### <span id="_EAP_TPL">如何把 EAP 模式转换成 TPL 模式？</span>
+#### 如何把 EAP 模式转换成 TPL 模式？
 
 EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但是写的并不是很清楚。
 
@@ -286,9 +286,9 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
 
 &nbsp;
 
-### <span id="i-3">性能测试</span>
+### 性能测试
 
-#### <span id="i-4">测试的理论：</span>
+#### 测试的理论：
 
 异步页最大的用处就是在处理“IO-Bound Operation”的时候可以不占据工作线程，验证逻辑如下：
 
@@ -298,7 +298,7 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
 
 &nbsp;
 
-#### <span id="i-5">前期准备：</span>
+#### 前期准备：
 
 最开始我使用浏览器测试，但是一直有问题，没解决，所以改用 ab.exe 来测试了。
 
@@ -314,7 +314,7 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
 
 &nbsp;
 
-#### <span id="i-6">工具准备：</span>
+#### 工具准备：
 
 我这里用的工具是 apache 下那只的 ab.exe，简单好用！
 
@@ -324,7 +324,7 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
 
 &nbsp;
 
-#### <span id="i-7">开始测试：</span>
+#### 开始测试：
 
 运行 WebService，提供一个会延时5秒的服务。
 
@@ -352,7 +352,7 @@ ab -c 10 -n 10 http://localhost:6360/asyncpage_cpu.aspx</pre>
 
 &nbsp;
 
-#### <span id="i-8">数据分析：</span>
+#### 数据分析：
 
 仔细分析下数据，会发现都符合理论：
 
@@ -368,7 +368,7 @@ ab -c 10 -n 10 http://localhost:6360/asyncpage_cpu.aspx</pre>
 
 &nbsp;
 
-### <span id="i-9">源代码和工具下载</span>
+### 源代码和工具下载
 
 <a href="/wp-content/uploads/2012/03/AsyncSample.zip" target="_blank">AsyncSample</a>
 

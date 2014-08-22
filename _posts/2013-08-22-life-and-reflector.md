@@ -16,7 +16,7 @@ tags:
   - 重构
 ---
 
-### <span id="NB">怎么样才是NB的工程师</span>
+### 怎么样才是NB的工程师
 
 记得以前我很喜欢一句话：“当你觉得以前的代码很2的时候，就说明你进步了。”
 
@@ -40,7 +40,7 @@ tags:
 
 &nbsp;
 
-### <span id="i">生活与重构</span>
+### 生活与重构
 
 但是呢，我这篇文章不是想讲重构的，重构的方法和技巧就不说了。
 
@@ -52,7 +52,7 @@ tags:
 
 &nbsp;
 
-#### <span id="Just_Trying_To_Make_IT_Work">Just Trying To Make IT Work</span>
+#### Just Trying To Make IT Work
 
 TDD 的第一步通常是：Just Trying To Make IT Work，生活中很多事都是这样。
 
@@ -62,7 +62,7 @@ TDD 的第一步通常是：Just Trying To Make IT Work，生活中很多事都�
 
 &nbsp;
 
-#### <span id="Continuous_Improvement">Continuous Improvement</span>
+#### Continuous Improvement
 
 TDD 和重构相辅相成，当它看起来还不错的时候，可以不去管它，但是在一个点上，就要开始持续改进了。
 
@@ -90,7 +90,7 @@ TDD 和重构相辅相成，当它看起来还不错的时候，可以不去管�
 
 &nbsp;
 
-### <span id="i-2">关于效率</span>
+### 关于效率
 
 回过头来，我又思考了一下这么做是否最高效？
 

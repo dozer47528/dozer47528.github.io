@@ -16,7 +16,7 @@ tags:
   - Google Analytics
 ---
 
-### <span id="i">什么是自定义维度</span>
+### 什么是自定义维度
 
 Google Analytics 本身有很多维度了，例如：应用版本、设备型号、网络环境 等等…
 
@@ -32,7 +32,7 @@ GA 可以自动识别内置的维度，但是自定义维度需要自己在应�
 
 &nbsp;
 
-### <span id="i-2">维度的坑</span>
+### 维度的坑
 
 自定义维度很好用，但是最近我们的项目发现了一个问题：
 
@@ -50,7 +50,7 @@ GA 可以自动识别内置的维度，但是自定义维度需要自己在应�
 
 &nbsp;
 
-### <span id="i-3">适用范围和优先级</span>
+### 适用范围和优先级
 
 先解释两个名词：
 
@@ -90,7 +90,7 @@ Google Analitics 官方文档：<a href="https://developers.google.com/analytics
 
 &nbsp;
 
-### <span id="_Session">让你的 Session 不再被遗漏</span>
+### 让你的 Session 不再被遗漏
 
 怎么解决？我想了两个办法：
 

@@ -22,7 +22,7 @@ tags:
 
 &nbsp;
 
-### <span id="i">材料购买</span>
+### 材料购买
 
 材料真的很便宜，可以自己到淘X上购买，我买了0.25平方米，大概在5-10元左右
 
@@ -30,7 +30,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">准备工作</span>
+### 准备工作
 
 材料到了以后就要开始准备了
 
@@ -42,9 +42,9 @@ tags:
 
 <!--more-->
 
-### <span id="i-3">开始工作</span>
+### 开始工作
 
-###### <span id="Step1"> Step1:</span>
+######  Step1:
 
 [<img class="alignnone size-medium wp-image-500" title="IMG_1979" alt="" src="/uploads/2011/11/IMG_1979.png" width="300" height="225" />][1]
 
@@ -52,7 +52,7 @@ tags:
 
 &nbsp;
 
-###### <span id="Step2">Step2:</span>
+###### Step2:
 
 [<img class="alignnone size-medium wp-image-501" title="IMG_1980" alt="" src="/uploads/2011/11/IMG_1980.png" width="300" height="225" />][2]
 
@@ -70,7 +70,7 @@ tags:
 
 &nbsp;
 
-###### <span id="Step3">Step3:</span>
+###### Step3:
 
 [<img class="alignnone size-medium wp-image-503" title="IMG_1982" alt="" src="/uploads/2011/11/IMG_1982.png" width="300" height="225" />][4]
 
@@ -78,7 +78,7 @@ tags:
 
 &nbsp;
 
-###### <span id="Step4">Step4:</span>
+###### Step4:
 
 [<img class="alignnone size-medium wp-image-504" title="IMG_1983" alt="" src="/uploads/2011/11/IMG_1983.png" width="300" height="225" />][5]
 
@@ -90,7 +90,7 @@ tags:
 
 &nbsp;
 
-###### <span id="SETP5">SETP5:</span>
+###### SETP5:
 
 接下来一步非常关键，你需要把这些边缘在电吹风下吹一下软化它，
 
@@ -98,7 +98,7 @@ tags:
 
 &nbsp;
 
-###### <span id="STEP6">STEP6:</span>
+###### STEP6:
 
 [<img class="alignnone size-medium wp-image-508" title="IMG_1987" alt="" src="/uploads/2011/11/IMG_1987.png" width="300" height="225" />][6]
 
@@ -108,7 +108,7 @@ tags:
 
 &nbsp;
 
-###### <span id="FINISH">FINISH:</span>
+###### FINISH:
 
 最后附上效果图
 
@@ -148,7 +148,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-4">万能的碳纤维膜</span>
+### 万能的碳纤维膜
 
 你以为它只能贴手机后面？那就错了，其实很多地方都可以用到它！
 

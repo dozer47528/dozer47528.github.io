@@ -13,7 +13,7 @@ tags:
   - 异步
 ---
 
-### <span id="i">发现问题</span>
+### 发现问题
 
 在我的上一篇文章<a href="/2012/03/async-and-await-in-web-application/" target="_blank"><strong>《async 与 await 在 Web 下的应用》</strong></a>中，我提到了 asp.net 4.5 在 Web.Config 中的一个奇怪配置：
 
@@ -38,9 +38,9 @@ tags:
 
 <!--more-->
 
-### <span id="_async">在事件上直接使用 async 引发的错误</span>
+### 在事件上直接使用 async 引发的错误
 
-#### <span id="i-2">代码段一：</span>
+#### 代码段一：
 
 <pre class="brush:csharp">public partial class WebForm1 : System.Web.UI.Page
 {
@@ -74,7 +74,7 @@ tags:
 
 &nbsp;
 
-#### <span id="i-3">代码段二：</span>
+#### 代码段二：
 
 <pre class="brush:xml">&lt;appSettings&gt;
   &lt;add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" /&gt;
@@ -105,13 +105,13 @@ tags:
 
 &nbsp;
 
-### <span id="UseTaskFriendlySynchronizationContext">UseTaskFriendlySynchronizationContext 的作用和错误引发的原因</span>
+### UseTaskFriendlySynchronizationContext 的作用和错误引发的原因
 
 其实在老外的回答中已经说明了全部，我这里主要是翻译+精简一下。
 
 &nbsp;
 
-#### <span id="UseTaskFriendlySynchronizationContext-2">UseTaskFriendlySynchronizationContext 的作用：</span>
+#### UseTaskFriendlySynchronizationContext 的作用：
 
 之前版本的 asp.net 所使用的异步不符合 CLR 的规范，而只有 RegisterAsyncTask 这个方法是符合 CLR 规范的。
 
@@ -119,7 +119,7 @@ tags:
 
 &nbsp;
 
-#### <span id="i-4">引发错误的原因：</span>
+#### 引发错误的原因：
 
 async 和 await 关键字在底层主要是利用 SynchronizationContext 来实现了异步。（具体原理我也没研究过）
 
@@ -127,7 +127,7 @@ async 和 await 关键字在底层主要是利用 SynchronizationContext 来实�
 
 &nbsp;
 
-### <span id="i-5">目前正确的写法</span>
+### 目前正确的写法
 
 首先，建议把 UseTaskFriendlySynchronizationContext 设置为 true。
 
@@ -171,7 +171,7 @@ async 和 await 关键字在底层主要是利用 SynchronizationContext 来实�
 
 &nbsp;
 
-#### <span id="i-6">参考资料：</span>
+#### 参考资料：
 
 <a href="http://stackoverflow.com/questions/9562836/whats-the-meaning-of-usetaskfriendlysynchronizationcontext" target="_blank">http://stackoverflow.com/questions/9562836/whats-the-meaning-of-usetaskfriendlysynchronizationcontext</a>
 

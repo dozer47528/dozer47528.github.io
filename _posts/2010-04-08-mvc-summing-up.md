@@ -16,7 +16,7 @@ tags:
 
 &nbsp;
 
-### <span id="1IISIIS6MVC">1、不对IIS做任何修改，如何在IIS6下运行MVC？</span>
+### 1、不对IIS做任何修改，如何在IIS6下运行MVC？
 
 &nbsp;
 
@@ -30,7 +30,7 @@ tags:
 
 &nbsp;
 
-### <span id="2AreasController">2、不同Areas的Controller重复导致的问题</span>
+### 2、不同Areas的Controller重复导致的问题
 
 &nbsp;
 
@@ -75,7 +75,7 @@ new string[] { "MvcApplication1.Areas.Web.Controllers" }
 
 &nbsp;
 
-### <span id="3Filter">3、关于Filter</span>
+### 3、关于Filter
 
 &nbsp;
 
@@ -135,7 +135,7 @@ public abstract class AuthorizationFilter : BaseFilterAttribute, IAuthorizationF
 
 &nbsp;
 
-### <span id="4MVCjs">4、MVC中控制js代码（修改版）</span>
+### 4、MVC中控制js代码（修改版）
 
 &nbsp;
 
@@ -191,7 +191,7 @@ window.location.href = '&lt;%=ViewData["JSHref"] %&gt;';
 
 &nbsp;
 
-### <span id="5WebDebugconfig_WebReleaseconfig">5、Web.Debug.config 和 Web.Release.config 的用法</span>
+### 5、Web.Debug.config 和 Web.Release.config 的用法
 
 &nbsp;
 
@@ -246,7 +246,7 @@ window.location.href = '&lt;%=ViewData["JSHref"] %&gt;';
 
 &nbsp;
 
-### <span id="6MVC">6、MVC中捕捉错误</span>
+### 6、MVC中捕捉错误
 
 &nbsp;
 

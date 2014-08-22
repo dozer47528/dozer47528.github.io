@@ -12,7 +12,7 @@ tags:
   - java
 ---
 
-### <span id="Google_Translate_Toolkit">Google Translate Toolkit</span>
+### Google Translate Toolkit
 
 2013年在线教育很火啊，从没有资源到不知道怎么选资源…
 
@@ -38,7 +38,7 @@ http://translate.google.com/toolkit
 
 &nbsp;
 
-### <span id="i">思路</span>
+### 思路
 
 最近正好用 Groovy 用得比较爽，而且它可以直接写 script，一个文件就可以了。
 
@@ -52,7 +52,7 @@ http://translate.google.com/toolkit
 
 &nbsp;
 
-### <span id="Groovy">Groovy</span>
+### Groovy
 
 用惯了 C# 后写 Java 真的很痛苦，但是遇到 Groovy 后一切都变了！
 
@@ -74,7 +74,7 @@ http://translate.google.com/toolkit
 
 &nbsp;
 
-### <span id="i-2">源代码</span>
+### 源代码
 
 最后直接贴上项目地址：<a href="https://github.com/dozer47528/srt-translater" target="_blank">https://github.com/dozer47528/srt-translater</a>
 

@@ -14,7 +14,7 @@ tags:
   - x64
 ---
 
-### <span id="GraphicsDeviceInterface"><strong>基础知识：图形设备接口（GraphicsDeviceInterface）</strong></span>
+### <strong>基础知识：图形设备接口（GraphicsDeviceInterface）</strong>
 
 GDI是Graphics Device Interface的缩写，含义是图形设备接口，它的主要任务是负责系统与绘图程序之间的信息交换，处理所有Windows程序的图形输出。
 
@@ -34,7 +34,7 @@ GDI具有如下特点：
 
 &nbsp;
 
-### <span id="i"><strong>效果如下</strong></span>
+### <strong>效果如下</strong>
 
 [<img class="alignnone size-medium wp-image-165" title="effect_1" alt="" src="/uploads/2011/01/effect_1-300x141.png" width="300" height="141" />][1]
 
@@ -50,7 +50,7 @@ GDI具有如下特点：
 
 &nbsp;
 
-### <span id="i-2"><strong>相关软件</strong></span>
+### <strong>相关软件</strong>
 
 **GDI++：**
 

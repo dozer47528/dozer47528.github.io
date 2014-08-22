@@ -9,7 +9,7 @@ tags:
   - java
 ---
 
-### <span id="URL">URL编码</span>
+### URL编码
 
 概念就不啰嗦了，直接上维基百科：<a href="http://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81" target="_blank"><strong>传送门</strong></a>
 
@@ -21,7 +21,7 @@ tags:
 
 &nbsp;
 
-### <span id="encodeURI_encodeURIComponent">encodeURI 和 encodeURIComponent</span>
+### encodeURI 和 encodeURIComponent
 
 JavaScript 中常常会见到这两个函数，发 POST 请求的时候，同样也是不需要你做任何事情的，但是如果是 GET 请求的话，就会需要用到这两个函数了。
 
@@ -53,7 +53,7 @@ MDN文档：
 
 &nbsp;
 
-### <span id="Java">Java 中遇到的问题</span>
+### Java 中遇到的问题
 
 如果你的 Java 程序作为服务端，不管客户端用了哪种编码方式，你只要一个方法就搞定了。
 

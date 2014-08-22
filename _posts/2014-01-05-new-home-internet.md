@@ -10,7 +10,7 @@ tags:
   - 路由器
 ---
 
-### <span id="100M">100M</span>
+### 100M
 
 新家搬过来半个多月了，发现郊区的最大好处就是：宽带太便宜了！
 
@@ -38,7 +38,7 @@ tags:
 
 &nbsp;
 
-### <span id="i">设备</span>
+### 设备
 
 好马配好鞍，这么快的网速再用TP之类的垃圾路由器坑定是跟不上这速度的。
 
@@ -52,7 +52,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">拓扑图</span>
+### 拓扑图
 
 [<img class="alignnone size-full wp-image-1424" alt="network" src="/uploads/2014/01/network.png" width="629" height="413" />][3]
 
@@ -66,7 +66,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-3">缺陷</span>
+### 缺陷
 
 现在还差什么？局域网内没有问题了，现在最苦恼的是我那新版本的光纤猫。
 

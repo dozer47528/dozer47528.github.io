@@ -22,7 +22,7 @@ tags:
 
 &nbsp;
 
-### <span id="UCenter">UCenter 通讯基本原理</span>
+### UCenter 通讯基本原理
 
 UCenter和各个子站的通讯，主要就是通过 POST 的方式调用而已，没有什么技术含量。
 
@@ -54,7 +54,7 @@ UCenter和各个子站的通讯，主要就是通过 POST 的方式调用而已�
 
 &nbsp;
 
-### <span id="UCenter-2">UCenter 多点登录的原理及过程</span>
+### UCenter 多点登录的原理及过程
 
 通讯原理就这么点，很简单，子站想联系 UCenter，就调用一个地址，传递一些参数就行了，反之亦然。
 
@@ -132,7 +132,7 @@ if(ucLoginReturn.Success)
 
 &nbsp;
 
-### <span id="AuthCode">AuthCode函数</span>
+### AuthCode函数
 
 这个函数是什么？传说这是康盛公司对 php 发展做出的一个极大的贡献…
 

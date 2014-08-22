@@ -11,7 +11,7 @@ tags:
   - 导航
 ---
 
-### <span id="i">前言</span>
+### 前言
 
 导航高亮一直是一个让大家头疼的问题。
 
@@ -33,7 +33,7 @@ tags:
 
 <!--more-->
 
-### <span id="_eval">神奇的 eval 函数</span>
+### 神奇的 eval 函数
 
 Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥有的精髓。我们是否可以利用这个函数呢？
 
@@ -47,7 +47,7 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
 
 &nbsp;
 
-### <span id="i-2">解决方案</span>
+### 解决方案
 
 <pre class="brush:xml">&lt;ul id="top-navigation"&gt;
     &lt;li class="controller_Home"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("首页","Index","Home")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
@@ -107,7 +107,7 @@ function GetClassName(item) {
 
 &nbsp;
 
-### <span id="i-3">高级应用</span>
+### 高级应用
 
 就这么简单？仅此而已？
 

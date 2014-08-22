@@ -10,7 +10,7 @@ tags:
   - javascript
 ---
 
-### <span id="Web_Worker">Web Worker 的奇怪用法</span>
+### Web Worker 的奇怪用法
 
 当我第一次看到 <a href="http://www.w3schools.com/html5/default.asp" target="_blank"><strong>HTML5</strong> </a>中 <a href="http://en.wikipedia.org/wiki/Web_worker" target="_blank"><strong>Web Worker</strong></a> 的用法时，非常地疑惑：
 
@@ -26,7 +26,7 @@ tags:
 
 <!--more-->
 
-### <span id="Web_Worker-2">Web Worker 实现原理猜想</span>
+### Web Worker 实现原理猜想
 
 由于这样奇怪的调用方法，我开始有了一种猜想，HTML5 中的 Web Worker 是不是和样子实现的呢？
 
@@ -40,7 +40,7 @@ Javascript 底层是单线程的，但是浏览器在加载页面的时候是可
 
 &nbsp;
 
-### <span id="Web_Worker-3">Web Worker 实现原理猜想试验</span>
+### Web Worker 实现原理猜想试验
 
 为了验证这个猜想，特意写了一段代码。
 
@@ -80,7 +80,7 @@ onmessage();</pre>
 
 &nbsp;
 
-### <span id="Web_Worker-4">Web Worker 设计原理</span>
+### Web Worker 设计原理
 
 最后，求助了 Stack Overflow：<http://stackoverflow.com/questions/11354992/why-the-web-worker-cant-call-a-function>
 

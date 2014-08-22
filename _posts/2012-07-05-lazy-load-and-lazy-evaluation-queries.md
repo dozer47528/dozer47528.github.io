@@ -12,7 +12,7 @@ tags:
   - 延迟求值查询
 ---
 
-### <span id="i">对延迟加载的片面认识</span>
+### 对延迟加载的片面认识
 
 很多人对延迟加载的初步认识就是，在使用 LINQ for Entity 的时候，查询语句不会立即执行查询，只有在使用 foreach 或者 ToList() 等方法的时候，才会去查询数据库。
 
@@ -22,7 +22,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">延迟加载的实现原理</span>
+### 延迟加载的实现原理
 
 LINQ for IQueryable 查询的往往是远程数据的，当你调用 Where()，Single() 等方法的时候，并没有去查询数据库，而是保存为表达式树了。
 
@@ -52,7 +52,7 @@ var result2 = list.Where(_ =&gt; _ &lt; 5).ToList().Where(_ =&gt; _ != 8);</pre>
 
 &nbsp;
 
-### <span id="i-3">迭代器与延迟求值查询</span>
+### 迭代器与延迟求值查询
 
 大家有没有发现在这个章节我把延迟加载改成了延迟求值查询？因为严格的来说，LINQ for IEnumerable 查询的数据已经在内存中了，那还需要加载什么呢？
 
@@ -70,7 +70,7 @@ var result2 = list.Where(_ =&gt; _ &lt; 5).ToList().Where(_ =&gt; _ != 8);</pre>
 
 &nbsp;
 
-### <span id="i-4">延迟加载和延迟求值查询的思考</span>
+### 延迟加载和延迟求值查询的思考
 
 由于之前的片面认识，导致我一直认为延迟加载只有在使用 LINQ to Entity 等 ORM 框架的时候，才会有用。
 
@@ -105,7 +105,7 @@ var result2 = list.Where(_ =&gt; _ &lt; 5).ToList().Where(_ =&gt; _ != 8);</pre>
 
 &nbsp;
 
-### <span id="IQueryableltTgt_IEnumerableltTgt">IQueryable<T> 显示转换为 IEnumerable<T> 时出现的问题</span>
+### IQueryable<T> 显示转换为 IEnumerable<T> 时出现的问题
 
 LINQ 技术中，为 IQueryable<T> 接口和 IEnumerable<T> 写了两套扩展方法（LINQ 技术中的各种函数使用扩展方法实现的）。
 
@@ -117,7 +117,7 @@ LINQ 技术中，为 IQueryable<T> 接口和 IEnumerable<T> 写了两套扩展�
 
 &nbsp;
 
-### <span id="i-5">自己实现延迟求值查询</span>
+### 自己实现延迟求值查询
 
 另外，如果你没有用 LINQ，老版本 .NET？或者是需要一些复杂的操作 .NET 现有类库无法满足怎么办？
 
@@ -173,7 +173,7 @@ PS.当然，如果用的是 Entity Framework 等 LINQ for IQueryable<T> 技术�
 
 &nbsp;
 
-### <span id="i-6">不适用场景</span>
+### 不适用场景
 
 这种方法虽然能在特定的场景下提升性能，但是并不是适合所有场景。因为利用此方法后，相当于把集合中的元素一个个执行对应的方法，最终合并成了一个循环。
 

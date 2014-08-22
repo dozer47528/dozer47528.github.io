@@ -11,7 +11,7 @@ tags:
   - javascript
 ---
 
-### <span id="i">场景</span>
+### 场景
 
 最近有一个需求，会在 mongodb 中插入各种类型的数据，算是记录业务日志的数据库吧。
 
@@ -23,7 +23,7 @@ tags:
 
 <!--more-->
 
-### <span id="i-2">查询设计方案</span>
+### 查询设计方案
 
 首先想到的是让用户直接输入 mongodb 查询语法，类似 json 格式。但是使用者虽然也是开发，可都不熟悉这个语法，所以放弃了。
 
@@ -41,7 +41,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-3">数据结构</span>
+### 数据结构
 
 为了设计出这样的结构，肯定要先好好想一下数据结构。
 
@@ -80,7 +80,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-4">前端设计交互</span>
+### 前端设计交互
 
 [<img class="alignnone size-medium wp-image-895" title="ui" alt="ui" src="/uploads/2012/10/ui-300x138.png" width="300" height="138" />][2]
 
@@ -182,7 +182,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-5">前端数据处理</span>
+### 前端数据处理
 
 界面交互真的很简单，但是怎么把这个数据传给后端呢？
 
@@ -253,7 +253,7 @@ function QueryItem() {
 
 &nbsp;
 
-### <span id="i-6">后端数据处理</span>
+### 后端数据处理
 
 后端数据处理主要分两个部分：反序列化、转换成查询条件。
 
@@ -322,7 +322,7 @@ var item = JsonConvert.DeserializeObject&lt;QueryGroup&gt;(json);</pre>
 
 &nbsp;
 
-### <span id="i-7">后记</span>
+### 后记
 
 本场景中用的是 mongodb ，所以最终转换出来的是 mongodb 查询对象。其实，如果是转换 SQL 也是非常方便的。
 

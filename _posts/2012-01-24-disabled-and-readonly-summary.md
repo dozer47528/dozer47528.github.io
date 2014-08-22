@@ -12,13 +12,13 @@ tags:
   - WebForm
 ---
 
-### <span id="i">问题重现</span>
+### 问题重现
 
 前段时间做网站遇到了一点纠结事，在下面两个场景出现了问题：
 
 &nbsp;
 
-#### <span id="disabled_readonly">disabled 和 readonly 的提交问题</span>
+#### disabled 和 readonly 的提交问题
 
 有一个 <a href="http://www.w3school.com.cn/htmldom/dom_obj_text.asp" target="_blank"><strong>text</strong></a> 类型的 <a href="http://www.w3school.com.cn/tags/tag_input.asp" target="_blank"><strong>input</strong></a>，用户无法直接提交内容，但是 js 会自动根据别的一些表单修改其中的内容。
 
@@ -34,7 +34,7 @@ tags:
 
 <!--more-->
 
-#### <span id="readonly_Aspnet">readonly 在 Asp.net 中的问题</span>
+#### readonly 在 Asp.net 中的问题
 
 先说现象吧，同一个场景，我在前端会用 js 修改这个 text 的属性，所以提交的 value 和一开始的 value 会是不同的。
 
@@ -56,7 +56,7 @@ js 是不可信的，严格的来说我这里的确是不安全的。
 
 &nbsp;
 
-#### <span id="checkbox_radio_readonly">checkbox, radio 等控件无法设置 readonly 的问题</span>
+#### checkbox, radio 等控件无法设置 readonly 的问题
 
 类似的场景，只不过对象换成了 <a href="http://www.w3school.com.cn/htmldom/dom_obj_checkbox.asp" target="_blank"><strong>checkbox</strong></a>, **<a href="http://www.w3school.com.cn/htmldom/dom_obj_radio.asp" target="_blank">radio</a>**等控件。
 
@@ -73,7 +73,7 @@ js 是不可信的，严格的来说我这里的确是不安全的。
 
 &nbsp;
 
-### <span id="i-2">总结</span>
+### 总结
 
 看完几个场景的解决方法，其实只有了解原理后才能应付一切问题。
 

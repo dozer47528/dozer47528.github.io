@@ -18,7 +18,7 @@ tags:
   - shell
 ---
 
-### <span id="_git">各种 git 工具</span>
+### 各种 git 工具
 
 最新在 mac 和 windows 下用了各种 git 工具；有 shell 的，也有 GUI 的，并尝试着使用它们来进行工作。
 
@@ -28,7 +28,7 @@ tags:
 
 &nbsp;
 
-### <span id="i">公共配置</span>
+### 公共配置
 
 先给大家看一下我 .gitconfig 文件里的一些配置（mac & windows 都适用）：
 
@@ -66,7 +66,7 @@ tags:
 
 &nbsp;
 
-### <span id="mac_os">mac os</span>
+### mac os
 
 mac 上的 git 就不用怎么纠结了，直接是官方的标准 git 即可。
 
@@ -77,7 +77,7 @@ mac 上的 git 就不用怎么纠结了，直接是官方的标准 git 即可。
 
 &nbsp;
 
-#### <span id="oh_my_zsh">oh my zsh</span>
+#### oh my zsh
 
 zsh 是一个替代 mac shell 的东西，在 shell 上拓展了很多东西。
 
@@ -101,7 +101,7 @@ oh my zsh 是一个开元框架可以让你方便地配置 zsh。
 
 &nbsp;
 
-#### <span id="git-extras">git-extras</span>
+#### git-extras
 
 git-extras 包含了很多扩展的 git 命令，有的人喜欢，有的人不喜欢，各取所好吧。
 
@@ -113,7 +113,7 @@ mac 下更建议从 brew 中安装。
 
 &nbsp;
 
-#### <span id="SourceTree">SourceTree</span>
+#### SourceTree
 
 SourceTree 支持 windows 平台和 mac 平台，它展示出来的分支图非常漂亮！
 
@@ -127,7 +127,7 @@ gitk 下的分支图，同一个分支一直会乱窜…
 
 &nbsp;
 
-### <span id="windows">windows</span>
+### windows
 
 windows 下的 git 选择太多了：
 
@@ -156,13 +156,13 @@ windows 下的 git 选择太多了：
 
 &nbsp;
 
-#### <span id="SourceTree-2">SourceTree 适合看分支图</span>
+#### SourceTree 适合看分支图
 
 windows 下也有 SoureceTree，体验一样棒！
 
 &nbsp;
 
-#### <span id="Github_for_Windows">Github for Windows</span>
+#### Github for Windows
 
 如果你希望打开一个 shell ，可以操作 git ，也可以同时调用 windows 的命令，那这个会很适合你。
 
@@ -176,7 +176,7 @@ windows 下也有 SoureceTree，体验一样棒！
 
 &nbsp;
 
-#### <span id="cygwin">cygwin</span>
+#### cygwin
 
 最后强烈推荐的是 cygwin，让你在 windows 下有很棒的 linux(mac) 体验。
 

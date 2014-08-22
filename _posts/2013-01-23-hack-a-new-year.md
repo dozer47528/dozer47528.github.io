@@ -9,13 +9,13 @@ tags:
   - Hackathon
 ---
 
-### <span id="Hack_a_New_Year">Hack a New Year</span>
+### Hack a New Year
 
 新年的 <a href="http://zh.wikipedia.org/zh/Hackathon" target="_blank"><strong>Hackathon</strong></a> 刚刚结束，和上次部门的 Hackathon 完全是两种不同的感觉，有些东西有必要拿出来说说~
 
 &nbsp;
 
-### <span id="i">我们做了什么？</span>
+### 我们做了什么？
 
 我们的项目叫“闪验”，提供一种快速验证团购券的方案。
 
@@ -31,7 +31,7 @@ tags:
 
 <!--more-->
 
-### <span id="24">24小时</span>
+### 24小时
 
 我们组有两个 js 开发工程师，另外我还有另一位也都熟悉 js，所以我们的架构师寸老师就决定都用 js 了，为什么？因为架构师只会 js ，哈哈哈哈哈~
 
@@ -80,7 +80,7 @@ Github 上的版本树
 
 &nbsp;
 
-### <span id="_Hackathon">说说上次的 Hackathon</span>
+### 说说上次的 Hackathon
 
 上次的 Hackathon 我们团队虽然获得了第一名，但是却远没有这次有趣。
 

@@ -11,11 +11,11 @@ tags:
   - 验证码
 ---
 
-### <span id="i"><span style="line-height: 19px;"><strong>场景：</strong></span></span>
+### <span style="line-height: 19px;"><strong>场景：</strong></span>
 
 某网站在许多地方需要验证码（例如：文件下载、发表留言等），所以用户可能会打开多个包含验证码的页面，根据常规验证码实现的思路，会导致冲突，只有最后一个页面的验证码是可以用的，如何解决？
 
-### <span id="i-2"><strong>其他网站的“解决办法”：</strong></span>
+### <strong>其他网站的“解决办法”：</strong>
 
 1、大部分网站，例如中国移动和中国电信的网站并没有做任何优化，只有最后打开的一个网页的验证码可用。如果这个验证码仅仅是用来验证登陆的话问题不大。
 
@@ -27,7 +27,7 @@ tags:
 
 <!--more-->
 
-### <span id="i-3"><strong>基本思路：</strong></span>
+### <strong>基本思路：</strong>
 
 我的解决方案应该和xun6的差不多，也是用了一个key，来代表本次会话，然后根据这个key去得到验证码。
 
@@ -49,7 +49,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-4"><strong>验证码管理类——概况：</strong></span>
+### <strong>验证码管理类——概况：</strong>
 
 可以看到，这个过程中，流程是固定的，所以完全自己设计一个类，来实现这个“复杂”的过程，因为我懒得每次都重写一遍~
 
@@ -65,7 +65,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-5"><strong>验证码管理类——用法：</strong></span>
+### <strong>验证码管理类——用法：</strong>
 
 1、IAuthCodeBuilder接口，这是什么？因为验证码生成的步骤区别很大，大家自由一套办法，所以需要传入一个验证码构造者来生成和输出验证码，实现该接口即可。
 
@@ -93,7 +93,7 @@ tags:
 
 &nbsp;
 
-### <span id="Aspnet"><strong>验证码管理类——Asp.net 用法：</strong></span>
+### <strong>验证码管理类——Asp.net 用法：</strong>
 
 **1、后端代码 Default.aspx.cs**
 
@@ -202,7 +202,7 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 
 &nbsp;
 
-### <span id="MVC"><strong>验证码管理类——MVC 用法：</strong></span>
+### <strong>验证码管理类——MVC 用法：</strong>
 
 **1、后端代码 HomeController.cs**
 
@@ -292,7 +292,7 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 
 &nbsp;
 
-### <span id="i-6"><strong>可扩展性：</strong></span>
+### <strong>可扩展性：</strong>
 
 公布源码，大家觉得我有写的不好的地方，可以直接修改。但是我也考虑到了可扩展性。
 
@@ -333,7 +333,7 @@ public virtual bool Authorize(string authcode)
 
 &nbsp;
 
-### <span id="i-7"><strong>后记：</strong></span>
+### <strong>后记：</strong>
 
 **F&Q：**
 

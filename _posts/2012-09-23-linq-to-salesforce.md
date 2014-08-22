@@ -12,7 +12,7 @@ tags:
   - 表达式树
 ---
 
-### <span id="i">锤子与钉子</span>
+### 锤子与钉子
 
 手中有锤子，眼前的一切就都变成钉子了…
 
@@ -27,7 +27,7 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 <!--more-->
 
-### <span id="i-2">调研</span>
+### 调研
 
 如果网上有好的框架可以用，那何必自己写呢？
 
@@ -51,7 +51,7 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 &nbsp;
 
-### <span id="_Linq_To_Salesforce">自己实现 Linq To Salesforce</span>
+### 自己实现 Linq To Salesforce
 
 自己实现 Linq To Salesforce 最关键的就是把<a href="http://msdn.microsoft.com/zh-cn/library/bb397951.aspx" target="_blank"><strong>表达式树</strong></a>转换成SOQL：
 
@@ -74,11 +74,11 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 &nbsp;
 
-### <span id="_Linq_To_Salesforce-2">我的 Linq To Salesforce</span>
+### 我的 Linq To Salesforce
 
 我的项目已经发布到了 Github 上了：<https://github.com/dozer47528/LinqToSalesforce>
 
-#### <span id="i-3">框架内容简介：</span>
+#### 框架内容简介：
 
 <span style="background-color: #eeeeee;">SalesforceQuery</span>：职责是保存 IQueryProvider 和 Expression 的引用，并调用 <span style="background-color: #eeeeee;">IQueryProvider</span> 得到最终结果；
 
@@ -90,7 +90,7 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 &nbsp;
 
-#### <span id="1">使用步骤1：</span>
+#### 使用步骤1：
 
 继承 <span style="background-color: #eeeeee;">SalesforceProviderBase<T></span> ，实现自己的 <span style="background-color: #eeeeee;">SalesforceProvider<T></span> ，这里需要重写 2 个方法：
 
@@ -103,7 +103,7 @@ protected abstract IEnumerable&lt;T&gt; GetEnumerable(string cmd);</pre>
 
 &nbsp;
 
-#### <span id="2">使用步骤2：</span>
+#### 使用步骤2：
 
 创建 IQueryable<T> 对象：
 
@@ -120,7 +120,7 @@ protected abstract IEnumerable&lt;T&gt; GetEnumerable(string cmd);</pre>
 
 &nbsp;
 
-#### <span id="i-4">注意事项：</span>
+#### 注意事项：
 
 *   实现 SalesforceProviderBase<T> 中的 GetEnumerable 方法的时候请注意利用迭代器模式取回所有数据，因为 Salesforce 默认只会返回 200 条数据。
 *   <span style="background-color: #eeeeee;">SOQL</span> 没有 <span style="background-color: #eeeeee;">join</span> 查询，如果要查询关联对象的话，SOQL 是这样实现的：<span style="background-color: #eeeeee;">[SELECT Accoint.Name From Contract]<span style="background-color: #ffffff;">，而在 Linq To Salesforce 中，这种查询可能会有点麻烦，具体的可以参考 测试项目中的 <span style="background-color: #eeeeee;">SelectRelatedTest</span> 测试。</span></span>
@@ -129,7 +129,7 @@ protected abstract IEnumerable&lt;T&gt; GetEnumerable(string cmd);</pre>
 
 &nbsp;
 
-### <span id="i-5">功能列表：</span>
+### 功能列表：
 
 *   支持 Select 关联对象
 *   支持 First, FirstOrDefault, Single, SingleOrDefault 方法

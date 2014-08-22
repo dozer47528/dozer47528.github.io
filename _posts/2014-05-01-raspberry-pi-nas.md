@@ -11,7 +11,7 @@ tags:
   - 树莓派
 ---
 
-### <span id="i">小米路由器</span>
+### 小米路由器
 
 最近小米路由器火了，说实在的，这配置拆开卖每个都要699这个价格。
 
@@ -31,7 +31,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-2">硬件</span>
+### 硬件
 
 *   树莓派一个（加上一些配件）：400元
 *   1T移动硬盘一个：400元
@@ -50,7 +50,7 @@ tags:
 
 &nbsp;
 
-### <span id="i-3">操作系统准备</span>
+### 操作系统准备
 
 操作系统选用的是 RaspBian，用的人比较多，教程也多一点，喜欢 ArchLinux 的也可以用它。
 
@@ -64,9 +64,9 @@ tags:
 
 &nbsp;
 
-### <span id="i-4">下载部分</span>
+### 下载部分
 
-#### <span id="i-5">准备硬盘</span>
+#### 准备硬盘
 
 各种格式支持：
 
@@ -81,7 +81,7 @@ sudo apt-get install exfat-nofuse</pre>
 
 &nbsp;
 
-#### <span id="i-6">挂载硬盘</span>
+#### 挂载硬盘
 
 我们先新建一个文件夹用来挂载硬盘：
 
@@ -108,7 +108,7 @@ sudo apt-get install exfat-nofuse</pre>
 
 &nbsp;
 
-#### <span id="i-7">迅雷路由器固件</span>
+#### 迅雷路由器固件
 
 这个真是神器啊！家里的小米电视插上硬盘式支持迅雷远程下载的，但是小米电视是 Android 系统的，是不是很神奇？
 
@@ -197,9 +197,9 @@ esac</pre>
 
 &nbsp;
 
-### <span id="i-8">共享部分</span>
+### 共享部分
 
-#### <span id="Samba">Samba</span>
+#### Samba
 
 Samba 是最常用的了，Windows、Linux、小米电视都支持！
 
@@ -233,7 +233,7 @@ Samba 是最常用的了，Windows、Linux、小米电视都支持！
 
 &nbsp;
 
-#### <span id="DLNA">DLNA</span>
+#### DLNA
 
 DLNA 管理各种媒体文件比较好，性能和 Samba 也差不多，反正两者可以共存，主要看你的设备支持什么了。
 
@@ -284,7 +284,7 @@ FTP 配置起来也很简单，但是作为 NAS，一个是给播放器播放，
 
 &nbsp;
 
-### <span id="i-9">最后</span>
+### 最后
 
 树莓派算是搞定了，性能一般般，主要是受到了树莓派 CPU 的限制，如果有一台性能高一点、功耗低一点的机器，再把这套东西迁移过去。
 

@@ -12,7 +12,7 @@ tags:
   - 垃圾回收
 ---
 
-### <span id="GeoCoordinateWatcher">GeoCoordinateWatcher 的诡异问题</span>
+### GeoCoordinateWatcher 的诡异问题
 
 前两天在做 **<a href="http://zh.wikipedia.org/wiki/Windows_Phone" target="_blank">WP7</a>** 开发，需要用到 **<a href="http://zh.wikipedia.org/wiki/GPS" target="_blank">GPS</a>** 定位，这里会用到一个 **<a href="http://msdn.microsoft.com/zh-cn/library/system.device.location.geocoordinatewatcher.aspx" target="_blank">GeoCoordinateWatcher</a>** 类。
 
@@ -46,7 +46,7 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
 
 <!--more-->
 
-### <span id="i">网友的解答</span>
+### 网友的解答
 
 发帖后，很多老外给予我帮助，一个人说：每次绑定事件，这个实例的 **<a href="https://www.google.com/search?q=%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0" target="_blank">引用计数</a>** 就会加一，所以除非取消事件绑定，否则它不会被销毁。
 
@@ -69,7 +69,7 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
 
 &nbsp;
 
-### <span id="i-2">反编译后终得结果</span>
+### 反编译后终得结果
 
 为了寻找最后的结果，决定反编译一下这个类：
 
@@ -101,7 +101,7 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
 
 &nbsp;
 
-### <span id="i-3">解决方法</span>
+### 解决方法
 
 既然找到了原因，就需要去避免它。在上面这段代码中，有两种方式可以避免：
 
@@ -110,7 +110,7 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
 
 &nbsp;
 
-### <span id="i-4">其他类似的类</span>
+### 其他类似的类
 
 由于这个问题，我又想到了很多别的类，也会有同样的用法，那的类会有怎么样的表现呢？
 
@@ -146,7 +146,7 @@ public void client_DownloadStringCompleted(object sender, DownloadStringComplete
 
 &nbsp;
 
-### <span id="i-5">总结</span>
+### 总结
 
 最后，发现了问题以后肯定要避免以下了。
 
