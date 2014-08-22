@@ -303,11 +303,11 @@ out 关键字就相当于 return ，所以内部赋值为 null ，就相当于 r
 
 **正常的传递引用类型：**
 
-[<img class="alignnone size-medium wp-image-480" title="ref1" alt="" src="/uploads/2011/10/ref1-300x79.png" width="300" height="79" />][1]
+[<img class="alignnone size-medium wp-image-480" title="ref1" alt="ref1" src="/uploads/2011/10/ref1-300x79.png" width="300" height="79" />][1]
 
 **加了 ref 的传递引用类型：**
 
-[<img class="alignnone size-medium wp-image-481" title="ref2" alt="" src="/uploads/2011/10/ref2-300x79.png" width="300" height="79" />][2]
+[<img class="alignnone size-medium wp-image-481" title="ref2" alt="ref2" src="/uploads/2011/10/ref2-300x79.png" width="300" height="79" />][2]
 
 这两张图对于上面那句话的解释很清楚了吧？
 

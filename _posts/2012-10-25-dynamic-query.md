@@ -31,7 +31,7 @@ tags:
 
 最后，看到了 iTunes 智能播放列表的交互设计：
 
-[<img class="alignnone size-medium wp-image-894" title="itunes" alt="" src="/uploads/2012/10/itunes-300x179.png" width="300" height="179" />][1]
+[<img class="alignnone size-medium wp-image-894" title="itunes" alt="itunes" src="/uploads/2012/10/itunes-300x179.png" width="300" height="179" />][1]
 
 这里，你可以插入一个条件，也可以插入一组条件（相当于插入了一个括号，括号内是许多条件）。
 
@@ -82,7 +82,7 @@ tags:
 
 ### <span id="i-4">前端设计交互</span>
 
-[<img class="alignnone size-medium wp-image-895" title="ui" alt="" src="/uploads/2012/10/ui-300x138.png" width="300" height="138" />][2]
+[<img class="alignnone size-medium wp-image-895" title="ui" alt="ui" src="/uploads/2012/10/ui-300x138.png" width="300" height="138" />][2]
 
 这里用的是 bootstrap ，界面非常好看！
 
@@ -330,7 +330,7 @@ var item = JsonConvert.DeserializeObject&lt;QueryGroup&gt;(json);</pre>
 
 最后附上 gif 的 Demo：
 
-[<img class="alignnone size-medium wp-image-903" title="demo" alt="" src="/uploads/2012/10/demo-300x146.gif" width="300" height="146" />][3]
+[<img class="alignnone size-medium wp-image-903" title="demo" alt="demo" src="/uploads/2012/10/demo-300x146.gif" width="300" height="146" />][3]
 
 &nbsp;
 

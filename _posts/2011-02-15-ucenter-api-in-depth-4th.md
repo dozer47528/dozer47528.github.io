@@ -50,7 +50,7 @@ tags:
 
 <http://faq.comsenz.com/userguide/x/install.html>
 
-[<img title="ucenter_success" alt="" src="/uploads/2011/01/ucenter_success.png" width="474" height="330" />][1]
+[<img title="ucenter_success" alt="ucenter_success" src="/uploads/2011/01/ucenter_success.png" width="474" height="330" />][1]
 
 安装完成后，因为还没有安装别的应用，所以应用数量是：0
 
@@ -64,7 +64,7 @@ tags:
 
 <http://faq.comsenz.com/userguide/discuz/install.html>
 
-[<img title="connection" alt="" src="/uploads/2011/01/connection.png" width="547" height="266" />][2]
+[<img title="connection" alt="connection" src="/uploads/2011/01/connection.png" width="547" height="266" />][2]
 
 这里没有什么难度，网上有许多教程
 
@@ -82,7 +82,7 @@ tags:
 
 新建网站应用程序 — 打开属性页面
 
-[<img title="ucentertest" alt="" src="/uploads/2011/01/ucentertest-300x172.png" width="300" height="172" />][3]
+[<img title="ucentertest" alt="ucentertest" src="/uploads/2011/01/ucentertest-300x172.png" width="300" height="172" />][3]
 
 这步非不要操作，但是可以模拟真实的场景，并且还可以在 IIS 里调试
 
@@ -102,7 +102,7 @@ tags:
 
 按照这张图配置一下
 
-[<img title="apps_settings" alt="" src="/uploads/2011/01/apps_settings-200x300.png" width="200" height="300" />][5]
+[<img title="apps_settings" alt="apps_settings" src="/uploads/2011/01/apps_settings-200x300.png" width="200" height="300" />][5]
 
 这里就一个地方和配置 php 的网站不同，就是“应用接口文件名称”
 
@@ -112,7 +112,7 @@ tags:
 
 提交后复制一下配置信息，后面有用
 
-[<img title="app_info" alt="" src="/uploads/2011/01/app_info-300x208.png" width="300" height="208" />][6]
+[<img title="app_info" alt="app_info" src="/uploads/2011/01/app_info-300x208.png" width="300" height="208" />][6]
 
 &nbsp;
 
@@ -194,7 +194,7 @@ Asp.net 网站算是搭建成功了，但是现在还没有用到那个类库呢
 
 **类库概况**
 
-[<img class="alignnone size-full wp-image-217" title="solution" alt="" src="/uploads/2011/02/solution.png" width="220" height="189" />][7]
+[<img class="alignnone size-full wp-image-217" title="solution" alt="solution" src="/uploads/2011/02/solution.png" width="220" height="189" />][7]
 
 &nbsp;
 
@@ -694,7 +694,7 @@ namespace DS.Web.UCenter.Client
 
 结构如下：
 
-[<img class="alignnone size-full wp-image-218" title="ashx" alt="" src="/uploads/2011/02/ashx.png" width="227" height="197" />][8]
+[<img class="alignnone size-full wp-image-218" title="ashx" alt="ashx" src="/uploads/2011/02/ashx.png" width="227" height="197" />][8]
 
 uc.ashx 修改如下：
 
