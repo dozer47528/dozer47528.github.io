@@ -25,7 +25,7 @@ tags:
 
 &nbsp;
 
-<em id="__mceDel"><!--more--></em>
+<!--more-->
 
 &nbsp;
 
