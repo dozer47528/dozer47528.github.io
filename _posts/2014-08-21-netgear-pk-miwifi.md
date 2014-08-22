@@ -50,11 +50,11 @@ tags:
 
 #### Netgear 速度
 
-![](/uploads/2014/08/ng-5g-file.png)
+![ng-5g-file](/uploads/2014/08/ng-5g-file.png)
 
 #### 小米 速度
 
-![](/uploads/2014/08/xm-5g-file.png)
+![xm-5g-file](/uploads/2014/08/xm-5g-file.png)
 
 &nbsp;
 
@@ -64,11 +64,11 @@ tags:
 
 #### Netgear 速度
 
-![](/uploads/2014/08/ng-2g-file.png)
+![ng-2g-file](/uploads/2014/08/ng-2g-file.png)
 
 #### 小米 速度
 
-![](/uploads/2014/08/xm-2g-file.png)
+![xm-2g-file](/uploads/2014/08/xm-2g-file.png)
 
 &nbsp;
 
@@ -94,19 +94,19 @@ tags:
 
 #### Netgear 2G 速度
 
-![](/uploads/2014/08/ng-2g.png)
+![ng-2g](/uploads/2014/08/ng-2g.png)
 
 #### Netgear 5G 速度
 
-![](/uploads/2014/08/ng-5g.png)
+![ng-5g](/uploads/2014/08/ng-5g.png)
 
 #### 小米 2G 速度
 
-![](/uploads/2014/08/xm-2g.png)
+![xm-2g](/uploads/2014/08/xm-2g.png)
 
 #### 小米 5G 速度
 
-![](/uploads/2014/08/xm-5g.png)
+![xm-5g](/uploads/2014/08/xm-5g.png)
 
 &nbsp;
 
