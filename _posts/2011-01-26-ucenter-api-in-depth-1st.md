@@ -46,7 +46,7 @@ Discuz 算是很开放的吧（对php程序员而言）
 
 反编译之（原作者再原文中说可以反编译，但找不到他了），后经过修改，BUG 是没了，基本功能也可以用了，所以写了一篇<a style="font-weight: bold;" href="http://www.cnblogs.com/dozer/archive/2010/09/21/ucenter-api_with_asp-net.html" target="_blank">文章</a>，并且还把这个应用到了**<a href="http://online.cumt.edu.cn" target="_blank">学生在线</a>**的网站上
 
-[<img class="alignnone size-full wp-image-191" title="ucenter" alt="" src="/uploads/2011/01/ucenter.png" width="632" height="437" />][1]
+[<img alt="ucenter" class="alignnone size-full wp-image-191" title="ucenter" alt="" src="/uploads/2011/01/ucenter.png" width="632" height="437" />][1]
 
 &nbsp;
 
