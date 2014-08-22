@@ -125,7 +125,7 @@ static void Test3(object c)
 
 &nbsp;
 
-#### <strong>个人总结有几个原则：</strong>
+#### 个人总结有几个原则：
 
 **如果你是为了能多返回一个变量，那么就应该用 out：**
 
@@ -191,7 +191,7 @@ static void Test2(object b) { }</pre>
 
 &nbsp;
 
-#### <strong>总结：</strong>
+#### 总结：
 
 现在你是否明白，当变量什么情况下该用什么关键字了吗？其实有时候 ref 和 out 都可以达到目的，你需要根据你的初衷，和它们的特点，来衡量一下到底使用哪个了！
 
