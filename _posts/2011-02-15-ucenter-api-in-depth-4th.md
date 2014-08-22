@@ -96,7 +96,7 @@ tags:
 
 登录后点添加新应用
 
-[<img title="add_app" alt="" src="/uploads/2011/01/add_app-300x126.png" width="300" height="126" />][4]
+[<img title="add_app" alt="add_app" src="/uploads/2011/01/add_app-300x126.png" width="300" height="126" />][4]
 
 &nbsp;
 
