@@ -62,7 +62,7 @@ tags:
 
 先来看张图吧
 
-[<img class="alignnone size-medium wp-image-297" title="online" alt="" src="/uploads/2011/04/online-240x300.png" width="240" height="300" />][1]
+[<img class="alignnone size-medium wp-image-297" title="online" alt="online" src="/uploads/2011/04/online-240x300.png" width="240" height="300" />][1]
 
 &nbsp;
 

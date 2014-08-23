@@ -22,13 +22,13 @@ tags:
 
 首先是 <a href="http://qdesk.qq.com/" target="_blank"><strong>小Q书桌</strong></a>，360等都有类似的软件，大家根据洗好自我选择。
 
-[<img class="alignnone size-full wp-image-592" title="qdesk" alt="" src="/uploads/2012/01/qdesk.png" width="433" height="273" />][1]
+[<img class="alignnone size-full wp-image-592" title="qdesk" alt="qdesk" src="/uploads/2012/01/qdesk.png" width="433" height="273" />][1]
 
 <!--more-->
 
 这里有个小软件：**<a href="http://www.launchy.net/" target="_blank">Launchy</a> **它不仅可以搜索程序，还可以搜索文档。
 
-[<img class="alignnone size-full wp-image-591" title="launchy" alt="" src="/uploads/2012/01/launchy.png" width="322" height="249" />][2]
+[<img class="alignnone size-full wp-image-591" title="launchy" alt="launchy" src="/uploads/2012/01/launchy.png" width="322" height="249" />][2]
 
 &nbsp;
 
@@ -43,7 +43,7 @@ tags:
 **一张图就能说明问题，但是也需要来解释一下它的特点：**
 
 <div>
-  <a href="/wp-content/uploads/2012/01/search_windows.png"><img class="alignnone size-full wp-image-602" title="search_windows" alt="" src="/uploads/2012/01/search_windows.png" width="410" height="476" /></a>
+  <a href="/wp-content/uploads/2012/01/search_windows.png"><img class="alignnone size-full wp-image-602" title="search_windows" alt="search_windows" src="/uploads/2012/01/search_windows.png" width="410" height="476" /></a>
 </div>
 
 1.  根据类型分类，程序排第一（因为大部分情况是为了启动程序）
@@ -69,7 +69,7 @@ tags:
 
 现在开始菜单搜索“索引选项”，我们先来告诉一下 Windows ，它应该去哪里搜索东西。
 
-[<img class="alignnone size-medium wp-image-594" title="index" alt="" src="/uploads/2012/01/index-300x176.png" width="300" height="176" />][3]
+[<img class="alignnone size-medium wp-image-594" title="index" alt="index" src="/uploads/2012/01/index-300x176.png" width="300" height="176" />][3]
 
 一般用默认的就行，除非有特殊需求。
 
@@ -77,7 +77,7 @@ tags:
 
 再次在开始菜单搜索“文件夹选项”，我们现在来配置一些高级选项。
 
-[<img class="alignnone size-medium wp-image-595" title="search" alt="" src="/uploads/2012/01/search-265x300.png" width="265" height="300" />][4]
+[<img class="alignnone size-medium wp-image-595" title="search" alt="search" src="/uploads/2012/01/search-265x300.png" width="265" height="300" />][4]
 
 把这些都够上是为了能让搜索更智能一点，虽然会加大系统负担，但现在的配置不在乎这点了吧？
 
@@ -101,7 +101,7 @@ OK，初级调教完毕了，这时候，如果你新装了很多软件，并在
 
 让我们来看看效果吧。（我假设有一个程序叫“工资”，另外我的文档里也有很多和“工资”有关的文件）
 
-[<img class="alignnone size-full wp-image-597" title="search_temp" alt="" src="/uploads/2012/01/search_temp.png" width="409" height="474" />][5]
+[<img class="alignnone size-full wp-image-597" title="search_temp" alt="search_temp" src="/uploads/2012/01/search_temp.png" width="409" height="474" />][5]
 
 纳尼！为什么会这样？程序呢？为什么它跑到了文件里？而且排在了这么后面？！
 
@@ -139,7 +139,7 @@ OK，我们理一下思路：
 
 下面看看效果吧。
 
-[<img class="alignnone size-full wp-image-598" title="mtxx" alt="" src="/uploads/2012/01/mtxx.png" width="413" height="475" />][6]
+[<img class="alignnone size-full wp-image-598" title="mtxx" alt="mtxx" src="/uploads/2012/01/mtxx.png" width="413" height="475" />][6]
 
 虽然，你每次安装一个程序后都要改一下快捷方式的名字，但是由于会受到重装的影响，所以其实是一劳永逸的。
 

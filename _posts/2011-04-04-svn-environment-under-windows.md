@@ -62,7 +62,7 @@ Visual Studio 插件：<a href="http://ankhsvn.open.collab.net/" target="_blank"
 
 **配置：**
 
-[<img class="alignnone size-full wp-image-279" title="virsualsvn" alt="" src="/uploads/2011/04/virsualsvn.png" width="205" height="244" />][1]
+[<img class="alignnone size-full wp-image-279" title="virsualsvn" alt="virsualsvn" src="/uploads/2011/04/virsualsvn.png" width="205" height="244" />][1]
 
 这是右边的控制台，可以新建 SVN 项目，也可以新建用户和群组，傻瓜式，熟悉 Windows 的你一定没有问题！
 
@@ -84,7 +84,7 @@ Visual Studio 插件：<a href="http://ankhsvn.open.collab.net/" target="_blank"
 2.  在本地的项目文件加上右击：导入(Import) *[TortoiseSVN 是一个 Windows 资源管理器的外壳工具]*
 3.  输入项目的地址
 
-[<img class="alignnone size-medium wp-image-280" title="import" alt="" src="/uploads/2011/04/import-300x220.png" width="300" height="220" />][2]
+[<img class="alignnone size-medium wp-image-280" title="import" alt="import" src="/uploads/2011/04/import-300x220.png" width="300" height="220" />][2]
 
 &nbsp;
 
@@ -96,7 +96,7 @@ Visual Studio 插件：<a href="http://ankhsvn.open.collab.net/" target="_blank"
 
 在你需要放这个项目的文件夹中右击：检出(Checkout)
 
-[<img class="alignnone size-medium wp-image-281" title="checkout" alt="" src="/uploads/2011/04/checkout-300x231.png" width="300" height="231" />][3]
+[<img class="alignnone size-medium wp-image-281" title="checkout" alt="checkout" src="/uploads/2011/04/checkout-300x231.png" width="300" height="231" />][3]
 
 如果你刚刚执行了第一步上传到服务器，那么填写检出目录的时候直接填写那个目录即可（会覆盖）
 
@@ -118,7 +118,7 @@ Visual Studio 插件：<a href="http://ankhsvn.open.collab.net/" target="_blank"
 
 安装完 ankhsvn 的 Visual Studio 在解决方案管理器中年，可以看到版本控制状态图标，具体的使用方法和 TortoiseSVN 其实是相同的。
 
-[<img class="alignnone size-medium wp-image-282" title="ankhsvn" alt="" src="/uploads/2011/04/ankhsvn-175x300.png" width="175" height="300" />][4]
+[<img class="alignnone size-medium wp-image-282" title="ankhsvn" alt="ankhsvn" src="/uploads/2011/04/ankhsvn-175x300.png" width="175" height="300" />][4]
 
  [1]: /uploads/2011/04/virsualsvn.png
  [2]: /uploads/2011/04/import.png

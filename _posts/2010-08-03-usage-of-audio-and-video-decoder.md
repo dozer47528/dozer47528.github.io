@@ -50,13 +50,13 @@ b) 直接调用，查看帮助
 
 i. 先调用相应的解码器，它会提示怎么查看帮助，然后传入相应的参数即可
 
-[<img title="cmd1" alt="" src="/uploads/2011/01/cmd1.png" width="677" height="234" />][1]
+[<img title="cmd1" alt="cmd1" src="/uploads/2011/01/cmd1.png" width="677" height="234" />][1]
 
 &nbsp;
 
 ii.但是好长啊，其实还可以把帮助输出到文件
 
-[<img class="alignnone size-full wp-image-187" title="cmd2" alt="" src="/uploads/2011/01/cmd2.png" width="677" height="234" />][2]
+[<img class="alignnone size-full wp-image-187" title="cmd2" alt="cmd2" src="/uploads/2011/01/cmd2.png" width="677" height="234" />][2]
 
 &nbsp;
 
@@ -80,7 +80,7 @@ ii.但是好长啊，其实还可以把帮助输出到文件
 
 此时，我只需要在上面的图形界面中调整相应的参数，就可以在这里看到自动生成的参数设置方法了~~
 
-[<img class="alignnone size-medium wp-image-188" title="mediacoder" alt="" src="/uploads/2011/01/mediacoder-300x225.png" width="300" height="225" />][3]
+[<img class="alignnone size-medium wp-image-188" title="mediacoder" alt="mediacoder" src="/uploads/2011/01/mediacoder-300x225.png" width="300" height="225" />][3]
 
 &nbsp;
 

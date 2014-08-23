@@ -26,7 +26,7 @@ tags:
 
 UCenter和各个子站的通讯，主要就是通过 POST 的方式调用而已，没有什么技术含量。
 
-[<img class="alignnone size-full wp-image-193" title="ucenterapi" alt="" src="/uploads/2011/01/ucenterapi.png" width="211" height="247" />][1]
+[<img class="alignnone size-full wp-image-193" title="ucenterapi" alt="ucenterapi" src="/uploads/2011/01/ucenterapi.png" width="211" height="247" />][1]
 
 表单参数都是经过 **<a href="http://zh.wikipedia.org/zh-cn/Base64" target="_blank">Base64</a>** 算法，加一个通信密钥进行加密和解密的。
 
@@ -68,7 +68,7 @@ UCenter和各个子站的通讯，主要就是通过 POST 的方式调用而已�
 
 **先看一下多点登录的过程吧：**
 
-[<img class="alignnone size-full wp-image-130" title="login" alt="" src="/uploads/2011/01/login.png" width="360" height="315" />][2]
+[<img class="alignnone size-full wp-image-130" title="login" alt="login" src="/uploads/2011/01/login.png" width="360" height="315" />][2]
 
 子站调用封装好的登录函数（参数：帐号、密码），返回登录信息（包括：uid、用户名、E-mail）
 
@@ -126,7 +126,7 @@ if(ucLoginReturn.Success)
 
 这样就可以实现同步登录了，我们来看一下 UC\_User\_Synlogin 函数返回的 js 代码吧：
 
-[<img class="alignnone size-full wp-image-132" title="login_js" alt="" src="/uploads/2011/01/login_js.png" width="545" height="341" />][3]
+[<img class="alignnone size-full wp-image-132" title="login_js" alt="login_js" src="/uploads/2011/01/login_js.png" width="545" height="341" />][3]
 
 &nbsp;
 

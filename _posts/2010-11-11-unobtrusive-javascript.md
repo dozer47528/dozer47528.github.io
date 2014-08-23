@@ -70,7 +70,7 @@ MVC3中的Web.Config文件中默认多了两个配置项
 
 这里是一个全局设置，你可以打开或者关闭。
 
-<img class="alignnone size-full wp-image-100" title="uj1" alt="" src="/uploads/2011/01/uj1.png" width="439" height="88" />
+<img class="alignnone size-full wp-image-100" title="uj1" alt="uj1" src="/uploads/2011/01/uj1.png" width="439" height="88" />
 
 另外，你也可以在任何一个 Action 或 Controller 中执行以下代码，灵活地进行控制，来处理一些特殊的 Action 或 Controller。
 

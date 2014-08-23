@@ -153,7 +153,7 @@ static IEnumerable&lt;int&gt; Test2(IEnumerable&lt;int&gt; list)
 
 执行结果如下：
 
-[<img class="alignnone size-medium wp-image-795" title="console" alt="" src="/uploads/2012/07/console-215x300.png" width="215" height="300" />][1]
+[<img class="alignnone size-medium wp-image-795" title="console" alt="console" src="/uploads/2012/07/console-215x300.png" width="215" height="300" />][1]
 
 &nbsp;
 

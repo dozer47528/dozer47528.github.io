@@ -34,7 +34,7 @@ tags:
 
 此图这就是最后的效果
 
-<img class="alignnone size-full wp-image-55" title="1" alt="" src="/uploads/2011/01/1.jpg" width="427" height="329" />
+<img class="alignnone size-full wp-image-55" title="1" alt="1" src="/uploads/2011/01/1.jpg" width="427" height="329" />
 
 <!--more-->
 
@@ -107,19 +107,19 @@ public ActionResult Exp1(Models.UserModel user)
 
 选择创建强类型View，并且在内容中选择Edit
 
-<img class="alignnone size-full wp-image-56" title="2" alt="" src="/uploads/2011/01/2.jpg" width="479" height="526" />
+<img class="alignnone size-full wp-image-56" title="2" alt="2" src="/uploads/2011/01/2.jpg" width="479" height="526" />
 
 &nbsp;
 
 这是自动生成的View
 
-<img class="alignnone size-full wp-image-57" title="3" alt="" src="/uploads/2011/01/3.jpg" width="613" height="549" />
+<img class="alignnone size-full wp-image-57" title="3" alt="3" src="/uploads/2011/01/3.jpg" width="613" height="549" />
 
 &nbsp;
 
 OK，下面我可以运行了。。。
 
-<img class="alignnone size-full wp-image-58" title="4" alt="" src="/uploads/2011/01/4.jpg" width="455" height="472" />
+<img class="alignnone size-full wp-image-58" title="4" alt="4" src="/uploads/2011/01/4.jpg" width="455" height="472" />
 
 &nbsp;
 
@@ -362,7 +362,7 @@ OK，言归正传…
 
 如何把数据验证交给Model呢？这里需要引用一个DLL
 
-<img class="alignnone size-full wp-image-59" title="5" alt="" src="/uploads/2011/01/5.jpg" width="431" height="385" />
+<img class="alignnone size-full wp-image-59" title="5" alt="5" src="/uploads/2011/01/5.jpg" width="431" height="385" />
 
 然后在Model中这样做
 
@@ -448,7 +448,7 @@ public static void Edit(Models.UserModel user,bool IsValid)
 
 并且混合使用了2中验证方法
 
-<img class="alignnone size-full wp-image-60" title="6" alt="" src="/uploads/2011/01/6.jpg" width="429" height="243" />
+<img class="alignnone size-full wp-image-60" title="6" alt="6" src="/uploads/2011/01/6.jpg" width="429" height="243" />
 
 什么时候用Model验证？ 验证Model固有的属性
 
@@ -460,7 +460,7 @@ public static void Edit(Models.UserModel user,bool IsValid)
 
 因为Model验证是在这个Model传入这个方法的时候就已经完成的
 
-<img class="alignnone size-full wp-image-61" title="7" alt="" src="/uploads/2011/01/7.jpg" width="512" height="544" />
+<img class="alignnone size-full wp-image-61" title="7" alt="7" src="/uploads/2011/01/7.jpg" width="512" height="544" />
 
 如果不传入，那BLL验证中虽然没错误，但不代表整个过程没有错误。
 
@@ -488,7 +488,7 @@ public static void Edit(Models.UserModel user,bool IsValid)
 
 其实打开MVC默认的CSS样式表就不难发现，这些错误信息都有固定的class，所以只要写一个CSS的class即可
 
-<img class="alignnone size-full wp-image-62" title="8" alt="" src="/uploads/2011/01/8.jpg" width="254" height="212" />
+<img class="alignnone size-full wp-image-62" title="8" alt="8" src="/uploads/2011/01/8.jpg" width="254" height="212" />
 
 那怎么才能知道class名是什么呢？ 最方便的方法，做好页面后在浏览器中看一下即可
 
@@ -551,13 +551,13 @@ public class UserMetaData
 
 先添加3个javascript文件，请按顺序添加：
 
-<img class="alignnone size-full wp-image-63" title="9" alt="" src="/uploads/2011/01/9.jpg" width="677" height="170" />
+<img class="alignnone size-full wp-image-63" title="9" alt="9" src="/uploads/2011/01/9.jpg" width="677" height="170" />
 
 &nbsp;
 
 然后在View里添加一行代码：（注意要添加在Form前）
 
-<img class="alignnone size-full wp-image-64" title="10" alt="" src="/uploads/2011/01/10.jpg" width="392" height="124" />
+<img class="alignnone size-full wp-image-64" title="10" alt="10" src="/uploads/2011/01/10.jpg" width="392" height="124" />
 
 注意点：这里，其实是这个函数把Model验证转换成了javascript代码，对！它只能转换Model验证，BLL验证无法转换，因为BLL验证涉及到复杂的代码，不可能全部转换成javascript吧？并且BLL验证很多还需要和数据库交互。
 
@@ -575,7 +575,7 @@ public class UserMetaData
 
 &nbsp;
 
-<img class="alignnone size-full wp-image-65" title="11" alt="" src="/uploads/2011/01/11.jpg" width="484" height="342" />
+<img class="alignnone size-full wp-image-65" title="11" alt="11" src="/uploads/2011/01/11.jpg" width="484" height="342" />
 
 &nbsp;
 

@@ -54,7 +54,7 @@ GFW现在真的是越来越过分了，以前用 Google 搜索，只不过是会
 
 这样，你的 Google.com 就变成了简体中文界面了，并且它还能搜索到英文和繁体中文的内容
 
-[<img class="alignnone size-medium wp-image-492" title="google_1" alt="" src="/uploads/2011/11/google_1-300x230.png" width="300" height="230" />][1]
+[<img class="alignnone size-medium wp-image-492" title="google_1" alt="google_1" src="/uploads/2011/11/google_1-300x230.png" width="300" height="230" />][1]
 
 &nbsp;
 
@@ -88,7 +88,7 @@ PS.这个功能只有在界面语言设置成英文的情况下才能使用。
 
 修改 Hosts 前
 
-[<img class="alignnone size-medium wp-image-493" title="google_3" alt="" src="/uploads/2011/11/google_3-300x145.png" width="300" height="145" />][2]
+[<img class="alignnone size-medium wp-image-493" title="google_3" alt="google_3" src="/uploads/2011/11/google_3-300x145.png" width="300" height="145" />][2]
 
 &nbsp;
 
@@ -96,7 +96,7 @@ PS.这个功能只有在界面语言设置成英文的情况下才能使用。
 
 修改 Hosts 后
 
-[<img class="alignnone size-medium wp-image-494" title="google_2" alt="" src="/uploads/2011/11/google_2-300x176.png" width="300" height="176" />][3]
+[<img class="alignnone size-medium wp-image-494" title="google_2" alt="google_2" src="/uploads/2011/11/google_2-300x176.png" width="300" height="176" />][3]
 
 &nbsp;
 

@@ -28,7 +28,7 @@ Android 上的 Google 服务没的话说，好用的不得了。到了 <a href="
 
 微软官方其实有教程，虽然翻译了，但是却没考虑到中国用户。因为这个页面在中国打开是会有问题的。
 
-[<img class="alignnone size-medium wp-image-727" title="error" alt="" src="/uploads/2012/03/error-180x300.png" width="180" height="300" />][1]
+[<img class="alignnone size-medium wp-image-727" title="error" alt="error" src="/uploads/2012/03/error-180x300.png" width="180" height="300" />][1]
 
 其实很简单，更改语言，然后选 English(US) 即可。
 
@@ -36,19 +36,19 @@ Android 上的 Google 服务没的话说，好用的不得了。到了 <a href="
 
 #### 登陆 Google Account
 
-[<img class="alignnone size-medium wp-image-728" title="login" alt="" src="/uploads/2012/03/login-180x300.png" width="180" height="300" />][2]
+[<img class="alignnone size-medium wp-image-728" title="login" alt="login" src="/uploads/2012/03/login-180x300.png" width="180" height="300" />][2]
 
 &nbsp;
 
 #### 选择 Windows Phone
 
-[<img class="alignnone size-medium wp-image-729" title="platform" alt="" src="/uploads/2012/03/platform-180x300.png" width="180" height="300" />][3]
+[<img class="alignnone size-medium wp-image-729" title="platform" alt="platform" src="/uploads/2012/03/platform-180x300.png" width="180" height="300" />][3]
 
 &nbsp;
 
 #### 勾上你需要同步的日历
 
-[<img class="alignnone size-medium wp-image-730" title="save" alt="" src="/uploads/2012/03/save-180x300.png" width="180" height="300" />][4]
+[<img class="alignnone size-medium wp-image-730" title="save" alt="save" src="/uploads/2012/03/save-180x300.png" width="180" height="300" />][4]
 
 回到手机手动同步一下即可。
 
