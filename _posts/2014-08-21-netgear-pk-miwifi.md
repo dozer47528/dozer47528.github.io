@@ -22,7 +22,7 @@ tags:
 
 ### 参数对比
 
-<table>
+<table class="table table-bordered">
 <tr><td> 型号 </td><td> 价格 </td><td> CPU </td><td> 内存 </td><td> 无线 </td><td> 有线 </td></tr>
 <tr><td> Netgear 3700V4 </td><td> 499 </td><td> Atheros AR9344 560 MHz </td><td> 128MB </td><td> 2.4GHz/5GHz 11a/b/g/n </td><td> 1000M * 4 </td></tr>
 <tr><td> 小米路由器 mini </td><td> 129 </td><td> MT7620A 580MHz </td><td> 128MB </td><td> 2.4GHz/5GHz 11a/b/g/n/ac </td><td> 100M * 2 </td></tr>
