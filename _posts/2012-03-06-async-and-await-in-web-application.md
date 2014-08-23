@@ -47,7 +47,7 @@ tags:
 
 在 <a href="http://www.microsoft.com/visualstudio/11/zh-cn" target="_blank"><strong>Visual Studio 11</strong></a> 中，只要你调用的某个方法返回的类型是 Task 或者 Task<T>，它就会提示这是一个可等待的方法。
 
-[<img class="alignnone size-full wp-image-664" title="canwait" alt="" src="/uploads/2012/03/canwait.png" width="499" height="132" />][1]
+[<img class="alignnone size-full wp-image-664" title="canwait" alt="canwait" src="/uploads/2012/03/canwait.png" width="499" height="132" />][1]
 
 这时候，就可以利用 async 和 await 关键字了。
 
@@ -362,7 +362,7 @@ ab -c 10 -n 10 http://localhost:6360/asyncpage_cpu.aspx</pre>
 
 &nbsp;
 
-[<img class="alignnone size-medium wp-image-665" title="async" alt="" src="/uploads/2012/03/async-300x194.png" width="300" height="194" />][2]
+[<img class="alignnone size-medium wp-image-665" title="async" alt="async" src="/uploads/2012/03/async-300x194.png" width="300" height="194" />][2]
 
 最终结果非常让人满意，特别是AsyncPage_IO.aspx，如果我们把访问量大，并且需要等在磁盘或者是网络的页面都改写成这样，那可以大大减少IIS管线的消耗！
 
