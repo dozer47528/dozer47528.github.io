@@ -116,7 +116,7 @@ sudo apt-get install exfat-nofuse</pre>
 
 树莓派当然也是支持的！
 
-到论坛下载固件，树莓派需要下载这个版本：`<span style="color: #555555;">armel_v5te_glibc</span>`，具体选择什么版本和 CPU 架构有关。
+到论坛下载固件，树莓派需要下载这个版本：`armel_v5te_glibc`，具体选择什么版本和 CPU 架构有关。
 
 因为迅雷没有开源，所以它只能针对各种架构和库，编译了各种版本。
 
