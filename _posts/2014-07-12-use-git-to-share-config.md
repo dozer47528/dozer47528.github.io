@@ -30,84 +30,87 @@ tags:
 
 现在各种云都上T了，而且也都跨平台了，那为什么需要用 git 来实现 Home 目录下的各种配置同步呢？
 
-主要原因是两个：
+主要原因是三个：
 
 1.  各种云很难选择仅仅同步个别文件，它们都是按文件夹级别的
-2.  git 通过分支策略，可以有继承关系
+2.  git 在出现冲突的时候解决起来更简单
+3.  git 通过分支策略，可以有继承关系（一般情况不需要用到）
 
 &nbsp;
 
 ### 实现步骤
 
-第一步：在 github 或者 bitbucket 上新建一个项目
+&nbsp;
+
+#### 第一步：在 github 或者 bitbucket 上新建一个项目
 
 bitbucket 可以新建私有项目，我的配置里没什么敏感信息，所以就放 github 了。
 
 &nbsp;
 
-第二步：立刻建议一个`.gitignore`文件，并手动添加你需要同步的文件
+#### 第二步：立刻建一个`.gitignore`文件，并手动添加你需要同步的文件
 
 在`.gitignore`中直接忽略所有文件`*`。
 
 为什么这么做？Home 目录里大部分是不需要同步的，需要同步的文件你可以强制加入 git 中：
 
-<pre class="lang:sh decode:true ">git add -f yourfile</pre>
+`git add -f [yourfile]`
 
 &nbsp;
 
-第三步：整理各种配置的继承关系并建立分支
+#### 第三步：整理各种配置的关系并编写脚本
 
-我用的是`ohmyzsh`，所以主要的配置都在`.zshrc`中，为了实现各个环境的特殊配置，可以加入如下代码在`master`分支中：
+我用的是`ohmyzsh`，所以主要的配置都在`.zshrc`中，最关键的一段脚本如下：
 
-<pre class="lang:sh decode:true"># Include
-if [ -f ~/.env_profile ]; then
+    # Include
+    if [ -f ~/.env_profile ]; then
         . ~/.env_profile
-fi
-if [ -f ~/.mac_profile ]; then
-        . ~/.mac_profile
-fi
-if [ -f ~/.linux_profile ]; then
+    fi
+    if [ -f ~/.alias_profile ]; then
+        . ~/.alias_profile
+    fi
+    
+    if [[ $('uname') == 'Linux' && -f ~/.linux_profile ]]; then
         . ~/.linux_profile
-fi
-if [ -f ~/.cygwin_profile ]; then
+    fi
+    if [[ $('uname') == 'Darwin' && -f ~/.mac_profile ]]; then
+        . ~/.mac_profile
+    fi
+    if [[ $('uname') == 'CYGWIN_NT-6.2' && -f ~/.cygwin_profile ]]; then
         . ~/.cygwin_profile
-fi</pre>
-
-然后新建一个`cygwin`分支，并新建`.cygwin_profile`文件：
-
-<pre class="lang:sh decode:true"># 解决tmux在cygwin下的问题
-alias tmux='rm -rf /tmp/tmux* && tmux'
-
-# 解决ohmyzsh在cygwin中不兼容autojump的问题
-[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u</pre>
-
-这几行脚本只有在`cygwin`中才需要，而其他平台并不需要。
+    fi
 
 &nbsp;
 
-第四步：全局配置变更
+这段脚本会自动读取一下公用的配置，这个根据自己的习惯去配置，例如`.env_profile`和`.alias_profile`。
 
-将来有全局的配置变更，直接在`master`分支提交一下，再`merge`到各个平台即可。
+然后再根据当前的操作系统去加载不同的配置。
 
-&nbsp;
+你可以把所有的文件全部放在`master`分支上，因为会根据系统自动加载，所以不会有冲突。
 
-第五步：环境变量
-
-上面的配置中还有一个`.env\_profile`文件，我的设计中，这个文件是用来放环境变量的，因为这个通用性非常差，例如`JAVA\_HOME`，就算是都是 Mac 也会有不同的版本。
-
-总之策略是你自己设定的，根据自己的习惯来就行了。
+而我不会把`.env_profile`签入，因为里面都是环境变量，每个电脑都不太一样，签入没有什么意义。
 
 &nbsp;
 
-### 自动化脚本
+#### 第四步：如果有特殊需求，就拉新的分支
 
-目标完成，基本策略也很清晰，还差什么呢？好像还有点不方便！
-
-能不能自动`merge`？能不能一键在新电脑上初始化？
-
-这些都不是问题，待我写几个脚本~
+例如你有一个树莓派，不希望加载那么多的`ohmyzsh`插件，那么你可以新拉一个分支把相关功能注释掉。但大部分情况下不需要弄这个。
 
 &nbsp;
+
+### 如何在新的电脑加载这份配置
+
+这里有些技巧，因为如果你的电脑本来就包含这些文件了，而你想全部替换掉的话，需要如下操作：
+
+    cd ~ #到根目录
+    git init #初始化git
+    git remote add origin [your url] #帮顶远程分支
+    git fetch origin #拉一下远程代码
+    git reset --hard origin/master #强制把本地文件还原成和远程一致
+    git pull -u origin master #绑定本地和远程的分支
+
+&nbsp;
+
+### 我的配置
 
 最后贴上我的配置：<a href="https://github.com/dozer47528/home-config/tree/master" target="_blank">https://github.com/dozer47528/home-config/tree/master</a>
