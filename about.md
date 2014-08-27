@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
+### 关于我
 
 	new dozer()
 	{
@@ -16,6 +17,23 @@ permalink: /about/
 	    copyright = "如需转载，请注明出处，谢谢配合！",
 	}
 
+--------
+
+### 友情链接
+
+* [7 Design](http://www.zcool.com.cn/u/483558/)
+* [island205](http://island205.com/)
+* [evanhsiwood](http://evanhsiwood.com/)
+* [Rain Man](http://www.cnblogs.com/rainman/)
+* [TEDLIFE](http://www.tedlife.com)
+* [书豪](http://caosh.me/)
+* [发如雪](http://www.cnblogs.com/faruxue/)
+* [浊酒](http://blog.xujif.com/)
+* [随网之舞](http://dancewithnet.com/)
+
+--------
+
+### 给我留言
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
