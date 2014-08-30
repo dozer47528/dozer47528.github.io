@@ -107,7 +107,7 @@ bitbucket 可以新建私有项目，我的配置里没什么敏感信息，所�
     git remote add origin [your url] #帮顶远程分支
     git fetch origin #拉一下远程代码
     git reset --hard origin/master #强制把本地文件还原成和远程一致
-    git pull -u origin master #绑定本地和远程的分支
+    git branch --set-upstream master origin/master #绑定本地和远程的分支
 
 &nbsp;
 
