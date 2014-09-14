@@ -23,6 +23,6 @@ paginate: 10
 paginate_path: "page/:num/"
 highlighter: pygments
 markdown: kramdown
-rss_path: feed.xml
+rss_path: feed
 categories_path: categories.html
 tags_path: tags.html
