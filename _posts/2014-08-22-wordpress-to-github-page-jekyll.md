@@ -55,7 +55,7 @@ Github Page + Jekyll 的方案很早就有了，我为什么到现在才迁移�
 但是如果你是一个项目专门用来写博客，那就不一样了。
 
 * 你的项目名必须是`[your github username].github.io`，访问的 URL 是 `[your github username].github,io`，如果不是这样的规范的话，页面会无法访问
-* 你的项目只要在`master`分之即可，不需要特殊的分支
+* 你的项目只要在`master`分支即可，不需要特殊的分支
 
 &nbsp;
 
