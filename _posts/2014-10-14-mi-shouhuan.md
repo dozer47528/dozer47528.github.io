@@ -1,5 +1,5 @@
 ---
-title: 小米评测
+title: 小米手环评测
 author: Dozer
 layout: post
 permalink: /2014/10/mi-shouhuan/
