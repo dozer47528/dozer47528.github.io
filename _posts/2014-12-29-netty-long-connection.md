@@ -136,7 +136,7 @@ for rapid development of maintainable high performance protocol servers & client
 
 这个东西现在看似很简单，按照网上的配置改一下就行了，但是大家一定不知道第一个研究这个人有多难。
 
-这里直接贴一个其他人的文章，介绍了相关配置的修改方式：
+这里直接贴几篇文章，介绍了相关配置的修改方式：
 
 [构建C1000K的服务器](http://www.ideawu.net/blog/archives/740.html)
 
