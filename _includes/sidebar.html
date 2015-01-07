@@ -13,7 +13,9 @@
 	{{ site.author.bio }}
 </div>
 {% endif %}
-
+<div id="site-search" class="text-center" style="margin-bottom: 10px;">
+	<form><input placeholder="Search" style="width: 141px;padding-left: 5px;border-radius: 3px;background-color: white;border: none;height: 2em;" type='text' id='ts-search-input'></form>
+</div>
 <div id="contact-list" class="text-center">
 	<ul class="list-unstyled list-inline">
 		{% if site.author.github %}
@@ -59,8 +61,5 @@
 			</a>
 		</li>
 	</ul>
-</div>
-<div id="site-search" class="text-center">
-	<form><input placeholder="Search" style="width: 142px;" type='text' id='ts-search-input'></form>
 </div>
 <! -- sidebar.html end -->
