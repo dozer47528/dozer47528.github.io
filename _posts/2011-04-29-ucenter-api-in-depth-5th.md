@@ -16,7 +16,7 @@ tags:
 </div>
 
 > **目录：**
-> 
+>
 > 1.  <a href="/2011/01/ucenter-api-in-depth-1st/" target="_blank"><strong>开篇</strong></a>
 > 2.  <a href="/2011/01/ucenter-api-in-depth-2nd/" target="_blank"><strong>通讯原理：UCenter API 与子站之间的通讯原理和单点登陆原理</strong></a>
 > 3.  <a href="/2011/01/ucenter-api-in-depth-3rd/" target="_blank"><strong>加密与解密：AuthCode详解 & AuthCode函数翻译过程中的注意点</strong></a>
@@ -50,15 +50,15 @@ HttpContext 里的 Session 对象是 null
 
 &nbsp;
 
-<pre class="brush:csharp">namespace MVC.Controllers
-{
-    public class APIController : Controller
+    namespace MVC.Controllers
     {
-        public ActionResult Uc()
+        public class APIController : Controller
         {
-            new UcBase().ProcessRequest(System.Web.HttpContext.Current);
-            return Content("");
-        }
+            public ActionResult Uc()
+            {
+                new UcBase().ProcessRequest(System.Web.HttpContext.Current);
+                return Content("");
+            }
 
+        }
     }
-}</pre>

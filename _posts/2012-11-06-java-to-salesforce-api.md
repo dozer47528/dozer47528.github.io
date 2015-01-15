@@ -121,49 +121,49 @@ eclipse 其实可以自动生成，底层其实就是调用了 Axis。
 
 直接上代码：
 
-<pre class="lang:default decode:true brush: java; gutter: true">package Main;
+    package Main;
 
-import java.rmi.RemoteException;
+    import java.rmi.RemoteException;
 
-import javax.xml.rpc.ServiceException;
+    import javax.xml.rpc.ServiceException;
 
-import com.sforce.soap.enterprise.LoginResult;
-import com.sforce.soap.enterprise.QueryResult;
-import com.sforce.soap.enterprise.SessionHeader;
-import com.sforce.soap.enterprise.SforceServiceLocator;
-import com.sforce.soap.enterprise.SoapBindingStub;
-import com.sforce.soap.enterprise.fault.InvalidIdFault;
-import com.sforce.soap.enterprise.fault.LoginFault;
-import com.sforce.soap.enterprise.fault.UnexpectedErrorFault;
-import com.sforce.soap.enterprise.sobject.SObject;
+    import com.sforce.soap.enterprise.LoginResult;
+    import com.sforce.soap.enterprise.QueryResult;
+    import com.sforce.soap.enterprise.SessionHeader;
+    import com.sforce.soap.enterprise.SforceServiceLocator;
+    import com.sforce.soap.enterprise.SoapBindingStub;
+    import com.sforce.soap.enterprise.fault.InvalidIdFault;
+    import com.sforce.soap.enterprise.fault.LoginFault;
+    import com.sforce.soap.enterprise.fault.UnexpectedErrorFault;
+    import com.sforce.soap.enterprise.sobject.SObject;
 
-public class main {
-	public static void main(String[] args) throws InvalidIdFault,
-			UnexpectedErrorFault, LoginFault, RemoteException, ServiceException {
+    public class main {
+    	public static void main(String[] args) throws InvalidIdFault,
+    			UnexpectedErrorFault, LoginFault, RemoteException, ServiceException {
 
-		//init binding
-		SoapBindingStub binding = (SoapBindingStub) new SforceServiceLocator()
-				.getSoap();
+    		//init binding
+    		SoapBindingStub binding = (SoapBindingStub) new SforceServiceLocator()
+    				.getSoap();
 
-		//login
-		LoginResult result = binding.login("xxxxxxxx",
-				"xxxxxxxxxx");
+    		//login
+    		LoginResult result = binding.login("xxxxxxxx",
+    				"xxxxxxxxxx");
 
-		//set session
-		SessionHeader session = new SessionHeader();
-		session.setSessionId(result.getSessionId());
-		binding.setHeader(new SforceServiceLocator().getServiceName()
-				.getNamespaceURI(), "SessionHeader", session);
+    		//set session
+    		SessionHeader session = new SessionHeader();
+    		session.setSessionId(result.getSessionId());
+    		binding.setHeader(new SforceServiceLocator().getServiceName()
+    				.getNamespaceURI(), "SessionHeader", session);
 
-		//set server url
-		binding._setProperty(SoapBindingStub.ENDPOINT_ADDRESS_PROPERTY,
-				result.getServerUrl());
+    		//set server url
+    		binding._setProperty(SoapBindingStub.ENDPOINT_ADDRESS_PROPERTY,
+    				result.getServerUrl());
 
-		//query test
-		QueryResult q = binding.query("Select Id from Contract limit 1");
-		SObject[] recordSObjects = q.getRecords();
-	}
-}</pre>
+    		//query test
+    		QueryResult q = binding.query("Select Id from Contract limit 1");
+    		SObject[] recordSObjects = q.getRecords();
+    	}
+    }
 
 &nbsp;
 

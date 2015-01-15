@@ -63,33 +63,33 @@ tags:
 
 我们先来看看用基于事件的异步来实现：
 
-<pre class="brush:csharp">protected void DownloadAsync()
-{
-    WebClient client = new WebClient();
-    client.DownloadStringCompleted += client_DownloadStringCompleted;
-    client.DownloadStringAsync(new Uri("http://www.website.com"));
-}
-void client_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
-{
-    WebClient client = new WebClient();
-    client.DownloadStringCompleted+=client_DownloadStringCompleted2;
-    client.DownloadStringAsync(new Uri(e.Result));
-}
-void client_DownloadStringCompleted2(object sender, DownloadStringCompletedEventArgs e)
-{
-    var result = e.Result;//最终结果
-    //do more
-}</pre>
+    protected void DownloadAsync()
+    {
+        WebClient client = new WebClient();
+        client.DownloadStringCompleted += client_DownloadStringCompleted;
+        client.DownloadStringAsync(new Uri("http://www.website.com"));
+    }
+    void client_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+    {
+        WebClient client = new WebClient();
+        client.DownloadStringCompleted+=client_DownloadStringCompleted2;
+        client.DownloadStringAsync(new Uri(e.Result));
+    }
+    void client_DownloadStringCompleted2(object sender, DownloadStringCompletedEventArgs e)
+    {
+        var result = e.Result;//最终结果
+        //do more
+    }
 
 下面再来看看用 async 和 await 来实现：
 
-<pre class="brush:csharp">protected async void DownloadTaskAsync() {
-    WebClient client = new WebClient();
-    var result1 = await client.DownloadStringTaskAsync("http://www.website.com");
-    WebClient client2 = new WebClient();
-    var result2 = await client.DownloadStringTaskAsync(result1);
-    //do more
-}</pre>
+    protected async void DownloadTaskAsync() {
+        WebClient client = new WebClient();
+        var result1 = await client.DownloadStringTaskAsync("http://www.website.com");
+        WebClient client2 = new WebClient();
+        var result2 = await client.DownloadStringTaskAsync(result1);
+        //do more
+    }
 
 是不是简单多了？
 
@@ -106,15 +106,15 @@ void client_DownloadStringCompleted2(object sender, DownloadStringCompletedEvent
 3.  <del>接下来在任何一个事件中，加入这两个关键字即可</del>
 4.  <del>另外在 Web.Config 中有两个奇怪的配置，有可能会导致出错，去掉有正常，这两个配置具体有什么用，我已经在 <a href="http://stackoverflow.com/questions/9562836/whats-the-meaning-of-usetaskfriendlysynchronizationcontext" target="_blank"><strong>StackOverFlow</strong></a> 上问别人了</del>
 
-<pre class="brush:csharp">//以下代码有错误，请勿使用
-protected async void Page_Load(object sender, EventArgs e)
-{
-    WebClient client = new WebClient();
-    var result1 = await client.DownloadStringTaskAsync("http://www.website.com");
-    WebClient client2 = new WebClient();
-    var result2 = await client.DownloadStringTaskAsync(result1);
-    //do more
-}</pre>
+    //以下代码有错误，请勿使用
+    protected async void Page_Load(object sender, EventArgs e)
+    {
+        WebClient client = new WebClient();
+        var result1 = await client.DownloadStringTaskAsync("http://www.website.com");
+        WebClient client2 = new WebClient();
+        var result2 = await client.DownloadStringTaskAsync(result1);
+        //do more
+    }
 
 <span style="color: #ff0000;">在 asp.net WebForm 的正确用法请参考最新文章，上述方法被证实有错误：<a href="/2012/03/async-and-await-in-asp-net-beta/" target="_blank"><span style="color: #ff0000;"><strong>传送门</strong></span></a></span>
 
@@ -126,18 +126,18 @@ protected async void Page_Load(object sender, EventArgs e)
 
 在方法前加上 async，并把返回类型改成 Task<T>
 
-<pre class="brush:csharp">public class HomeController : AsyncController
-{
-    public async Task&lt;ActionResult&gt; Test()
+    public class HomeController : AsyncController
     {
-        var result = await Task.Run(() =&gt;
+        public async Task&lt;ActionResult&gt; Test()
         {
-            Thread.Sleep(5000);
-            return "hello";
-        });
-        return Content(result);
+            var result = await Task.Run(() =&gt;
+            {
+                Thread.Sleep(5000);
+                return "hello";
+            });
+            return Content(result);
+        }
     }
-}</pre>
 
 &nbsp;
 
@@ -145,20 +145,20 @@ protected async void Page_Load(object sender, EventArgs e)
 
 微软官方的 .net 4.5 <a href="http://www.asp.net/vnext/overview/whitepapers/whats-new#_Toc318097378" target="_blank"><strong>releace note</strong></a> 中已经提到了：
 
-<pre class="brush:csharp">public class MyAsyncHandler : HttpTaskAsyncHandler
-{
-    // ...
-
-    // ASP.NET automatically takes care of integrating the Task based override
-    // with the ASP.NET pipeline.
-    public override async Task ProcessRequestAsync(HttpContext context)
+    public class MyAsyncHandler : HttpTaskAsyncHandler
     {
-        WebClient wc = new WebClient();
-        var result = await
-            wc.DownloadStringTaskAsync("http://www.microsoft.com");
-        // Do something with the result
+        // ...
+
+        // ASP.NET automatically takes care of integrating the Task based override
+        // with the ASP.NET pipeline.
+        public override async Task ProcessRequestAsync(HttpContext context)
+        {
+            WebClient wc = new WebClient();
+            var result = await
+                wc.DownloadStringTaskAsync("http://www.microsoft.com");
+            // Do something with the result
+        }
     }
-}</pre>
 
 &nbsp;
 
@@ -218,71 +218,71 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
 
 下面我用一段简化的代码来实现 EAP 转 TPL：
 
-<pre class="brush:csharp">namespace WebServiceAdapter.MyWebService
-{
-    public partial class WebService
+    namespace WebServiceAdapter.MyWebService
     {
-        /// &lt;summary&gt;
-        /// 无 CancellationToken 的调用
-        /// &lt;/summary&gt;
-        /// &lt;returns&gt;&lt;/returns&gt;
-        public Task&lt;string&gt; HelloWorldTaskSync()
+        public partial class WebService
         {
-            return HelloWorldTaskSync(new CancellationToken());
-        }
-
-        /// &lt;summary&gt;
-        /// 有 CancellationToken 的调用
-        /// &lt;/summary&gt;
-        /// &lt;param name="token"&gt;&lt;/param&gt;
-        /// &lt;returns&gt;&lt;/returns&gt;
-        public Task&lt;string&gt; HelloWorldTaskSync(CancellationToken token)
-        {
-            TaskCompletionSource&lt;string&gt; tcs = new TaskCompletionSource&lt;string&gt;();
-
-            token.Register(() =&gt;
+            /// &lt;summary&gt;
+            /// 无 CancellationToken 的调用
+            /// &lt;/summary&gt;
+            /// &lt;returns&gt;&lt;/returns&gt;
+            public Task&lt;string&gt; HelloWorldTaskSync()
             {
-                //注册 CancellationToken
-                this.CancelAsync(null);
-            });
+                return HelloWorldTaskSync(new CancellationToken());
+            }
 
-            //注册完成事件
-            this.HelloWorldCompleted += (object sender, HelloWorldCompletedEventArgs args) =&gt;
+            /// &lt;summary&gt;
+            /// 有 CancellationToken 的调用
+            /// &lt;/summary&gt;
+            /// &lt;param name="token"&gt;&lt;/param&gt;
+            /// &lt;returns&gt;&lt;/returns&gt;
+            public Task&lt;string&gt; HelloWorldTaskSync(CancellationToken token)
             {
-                if (args.Cancelled == true)
-                {
-                    tcs.TrySetCanceled();
-                    return;
-                }
-                else if (args.Error != null)
-                {
-                    tcs.TrySetException(args.Error);
-                    return;
-                }
-                else
-                {
-                    tcs.TrySetResult(args.Result);
-                }
-            };
+                TaskCompletionSource&lt;string&gt; tcs = new TaskCompletionSource&lt;string&gt;();
 
-            //异步调用
-            this.HelloWorldAsync();
+                token.Register(() =&gt;
+                {
+                    //注册 CancellationToken
+                    this.CancelAsync(null);
+                });
 
-            //返回 Task
-            return tcs.Task;
+                //注册完成事件
+                this.HelloWorldCompleted += (object sender, HelloWorldCompletedEventArgs args) =&gt;
+                {
+                    if (args.Cancelled == true)
+                    {
+                        tcs.TrySetCanceled();
+                        return;
+                    }
+                    else if (args.Error != null)
+                    {
+                        tcs.TrySetException(args.Error);
+                        return;
+                    }
+                    else
+                    {
+                        tcs.TrySetResult(args.Result);
+                    }
+                };
+
+                //异步调用
+                this.HelloWorldAsync();
+
+                //返回 Task
+                return tcs.Task;
+            }
         }
     }
-}</pre>
 
 转换好后再去配合使用 async 和 await 关键字就方便多了：
 
-<pre class="brush:csharp">protected async void Page_Load(object sender, EventArgs e)
-{
-    using (WebService service = new WebService())
+    protected async void Page_Load(object sender, EventArgs e)
     {
-        await service.HelloWorldTaskSync();
+        using (WebService service = new WebService())
+        {
+            await service.HelloWorldTaskSync();
+        }
     }
-}</pre>
 
 &nbsp;
 
@@ -338,9 +338,9 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
 
 在CMD中，依次用 ab.exe 调用这三个页面：
 
-<pre class="brush:shell">ab -c 10 -n 10 http://localhost:6360/noasyncpage.aspx
-ab -c 10 -n 10 http://localhost:6360/asyncpage_io.aspx
-ab -c 10 -n 10 http://localhost:6360/asyncpage_cpu.aspx</pre>
+    ab -c 10 -n 10 http://localhost:6360/noasyncpage.aspx
+    ab -c 10 -n 10 http://localhost:6360/asyncpage_io.aspx
+    ab -c 10 -n 10 http://localhost:6360/asyncpage_cpu.aspx
 
 &nbsp;
 

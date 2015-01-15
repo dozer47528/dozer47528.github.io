@@ -11,7 +11,7 @@ tags:
 ---
 
 > 刚用MVC完成了一个小项目，MVC技术又有了一次提升，所以，再次写一点总结性的东西。
-> 
+>
 > 开发环境：Visual Studio 2010 RC, MVC 2 RC, Entity Framework, SQL Server 2008
 
 &nbsp;
@@ -60,12 +60,12 @@ tags:
 
 &nbsp;
 
-<pre class="brush:csharp">context.MapRoute(
-"Web_default",
-"{controller}/{action}/{id}",
-new {controller="Home", action = "Index", id = "" },
-new string[] { "MvcApplication1.Areas.Web.Controllers" }
-);</pre>
+    context.MapRoute(
+    "Web_default",
+    "{controller}/{action}/{id}",
+    new {controller="Home", action = "Index", id = "" },
+    new string[] { "MvcApplication1.Areas.Web.Controllers" }
+    );
 
 调用 MapRoute 的时候在后面多传入一个 String[] ，并且填入你需要 Route 的那个 Areas 的 Controller 所在的命名空间
 
@@ -89,45 +89,45 @@ MVC提供的4个Filter很方便，但是有一个问题，Filter中不能直接�
 
 &nbsp;
 
-<pre class="brush:csharp">public abstract class BaseFilterAttribute : FilterAttribute
-{
-    //这里可以根据自己的喜好来设定
-    protected HttpSessionStateBase Session;
-    protected ModelStateDictionary State;
-    protected ViewDataDictionary ViewData;
-    protected TempDataDictionary TempData;
-    protected HttpRequestBase Request;
-    protected Dictionary&lt;string, string&gt; RouteValues;
-    protected UrlHelper Url;
-
-    protected void Initialize(ControllerContext filterContext)
+    public abstract class BaseFilterAttribute : FilterAttribute
     {
-        //初始化
-        Request = filterContext.RequestContext.HttpContext.Request;
-        RouteValues = new Dictionary&lt;string, string&gt;();
-        foreach (var v in filterContext.RequestContext.RouteData.Values)
+        //这里可以根据自己的喜好来设定
+        protected HttpSessionStateBase Session;
+        protected ModelStateDictionary State;
+        protected ViewDataDictionary ViewData;
+        protected TempDataDictionary TempData;
+        protected HttpRequestBase Request;
+        protected Dictionary&lt;string, string&gt; RouteValues;
+        protected UrlHelper Url;
+
+        protected void Initialize(ControllerContext filterContext)
         {
-            RouteValues.Add(v.Key, v.Value.ToString());
+            //初始化
+            Request = filterContext.RequestContext.HttpContext.Request;
+            RouteValues = new Dictionary&lt;string, string&gt;();
+            foreach (var v in filterContext.RequestContext.RouteData.Values)
+            {
+                RouteValues.Add(v.Key, v.Value.ToString());
+            }
+            ViewData = filterContext.Controller.ViewData;
+            TempData = filterContext.Controller.TempData;
+            State = ViewData.ModelState;
+            Session = filterContext.RequestContext.HttpContext.Session;
+            Url = new UrlHelper(filterContext.RequestContext);
         }
-        ViewData = filterContext.Controller.ViewData;
-        TempData = filterContext.Controller.TempData;
-        State = ViewData.ModelState;
-        Session = filterContext.RequestContext.HttpContext.Session;
-        Url = new UrlHelper(filterContext.RequestContext);
     }
-}
 
-public abstract class AuthorizationFilter : BaseFilterAttribute, IAuthorizationFilter
-{
-    public void OnAuthorization(AuthorizationContext filterContext)
+    public abstract class AuthorizationFilter : BaseFilterAttribute, IAuthorizationFilter
     {
-        //调用初始化函数
-        Initialize(filterContext);
-        onAuthorization(filterContext);
+        public void OnAuthorization(AuthorizationContext filterContext)
+        {
+            //调用初始化函数
+            Initialize(filterContext);
+            onAuthorization(filterContext);
+        }
+        //这里把原来的 OnAuthorization 替换了一下
+        public abstract void onAuthorization(AuthorizationContext filterContext);
     }
-    //这里把原来的 OnAuthorization 替换了一下
-    public abstract void onAuthorization(AuthorizationContext filterContext);
-}</pre>
 
 然后需要使用 IAuthorizationFilter 的时候只要继承上面的 AuthorizationFilter 即可
 
@@ -151,14 +151,14 @@ public abstract class AuthorizationFilter : BaseFilterAttribute, IAuthorizationF
 
 &nbsp;
 
-<pre class="brush:csharp">public ActionResult Test()
-{
-    //弹出对话框
-    Response.Write(&lt;script&gt;alert('test');&lt;/script&gt;));
-    //跳转到index
-    Response.Write("&lt;script&gt;window.location.href='" + Url.Action("index") + "';&lt;/script&gt;");
-    return null;
-}</pre>
+    public ActionResult Test()
+    {
+        //弹出对话框
+        Response.Write(&lt;script&gt;alert('test');&lt;/script&gt;));
+        //跳转到index
+        Response.Write("&lt;script&gt;window.location.href='" + Url.Action("index") + "';&lt;/script&gt;");
+        return null;
+    }
 
 &nbsp;
 
@@ -168,12 +168,12 @@ public abstract class AuthorizationFilter : BaseFilterAttribute, IAuthorizationF
 
 &nbsp;
 
-<pre class="brush:csharp">public ActionResult Test()
-{
-    ViewData["JSAlert"] = "保存成功";
-    ViewData["JSHref"] = "保存成功";
-    return PartialView("JS");
-}</pre>
+    public ActionResult Test()
+    {
+        ViewData["JSAlert"] = "保存成功";
+        ViewData["JSHref"] = "保存成功";
+        return PartialView("JS");
+    }
 
 &nbsp;
 
@@ -181,11 +181,11 @@ public abstract class AuthorizationFilter : BaseFilterAttribute, IAuthorizationF
 
 &nbsp;
 
-<pre class="brush:xml">&lt;%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %&gt;
-&lt;script type="text/jscript"&gt;
-alert('&lt;%=ViewData["JSAlert"] %&gt;');
-window.location.href = '&lt;%=ViewData["JSHref"] %&gt;';
-&lt;/script&gt;</pre>
+    &lt;%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %&gt;
+    &lt;script type="text/jscript"&gt;
+    alert('&lt;%=ViewData["JSAlert"] %&gt;');
+    window.location.href = '&lt;%=ViewData["JSHref"] %&gt;';
+    &lt;/script&gt;
 
 &nbsp;
 
@@ -221,22 +221,22 @@ window.location.href = '&lt;%=ViewData["JSHref"] %&gt;';
 
 &nbsp;
 
-<pre class="brush:xml">//Web.config下，假设有这个字段
-&lt;connectionStrings&gt;
-&lt;add name="ModelContainer"
-    connectionString="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string="Data Source=192.168.174.131,1433;Initial Catalog=Port80;User ID=port80;Password=port80;MultipleActiveResultSets=True""
-    providerName="System.Data.EntityClient"/&gt;
-&lt;/connectionStrings&gt;
+    //Web.config下，假设有这个字段
+    &lt;connectionStrings&gt;
+    &lt;add name="ModelContainer"
+        connectionString="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string="Data Source=192.168.174.131,1433;Initial Catalog=Port80;User ID=port80;Password=port80;MultipleActiveResultSets=True""
+        providerName="System.Data.EntityClient"/&gt;
+    &lt;/connectionStrings&gt;
 
-//在Web.Debug.config下
+    //在Web.Debug.config下
 
-&lt;connectionStrings&gt;
-&lt;add name="ModelContainer"
-        connectionString&lt;/span&gt;="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string="Data Source=.\sqlexpress;Initial Catalog=Port80;Integrated Security=True""
-        providerName="System.Data.EntityClient"
-        xdt:Transform="Replace"
-        xdt:Locator="Match(name)"/&gt;
-&lt;/connectionStrings&gt;</pre>
+    &lt;connectionStrings&gt;
+    &lt;add name="ModelContainer"
+            connectionString&lt;/span&gt;="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string="Data Source=.\sqlexpress;Initial Catalog=Port80;Integrated Security=True""
+            providerName="System.Data.EntityClient"
+            xdt:Transform="Replace"
+            xdt:Locator="Match(name)"/&gt;
+    &lt;/connectionStrings&gt;
 
 &nbsp;
 
@@ -262,54 +262,54 @@ MVC中，有一个Filter可以捕捉错误，但是它的用法是利用Attribut
 
 &nbsp;
 
-<pre class="brush:csharp">protected void Application_Error(object sender, EventArgs e)
-{
-
-    Exception exception = Server.GetLastError();
-
-    Response.Clear();
-
-    HttpException httpException = exception as HttpException;
-    RouteData routeData = new RouteData();
-    routeData.Values.Add("controller", "Error");
-
-    if (httpException == null)
-    {
-        routeData.Values.Add("action", "Index");
-    }
-    else //It's an Http Exception, Let's handle it.
+    protected void Application_Error(object sender, EventArgs e)
     {
 
-        switch (httpException.GetHttpCode())
+        Exception exception = Server.GetLastError();
+
+        Response.Clear();
+
+        HttpException httpException = exception as HttpException;
+        RouteData routeData = new RouteData();
+        routeData.Values.Add("controller", "Error");
+
+        if (httpException == null)
         {
-            case 404:
-                // Page not found.
-                routeData.Values.Add("action", "HttpError404");
-                break;
-            case 500:
-                // Server error.
-                routeData.Values.Add("action", "HttpError500");
-                break;
-            // Here you can handle Views to other error codes.
-            // I choose a General error template
-            default:
-                routeData.Values.Add("action", "General");
-                break;
+            routeData.Values.Add("action", "Index");
         }
+        else //It's an Http Exception, Let's handle it.
+        {
+
+            switch (httpException.GetHttpCode())
+            {
+                case 404:
+                    // Page not found.
+                    routeData.Values.Add("action", "HttpError404");
+                    break;
+                case 500:
+                    // Server error.
+                    routeData.Values.Add("action", "HttpError500");
+                    break;
+                // Here you can handle Views to other error codes.
+                // I choose a General error template
+                default:
+                    routeData.Values.Add("action", "General");
+                    break;
+            }
+        }
+
+        // Pass exception details to the target error View.
+        routeData.Values.Add("error", exception.Message);
+
+        // Clear the error on server.
+        Server.ClearError();
+
+        // Call target Controller and pass the routeData.
+        IController errorController = new WEB.Controllers.ErrorController();
+        errorController.Execute(new RequestContext(
+        new HttpContextWrapper(Context), routeData));
+
     }
-
-    // Pass exception details to the target error View.
-    routeData.Values.Add("error", exception.Message);
-
-    // Clear the error on server.
-    Server.ClearError();
-
-    // Call target Controller and pass the routeData.
-    IController errorController = new WEB.Controllers.ErrorController();
-    errorController.Execute(new RequestContext(
-    new HttpContextWrapper(Context), routeData));
-
-}</pre>
 
 &nbsp;
 
@@ -317,39 +317,39 @@ MVC中，有一个Filter可以捕捉错误，但是它的用法是利用Attribut
 
 &nbsp;
 
-<pre class="brush:csharp">namespace WEB.Controllers
-{
-    public class ErrorController : Controller
+    namespace WEB.Controllers
     {
-        public ActionResult Index(string error)
+        public class ErrorController : Controller
         {
-            ViewData["Title"] = "WebSite 网站内部错误";
-            ViewData["Description"] = error;
-            return View("Index");
-        }
+            public ActionResult Index(string error)
+            {
+                ViewData["Title"] = "WebSite 网站内部错误";
+                ViewData["Description"] = error;
+                return View("Index");
+            }
 
-        public ActionResult HttpError404(string error)
-        {
-            ViewData["Title"] = "HTTP 404- 无法找到文件";
-            ViewData["Description"] = error;
-            return View("Index");
-        }
+            public ActionResult HttpError404(string error)
+            {
+                ViewData["Title"] = "HTTP 404- 无法找到文件";
+                ViewData["Description"] = error;
+                return View("Index");
+            }
 
-        public ActionResult HttpError500(string error)
-        {
-            ViewData["Title"] = "HTTP 500 - 内部服务器错误";
-            ViewData["Description"] = error;
-            return View("Index");
-        }
+            public ActionResult HttpError500(string error)
+            {
+                ViewData["Title"] = "HTTP 500 - 内部服务器错误";
+                ViewData["Description"] = error;
+                return View("Index");
+            }
 
-        public ActionResult General(string error)
-        {
-            ViewData["Title"] = "HTTP 发生错误";
-            ViewData["Description"] = error;
-            return View("Index");
+            public ActionResult General(string error)
+            {
+                ViewData["Title"] = "HTTP 发生错误";
+                ViewData["Description"] = error;
+                return View("Index");
+            }
         }
     }
-}</pre>
 
 &nbsp;
 

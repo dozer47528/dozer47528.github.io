@@ -34,25 +34,25 @@ tags:
 
 解决办法如下：
 
-<pre class="brush: csharp; gutter: true">public void ProcessingData()
-{
-    var index = 0;
-    while (true)
+    public void ProcessingData()
     {
-        var result = GetFromDatabase(index, 200);
-        foreach (var item in result)
+        var index = 0;
+        while (true)
         {
-            //do something with item
+            var result = GetFromDatabase(index, 200);
+            foreach (var item in result)
+            {
+                //do something with item
+            }
+            if (result.Count &lt; 200) { break; }
         }
-        if (result.Count &lt; 200) { break; }
     }
-}
 
-public List&lt;string&gt; GetFromDatabase(int index, int size)
-{
-    //do something
-    return result;
-}</pre>
+    public List&lt;string&gt; GetFromDatabase(int index, int size)
+    {
+        //do something
+        return result;
+    }
 
 代码非常简单，利用类似分页的思想，每次读取200条数据，当取出来的数据不满200条时，代表后面没有数据了，也就不会继续读取后面的页码了。
 
@@ -68,36 +68,36 @@ public List&lt;string&gt; GetFromDatabase(int index, int size)
 
 实现代码如下：
 
-<pre class="brush: csharp; gutter: true">static void Main(string[] args)
-{
-    foreach (var item in GetIEnumerableData())
+    static void Main(string[] args)
     {
-        Console.Write(item);
-    }
-}
-static IEnumerable&lt;string&gt; GetIEnumerableData()
-{
-    var index = 0;
-    while (true)
-    {
-        var result = GetFromDatabase(index, 200);
-        foreach (var item in result)
+        foreach (var item in GetIEnumerableData())
         {
-            yield return item;
+            Console.Write(item);
         }
-        if (result.Count &lt; 200) { break; }
     }
-}
-static List&lt;string&gt; GetFromDatabase(int index, int size)
-{
-    var result = new List&lt;string&gt;();
-    for (var k = 0; k &lt; size; k++)
+    static IEnumerable&lt;string&gt; GetIEnumerableData()
     {
-        if (size * index + k &gt; 1000000) { break; };
-        result.Add(Guid.NewGuid().ToString());
+        var index = 0;
+        while (true)
+        {
+            var result = GetFromDatabase(index, 200);
+            foreach (var item in result)
+            {
+                yield return item;
+            }
+            if (result.Count &lt; 200) { break; }
+        }
     }
-    return result;
-}</pre>
+    static List&lt;string&gt; GetFromDatabase(int index, int size)
+    {
+        var result = new List&lt;string&gt;();
+        for (var k = 0; k &lt; size; k++)
+        {
+            if (size * index + k &gt; 1000000) { break; };
+            result.Add(Guid.NewGuid().ToString());
+        }
+        return result;
+    }
 
 上面，我制造了100万个 string 对象，模拟数据库读取出来的数据。
 

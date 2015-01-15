@@ -48,7 +48,7 @@ git 中的`reset`和`revert`是两个非常有用的命令，它们的细节不�
 
 这样就无解了吗？其实也不一定，还有一个杀手锏：
 
-<pre class="lang:sh decode:true">git push -f</pre>
+`git push -f`
 
 强制替代远程版本，让它和你本地的一样。但是这样就完美了吗？
 

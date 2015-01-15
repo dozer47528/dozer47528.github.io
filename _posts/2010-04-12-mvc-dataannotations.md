@@ -13,7 +13,7 @@ tags:
 ---
 
 > 今天在这里给大家介绍一下MVC的数据验证框架。
-> 
+>
 > 在1.0版中，很多朋友提出了怎么使用客户端验证，今天找了一些资料，发现了客户端验证的方法。
 
 &nbsp;
@@ -74,28 +74,28 @@ iii)写在Model中：一些底层的标准应该写在这一层，因为这些�
 
 &nbsp;
 
-<pre class="brush:csharp">[HttpPost]
-//如果表单中input的name属性和Model的字段一样，那可以直接以Model形式传入一个Action
-public ActionResult Exp1(Models.UserModel user)
-{
-    //判断
-    if (user.Name.Length &gt; 20)
+    [HttpPost]
+    //如果表单中input的name属性和Model的字段一样，那可以直接以Model形式传入一个Action
+    public ActionResult Exp1(Models.UserModel user)
     {
-        //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
-        ModelState.AddModelError("Name", "名字不得超过20个字符");
+        //判断
+        if (user.Name.Length &gt; 20)
+        {
+            //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
+            ModelState.AddModelError("Name", "名字不得超过20个字符");
+        }
+        //判断ModelState中是否有错误
+        if (ModelState.IsValid)
+        {
+            //如果没错误，返回首页
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            //如果有错误，继续输入信息
+            return View(user);
+        }
     }
-    //判断ModelState中是否有错误
-    if (ModelState.IsValid)
-    {
-        //如果没错误，返回首页
-        return RedirectToAction("Index");
-    }
-    else
-    {
-        //如果有错误，继续输入信息
-        return View(user);
-    }
-}</pre>
 
 这里在Controller中一个Action中进行了数据验证，并且把结果放入了ModelState中，那怎么在前端页面显示呢？
 
@@ -167,51 +167,51 @@ OK，下面我可以运行了。。。
 
 下面就让我来实现它：
 
-<pre class="brush:csharp">//BLL
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+    //BLL
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.Mvc;
 
-namespace MvcApplication1.BLL
-{
-    public static class UserBLL
+    namespace MvcApplication1.BLL
     {
-        public static void Edit(Models.UserModel user, ModelStateDictionary ModelState)
+        public static class UserBLL
         {
-            if (user.Name.Length &gt; 20)
+            public static void Edit(Models.UserModel user, ModelStateDictionary ModelState)
             {
-                //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
-                ModelState.AddModelError("Name", "名字不得超过20个字符");
-            }
-            if (ModelState.IsValid)
-            {
-                //在这里我可以写一些代码，因为完成了验证，我就可以开始更新数据库了
+                if (user.Name.Length &gt; 20)
+                {
+                    //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
+                    ModelState.AddModelError("Name", "名字不得超过20个字符");
+                }
+                if (ModelState.IsValid)
+                {
+                    //在这里我可以写一些代码，因为完成了验证，我就可以开始更新数据库了
+                }
             }
         }
     }
-}</pre>
 
 &nbsp;
 
-<pre class="brush:csharp">//controler
-[HttpPost]
-public ActionResult Exp2(Models.UserModel user)
-{
-    //调用BLL中的函数
-    BLL.UserBLL.Edit(user, ModelState);
+    //controler
+    [HttpPost]
+    public ActionResult Exp2(Models.UserModel user)
+    {
+        //调用BLL中的函数
+        BLL.UserBLL.Edit(user, ModelState);
 
-    if (ModelState.IsValid)
-    {
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            //这里，前端页面不用改，所以我直接利用第一个例子中的前端页面
+            return View("Exp1",user);
+        }
     }
-    else
-    {
-        //这里，前端页面不用改，所以我直接利用第一个例子中的前端页面
-        return View("Exp1",user);
-    }
-}</pre>
 
 OK，直接运行，结果和上一个方法一样
 
@@ -241,90 +241,90 @@ OK，直接运行，结果和上一个方法一样
 
 下面的代码就是这个自定义Exception类
 
-<pre class="brush:csharp">//ModelExceptions
-//必须继承自Exception
-public class ModelExceptions : Exception
-{
-    //存放错误信息的List
-    List&lt;string[]&gt; errors = new List&lt;string[]&gt;();
-
-    //判断是否有错误
-    public bool IsValid
+    //ModelExceptions
+    //必须继承自Exception
+    public class ModelExceptions : Exception
     {
-        get
+        //存放错误信息的List
+        List&lt;string[]&gt; errors = new List&lt;string[]&gt;();
+
+        //判断是否有错误
+        public bool IsValid
         {
-            return errors.Count == 0 ? true : false;
+            get
+            {
+                return errors.Count == 0 ? true : false;
+            }
+        }
+
+        //增加错误信息
+        public void AddError(string name, string message)
+        {
+            this.errors.Add(new string[] { name, message });
+        }
+
+        //填充ModelState
+        public void FillModelState(ModelStateDictionary modelstate)
+        {
+            foreach (var e in this.errors)
+            {
+                modelstate.AddModelError(e[0], e[1]);
+            }
         }
     }
-
-    //增加错误信息
-    public void AddError(string name, string message)
-    {
-        this.errors.Add(new string[] { name, message });
-    }
-
-    //填充ModelState
-    public void FillModelState(ModelStateDictionary modelstate)
-    {
-        foreach (var e in this.errors)
-        {
-            modelstate.AddModelError(e[0], e[1]);
-        }
-    }
-}</pre>
 
 &nbsp;
 
 接下来是在Controller中的代码
 
-<pre class="brush:csharp">//Controller
-[HttpPost]
-public ActionResult Exp3(Models.UserModel user)
-{
-    //用try来捕捉错误
-    try
+    //Controller
+    [HttpPost]
+    public ActionResult Exp3(Models.UserModel user)
     {
-        BLL.UserBLL.Edit(user);
+        //用try来捕捉错误
+        try
+        {
+            BLL.UserBLL.Edit(user);
+        }
+        catch (ModelExceptions e)
+        {
+            //如果发生了错误，就填充到ModelState中
+            e.FillModelState(ModelState);
+        }
+        if (ModelState.IsValid)
+        {
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            //这里，前端页面不用改，所以我直接利用第一个例子中的前端页面
+            return View("Exp1", user);
+        }
     }
-    catch (ModelExceptions e)
-    {
-        //如果发生了错误，就填充到ModelState中
-        e.FillModelState(ModelState);
-    }
-    if (ModelState.IsValid)
-    {
-        return RedirectToAction("Index");
-    }
-    else
-    {
-        //这里，前端页面不用改，所以我直接利用第一个例子中的前端页面
-        return View("Exp1", user);
-    }
-}</pre>
 
 &nbsp;
 
 然后是在BLL中的代码
 
-<pre class="brush:csharp">//BLL
-public static void Edit(Models.UserModel user)
-{
-    var e = new ModelExceptions();
-    if (user.Name.Length &gt; 20)
+    //BLL
+    public static void Edit(Models.UserModel user)
     {
-        //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
-        e.AddError("Name", "名字不得超过20个字符");
+        var e = new ModelExceptions();
+        if (user.Name.Length &gt; 20)
+        {
+            //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
+            e.AddError("Name", "名字不得超过20个字符");
+        }
+        if (e.IsValid)
+        {
+            //在这里我可以写一些代码，因为完成了验证，我就可以开始更新数据库了
+        }
+        else
+        {
+            //如果有错误，就抛出错误
+            throw e;
+        }
     }
-    if (e.IsValid)
-    {
-        //在这里我可以写一些代码，因为完成了验证，我就可以开始更新数据库了
-    }
-    else
-    {
-        //如果有错误，就抛出错误
-        throw e;
-    }
-}</pre>
 
 &nbsp;
 
@@ -366,24 +366,24 @@ OK，言归正传…
 
 然后在Model中这样做
 
-<pre class="brush:csharp">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.ComponentModel.DataAnnotations;
 
-namespace MvcApplication1.Models
-{
-    public class UserModel
+    namespace MvcApplication1.Models
     {
-        public string Name { get; set; }
+        public class UserModel
+        {
+            public string Name { get; set; }
 
-        //属性前加上Attribute
-        [Required(ErrorMessage = "密码不能为空")]
-        [StringLength(20, ErrorMessage = "密码长度不能超过20个字符")]
-        public string Password { get; set; }
+            //属性前加上Attribute
+            [Required(ErrorMessage = "密码不能为空")]
+            [StringLength(20, ErrorMessage = "密码长度不能超过20个字符")]
+            public string Password { get; set; }
+        }
     }
-}</pre>
 
 引用 System.ComponentModel.DataAnnotations 命名空间，并且在Model属性前加上Attribute(C# 新特性：特征)，这样就可以了
 
@@ -399,48 +399,48 @@ namespace MvcApplication1.Models
 
 OK，那在Controller和BLL中需要做什么？我们需要做一定的修改
 
-<pre class="brush:csharp">//Controller
-[HttpPost]
-//MVC在传入这个Model的时候已经进行了验证，并且把错误放去了ModelState
-public ActionResult Exp4(Models.UserModel user)
-{
-    try
+    //Controller
+    [HttpPost]
+    //MVC在传入这个Model的时候已经进行了验证，并且把错误放去了ModelState
+    public ActionResult Exp4(Models.UserModel user)
     {
-        //别的不变，除了这里，我们需要传入ModelState.IsValid
-        BLL.UserBLL.Edit(user,ModelState.IsValid);
+        try
+        {
+            //别的不变，除了这里，我们需要传入ModelState.IsValid
+            BLL.UserBLL.Edit(user,ModelState.IsValid);
+        }
+        catch (ModelExceptions e)
+        {
+            e.FillModelState(ModelState);
+        }
+        if (ModelState.IsValid)
+        {
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            return View("Exp1", user);
+        }
     }
-    catch (ModelExceptions e)
-    {
-        e.FillModelState(ModelState);
-    }
-    if (ModelState.IsValid)
-    {
-        return RedirectToAction("Index");
-    }
-    else
-    {
-        return View("Exp1", user);
-    }
-}
 
-//BLL
-public static void Edit(Models.UserModel user,bool IsValid)
-{
-    var e = new ModelExceptions();
-    if (user.Name.Length &gt; 20)
+    //BLL
+    public static void Edit(Models.UserModel user,bool IsValid)
     {
-        e.AddError("Name", "名字不得超过20个字符");
+        var e = new ModelExceptions();
+        if (user.Name.Length &gt; 20)
+        {
+            e.AddError("Name", "名字不得超过20个字符");
+        }
+        //别的不变，但在这里，我除了要判断e中是否有错误外，还要判断ModelState中是否有错误
+        if (e.IsValid && IsValid)
+        {
+            //在这里我可以写一些代码，因为完成了验证，我就可以开始更新数据库了
+        }
+        else
+        {
+            throw e;
+        }
     }
-    //别的不变，但在这里，我除了要判断e中是否有错误外，还要判断ModelState中是否有错误
-    if (e.IsValid && IsValid)
-    {
-        //在这里我可以写一些代码，因为完成了验证，我就可以开始更新数据库了
-    }
-    else
-    {
-        throw e;
-    }
-}</pre>
 
 &nbsp;
 
@@ -510,22 +510,22 @@ Entity Framework会自动生成Model，虽然是可以修改的，但是强烈�
 
 具体写法如下，写在不同的地方，但需要在同一个命名空间下
 
-<pre class="brush:csharp">[MetadataType(typeof(UserMetaData))]
-public partial class User { }
-public class UserMetaData
-{
-    [Required(ErrorMessage = "名字为空")]
-    [StringLength(10, ErrorMessage = "名字长度不得超过10个字符")]
-    public string Name { get; set; }
+    [MetadataType(typeof(UserMetaData))]
+    public partial class User { }
+    public class UserMetaData
+    {
+        [Required(ErrorMessage = "名字为空")]
+        [StringLength(10, ErrorMessage = "名字长度不得超过10个字符")]
+        public string Name { get; set; }
 
-    [Required(ErrorMessage = "密码为空")]
-    [StringLength(20, ErrorMessage = "密码长度不得超过20个字符")]
-    public string Password { get; set; }
+        [Required(ErrorMessage = "密码为空")]
+        [StringLength(20, ErrorMessage = "密码长度不得超过20个字符")]
+        public string Password { get; set; }
 
-    [Required(ErrorMessage = "帐号为空")]
-    [StringLength(10, ErrorMessage = "帐号长度不得超过10个字符")]
-    public string Passport { get; set; }
-}</pre>
+        [Required(ErrorMessage = "帐号为空")]
+        [StringLength(10, ErrorMessage = "帐号长度不得超过10个字符")]
+        public string Passport { get; set; }
+    }
 
 这样写好后，便可以在Entity Framework中使用Model验证了
 

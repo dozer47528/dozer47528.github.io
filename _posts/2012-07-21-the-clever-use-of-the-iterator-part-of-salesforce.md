@@ -31,9 +31,9 @@ Salesforce API 请求数据库的时候和执行 SQL 语句差不多，但是你
 
 如果想要得到一张表中的所有数据，你只能这么读：
 
-<pre class="brush: csharp; gutter: true">var qResult = connection.query("SELECT FirstName, LastName FROM Contact");
-var qResult2 = connection.queryMore(qResult.getQueryLocator());
-var qResult3 = connection.queryMore(qResult2.getQueryLocator());</pre>
+    var qResult = connection.query("SELECT FirstName, LastName FROM Contact");
+    var qResult2 = connection.queryMore(qResult.getQueryLocator());
+    var qResult3 = connection.queryMore(qResult2.getQueryLocator());
 
 这是最粗暴的读取方式，每次读取只能得到200条数据，如果想要更多的数据，必须利用上次返回结果里的一串字符串，然后就可以得到后面一批数据了。
 
@@ -47,21 +47,21 @@ var qResult3 = connection.queryMore(qResult2.getQueryLocator());</pre>
 
 ### 利用迭代器封装细节
 
-<pre class="brush: csharp; gutter: true">public IEnumerable&lt;Contact&gt; GetAllContact()
-{
-    QueryResult results = null;
-    do
+    public IEnumerable&lt;Contact&gt; GetAllContact()
     {
-        results = results == null ?
-                    connection.query("SELECT FirstName, LastName FROM Contact"):
-                    connection.queryMore(results.getQueryLocator());
-
-        foreach(var record in results.getRecords)
+        QueryResult results = null;
+        do
         {
-            yield return record;
-        }
-    }while(!results.isDone())
-}</pre>
+            results = results == null ?
+                        connection.query("SELECT FirstName, LastName FROM Contact"):
+                        connection.queryMore(results.getQueryLocator());
+
+            foreach(var record in results.getRecords)
+            {
+                yield return record;
+            }
+        }while(!results.isDone())
+    }
 
 思路很简单，直接进入一个 do-while 循环，如果是第一次就直接读取，如果不是第一次就利用上次的结果继续读取。
 

@@ -59,107 +59,107 @@ CORS Proxy 的原理其实很简单，主要就做三件事情：
 
 我们用 Spring MVC 和 Spring 的 RestTemplate 来实现了一个 CORS Proxy：
 
-<pre class="lang:java decode:true">@Controller
-@RequestMapping(value = "/corsproxy")
-public class CorsProxyController {
-    private Logger logger = LoggerFactory.getLogger(getClass());
+    @Controller
+    @RequestMapping(value = "/corsproxy")
+    public class CorsProxyController {
+        private Logger logger = LoggerFactory.getLogger(getClass());
 
-    private RestTemplate restTemplate;
-    private HeaderFilter headerFilter;
-    private TargetUrlFilter targetUrlFilter;
-    private final String CORS_PREFIX = "corsproxy/";
-    private final String HTTP_PREFIX = "http/";
-    private final String HTTPS_PREFIX = "https/";
+        private RestTemplate restTemplate;
+        private HeaderFilter headerFilter;
+        private TargetUrlFilter targetUrlFilter;
+        private final String CORS_PREFIX = "corsproxy/";
+        private final String HTTP_PREFIX = "http/";
+        private final String HTTPS_PREFIX = "https/";
 
-    @RequestMapping(value = "/**")
-    public ResponseEntity&lt;byte[]&gt; proxy(HttpServletRequest request, @RequestBody byte[] body, @RequestHeader MultiValueMap&lt;String, String&gt; headers) throws UnsupportedEncodingException {
+        @RequestMapping(value = "/**")
+        public ResponseEntity&lt;byte[]&gt; proxy(HttpServletRequest request, @RequestBody byte[] body, @RequestHeader MultiValueMap&lt;String, String&gt; headers) throws UnsupportedEncodingException {
 
-        String url = request.getRequestURI();
-        String queryString = request.getQueryString();
+            String url = request.getRequestURI();
+            String queryString = request.getQueryString();
 
-        if (queryString != null && queryString != "") {
-            url = url + "?" + queryString;
-        }
-
-        String targetUrl = getTargetUrl(url);
-
-        if (!targetUrlFilter.checkUrl(targetUrl)) {
-            return new ResponseEntity&lt;byte[]&gt;(HttpStatus.FORBIDDEN);
-        }
-
-        ResponseEntity&lt;byte[]&gt; result = null;
-        try {
-            result = restTemplate.exchange(new URI(targetUrl), HttpMethod.valueOf(request.getMethod()), new HttpEntity&lt;byte[]&gt;(body, headers), byte[].class);
-        } catch (HttpClientErrorException exp) {
-            return new ResponseEntity&lt;byte[]&gt;(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
-        } catch (HttpServerErrorException exp) {
-            return new ResponseEntity&lt;byte[]&gt;(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
-        } catch (Exception exp) {
-            return new ResponseEntity&lt;byte[]&gt;(exp.getMessage().getBytes("utf-8"), getResponseHeaders(new HttpHeaders()), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-
-        return new ResponseEntity&lt;byte[]&gt;(result.getBody(), getResponseHeaders(result.getHeaders()), result.getStatusCode());
-    }
-
-    @Resource(name = "restTemplate")
-    public void setRestTemplate(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
-
-    @Resource(name = "headerFilter")
-    public void setHeaderFilter(HeaderFilter headerFilter) {
-        this.headerFilter = headerFilter;
-    }
-
-    @Resource(name = "targetUrlFilter")
-    public void setTargetUrlFilter(TargetUrlFilter targetUrlFilter) {
-        this.targetUrlFilter = targetUrlFilter;
-    }
-
-    private String getTargetUrl(String url) {
-        String targetUrl = url.substring(url.indexOf(CORS_PREFIX) + CORS_PREFIX.length());
-        if (targetUrl.indexOf(HTTP_PREFIX) == 0) {
-            targetUrl = "http://" + targetUrl.substring(HTTP_PREFIX.length());
-        } else if (targetUrl.indexOf(HTTPS_PREFIX) == 0) {
-            targetUrl = "https://" + targetUrl.substring(HTTPS_PREFIX.length());
-        }
-        return targetUrl;
-    }
-
-    private HttpHeaders getResponseHeaders(HttpHeaders originHeaders) {
-        HttpHeaders header = new HttpHeaders();
-        for (Entry&lt;String, List&lt;String&gt;&gt; item : originHeaders.entrySet()) {
-            if (headerFilter.needRemoveHeader(item.getKey(), item.getValue().toString())) {
-                continue;
+            if (queryString != null && queryString != "") {
+                url = url + "?" + queryString;
             }
-            header.put(item.getKey(), item.getValue());
+
+            String targetUrl = getTargetUrl(url);
+
+            if (!targetUrlFilter.checkUrl(targetUrl)) {
+                return new ResponseEntity&lt;byte[]&gt;(HttpStatus.FORBIDDEN);
+            }
+
+            ResponseEntity&lt;byte[]&gt; result = null;
+            try {
+                result = restTemplate.exchange(new URI(targetUrl), HttpMethod.valueOf(request.getMethod()), new HttpEntity&lt;byte[]&gt;(body, headers), byte[].class);
+            } catch (HttpClientErrorException exp) {
+                return new ResponseEntity&lt;byte[]&gt;(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
+            } catch (HttpServerErrorException exp) {
+                return new ResponseEntity&lt;byte[]&gt;(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
+            } catch (Exception exp) {
+                return new ResponseEntity&lt;byte[]&gt;(exp.getMessage().getBytes("utf-8"), getResponseHeaders(new HttpHeaders()), HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+
+            return new ResponseEntity&lt;byte[]&gt;(result.getBody(), getResponseHeaders(result.getHeaders()), result.getStatusCode());
         }
 
-        return header;
-    }
+        @Resource(name = "restTemplate")
+        public void setRestTemplate(RestTemplate restTemplate) {
+            this.restTemplate = restTemplate;
+        }
 
-}</pre>
+        @Resource(name = "headerFilter")
+        public void setHeaderFilter(HeaderFilter headerFilter) {
+            this.headerFilter = headerFilter;
+        }
+
+        @Resource(name = "targetUrlFilter")
+        public void setTargetUrlFilter(TargetUrlFilter targetUrlFilter) {
+            this.targetUrlFilter = targetUrlFilter;
+        }
+
+        private String getTargetUrl(String url) {
+            String targetUrl = url.substring(url.indexOf(CORS_PREFIX) + CORS_PREFIX.length());
+            if (targetUrl.indexOf(HTTP_PREFIX) == 0) {
+                targetUrl = "http://" + targetUrl.substring(HTTP_PREFIX.length());
+            } else if (targetUrl.indexOf(HTTPS_PREFIX) == 0) {
+                targetUrl = "https://" + targetUrl.substring(HTTPS_PREFIX.length());
+            }
+            return targetUrl;
+        }
+
+        private HttpHeaders getResponseHeaders(HttpHeaders originHeaders) {
+            HttpHeaders header = new HttpHeaders();
+            for (Entry&lt;String, List&lt;String&gt;&gt; item : originHeaders.entrySet()) {
+                if (headerFilter.needRemoveHeader(item.getKey(), item.getValue().toString())) {
+                    continue;
+                }
+                header.put(item.getKey(), item.getValue());
+            }
+
+            return header;
+        }
+
+    }
 
 代码不是很复杂，这里是 Controller，另外还有一个 Filter：
 
-<pre class="lang:java decode:true">public class CorsFilter extends OncePerRequestFilter  implements Filter{
-    private HeaderHelper headerHelper;
+    public class CorsFilter extends OncePerRequestFilter  implements Filter{
+        private HeaderHelper headerHelper;
 
-    @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        for(Map.Entry&lt;? extends String, ? extends List&lt;String&gt;&gt; header: headerHelper.getHeadersMap().entrySet()){
-            Joiner joiner = Joiner.on("; ").skipNulls();
-            String value = joiner.join(header.getValue());
-            response.addHeader(header.getKey(),value);
+        @Override
+        protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+            for(Map.Entry&lt;? extends String, ? extends List&lt;String&gt;&gt; header: headerHelper.getHeadersMap().entrySet()){
+                Joiner joiner = Joiner.on("; ").skipNulls();
+                String value = joiner.join(header.getValue());
+                response.addHeader(header.getKey(),value);
+            }
+            filterChain.doFilter(request, response);
         }
-        filterChain.doFilter(request, response);
-    }
 
-    @Resource(name = "headerHelper")
-    public void setHeaderHelper(HeaderHelper headerHelper) {
-        this.headerHelper = headerHelper;
+        @Resource(name = "headerHelper")
+        public void setHeaderHelper(HeaderHelper headerHelper) {
+            this.headerHelper = headerHelper;
+        }
     }
-}</pre>
 
 代码中的 `HeaderHelper `，`HeaderFilter` 和 `TargetUrlFilter` 没什么逻辑，只是读取了一下配置而已。
 

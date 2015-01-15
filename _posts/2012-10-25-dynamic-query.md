@@ -49,20 +49,20 @@ tags:
 
 代码如下：
 
-<pre class="brush: csharp; gutter: true">public class QueryGroup
-    {
-        public GroupType GroupType { get; set; }
-        public List&lt;QueryItem&gt; Items { get; set; }
-        public List&lt;QueryGroup&gt; Groups { get; set; }
-    }
+    public class QueryGroup
+        {
+            public GroupType GroupType { get; set; }
+            public List&lt;QueryItem&gt; Items { get; set; }
+            public List&lt;QueryGroup&gt; Groups { get; set; }
+        }
 
-    public class QueryItem
-    {
-        public string Name { get; set; }
-        public QuerySymbol OperatorType { get; set; }
-        public string Value { get; set; }
-        public DataType ValueType { get; set; }
-    }</pre>
+        public class QueryItem
+        {
+            public string Name { get; set; }
+            public QuerySymbol OperatorType { get; set; }
+            public string Value { get; set; }
+            public DataType ValueType { get; set; }
+        }
 
 <span style="background-color: #eeeeee;">QueryGroup</span> 包含了一组查询条件，也包含了一组子 <span style="background-color: #eeeeee;">QueryGroup</span>，另外还有一个重要的属性 <span style="background-color: #eeeeee;">GroupType</span> ，代表这组数据的逻辑关系是 And 还是 Or。也就是上述界面中的“任何”和“任意”选项。
 
@@ -96,53 +96,53 @@ tags:
 
 &nbsp;
 
-<pre class="lang:xhtml decode:true brush: xhtml; gutter: true">&lt;div style="display: none;"&gt;
-    &lt;div class="query-group-template"&gt;
-        &lt;div class="query-group well"&gt;
-            &lt;div class="query-title"&gt;
-                &lt;span class="help-inline"&gt;匹配以下&lt;/span&gt;
-                &lt;select class="input-small group-type"&gt;
-                    &lt;option value="1"&gt;全部&lt;/option&gt;
-                    &lt;option value="2"&gt;任何&lt;/option&gt;
+    &lt;div style="display: none;"&gt;
+        &lt;div class="query-group-template"&gt;
+            &lt;div class="query-group well"&gt;
+                &lt;div class="query-title"&gt;
+                    &lt;span class="help-inline"&gt;匹配以下&lt;/span&gt;
+                    &lt;select class="input-small group-type"&gt;
+                        &lt;option value="1"&gt;全部&lt;/option&gt;
+                        &lt;option value="2"&gt;任何&lt;/option&gt;
+                    &lt;/select&gt;
+                    &lt;span class="help-inline"&gt;规则：&lt;/span&gt;
+                    &lt;button type="button" class="btn btn-mini btn-success add-query-item" title="增加一个条件"&gt;
+                        &lt;i class="icon-plus icon-white"&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button type="button" class="btn btn-mini btn-info add-query-group" title="增加一组条件"&gt;
+                        &lt;i class="icon-th-list icon-white"&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button type="button" class="btn btn-mini btn-danger delete-query-group" title="删除这组条件"&gt;
+                        &lt;i class="icon-minus icon-white"&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="query-item-template"&gt;
+            &lt;div class="query-item"&gt;
+                &lt;input type="text" value="" placeholder="字段名" title="字段名" class="property-name" /&gt;
+                &lt;select class="input-mini operate-type" title="条件"&gt;
+                    &lt;option value="1"&gt;==&lt;/option&gt;
+                    &lt;option value="2"&gt;!=&lt;/option&gt;
+                    &lt;option value="3"&gt;&gt;&lt;/option&gt;
+                    &lt;option value="4"&gt;&gt;=&lt;/option&gt;
+                    &lt;option value="5"&gt;&lt;&lt;/option&gt;
+                    &lt;option value="6"&gt;&lt;=&lt;/option&gt;
+                    &lt;option value="7"&gt;LK&lt;/option&gt;
                 &lt;/select&gt;
-                &lt;span class="help-inline"&gt;规则：&lt;/span&gt;
-                &lt;button type="button" class="btn btn-mini btn-success add-query-item" title="增加一个条件"&gt;
-                    &lt;i class="icon-plus icon-white"&gt;&lt;/i&gt;
-                &lt;/button&gt;
-                &lt;button type="button" class="btn btn-mini btn-info add-query-group" title="增加一组条件"&gt;
-                    &lt;i class="icon-th-list icon-white"&gt;&lt;/i&gt;
-                &lt;/button&gt;
-                &lt;button type="button" class="btn btn-mini btn-danger delete-query-group" title="删除这组条件"&gt;
+                &lt;input type="text" class="query-value" value="" placeholder="值" title="值" /&gt;
+                &lt;select class="input-medium value-type"&gt;
+                    &lt;option value="3"&gt;String&lt;/option&gt;
+                    &lt;option value="1"&gt;Int&lt;/option&gt;
+                    &lt;option value="2"&gt;Double&lt;/option&gt;
+                    &lt;option value="4"&gt;DateTime&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;button type="button" class="btn btn-mini btn-danger delete-query-item" title="删除条件"&gt;
                     &lt;i class="icon-minus icon-white"&gt;&lt;/i&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="query-item-template"&gt;
-        &lt;div class="query-item"&gt;
-            &lt;input type="text" value="" placeholder="字段名" title="字段名" class="property-name" /&gt;
-            &lt;select class="input-mini operate-type" title="条件"&gt;
-                &lt;option value="1"&gt;==&lt;/option&gt;
-                &lt;option value="2"&gt;!=&lt;/option&gt;
-                &lt;option value="3"&gt;&gt;&lt;/option&gt;
-                &lt;option value="4"&gt;&gt;=&lt;/option&gt;
-                &lt;option value="5"&gt;&lt;&lt;/option&gt;
-                &lt;option value="6"&gt;&lt;=&lt;/option&gt;
-                &lt;option value="7"&gt;LK&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;input type="text" class="query-value" value="" placeholder="值" title="值" /&gt;
-            &lt;select class="input-medium value-type"&gt;
-                &lt;option value="3"&gt;String&lt;/option&gt;
-                &lt;option value="1"&gt;Int&lt;/option&gt;
-                &lt;option value="2"&gt;Double&lt;/option&gt;
-                &lt;option value="4"&gt;DateTime&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;button type="button" class="btn btn-mini btn-danger delete-query-item" title="删除条件"&gt;
-                &lt;i class="icon-minus icon-white"&gt;&lt;/i&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
 
 这里其实不难，最关键的地方其实是各个按钮的事件了。
 
@@ -154,29 +154,29 @@ tags:
 
 这里逻辑其实非常简单：
 
-<pre class="lang:js decode:true brush: javascript; gutter: true">$('#queryContainer').append($('.query-group-template&gt;.query-group').clone())
-    $('#queryContainer&gt;.query-group').first().find('.delete-query-group').remove();
+    $('#queryContainer').append($('.query-group-template&gt;.query-group').clone())
+        $('#queryContainer&gt;.query-group').first().find('.delete-query-group').remove();
 
-    $('button.add-query-item').live('click', function () {
-        $(this).parent().parent().append($('.query-item-template&gt;.query-item').clone());
-        return false;
-    });
+        $('button.add-query-item').live('click', function () {
+            $(this).parent().parent().append($('.query-item-template&gt;.query-item').clone());
+            return false;
+        });
 
-    $('button.add-query-group').live('click', function () {
-        $(this).parent().parent().append($('.query-group-template&gt;.query-group').clone());
-        return false;
-    });
+        $('button.add-query-group').live('click', function () {
+            $(this).parent().parent().append($('.query-group-template&gt;.query-group').clone());
+            return false;
+        });
 
-    $('button.delete-query-group').live('click', function () {
-        if (!$(this).parent().parent().parent().hasClass('query-group')) { return false; }
-        $(this).parent().parent().remove();
-        return false;
-    });
+        $('button.delete-query-group').live('click', function () {
+            if (!$(this).parent().parent().parent().hasClass('query-group')) { return false; }
+            $(this).parent().parent().remove();
+            return false;
+        });
 
-    $('button.delete-query-item').live('click', function () {
-        $(this).parent().remove();
-        return false;
-    });</pre>
+        $('button.delete-query-item').live('click', function () {
+            $(this).parent().remove();
+            return false;
+        });
 
 另外，看代码前两行，第一次加载的时候别忘了先加一组条件，并且把默认组的“删除本组条件”这个按钮去掉吧。
 
@@ -202,17 +202,17 @@ tags:
 
 那我先来定义两个对象（注意字段名一定要和后端一样）：
 
-<pre class="lang:js decode:true brush: javascript; gutter: true">function QueryGroup() {
-    this.GroupType = 0;
-    this.Items = [];
-    this.Groups = [];
-}
-function QueryItem() {
-    this.Name = '';
-    this.OperatorType = 0;
-    this.Value = '';
-    this.ValueType = 0;
-}</pre>
+    function QueryGroup() {
+        this.GroupType = 0;
+        this.Items = [];
+        this.Groups = [];
+    }
+    function QueryItem() {
+        this.Name = '';
+        this.OperatorType = 0;
+        this.Value = '';
+        this.ValueType = 0;
+    }
 
 &nbsp;
 
@@ -222,28 +222,28 @@ function QueryItem() {
 
 代码如下：
 
-<pre class="lang:js decode:true brush: javascript; gutter: true">function GetQueryGroup(group) {
-    group = $(group);
-    var queryGroup = new QueryGroup();
-    queryGroup.GroupType = parseInt(group.find('.group-type').val());
+    function GetQueryGroup(group) {
+        group = $(group);
+        var queryGroup = new QueryGroup();
+        queryGroup.GroupType = parseInt(group.find('.group-type').val());
 
-    var queryItems = group.children('.query-item');
-    for (var k = 0; k &lt; queryItems.length; k++) {
-        var queryItem = new QueryItem();
-        queryItem.Name = $(queryItems[k]).find('.property-name').val();
-        queryItem.OperatorType = parseInt($(queryItems[k]).find('.operate-type').val());
-        queryItem.Value = $(queryItems[k]).find('.query-value').val();
-        queryItem.ValueType = parseInt($(queryItems[k]).find('.value-type').val());
-        queryGroup.Items.push(queryItem);
+        var queryItems = group.children('.query-item');
+        for (var k = 0; k &lt; queryItems.length; k++) {
+            var queryItem = new QueryItem();
+            queryItem.Name = $(queryItems[k]).find('.property-name').val();
+            queryItem.OperatorType = parseInt($(queryItems[k]).find('.operate-type').val());
+            queryItem.Value = $(queryItems[k]).find('.query-value').val();
+            queryItem.ValueType = parseInt($(queryItems[k]).find('.value-type').val());
+            queryGroup.Items.push(queryItem);
+        }
+
+        var childGroups = group.children('.query-group');
+        for (var k = 0; k &lt; childGroups.length; k++) {
+            queryGroup.Groups.push(GetQueryGroup(childGroups[k]));
+        }
+
+        return queryGroup;
     }
-
-    var childGroups = group.children('.query-group');
-    for (var k = 0; k &lt; childGroups.length; k++) {
-        queryGroup.Groups.push(GetQueryGroup(childGroups[k]));
-    }
-
-    return queryGroup;
-}</pre>
 
 &nbsp;
 
@@ -259,8 +259,8 @@ function QueryItem() {
 
 数据结构在上面已经定义过了，只要字段名和 json 中的一样，就可以直接反序列化。
 
-<pre class="brush: csharp; gutter: true">var json = Uri.UnescapeDataString(Request["query"]);
-var item = JsonConvert.DeserializeObject&lt;QueryGroup&gt;(json);</pre>
+    var json = Uri.UnescapeDataString(Request["query"]);
+    var item = JsonConvert.DeserializeObject&lt;QueryGroup&gt;(json);
 
 两行代码，它就变成 .net 中的对象了！
 
@@ -270,53 +270,53 @@ var item = JsonConvert.DeserializeObject&lt;QueryGroup&gt;(json);</pre>
 
 我在 <span style="background-color: #eeeeee;">QueryGroup</span> 中扩展了一个方法，其中 <span style="background-color: #eeeeee;">ICriteria</span> 和 <span style="background-color: #eeeeee;">IMongoQuery</span> 结构类似，用过 mongodb 的同学当它是 <span style="background-color: #eeeeee;">IMongoQuery</span> 即可，它只是包了一层，最终也是生成 <span style="background-color: #eeeeee;">IMongoQuery</span>。
 
-<pre class="lang:c# decode:true brush: csharp; gutter: true">public class QueryGroup
-    {
-        public GroupType GroupType { get; set; }
-        public List&lt;QueryItem&gt; Items { get; set; }
-        public List&lt;QueryGroup&gt; Groups { get; set; }
-
-        public ICriteria ToICriteria()
+    public class QueryGroup
         {
-            ICriteria result = null;
-            foreach (var criteria in GetICriteriaList())
+            public GroupType GroupType { get; set; }
+            public List&lt;QueryItem&gt; Items { get; set; }
+            public List&lt;QueryGroup&gt; Groups { get; set; }
+
+            public ICriteria ToICriteria()
             {
-                if (result == null)
+                ICriteria result = null;
+                foreach (var criteria in GetICriteriaList())
                 {
-                    result = criteria;
-                    continue;
+                    if (result == null)
+                    {
+                        result = criteria;
+                        continue;
+                    }
+
+                    if (GroupType == Model.GroupType.AndAlse)
+                    {
+                        result = result.Add(criteria);
+                        continue;
+                    }
+
+                    if (GroupType == Model.GroupType.OrElse)
+                    {
+                        result = result.Or(criteria);
+                        continue;
+                    }
                 }
 
-                if (GroupType == Model.GroupType.AndAlse)
-                {
-                    result = result.Add(criteria);
-                    continue;
-                }
-
-                if (GroupType == Model.GroupType.OrElse)
-                {
-                    result = result.Or(criteria);
-                    continue;
-                }
+                return result;
             }
 
-            return result;
+            private List&lt;ICriteria&gt; GetICriteriaList()
+            {
+                var list = new List&lt;ICriteria&gt;();
+                foreach (var item in Items)
+                {
+                    list.Add(new Criteria(item.Name, item.OperatorType, new QueryValue(item.ValueType, item.Value, FieldHierarchyLevel.Child)));
+                }
+                foreach (var group in Groups)
+                {
+                    list.Add(group.ToICriteria());
+                }
+                return list;
+            }
         }
-
-        private List&lt;ICriteria&gt; GetICriteriaList()
-        {
-            var list = new List&lt;ICriteria&gt;();
-            foreach (var item in Items)
-            {
-                list.Add(new Criteria(item.Name, item.OperatorType, new QueryValue(item.ValueType, item.Value, FieldHierarchyLevel.Child)));
-            }
-            foreach (var group in Groups)
-            {
-                list.Add(group.ToICriteria());
-            }
-            return list;
-        }
-    }</pre>
 
 得到查询条件对象后，直接调用相关查询方法即可。
 

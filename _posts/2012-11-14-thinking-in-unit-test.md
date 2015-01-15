@@ -96,36 +96,36 @@ tags:
 
 考虑如下情况：
 
-<pre class="brush: csharp; gutter: true">public class TestClass
-    {
-        public int Method1(int a, bool b)
+    public class TestClass
         {
-            int result = 0;
-            if (b)
+            public int Method1(int a, bool b)
             {
-                if (a &gt; 10)
+                int result = 0;
+                if (b)
                 {
-                    result = 2;
+                    if (a &gt; 10)
+                    {
+                        result = 2;
+                    }
+                    else if (a &gt; 5)
+                    {
+                        result = 3;
+                    }
                 }
-                else if (a &gt; 5)
+                else
                 {
-                    result = 3;
+                    if (a &lt; 3)
+                    {
+                        result = 4;
+                    }
+                    else if (a &lt; 4)
+                    {
+                        result = 5;
+                    }
                 }
+                return result;
             }
-            else
-            {
-                if (a &lt; 3)
-                {
-                    result = 4;
-                }
-                else if (a &lt; 4)
-                {
-                    result = 5;
-                }
-            }
-            return result;
         }
-    }</pre>
 
 你说这个怎么测？
 
@@ -145,48 +145,48 @@ b:false    a:1
 
 如果你不想这么写，那么请考虑如下写法：
 
-<pre class="brush: csharp; gutter: true">public class TestClass
-    {
-        public int Method1(int a, bool b)
+    public class TestClass
         {
-            int result = 0;
-            if (b)
+            public int Method1(int a, bool b)
             {
-                result = Method2(a, result);
+                int result = 0;
+                if (b)
+                {
+                    result = Method2(a, result);
+                }
+                else
+                {
+                    result = Method3(a, result);
+                }
+                return result;
             }
-            else
-            {
-                result = Method3(a, result);
-            }
-            return result;
-        }
 
-        private int Method3(int a, int result)
-        {
-            if (a &lt; 3)
+            private int Method3(int a, int result)
             {
-                result = 4;
+                if (a &lt; 3)
+                {
+                    result = 4;
+                }
+                else if (a &lt; 4)
+                {
+                    result = 5;
+                }
+                return result;
             }
-            else if (a &lt; 4)
-            {
-                result = 5;
-            }
-            return result;
-        }
 
-        private int Method2(int a, int result)
-        {
-            if (a &gt; 10)
+            private int Method2(int a, int result)
             {
-                result = 2;
+                if (a &gt; 10)
+                {
+                    result = 2;
+                }
+                else if (a &gt; 5)
+                {
+                    result = 3;
+                }
+                return result;
             }
-            else if (a &gt; 5)
-            {
-                result = 3;
-            }
-            return result;
         }
-    }</pre>
 
 先想一下这个命题是否正确：如果一个函数中每块功能是正确的，那么它整体也是正确的。
 
@@ -202,17 +202,17 @@ b:false    a:1
 
 有经验的同学肯定想到解决方案了：
 
-<pre class="brush: csharp; gutter: true">public class TestClassMock : TestClass
-    {
-        protected override int Method2(int a, int result)
+    public class TestClassMock : TestClass
         {
-            return 1;
+            protected override int Method2(int a, int result)
+            {
+                return 1;
+            }
+            protected override int Method3(int a, int result)
+            {
+                return 2;
+            }
         }
-        protected override int Method3(int a, int result)
-        {
-            return 2;
-        }
-    }</pre>
 
 Mock 一个 <span style="background-color: #eeeeee;">TestClass</span> ，并把它的两个方法覆盖掉（记得把原来的两个方法加上 <span style="background-color: #eeeeee;">virtual</span> 关键字）。
 

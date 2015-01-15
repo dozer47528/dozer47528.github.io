@@ -8,7 +8,7 @@ wpzoom_post_title:
 wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
-  - 
+  -
 categories:
   - 编程技术
 tags:
@@ -32,27 +32,27 @@ tags:
 
 先给大家看一下我 .gitconfig 文件里的一些配置（mac & windows 都适用）：
 
-<pre>[color]
-#开启着色功能
-	status = auto
-	diff = auto
-	branch = auto
-	interactive = auto
-[merge]
-#默认 merge 都加上 --no-ff
-	ff = false
-[alias]
-#别名
-	st = status
-	ci = "commit -m"
-	br = branch
-	co = checkout
-	cia = "commit -am"
-	df = diff
-	dt = difftool
-	mg = merge
-	mt = mergetool
-	ll = "log --oneline"</pre>
+    [color]
+    #开启着色功能
+    	status = auto
+    	diff = auto
+    	branch = auto
+    	interactive = auto
+    [merge]
+    #默认 merge 都加上 --no-ff
+    	ff = false
+    [alias]
+    #别名
+    	st = status
+    	ci = "commit -m"
+    	br = branch
+    	co = checkout
+    	cia = "commit -am"
+    	df = diff
+    	dt = difftool
+    	mg = merge
+    	mt = mergetool
+    	ll = "log --oneline"
 
 <!--more-->
 
@@ -190,16 +190,16 @@ windows 下也有 SoureceTree，体验一样棒！
 
 把桌面上 cygwin termial 的路径改掉即可：
 
-<pre class="lang:sh decode:true">#原始
-C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico -
-#改成
-C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico /bin/zsh --login</pre>
+    #原始
+    C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico -
+    #改成
+    C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico /bin/zsh --login
 
 &nbsp;
 
 安装 git-extras 也很简单，按照官网的教程直接执行一条命令即可：
 
-<pre class="lang:sh decode:true">(cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install)</pre>
+`(cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install)`
 
 如果无法识别 make 命令，打开 cygwin.exe 去搜索 make 并安装。
 

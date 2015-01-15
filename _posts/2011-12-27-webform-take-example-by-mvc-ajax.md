@@ -16,18 +16,18 @@ tags:
 
 用过 MVC 中局部更新的同学肯定会觉得其中的写法真的是非常的优雅：
 
-<pre class="brush:csharp">public ActionResult Index()
-{
-    var data = UserService.GetUserList();
-    if (Request.IsAjaxRequest())
+    public ActionResult Index()
     {
-        return PartialView("UserList", data);
+        var data = UserService.GetUserList();
+        if (Request.IsAjaxRequest())
+        {
+            return PartialView("UserList", data);
+        }
+        else
+        {
+            return View(data);
+        }
     }
-    else
-    {
-        return View(data);
-    }
-}</pre>
 
 如果在页面上加上一个刷新按钮后，第一次显示就能读取到这个 PartialView 的内容，点即刷新后就可以刷新页面。
 
@@ -141,46 +141,46 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 **首先我们先要自己实现一个 HttpHandler 来输出 UserContol：**
 
-<pre class="brush:csharp">namespace WebApplication1
-{
-    public class AjaxHandler : IHttpHandler
+    namespace WebApplication1
     {
-        //private const string FLAG = ".ajax";//去掉这里的注释即可实现自定义后缀
-        public void ProcessRequest(HttpContext context)
+        public class AjaxHandler : IHttpHandler
         {
-            var page = new Page();
-            var writer = new StringWriter();
-            var url = context.Request.AppRelativeCurrentExecutionFilePath;
-
-            //判断后缀是否为指定的后缀，是的话就替换成 .ascx
-            //if (url.IndexOf('?') &lt; 0 || url.IndexOf('?') &gt; url.IndexOf(FLAG)) { url = url.Replace(FLAG, ".ascx"); }//去掉这里的注释即可实现自定义后缀
-
-            //加载控件，并输出页面
-            var control = page.LoadControl(url);
-            page.Controls.Add(control);
-            context.Server.Execute(page, writer, false);
-            context.Response.Write(writer.ToString());
-        }
-
-        public bool IsReusable
-        {
-            get
+            //private const string FLAG = ".ajax";//去掉这里的注释即可实现自定义后缀
+            public void ProcessRequest(HttpContext context)
             {
-                return true;
+                var page = new Page();
+                var writer = new StringWriter();
+                var url = context.Request.AppRelativeCurrentExecutionFilePath;
+
+                //判断后缀是否为指定的后缀，是的话就替换成 .ascx
+                //if (url.IndexOf('?') &lt; 0 || url.IndexOf('?') &gt; url.IndexOf(FLAG)) { url = url.Replace(FLAG, ".ascx"); }//去掉这里的注释即可实现自定义后缀
+
+                //加载控件，并输出页面
+                var control = page.LoadControl(url);
+                page.Controls.Add(control);
+                context.Server.Execute(page, writer, false);
+                context.Response.Write(writer.ToString());
+            }
+
+            public bool IsReusable
+            {
+                get
+                {
+                    return true;
+                }
             }
         }
     }
-}</pre>
 
 &nbsp;
 
 **接下来修改 Web.Config 文件，在这里添加一条记录，让所有的 .ascx 页面都由这个 AjaxHandler 来处理：**
 
-<pre class="brush:xml">&lt;system.web&gt;
-      &lt;httpHandlers&gt;
-        &lt;add verb="*" path="*.ascx" type="WebApplication1.AjaxHandler,WebApplication1"/&gt;
-      &lt;/httpHandlers&gt;
-    &lt;/system.web&gt;</pre>
+    &lt;system.web&gt;
+          &lt;httpHandlers&gt;
+            &lt;add verb="*" path="*.ascx" type="WebApplication1.AjaxHandler,WebApplication1"/&gt;
+          &lt;/httpHandlers&gt;
+        &lt;/system.web&gt;
 
 这里，type 中传入的两个参数分别是这个 HttpHandler 的完整名称，包括前面的命名空间；都好后面是这个 HttpHandler 所在的 dll 文件名。
 
@@ -210,7 +210,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 得到了如下代码：
 
-<pre class="brush:xml">&lt;a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#testDiv" href="/Home/ajax"&gt;刷新&lt;/a&gt;</pre>
+`&lt;a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#testDiv" href="/Home/ajax"&gt;刷新&lt;/a&gt;`
 
 这里的 html 代码和是否使用 MVC 没有关系，那我们就尝试着直接在 WebForm 里直接打入以上代码吧。
 
@@ -222,25 +222,25 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 最终代码如下：
 
-<pre class="brush:xml">&lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1.Default" %&gt;
+    &lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1.Default" %&gt;
 
-&lt;%@ Register Src="TimeList.ascx" TagName="TimeList" TagPrefix="uc1" %&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head runat="server"&gt;
-    &lt;script src="Scripts/jquery-1.5.1.js" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;script src="Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form id="form1" runat="server"&gt;
-    &lt;div id="timeList"&gt;
-        &lt;uc1:TimeList ID="TimeList1" runat="server" /&gt;
-    &lt;/div&gt;
-    &lt;a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#timeList"
-        href="/timelist.ascx"&gt;刷新&lt;/a&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    &lt;%@ Register Src="TimeList.ascx" TagName="TimeList" TagPrefix="uc1" %&gt;
+    &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+    &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head runat="server"&gt;
+        &lt;script src="Scripts/jquery-1.5.1.js" type="text/javascript"&gt;&lt;/script&gt;
+        &lt;script src="Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form id="form1" runat="server"&gt;
+        &lt;div id="timeList"&gt;
+            &lt;uc1:TimeList ID="TimeList1" runat="server" /&gt;
+        &lt;/div&gt;
+        &lt;a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#timeList"
+            href="/timelist.ascx"&gt;刷新&lt;/a&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
 
 &nbsp;
 
@@ -262,19 +262,19 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 .aspx.cs页面：
 
-<pre class="brush:csharp">protected string GetAttributes(AjaxOptions ajaxOptions)
-{
-    var sb = new StringBuilder(" ");
-    foreach (var attribute in ajaxOptions.ToUnobtrusiveHtmlAttributes())
+    protected string GetAttributes(AjaxOptions ajaxOptions)
     {
-        sb.Append(string.Format("{0}=\"{1}\" ", attribute.Key, attribute.Value));
+        var sb = new StringBuilder(" ");
+        foreach (var attribute in ajaxOptions.ToUnobtrusiveHtmlAttributes())
+        {
+            sb.Append(string.Format("{0}=\"{1}\" ", attribute.Key, attribute.Value));
+        }
+        return sb.ToString();
     }
-    return sb.ToString();
-}</pre>
 
 .aspx 页面：
 
-<pre class="brush:xml">&lt;a &lt;%=GetAttributes(new WebApplication1.AjaxOptions{ UpdateTargetId = "timeList"}) %&gt; href="/timelist.ascx"&gt;刷新&lt;/a&gt;</pre>
+`&lt;a &lt;%=GetAttributes(new WebApplication1.AjaxOptions{ UpdateTargetId = "timeList"}) %&gt; href="/timelist.ascx"&gt;刷新&lt;/a&gt;`
 
 看上去还没那么优雅，但是已经能实现这个功能了！
 

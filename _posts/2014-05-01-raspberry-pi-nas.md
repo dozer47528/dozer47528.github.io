@@ -70,14 +70,14 @@ tags:
 
 各种格式支持：
 
-<pre class="lang:sh decode:true">sudo apt-get install ntfs-3g
-sudo apt-get install exfat-nofuse</pre>
+    sudo apt-get install ntfs-3g
+    sudo apt-get install exfat-nofuse
 
 装上这两个模块后，就可以支持 NTFS 和 exFAT 了。但是实测下来，这两种格式很吃 CPU，而树莓派最弱的就是 CPU了，所以最好用 ext4 格式！否则下载、传输性能会大打折扣。
 
 把分区1格式化成 ext4 格式：
 
-<pre class="lang:sh decode:true">sudo mkfs.ext4 /dev/sda1</pre>
+`sudo mkfs.ext4 /dev/sda1`
 
 &nbsp;
 
@@ -85,13 +85,13 @@ sudo apt-get install exfat-nofuse</pre>
 
 我们先新建一个文件夹用来挂载硬盘：
 
-<pre class="lang:sh decode:true">mkdir -p /home/pi/Share/usb</pre>
+`mkdir -p /home/pi/Share/usb`
 
 编辑`/etc/fstab`文件，就可以进行开机自动挂在配置了：
 
-<pre class="lang:default decode:true">/dev/sda1       /home/pi/Share/usb      ext4    defaults,noatime        0       0
-/dev/sda1       /home/pi/Share/usb      ntfs    defaults,noatime,uid=1000,gid=1000        0       0
-/dev/sda1       /home/pi/Share/usb      exfat    defaults,noatime,uid=1000,gid=1000        0       0</pre>
+    /dev/sda1       /home/pi/Share/usb      ext4    defaults,noatime        0       0
+    /dev/sda1       /home/pi/Share/usb      ntfs    defaults,noatime,uid=1000,gid=1000        0       0
+    /dev/sda1       /home/pi/Share/usb      exfat    defaults,noatime,uid=1000,gid=1000        0       0
 
 在`/etc/fstab`文件后面加上一行，只要一行就行了，上面3行分别对应着三种不同的硬盘格式。
 
@@ -102,7 +102,7 @@ sudo apt-get install exfat-nofuse</pre>
 
 编辑完后，重启即可生效，不重启的话，可以执行以下命令：
 
-<pre class="lang:sh decode:true">sudo mount -a</pre>
+`sudo mount -a`
 
 挂在完成后输入`mount`就可以看到当前系统所有的挂载记录，找找`/dev/sda1`是否在这个列表中，是的话就代表挂载成功了。
 
@@ -138,7 +138,7 @@ sudo apt-get install exfat-nofuse</pre>
 
 启动方式：
 
-<pre class="lang:sh decode:true">/home/pi/xunlei/portal</pre>
+`/home/pi/xunlei/portal`
 
 如果没什么问题的话，就会在看到它输出了一串激活码，类似`H2DS72`。
 
@@ -150,48 +150,48 @@ sudo apt-get install exfat-nofuse</pre>
 
 先创建一个服务：
 
-<pre class="lang:sh decode:true">sudo vi /etc/init.d/xunlei</pre>
+`sudo vi /etc/init.d/xunlei`
 
 然后配置一下启动脚本：
 
-<pre class="lang:default decode:true">#!/bin/sh
-#
-# Xunlei initscript
-#
-### BEGIN INIT INFO
-# Provides:          xunlei
-# Required-Start:    $network $local_fs $remote_fs
-# Required-Stop::    $network $local_fs $remote_fs
-# Should-Start:      $all
-# Should-Stop:       $all
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Start xunlei at boot time
-# Description:       A downloader
-### END INIT INFO
+    #!/bin/sh
+    #
+    # Xunlei initscript
+    #
+    ### BEGIN INIT INFO
+    # Provides:          xunlei
+    # Required-Start:    $network $local_fs $remote_fs
+    # Required-Stop::    $network $local_fs $remote_fs
+    # Should-Start:      $all
+    # Should-Stop:       $all
+    # Default-Start:     2 3 4 5
+    # Default-Stop:      0 1 6
+    # Short-Description: Start xunlei at boot time
+    # Description:       A downloader
+    ### END INIT INFO
 
-do_start()
-{
-        ./home/pi/xunlei/portal
-}
+    do_start()
+    {
+            ./home/pi/xunlei/portal
+    }
 
-do_stop()
-{
-        ./home/pi/xunlei/portal -s
-}
+    do_stop()
+    {
+            ./home/pi/xunlei/portal -s
+    }
 
-case "$1" in
-  start)
-    do_start
-    ;;
-  stop)
-    do_stop
-    ;;
-esac</pre>
+    case "$1" in
+      start)
+        do_start
+        ;;
+      stop)
+        do_stop
+        ;;
+    esac
 
 最后开启自动启动
 
-<pre class="lang:sh decode:true">sudo update-rc.d xunlei defaults</pre>
+`sudo update-rc.d xunlei defaults`
 
 至此，迅雷远程下载就配置完成了，之后需要下载的话只要登录迅雷远程下载网站即可，在外网也可以哦！
 
@@ -205,29 +205,29 @@ Samba 是最常用的了，Windows、Linux、小米电视都支持！
 
 先安装相关组件：
 
-<pre class="lang:sh decode:true">sudo apt-get install samba samba-common-bin</pre>
+`sudo apt-get install samba samba-common-bin`
 
 编辑配置文件`/etc/samba/smb.conf`：
 
-<pre class="lang:default decode:true ">[global]
-    workgroup = WORKGROUP
-    security = user
-    guest account = pi
-    map to guest = bad user
-    wins support = yes
-    log level = 1
-    max log size = 1000
+    [global]
+        workgroup = WORKGROUP
+        security = user
+        guest account = pi
+        map to guest = bad user
+        wins support = yes
+        log level = 1
+        max log size = 1000
 
-[usb]
-    path = /home/pi/Share/usb
-    read only = no
-    force user = pi
-    force group = pi
-    guest ok = yes</pre>
+    [usb]
+        path = /home/pi/Share/usb
+        read only = no
+        force user = pi
+        force group = pi
+        guest ok = yes
 
 重启服务：
 
-<pre class="lang:sh decode:true">sudo service samba restart</pre>
+`sudo service samba restart`
 
 打开你的其它电脑，看看是不是可以看到了？如果看不到可以用IP访问。
 
@@ -253,24 +253,24 @@ DLNA 管理各种媒体文件比较好，性能和 Samba 也差不多，反正�
 
 安装相关组件：
 
-<pre class="lang:sh decode:true">sudo apt-get install minidlna</pre>
+`sudo apt-get install minidlna`
 
 编辑配置文件`/etc/minidlna.conf`，主要就是修改一下媒体文件路径：
 
-<pre class="lang:default decode:true">#监视所有类型
-media_dir=/home/pi/Share
+    #监视所有类型
+    media_dir=/home/pi/Share
 
-#也可以监视指定类型
-#   * "A" for audio    (eg. media_dir=A,/var/lib/minidlna/music)
-#   * "P" for pictures (eg. media_dir=P,/var/lib/minidlna/pictures)
-#   * "V" for video    (eg. media_dir=V,/var/lib/minidlna/videos)
-media_dir=A,/home/pi/Share
-media_dir=P,/home/pi/Share
-media_dir=V,/home/pi/Share</pre>
+    #也可以监视指定类型
+    #   * "A" for audio    (eg. media_dir=A,/var/lib/minidlna/music)
+    #   * "P" for pictures (eg. media_dir=P,/var/lib/minidlna/pictures)
+    #   * "V" for video    (eg. media_dir=V,/var/lib/minidlna/videos)
+    media_dir=A,/home/pi/Share
+    media_dir=P,/home/pi/Share
+    media_dir=V,/home/pi/Share
 
 重启服务：
 
-<pre class="lang:sh decode:true">sudo service minidlna restart</pre>
+`sudo service minidlna restart`
 
 DLNA 配置很简单，现在打开支持 DLNA 的软件，看看是不是出现东西了？
 

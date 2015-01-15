@@ -11,7 +11,7 @@ tags:
 ---
 
 > 我为什么要写这个教程呢？
-> 
+>
 > 主要是为了解决把网站部署在虚拟主机上的人，因为你根本不能去配置虚拟主机 所以，用下面的方法，可以实现不配置IIS而使老版本IIS运行MVC。
 
 首先，给大家推荐2个MVC的学习好去处：
@@ -54,15 +54,15 @@ System.Web.Abstractions.dll
 
 老版本IIS会验证文件是否存在，所以必须新建一个页面，然后在写上代码就可以了
 
-<pre class="brush:csharp">public partial class _Default : Page
-{
-     public void Page_Load(object sender, System.EventArgs e)
-     {
-         HttpContext.Current.RewritePath(Request.ApplicationPath);
-         IHttpHandler httpHandler = new MvcHttpHandler();
-         httpHandler.ProcessRequest(HttpContext.Current);
-     }
-}</pre>
+    public partial class _Default : Page
+    {
+         public void Page_Load(object sender, System.EventArgs e)
+         {
+             HttpContext.Current.RewritePath(Request.ApplicationPath);
+             IHttpHandler httpHandler = new MvcHttpHandler();
+             httpHandler.ProcessRequest(HttpContext.Current);
+         }
+    }
 
 &nbsp;
 
@@ -80,11 +80,11 @@ controller/action/id.aspx?page=1
 
 &nbsp;
 
-<pre class="brush:csharp">//默认匹配
-routes.MapRoute("NoAction", "{controller}.aspx", new { controller = "home", action = "index", id = "" });//无Action的匹配
-routes.MapRoute("NoID", "{controller}/{action}.aspx", new { controller = "home", action = "index", id = "" });//无ID的匹配
-routes.MapRoute("Default", "{controller}/{action}/{id}.aspx", new { controller = "home", action = "index", id = "" });//默认匹配
-routes.MapRoute("Root", "", new { controller = "home", action = "index", id = "" });//根目录匹配</pre>
+    //默认匹配
+    routes.MapRoute("NoAction", "{controller}.aspx", new { controller = "home", action = "index", id = "" });//无Action的匹配
+    routes.MapRoute("NoID", "{controller}/{action}.aspx", new { controller = "home", action = "index", id = "" });//无ID的匹配
+    routes.MapRoute("Default", "{controller}/{action}/{id}.aspx", new { controller = "home", action = "index", id = "" });//默认匹配
+    routes.MapRoute("Root", "", new { controller = "home", action = "index", id = "" });//根目录匹配
 
 &nbsp;
 

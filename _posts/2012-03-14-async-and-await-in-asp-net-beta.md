@@ -17,9 +17,9 @@ tags:
 
 在我的上一篇文章<a href="/2012/03/async-and-await-in-web-application/" target="_blank"><strong>《async 与 await 在 Web 下的应用》</strong></a>中，我提到了 asp.net 4.5 在 Web.Config 中的一个奇怪配置：
 
-<pre class="brush:xml">&lt;appSettings&gt;
-  &lt;add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" /&gt;
-&lt;/appSettings&gt;</pre>
+    &lt;appSettings&gt;
+      &lt;add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" /&gt;
+    &lt;/appSettings&gt;
 
 在 <a href="http://stackoverflow.com/questions/9562836/whats-the-meaning-of-usetaskfriendlysynchronizationcontext" target="_blank"><strong>Stack Overflow</strong></a> 上提问后，终于有人回答我了。
 
@@ -27,14 +27,14 @@ tags:
 
 下面代码中的这种用法是错误的：
 
-<pre class="brush:csharp">protected async void Page_Load(object sender, EventArgs e)
-{
-    WebClient client = new WebClient();
-    var result1 = await client.DownloadStringTaskAsync("http://www.website.com");
-    WebClient client2 = new WebClient();
-    var result2 = await client.DownloadStringTaskAsync(result1);
-    //do more
-}</pre>
+    protected async void Page_Load(object sender, EventArgs e)
+    {
+        WebClient client = new WebClient();
+        var result1 = await client.DownloadStringTaskAsync("http://www.website.com");
+        WebClient client2 = new WebClient();
+        var result2 = await client.DownloadStringTaskAsync(result1);
+        //do more
+    }
 
 <!--more-->
 
@@ -42,25 +42,25 @@ tags:
 
 #### 代码段一：
 
-<pre class="brush:csharp">public partial class WebForm1 : System.Web.UI.Page
-{
-    protected string Msg { get; set; }
-    protected async void Page_Load(object sender, EventArgs e)
+    public partial class WebForm1 : System.Web.UI.Page
     {
-        using (WebService service = new WebService())
+        protected string Msg { get; set; }
+        protected async void Page_Load(object sender, EventArgs e)
         {
-            Msg = await service.Method1TaskSync();
+            using (WebService service = new WebService())
+            {
+                Msg = await service.Method1TaskSync();
+            }
         }
-    }
 
-    protected async void Button_Test_Click(object sender, EventArgs e)
-    {
-        using (WebService service = new WebService())
+        protected async void Button_Test_Click(object sender, EventArgs e)
         {
-            Msg = await service.Method2TaskSync();
+            using (WebService service = new WebService())
+            {
+                Msg = await service.Method2TaskSync();
+            }
         }
     }
-}</pre>
 
 试问，最后的 Msg 的值是什么？应该是哪个方法的返回值？
 
@@ -76,28 +76,28 @@ tags:
 
 #### 代码段二：
 
-<pre class="brush:xml">&lt;appSettings&gt;
-  &lt;add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" /&gt;
-&lt;/appSettings&gt;</pre>
+    &lt;appSettings&gt;
+      &lt;add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" /&gt;
+    &lt;/appSettings&gt;
 
 &nbsp;
 
-<pre class="brush:xml">&lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="AsyncAwait.WebForm1"
-    Async="true" %&gt;
+    &lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="AsyncAwait.WebForm1"
+        Async="true" %&gt;
 
-&lt;!DOCTYPE html&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head runat="server"&gt;
-    &lt;title&gt;&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form id="form1" runat="server"&gt;
-    &lt;div&gt;
-        &lt;%:Msg %&gt;
-    &lt;/div&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head runat="server"&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form id="form1" runat="server"&gt;
+        &lt;div&gt;
+            &lt;%:Msg %&gt;
+        &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
 
 后端代码和上面一样的代码，只不过把 UseTaskFriendlySynchronizationContext 的配置改成了 true，并且把数据显示到了页面上。
 
@@ -133,35 +133,35 @@ async 和 await 关键字在底层主要是利用 SynchronizationContext 来实�
 
 另外，正确的写法如下：
 
-<pre class="brush:csharp">public partial class WebForm1 : System.Web.UI.Page
-{
-    protected string Msg { get; set; }
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class WebForm1 : System.Web.UI.Page
     {
-        RegisterAsyncTask(new PageAsyncTask(Method1));
-
-    }
-    private async Task Method1()
-    {
-        using (WebService service = new WebService())
+        protected string Msg { get; set; }
+        protected void Page_Load(object sender, EventArgs e)
         {
-            Msg = await service.HelloWorldTaskSync();
+            RegisterAsyncTask(new PageAsyncTask(Method1));
+
+        }
+        private async Task Method1()
+        {
+            using (WebService service = new WebService())
+            {
+                Msg = await service.HelloWorldTaskSync();
+            }
+        }
+
+        protected void Button_Test_Click(object sender, EventArgs e)
+        {
+            RegisterAsyncTask(new PageAsyncTask(Method2));
+        }
+
+        private async Task Method2()
+        {
+            using (WebService service = new WebService())
+            {
+                Msg = await service.HelloWorldTaskSync();
+            }
         }
     }
-
-    protected void Button_Test_Click(object sender, EventArgs e)
-    {
-        RegisterAsyncTask(new PageAsyncTask(Method2));
-    }
-
-    private async Task Method2()
-    {
-        using (WebService service = new WebService())
-        {
-            Msg = await service.HelloWorldTaskSync();
-        }
-    }
-}</pre>
 
 如果需要写异步，一定要用 RegisterAsyncTask 方法，实测证明，支持多次调用，而且会按次序执行。
 

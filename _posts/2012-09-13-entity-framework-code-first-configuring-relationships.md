@@ -80,70 +80,70 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 ### 配置一对多与一对一关系
 
-<pre class="brush: csharp; gutter: true">public class User
-{
-    public int ID { get; set; }
-    public string Name { get; set; }
-    public virtual IList&lt;Article&gt; Articles { get; set; }
-}
-public class Article
-{
-    public int ID { get; set; }
-    public string Name { get; set; }
-    public virtual User Owner { get; set; }
-}</pre>
+    public class User
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public virtual IList&lt;Article&gt; Articles { get; set; }
+    }
+    public class Article
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public virtual User Owner { get; set; }
+    }
 
 上述代码中有两个实体，它们是一对多的关系。
 
 完整的配置代码如下：
 
-<pre class="brush: csharp; gutter: true">public class TestContext : DbContext
-{
-
-    public DbSet&lt;User&gt; UserSet { get { return Set&lt;User&gt;(); } }
-    public DbSet&lt;Article&gt; ArticleSet { get { return Set&lt;Article&gt;(); } }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    public class TestContext : DbContext
     {
-        modelBuilder
-            .Configurations
-            .Add(new UserTypeConfiguration())
-            .Add(new ArticleTypeConfiguration());
-        base.OnModelCreating(modelBuilder);
-    }
-}
 
-public class UserTypeConfiguration : EntityTypeConfiguration&lt;User&gt;
-{
-    public UserTypeConfiguration()
-    {
-        HasKey(u =&gt; u.ID);
-        Property(u =&gt; u.ID)
-            .IsRequired()
-            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-        HasMany(u =&gt; u.Articles)
-            .WithRequired(a =&gt; a.Owner)
-            .Map(x =&gt; x.MapKey("UserID"));
-        ToTable("User");
+        public DbSet&lt;User&gt; UserSet { get { return Set&lt;User&gt;(); } }
+        public DbSet&lt;Article&gt; ArticleSet { get { return Set&lt;Article&gt;(); } }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Configurations
+                .Add(new UserTypeConfiguration())
+                .Add(new ArticleTypeConfiguration());
+            base.OnModelCreating(modelBuilder);
+        }
     }
-}
-public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
-{
-    public ArticleTypeConfiguration()
+
+    public class UserTypeConfiguration : EntityTypeConfiguration&lt;User&gt;
     {
-        HasKey(a =&gt; a.ID);
-        Property(a =&gt; a.ID)
-            .IsRequired()
-            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-        ToTable("Article");
+        public UserTypeConfiguration()
+        {
+            HasKey(u =&gt; u.ID);
+            Property(u =&gt; u.ID)
+                .IsRequired()
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            HasMany(u =&gt; u.Articles)
+                .WithRequired(a =&gt; a.Owner)
+                .Map(x =&gt; x.MapKey("UserID"));
+            ToTable("User");
+        }
     }
-}</pre>
+    public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
+    {
+        public ArticleTypeConfiguration()
+        {
+            HasKey(a =&gt; a.ID);
+            Property(a =&gt; a.ID)
+                .IsRequired()
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("Article");
+        }
+    }
 
 别的都是基本配置，这里最关键的一段代码是：
 
-<pre class="brush: csharp; gutter: true">HasMany(u =&gt; u.Articles)
-                .WithRequired(a =&gt; a.Owner)
-                .Map(x =&gt; x.MapKey("UserID"));</pre>
+    HasMany(u =&gt; u.Articles)
+                    .WithRequired(a =&gt; a.Owner)
+                    .Map(x =&gt; x.MapKey("UserID"));
 
 其实这里的语义很清晰，如果我把这段英文直接翻译成中文，我觉得可以是这样子的。
 
@@ -153,9 +153,9 @@ public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
 
 上面是配置在主对象 <span style="background-color: #eeeeee;">User </span>上的，如果配置在 <span style="background-color: #eeeeee;">Article </span>上，语句应该是这样写的：
 
-<pre class="brush: csharp; gutter: true">HasRequired(a =&gt; a.Owner)
-                .WithMany(u =&gt; u.Articles)
-                .Map(x =&gt; x.MapKey("UserID"));</pre>
+    HasRequired(a =&gt; a.Owner)
+                    .WithMany(u =&gt; u.Articles)
+                    .Map(x =&gt; x.MapKey("UserID"));
 
 “我有一个 <span style="background-color: #eeeeee;">Owner </span>切是必须的，它有很多的 <span style="background-color: #eeeeee;">Article</span>，外键被映射成了 <span style="background-color: #eeeeee;">UserID</span>”
 
@@ -165,9 +165,9 @@ public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
 
 其实一对一不就是这样的吗：我有一个 XXX，它有一个 XXX，外键被映射成了 XXX。
 
-<pre class="brush: csharp; gutter: true">HasRequired(a =&gt; a.Owner)
-                .WithOptional(u =&gt; u.Article)
-                .Map(x =&gt; x.MapKey("UserID"));</pre>
+    HasRequired(a =&gt; a.Owner)
+                    .WithOptional(u =&gt; u.Article)
+                    .Map(x =&gt; x.MapKey("UserID"));
 
 &nbsp;
 
@@ -183,11 +183,11 @@ public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
 
 因为多对多的话，必须要配置一张映射表，具体的配置方法如下：
 
-<pre class="brush: csharp; gutter: true">HasMany(a =&gt; a.Categories)
-                .WithMany(c =&gt; c.Articles)
-                .Map(x =&gt; x.ToTable("ArticleCategory")
-                           .MapLeftKey("ArticleID")
-                           .MapRightKey("CategoryID"));</pre>
+    HasMany(a =&gt; a.Categories)
+                    .WithMany(c =&gt; c.Articles)
+                    .Map(x =&gt; x.ToTable("ArticleCategory")
+                               .MapLeftKey("ArticleID")
+                               .MapRightKey("CategoryID"));
 
 这里在 Map 的时候，必须要配置关联左表的外键（或非显示外键）和关联右表的外键，还要指定关联表的名字。
 

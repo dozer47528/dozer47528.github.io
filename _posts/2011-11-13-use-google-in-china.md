@@ -120,8 +120,8 @@ PS.这个功能只有在界面语言设置成英文的情况下才能使用。
 
 然后在里面输入：
 
-<pre>203.208.46.210	www.google.com
-203.208.46.210	www.google.com.hk</pre>
+    203.208.46.210	www.google.com
+    203.208.46.210	www.google.com.hk
 
 保存！
 

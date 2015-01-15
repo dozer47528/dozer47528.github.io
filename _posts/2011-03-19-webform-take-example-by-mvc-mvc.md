@@ -57,36 +57,36 @@ MVC 其实是 Model, View, Controller 的意思，它是一种思想~
 
 第二，你需要存放 ViewData
 
-<pre class="brush:csharp">namespace Utility
-{
-    public class MasterPageHelper : MasterPage
+    namespace Utility
     {
-        protected IDictionary&lt;string, object&gt; ViewData
+        public class MasterPageHelper : MasterPage
         {
-            get
+            protected IDictionary&lt;string, object&gt; ViewData
             {
-                return
-                    (Dictionary&lt;string, object&gt;)
-                    (Session["ViewData"] ?? (Session["ViewData"] = new Dictionary&lt;string, object&gt;()));
+                get
+                {
+                    return
+                        (Dictionary&lt;string, object&gt;)
+                        (Session["ViewData"] ?? (Session["ViewData"] = new Dictionary&lt;string, object&gt;()));
+                }
+            }
+            protected dynamic Model
+            {
+                get { return ViewData["Model"]; }
+                set { ViewData["Model"] = value; }
+            }
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                Unload += PageHelper_Unload;
+            }
+            void PageHelper_Unload(object sender, EventArgs e)
+            {
+                if (Session["ViewData"] == null) return;
+                Session["ViewData"] = null;
+                GC.Collect();
             }
         }
-        protected dynamic Model
-        {
-            get { return ViewData["Model"]; }
-            set { ViewData["Model"] = value; }
-        }
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Unload += PageHelper_Unload;
-        }
-        void PageHelper_Unload(object sender, EventArgs e)
-        {
-            if (Session["ViewData"] == null) return;
-            Session["ViewData"] = null;
-            GC.Collect();
-        }
     }
-}</pre>
 
 这里，我先自己继承了原来的 MasterPage, Page 和 UserController 类。
 

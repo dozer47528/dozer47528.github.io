@@ -14,13 +14,13 @@ tags:
 
 当我第一次看到 <a href="http://www.w3schools.com/html5/default.asp" target="_blank"><strong>HTML5</strong> </a>中 <a href="http://en.wikipedia.org/wiki/Web_worker" target="_blank"><strong>Web Worker</strong></a> 的用法时，非常地疑惑：
 
-<pre class="brush: javascript; gutter: true">var worker = new Worker('worker.js');</pre>
+`var worker = new Worker('worker.js');`
 
 既然是新起一个线程，为什么要调用外部的 js 文件，而不是直接传入一个函数呢？
 
-<pre class="brush: javascript; gutter: true">var worker = new Worker(function(){
-    //do something
-});</pre>
+    var worker = new Worker(function(){
+        //do something
+    });
 
 因为调用外部 js 会非常的麻烦。
 
@@ -46,33 +46,33 @@ Javascript 底层是单线程的，但是浏览器在加载页面的时候是可
 
 HTML 页面：
 
-<pre class="brush: xhtml; gutter: true">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
- &lt;head&gt;
-	  &lt;script&gt;
-		function ReCall(data){
-			alert(data);
-		}
-		var win = window.open();
-		win.document.write('&lt;script src="work.js" type="text/javascript" &gt;&lt;\/script&gt;');
-	  &lt;/script&gt;
-  &lt;/head&gt;
- &lt;body&gt;
-	&lt;button onclick="alert('ok!')"&gt;click me!&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;</pre>
+    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+     &lt;head&gt;
+    	  &lt;script&gt;
+    		function ReCall(data){
+    			alert(data);
+    		}
+    		var win = window.open();
+    		win.document.write('&lt;script src="work.js" type="text/javascript" &gt;&lt;\/script&gt;');
+    	  &lt;/script&gt;
+      &lt;/head&gt;
+     &lt;body&gt;
+    	&lt;button onclick="alert('ok!')"&gt;click me!&lt;/button&gt;
+     &lt;/body&gt;
+    &lt;/html&gt;
 
 JS 文件：
 
-<pre class="brush: javascript; gutter: true">function onmessage() { 
-	for(var k=0;k&lt;10000000;k++){
-		console.log('test');
-	}
-	self.opener=null;
-	self.open('', '_self');
-	self.close();
-}
-onmessage();</pre>
+    function onmessage() {
+    	for(var k=0;k&lt;10000000;k++){
+    		console.log('test');
+    	}
+    	self.opener=null;
+    	self.open('', '_self');
+    	self.close();
+    }
+    onmessage();
 
 运行后发现，子页面依然把父页面阻塞了，父页面的按钮点了也没用！
 

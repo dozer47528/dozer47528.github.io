@@ -12,7 +12,7 @@ tags:
 ---
 
 > **目录：**
-> 
+>
 > 1.  <a href="/2011/01/ucenter-api-in-depth-1st/" target="_blank"><strong>开篇</strong></a>
 > 2.  <a href="/2011/01/ucenter-api-in-depth-2nd/" target="_blank"><strong>通讯原理：UCenter API 与子站之间的通讯原理和单点登陆原理</strong></a>
 > 3.  <a href="/2011/01/ucenter-api-in-depth-3rd/" target="_blank"><strong>加密与解密：AuthCode详解 & AuthCode函数翻译过程中的注意点</strong></a>
@@ -112,15 +112,15 @@ UCenter和各个子站的通讯，主要就是通过 POST 的方式调用而已�
 
 可以这样写：
 
-<pre class="brush:csharp">using DS.Web.UCenterAPI.UCClient;
+    using DS.Web.UCenterAPI.UCClient;
 
-var client = new UCClient();
-var ucLoginReturn =  client.UC_User_Login("admin", "admin");
-if(ucLoginReturn.Success)
-{
-    var js = client.UC_User_Synlogin(ucLoginReturn.User.Uid);
-    Response.Write(js);
-}</pre>
+    var client = new UCClient();
+    var ucLoginReturn =  client.UC_User_Login("admin", "admin");
+    if(ucLoginReturn.Success)
+    {
+        var js = client.UC_User_Synlogin(ucLoginReturn.User.Uid);
+        Response.Write(js);
+    }
 
 &nbsp;
 

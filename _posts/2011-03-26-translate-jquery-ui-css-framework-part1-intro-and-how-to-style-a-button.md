@@ -62,32 +62,32 @@ tags:
 
 下面是一个简单的例子：
 
-<pre class="brush:xml">&lt;button id="cancel" type="button"  class="ui-state-default ui-corner-all"&gt;Cancel&lt;/button&gt;</pre>
+`&lt;button id="cancel" type="button"  class="ui-state-default ui-corner-all"&gt;Cancel&lt;/button&gt;`
 
 <table>
   <tr>
     <td>
       <a href="/wp-content/uploads/2011/03/uibuttonie.png"><img class="alignnone size-full wp-image-264" title="uibuttonie" alt="uibuttonie" src="/uploads/2011/03/uibuttonie.png" width="102" height="40" /></a>
     </td>
-    
+
     <td>
       <a href="/wp-content/uploads/2011/03/uibuttonfirefox.png"><img class="alignnone size-full wp-image-263" title="uibuttonfirefox" alt="uibuttonfirefox" src="/uploads/2011/03/uibuttonfirefox.png" width="111" height="37" /></a>
     </td>
-    
+
     <td>
       <a href="/wp-content/uploads/2011/03/uibuttonchrome.png"><img class="alignnone size-full wp-image-262" title="uibuttonchrome" alt="uibuttonchrome" src="/uploads/2011/03/uibuttonchrome.png" width="123" height="39" /></a>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       IE 下的效果
     </td>
-    
+
     <td>
       Firefox 下的效果
     </td>
-    
+
     <td>
       Chrome 下的效果
     </td>

@@ -8,7 +8,7 @@ wpzoom_post_title:
 wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
-  - 
+  -
 categories:
   - 编程技术
 tags:
@@ -42,85 +42,85 @@ tags:
 
 我还是不相信这个残酷的现实，所以决定自己测试一下…
 
-<pre class="lang:c# decode:true">class Program
-{
-	private static readonly ILog log = LogManager.GetLogger (typeof(Program));
-	private const int TestTimes = 10000;
+    class Program
+    {
+    	private static readonly ILog log = LogManager.GetLogger (typeof(Program));
+    	private const int TestTimes = 10000;
 
-	static void Main (string[] args)
-	{
-		var a = NoWriteLine ();
-		var b = WriteLine ();
-		var c = Log4NetDebug ();
-		var d = Log4NetError ();
-		var e = DebugWriteLine ();
+    	static void Main (string[] args)
+    	{
+    		var a = NoWriteLine ();
+    		var b = WriteLine ();
+    		var c = Log4NetDebug ();
+    		var d = Log4NetError ();
+    		var e = DebugWriteLine ();
 
-		Console.WriteLine ("没有输出：" + a);
-		Console.WriteLine ("有输出：" + b);
-		Console.WriteLine ("Debug输出：" + e);
-		Console.WriteLine ("Log4Net没有输出：" + c);
-		Console.WriteLine ("Log4Net有输出：" + d);
-	}
+    		Console.WriteLine ("没有输出：" + a);
+    		Console.WriteLine ("有输出：" + b);
+    		Console.WriteLine ("Debug输出：" + e);
+    		Console.WriteLine ("Log4Net没有输出：" + c);
+    		Console.WriteLine ("Log4Net有输出：" + d);
+    	}
 
-	private static long NoWriteLine ()
-	{
-		var watcher = new Stopwatch ();
-		watcher.Start ();
+    	private static long NoWriteLine ()
+    	{
+    		var watcher = new Stopwatch ();
+    		watcher.Start ();
 
-		for (var k = 0; k &lt; TestTimes; k++) {
-		}
-		watcher.Stop ();
-		return watcher.ElapsedTicks;
-	}
+    		for (var k = 0; k &lt; TestTimes; k++) {
+    		}
+    		watcher.Stop ();
+    		return watcher.ElapsedTicks;
+    	}
 
-	private static long DebugWriteLine ()
-	{
-		var watcher = new Stopwatch ();
-		watcher.Start ();
+    	private static long DebugWriteLine ()
+    	{
+    		var watcher = new Stopwatch ();
+    		watcher.Start ();
 
-		for (var k = 0; k &lt; TestTimes; k++) {
-			Debug.WriteLine (k);
-		}
-		watcher.Stop ();
-		return watcher.ElapsedTicks;
-	}
+    		for (var k = 0; k &lt; TestTimes; k++) {
+    			Debug.WriteLine (k);
+    		}
+    		watcher.Stop ();
+    		return watcher.ElapsedTicks;
+    	}
 
-	private static long WriteLine ()
-	{
-		var watcher = new Stopwatch ();
-		watcher.Start ();
+    	private static long WriteLine ()
+    	{
+    		var watcher = new Stopwatch ();
+    		watcher.Start ();
 
-		for (var k = 0; k &lt; TestTimes; k++) {
-			Console.WriteLine (k);
-		}
-		watcher.Stop ();
-		return watcher.ElapsedTicks;
-	}
+    		for (var k = 0; k &lt; TestTimes; k++) {
+    			Console.WriteLine (k);
+    		}
+    		watcher.Stop ();
+    		return watcher.ElapsedTicks;
+    	}
 
-	private static long Log4NetDebug ()
-	{
-		var watcher = new Stopwatch ();
-		watcher.Start ();
+    	private static long Log4NetDebug ()
+    	{
+    		var watcher = new Stopwatch ();
+    		watcher.Start ();
 
-		for (var k = 0; k &lt; TestTimes; k++) {
-			log.Debug (k);
-		}
-		watcher.Stop ();
-		return watcher.ElapsedTicks;
-	}
+    		for (var k = 0; k &lt; TestTimes; k++) {
+    			log.Debug (k);
+    		}
+    		watcher.Stop ();
+    		return watcher.ElapsedTicks;
+    	}
 
-	private static long Log4NetError ()
-	{
-		var watcher = new Stopwatch ();
-		watcher.Start ();
+    	private static long Log4NetError ()
+    	{
+    		var watcher = new Stopwatch ();
+    		watcher.Start ();
 
-		for (var k = 0; k &lt; TestTimes; k++) {
-			log.Error (k);
-		}
-		watcher.Stop ();
-		return watcher.ElapsedTicks;
-	}
-}</pre>
+    		for (var k = 0; k &lt; TestTimes; k++) {
+    			log.Error (k);
+    		}
+    		watcher.Stop ();
+    		return watcher.ElapsedTicks;
+    	}
+    }
 
 &nbsp;
 
@@ -129,13 +129,13 @@ tags:
 **Debug：**
 
 > 没有输出：1103
-> 
+>
 > 有输出：792840
-> 
+>
 > Debug输出：31345359
-> 
+>
 > Log4Net没有输出：58874
-> 
+>
 > Log4Net有输出：3511244
 
 &nbsp;
@@ -143,13 +143,13 @@ tags:
 **Release：**
 
 > 没有输出：934
-> 
+>
 > 有输出：635316
-> 
+>
 > Debug输出：223
-> 
+>
 > Log4Net没有输出：33297
-> 
+>
 > Log4Net有输出：2246490
 
 &nbsp;

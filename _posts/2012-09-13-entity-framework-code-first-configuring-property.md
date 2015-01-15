@@ -27,12 +27,12 @@ tags:
 
 在 Code First 之前，其实大家都知道一种配置方法：
 
-<pre class="brush: csharp; gutter: true">class AnimalType
-{
-  public int Id { get; set; }
-  [Required]
-  public string TypeName { get; set; }
-}</pre>
+    class AnimalType
+    {
+      public int Id { get; set; }
+      [Required]
+      public string TypeName { get; set; }
+    }
 
 没错，这就是 Code First 的配置方法之一：Data Annotations
 
@@ -48,18 +48,18 @@ tags:
 
 示例如下：
 
-<pre class="brush: csharp; gutter: true">class VetContext:DbContext
-{
-  public DbSet&lt;Patient&gt; Patients { get; set; }
-  public DbSet&lt;Visit&gt; Visits { get; set; }
-  protected override void OnModelCreating(DbModelBuilder modelBuilder)
-  {
-    modelBuilder.Entity&lt;AnimalType&gt;()
-                .ToTable("Species");
-    modelBuilder.Entity&lt;AnimalType&gt;()
-                .Property(p =&gt; p.TypeName).IsRequired();
-   }
-}</pre>
+    class VetContext:DbContext
+    {
+      public DbSet&lt;Patient&gt; Patients { get; set; }
+      public DbSet&lt;Visit&gt; Visits { get; set; }
+      protected override void OnModelCreating(DbModelBuilder modelBuilder)
+      {
+        modelBuilder.Entity&lt;AnimalType&gt;()
+                    .ToTable("Species");
+        modelBuilder.Entity&lt;AnimalType&gt;()
+                    .Property(p =&gt; p.TypeName).IsRequired();
+       }
+    }
 
 &nbsp;
 
@@ -80,27 +80,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       max (type specified by database)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       MinLength(nn)<br /> MaxLength(nn)<br /> StringLength(nn)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName).HasMaxLength(nn)
     </td>
@@ -118,27 +118,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       根据不同的数据提供者，会有不同的默认数据类型。<br /> 在 SQL Server 中：<br /> String : nvarchar(max)<br /> Integer : int<br /> Byte Array : varbinary(max)<br /> Boolean : bit
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       Column(TypeName=“xxx”)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName).HasColumnType (“xxx”)
     </td>
@@ -154,27 +154,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       主键、外键: 不为空<br /> 引用类型 (String, arrays): 可空<br /> 值类型 (all numeric types, DateTime, bool, char) : 不为空<br /> Nullable<T>  : 可空
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       Required
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName).IsRequired
     </td>
@@ -190,27 +190,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       命名为 Id 的属性<br /> 命名为 [类型名] + Id 的属性
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       Key
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.HasKey(t=>t.PropertyName)
     </td>
@@ -226,27 +226,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       数据库默认标识规范
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       DatabaseGenerated(DatabaseGeneratedOption)
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName)<br /> .HasDatabaseGeneratedOption(DatabaseGeneratedOption)
     </td>
@@ -262,27 +262,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       无
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       TimeStamp
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName).IsRowVersion()
     </td>
@@ -298,27 +298,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       无
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       ConcurrencyCheck
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName).IsConcurrencyToken()
     </td>
@@ -334,27 +334,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       所有的 String 都会被配制成 Unicode 编码的数据库类型
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       无法配置
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName).IsUnicode(boolean)
     </td>
@@ -370,27 +370,27 @@ tags:
     <td>
       Convention
     </td>
-    
+
     <td>
       Decimals 18, 2
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Data Annotation
     </td>
-    
+
     <td>
       无法配置
     </td>
   </tr>
-  
+
   <tr>
     <td>
       Fluent
     </td>
-    
+
     <td>
       Entity<T>.Property(t=>t.PropertyName).HasPrecision(n,n)
     </td>

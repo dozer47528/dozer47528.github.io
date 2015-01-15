@@ -8,7 +8,7 @@ wpzoom_post_title:
 wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
-  - 
+  -
 categories:
   - 编程技术
 tags:
@@ -45,47 +45,47 @@ WCF 太让人纠结了！不仅用 using 会有问题， Mock 这方面设计的
 
 网上的改进方案很多，但是只针对 using 进行了改善，另外需求可能也和我有所不同，所以自己弄了一种实现方案：
 
-<pre class="lang:c# decode:true">public static class Wcf
-{
-    public static void Use&lt;T&gt;(T proxy, Action&lt;T&gt; codeBlock)
-    where T : class
+    public static class Wcf
     {
-        try
+        public static void Use&lt;T&gt;(T proxy, Action&lt;T&gt; codeBlock)
+        where T : class
         {
-            codeBlock(proxy);
+            try
+            {
+                codeBlock(proxy);
 
-            if (proxy is ClientBase&lt;T&gt;)
-            {
-                (proxy as ClientBase&lt;T&gt;).Close();
+                if (proxy is ClientBase&lt;T&gt;)
+                {
+                    (proxy as ClientBase&lt;T&gt;).Close();
+                }
             }
-        }
-        catch
-        {
-            if (proxy is ClientBase&lt;T&gt;)
+            catch
             {
-                (proxy as ClientBase&lt;T&gt;).Abort();
+                if (proxy is ClientBase&lt;T&gt;)
+                {
+                    (proxy as ClientBase&lt;T&gt;).Abort();
+                }
+                throw;
             }
-            throw;
         }
     }
-}</pre>
 
 &nbsp;
 
 具体用法：
 
-<pre class="lang:c# decode:true">protected void Test()
-{
-    Wcf.Use(GetClient(), client =&gt;
-        {
-            client.Call();
-        });
-}
+    protected void Test()
+    {
+        Wcf.Use(GetClient(), client =&gt;
+            {
+                client.Call();
+            });
+    }
 
-protected virtual ICient GetClient()
-{
-    return new Client();
-}</pre>
+    protected virtual ICient GetClient()
+    {
+        return new Client();
+    }
 
 &nbsp;
 

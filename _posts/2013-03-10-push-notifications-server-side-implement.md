@@ -49,37 +49,37 @@ APNS 原理和 iOS 设备上的实现，可以在下文中获得答案：（右�
 
 代码如下：
 
-<pre class="lang:c# decode:true">[STAThread]
-static void Main(string[] args)
-{
-    //Create our service    
-    PushService push = new PushService();
+    [STAThread]
+    static void Main(string[] args)
+    {
+        //Create our service
+        PushService push = new PushService();
 
-    //Wire up the events
-    push.Events.OnNotificationSent += Events_OnNotificationSent;
-    push.Events.OnNotificationSendFailure += Events_OnNotificationSendFailure;
+        //Wire up the events
+        push.Events.OnNotificationSent += Events_OnNotificationSent;
+        push.Events.OnNotificationSendFailure += Events_OnNotificationSendFailure;
 
-    //Configure and start Apple APNS
-    var appleCert = File.ReadAllBytes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "key.p12"));
-    push.StartApplePushService(new ApplePushChannelSettings(false, appleCert, "xxxxx"));
-    push.QueueNotification(NotificationFactory.Apple()
-                .ForDeviceToken("xxxxxxxxxx")
-                .WithAlert("Alert Text!")
-                .WithSound("default")
-                .WithBadge(7));
-    Console.ReadKey();
+        //Configure and start Apple APNS
+        var appleCert = File.ReadAllBytes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "key.p12"));
+        push.StartApplePushService(new ApplePushChannelSettings(false, appleCert, "xxxxx"));
+        push.QueueNotification(NotificationFactory.Apple()
+                    .ForDeviceToken("xxxxxxxxxx")
+                    .WithAlert("Alert Text!")
+                    .WithSound("default")
+                    .WithBadge(7));
+        Console.ReadKey();
 
-}
+    }
 
-private static void Events_OnNotificationSendFailure(PushSharp.Common.Notification notification, Exception notificationFailureException)
-{
-    Console.WriteLine("发送失败！");
-}
+    private static void Events_OnNotificationSendFailure(PushSharp.Common.Notification notification, Exception notificationFailureException)
+    {
+        Console.WriteLine("发送失败！");
+    }
 
-private static void Events_OnNotificationSent(PushSharp.Common.Notification notification)
-{
-    Console.WriteLine("发送成功！");
-}</pre>
+    private static void Events_OnNotificationSent(PushSharp.Common.Notification notification)
+    {
+        Console.WriteLine("发送成功！");
+    }
 
 &nbsp;
 
@@ -97,18 +97,18 @@ Java 实现起来也非常简单，同样是用一个开源的类库。作者已
 
 实现代码如下：
 
-<pre class="lang:java decode:true">public static void main( String[] args )
-{
-	ApnsService service =
-		    APNS.newService()
-		    .withCert("key.p12", "xxxxx")
-		    .withSandboxDestination()
-		    .build();
+    public static void main( String[] args )
+    {
+    	ApnsService service =
+    		    APNS.newService()
+    		    .withCert("key.p12", "xxxxx")
+    		    .withSandboxDestination()
+    		    .build();
 
-	String payload = APNS.newPayload().alertBody("Can't be simpler than this!").build();
-	String token = "xxxxxx";
-	service.push(token, payload);
-}</pre>
+    	String payload = APNS.newPayload().alertBody("Can't be simpler than this!").build();
+    	String token = "xxxxxx";
+    	service.push(token, payload);
+    }
 
 最终手机上也收到了推送！
 
@@ -120,54 +120,54 @@ Java 实现起来也非常简单，同样是用一个开源的类库。作者已
 
 同样贴上代码：
 
-<pre class="lang:php decode:true">&lt;?php
+    &lt;?php
 
-// Put your device token here (without spaces):
-$deviceToken = 'xxxxxx';
+    // Put your device token here (without spaces):
+    $deviceToken = 'xxxxxx';
 
-// Put your private key's passphrase here:
-$passphrase = 'xxxx';
+    // Put your private key's passphrase here:
+    $passphrase = 'xxxx';
 
-// Put your alert message here:
-$message = 'My first push notification!';
+    // Put your alert message here:
+    $message = 'My first push notification!';
 
-////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
 
-$ctx = stream_context_create();
-stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
-stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
+    $ctx = stream_context_create();
+    stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
+    stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
-// Open a connection to the APNS server
-$fp = stream_socket_client(
-	'ssl://gateway.sandbox.push.apple.com:2195', $err,
-	$errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
+    // Open a connection to the APNS server
+    $fp = stream_socket_client(
+    	'ssl://gateway.sandbox.push.apple.com:2195', $err,
+    	$errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
 
-if (!$fp)
-	exit("Failed to connect: $err $errstr" . PHP_EOL);
+    if (!$fp)
+    	exit("Failed to connect: $err $errstr" . PHP_EOL);
 
-echo 'Connected to APNS' . PHP_EOL;
+    echo 'Connected to APNS' . PHP_EOL;
 
-// Create the payload body
-$body['aps'] = array(
-	'alert' =&gt; $message,
-	'sound' =&gt; 'default'
-	);
+    // Create the payload body
+    $body['aps'] = array(
+    	'alert' =&gt; $message,
+    	'sound' =&gt; 'default'
+    	);
 
-// Encode the payload as JSON
-$payload = json_encode($body);
+    // Encode the payload as JSON
+    $payload = json_encode($body);
 
-// Build the binary notification
-$msg = chr(0) . pack('n', 32) . pack('H*', $deviceToken) . pack('n', strlen($payload)) . $payload;
+    // Build the binary notification
+    $msg = chr(0) . pack('n', 32) . pack('H*', $deviceToken) . pack('n', strlen($payload)) . $payload;
 
-// Send it to the server
-$result = fwrite($fp, $msg, strlen($msg));
+    // Send it to the server
+    $result = fwrite($fp, $msg, strlen($msg));
 
-if (!$result)
-	echo 'Message not delivered' . PHP_EOL;
-else
-	echo 'Message successfully delivered' . PHP_EOL;
+    if (!$result)
+    	echo 'Message not delivered' . PHP_EOL;
+    else
+    	echo 'Message successfully delivered' . PHP_EOL;
 
-// Close the connection to the server
-fclose($fp);</pre>
+    // Close the connection to the server
+    fclose($fp);
 
  [1]: /uploads/2013/03/push.png

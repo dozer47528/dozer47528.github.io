@@ -8,7 +8,7 @@ wpzoom_post_title:
 wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
-  - 
+  -
 categories:
   - 编程技术
 tags:
@@ -22,22 +22,22 @@ tags:
 
 代码大致逻辑如下：
 
-<pre class="lang:js decode:true">var options
+    var options
 
-options.error = function (model, xhr, options) {
-    if (xhr.status === 401) {
-        //todo: login
+    options.error = function (model, xhr, options) {
+        if (xhr.status === 401) {
+            //todo: login
 
-        Backbone.sync(method, model, options)
-        return
+            Backbone.sync(method, model, options)
+            return
+        }
     }
-}
 
-options.success = function (model, xhr, options) {
-	//todo:
-}
+    options.success = function (model, xhr, options) {
+    	//todo:
+    }
 
-Backbone.sync(method, model, options)</pre>
+    Backbone.sync(method, model, options)
 
 逻辑很简单，就是如果登陆的时候返回401错误，就重新登陆一下，登陆完成后重新请求数据。
 
@@ -67,11 +67,11 @@ backbone 会把请求的 xhr 对象赋值到传入的 options 对象上，所以
 
 解决办法其实也非常简单啦，在第二次调用的时候把 options 里的 xhr 对象删除即可。
 
-<pre class="lang:default decode:true  crayon-selected">options.error = function (model, xhr, options) {
-    if (xhr.status === 401) {
-        //todo: login
-        delete options.xhr
-        Backbone.sync(method, model, options)
-        return
+    options.error = function (model, xhr, options) {
+        if (xhr.status === 401) {
+            //todo: login
+            delete options.xhr
+            Backbone.sync(method, model, options)
+            return
+        }
     }
-}</pre>

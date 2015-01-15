@@ -63,43 +63,43 @@ Mono.Cecil 可以帮助你修改编译好的 dll 文件。
 
 核心代码如下（这部分逻辑由老赵提供，我做了一定的修改）：
 
-<pre class="lang:c# decode:true">private static void OverWrite(string file, bool hasSymbols)
-{
-    var asmDef = AssemblyDefinition.ReadAssembly(file, 
-                          new ReaderParameters { ReadSymbols = hasSymbols });
-    var classTypes = asmDef.Modules
-                            .SelectMany(m =&gt; m.Types)
-                            .Where(t =&gt; t.IsClass)
-                            .ToList();
-
-    foreach (var type in classTypes)
+    private static void OverWrite(string file, bool hasSymbols)
     {
-        if (type.IsSealed)
+        var asmDef = AssemblyDefinition.ReadAssembly(file,
+                              new ReaderParameters { ReadSymbols = hasSymbols });
+        var classTypes = asmDef.Modules
+                                .SelectMany(m =&gt; m.Types)
+                                .Where(t =&gt; t.IsClass)
+                                .ToList();
+
+        foreach (var type in classTypes)
         {
-            type.IsSealed = false;
+            if (type.IsSealed)
+            {
+                type.IsSealed = false;
+            }
+
+            foreach (var method in type.Methods)
+            {
+                if (method.IsStatic) continue;
+                if (method.IsConstructor) continue;
+                if (method.IsAbstract) continue;
+
+                if (!method.IsVirtual)
+                {
+                    method.IsVirtual = true;
+                    method.IsNewSlot = true;
+                    method.IsReuseSlot = false;
+                }
+                else
+                {
+                    method.IsFinal = false;
+                }
+            }
         }
 
-        foreach (var method in type.Methods)
-        {
-            if (method.IsStatic) continue;
-            if (method.IsConstructor) continue;
-            if (method.IsAbstract) continue;
-
-            if (!method.IsVirtual)
-            {
-                method.IsVirtual = true;
-                method.IsNewSlot = true;
-                method.IsReuseSlot = false;
-            }
-            else
-            {
-                method.IsFinal = false;
-            }
-        }
+        asmDef.Write(file, new WriterParameters { WriteSymbols = hasSymbols });
     }
-
-    asmDef.Write(file, new WriterParameters { WriteSymbols = hasSymbols });
-}</pre>
 
 只要把这个代码封装成一个控制台应用程序，每次编译测试项目后运行一下即可。
 
@@ -143,7 +143,7 @@ NUnit 项目同样是一个演示的测试项目，但是用的是 <a href="http
 
 右击项目 — 属性 — 生成事件 — 后期生成事件命令行：
 
-<pre class="toolbar:2 lang:default decode:true">"$(ProjectDir)MockHelper\MockHelper.exe"</pre>
+`"$(ProjectDir)MockHelper\MockHelper.exe"`
 
 这里不用传参数，因为运行这个工具的是 Test 项目，而这个项目默认的运行位置就是 <span style="background-color: #eeeeee;">bin/Debug|Release</span>，所以需要修改的 dll 就在下面。
 
@@ -153,66 +153,66 @@ NUnit 项目同样是一个演示的测试项目，但是用的是 <a href="http
 
 TestDll 是非虚函数，而且是密封类：
 
-<pre class="lang:c# decode:true">public sealed class TestClass : TestClassBase
-{
-    public string NormalMethod()
+    public sealed class TestClass : TestClassBase
     {
-        return "TestClass";
+        public string NormalMethod()
+        {
+            return "TestClass";
+        }
+
+        public override string VirtualMethod()
+        {
+            return base.VirtualMethod();
+        }
+
+        public sealed override string SealedMethod()
+        {
+            return base.VirtualMethod();
+        }
+
+        public override string AbstractMethod()
+        {
+            return "TestClass";
+        }
     }
 
-    public override string VirtualMethod()
+    public abstract class TestClassBase
     {
-        return base.VirtualMethod();
-    }
+        public virtual string VirtualMethod()
+        {
+            return "TestClass";
+        }
 
-    public sealed override string SealedMethod()
-    {
-        return base.VirtualMethod();
-    }
+        public virtual string SealedMethod()
+        {
+            return "TestClass";
+        }
 
-    public override string AbstractMethod()
-    {
-        return "TestClass";
+        public abstract string AbstractMethod();
     }
-}
-
-public abstract class TestClassBase
-{
-    public virtual string VirtualMethod()
-    {
-        return "TestClass";
-    }
-
-    public virtual string SealedMethod()
-    {
-        return "TestClass";
-    }
-
-    public abstract string AbstractMethod();
-}</pre>
 
 &nbsp;
 
 测试代码如下：
 
-<pre class="lang:c# decode:true">[TestClass]
-public class UnitTest
-{
-    [TestMethod]
-    public void TestMethod1()
+    [TestClass]
+    public class UnitTest
     {
-        var test = new Mock&lt;TestClass&gt;();
-        test.Setup(t =&gt; t.NormalMethod()).Returns("Mock");
-        test.Setup(t =&gt; t.VirtualMethod()).Returns("Mock");
-        test.Setup(t =&gt; t.SealedMethod()).Returns("Mock");
-        test.Setup(t =&gt; t.AbstractMethod()).Returns("Mock");
+        [TestMethod]
+        public void TestMethod1()
+        {
+            var test = new Mock&lt;TestClass&gt;();
+            test.Setup(t =&gt; t.NormalMethod()).Returns("Mock");
+            test.Setup(t =&gt; t.VirtualMethod()).Returns("Mock");
+            test.Setup(t =&gt; t.SealedMethod()).Returns("Mock");
+            test.Setup(t =&gt; t.AbstractMethod()).Returns("Mock");
 
-        Assert.AreEqual(test.Object.NormalMethod(), "Mock");
-        Assert.AreEqual(test.Object.VirtualMethod(), "Mock");
-        Assert.AreEqual(test.Object.SealedMethod(), "Mock");
-        Assert.AreEqual(test.Object.AbstractMethod(), "Mock");
+            Assert.AreEqual(test.Object.NormalMethod(), "Mock");
+            Assert.AreEqual(test.Object.VirtualMethod(), "Mock");
+            Assert.AreEqual(test.Object.SealedMethod(), "Mock");
+            Assert.AreEqual(test.Object.AbstractMethod(), "Mock");
+        }
     }
-}</pre>
 
 &nbsp;
 
@@ -304,7 +304,7 @@ NUnit 运行结果如下：
 
 我在 Moq 中 Mock 了 Protect 方法，没有报错，看上去 Mock 成功了：
 
-<pre class="toolbar:2 lang:c# decode:true">test.Protected().Setup&lt;string&gt;("PrivateMethod").Returns("Mock");</pre>
+`test.Protected().Setup&lt;string&gt;("PrivateMethod").Returns("Mock");`
 
 但是在调用了时候还是调用了原来的方法。
 

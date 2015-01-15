@@ -119,7 +119,7 @@ OK，我们理一下思路：
 
 我们依然把所有的快捷方式放在一个文件夹下，然后在 CMD 中输入一些命令。
 
-<pre class="brush:shell">mklink /j "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Quick" "e:/quickstart"</pre>
+`mklink /j "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Quick" "e:/quickstart"`
 
 其中的 e:/quickstart 替换成你自己的目录就行了。
 

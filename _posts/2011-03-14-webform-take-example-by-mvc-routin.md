@@ -40,47 +40,47 @@ Routing，MVC 中的路由功能，和 Url 重写类似，但是更高层一点~
 
 2、在 Application_Start 中编写 Routing 规则
 
-<pre class="brush:csharp">void Application_Start(object sender, EventArgs e)
-{
-    //注册 Routing ，实现 Url 重写
-    Utility.RouteRegister.RegisterRoutes(RouteTable.Routes);
-}
-
-using System.Web.Routing;
-
-namespace Utility
-{
-    public static class RouteRegister
+    void Application_Start(object sender, EventArgs e)
     {
-        public static void RegisterRoutes(RouteCollection routes)
+        //注册 Routing ，实现 Url 重写
+        Utility.RouteRegister.RegisterRoutes(RouteTable.Routes);
+    }
+
+    using System.Web.Routing;
+
+    namespace Utility
+    {
+        public static class RouteRegister
         {
-            //根目录
-            routes.MapPageRoute(
-                "Root",
-                "",
-                "~/Views/Home_Index.aspx"
-                );
+            public static void RegisterRoutes(RouteCollection routes)
+            {
+                //根目录
+                routes.MapPageRoute(
+                    "Root",
+                    "",
+                    "~/Views/Home_Index.aspx"
+                    );
 
-            //后台管理
-            routes.MapPageRoute(
-                "Admin",
-                "Admin/{Controller}/{Action}/{Id}",
-                "~/Views/Admin/{Controller}_{Action}.aspx",
-                true,
-                new RouteValueDictionary(new { Controller = "Home", Action = "Index", Id = "" })
-                );
+                //后台管理
+                routes.MapPageRoute(
+                    "Admin",
+                    "Admin/{Controller}/{Action}/{Id}",
+                    "~/Views/Admin/{Controller}_{Action}.aspx",
+                    true,
+                    new RouteValueDictionary(new { Controller = "Home", Action = "Index", Id = "" })
+                    );
 
-            //默认页面
-            routes.MapPageRoute(
-                "Default",
-                "{Controller}/{Action}/{Id}",
-                "~/Views/{Controller}_{Action}.aspx",
-                true,
-                new RouteValueDictionary(new { Controller = "Home", Action = "Index", Id = "" })
-                );
+                //默认页面
+                routes.MapPageRoute(
+                    "Default",
+                    "{Controller}/{Action}/{Id}",
+                    "~/Views/{Controller}_{Action}.aspx",
+                    true,
+                    new RouteValueDictionary(new { Controller = "Home", Action = "Index", Id = "" })
+                    );
+            }
         }
     }
-}</pre>
 
 好了，就是这么简单！~
 
@@ -98,7 +98,7 @@ namespace Utility
 
 MVC 中有了 Controller 和 Action 后生成链接非常方便，其实在 Asp.net 4.0 中也有这样的功能
 
-<pre class="brush:xml">&lt;%: GetRouteUrl("Default", new {controller = "home" })%&gt;</pre>
+`&lt;%: GetRouteUrl("Default", new {controller = "home" })%&gt;`
 
 上述代码便可以生成指向 Home_Index 页面的链接
 

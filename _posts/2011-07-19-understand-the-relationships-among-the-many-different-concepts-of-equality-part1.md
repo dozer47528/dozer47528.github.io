@@ -25,10 +25,10 @@ tags:
 
 你可以使用 C# 提供的四种方法来判断他们是否相等。
 
-<pre class="brush:csharp">public static bool ReferenceEquals(object left, object right);
-public static bool Equals(object left, object right);
-public virtual bool Equals(object right);
-public static bool operator ==(MyClass left, MyClass right);</pre>
+    public static bool ReferenceEquals(object left, object right);
+    public static bool Equals(object left, object right);
+    public virtual bool Equals(object right);
+    public static bool operator ==(MyClass left, MyClass right);
 
 前两个是 Object 的静态方法，第三个是实例的方法，最后一个是 == 操作符。
 
@@ -56,16 +56,16 @@ C#中，判断引用类型是否相等是看他们是不是被引用到了同一
 
 所以这个方法比较的是相同的“身份”，而不是相同的“值”，也就是说让你对两个值类型进行比较的时候，结果永远是 false；
 
-<pre class="brush:csharp">int i = 5;
-int j = 5;
-if (Object.ReferenceEquals(i, j))
-	Console.WriteLine("Never happens.");
-else
-	Console.WriteLine("Always happens.");
-if (Object.ReferenceEquals(i, i))
-	Console.WriteLine("Never happens.");
-else
-	Console.WriteLine("Always happens.");</pre>
+    int i = 5;
+    int j = 5;
+    if (Object.ReferenceEquals(i, j))
+    	Console.WriteLine("Never happens.");
+    else
+    	Console.WriteLine("Always happens.");
+    if (Object.ReferenceEquals(i, i))
+    	Console.WriteLine("Never happens.");
+    else
+    	Console.WriteLine("Always happens.");
 
 &nbsp;
 
@@ -73,16 +73,16 @@ else
 
 这个方法是这样实现的：
 
-<pre class="brush:csharp">public static new bool Equals(object left, object right)
-{
-	// Check object identity
-	if (Object.ReferenceEquals(left, right) )
-		return true;
-	// both null references handled above
-	if (Object.ReferenceEquals(left, null) || Object.ReferenceEquals(right, null))
-		return false;
-	return left.Equals(right);
-}</pre>
+    public static new bool Equals(object left, object right)
+    {
+    	// Check object identity
+    	if (Object.ReferenceEquals(left, right) )
+    		return true;
+    	// both null references handled above
+    	if (Object.ReferenceEquals(left, null) || Object.ReferenceEquals(right, null))
+    		return false;
+    	return left.Equals(right);
+    }
 
 &nbsp;
 

@@ -49,13 +49,13 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
 
 ### 解决方案
 
-<pre class="brush:xml">&lt;ul id="top-navigation"&gt;
-    &lt;li class="controller_Home"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("首页","Index","Home")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li class="controller_Article"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("文章管理","Index","Article")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li class="controller_User"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("用户管理","Index","User")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;input id="controller" type="hidden" value="@Html.ViewContext.RouteData.Values["controller"]"/&gt;
-&lt;input id="action" type="hidden" value="@Html.ViewContext.RouteData.Values["action"]"/&gt;</pre>
+    &lt;ul id="top-navigation"&gt;
+        &lt;li class="controller_Home"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("首页","Index","Home")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+        &lt;li class="controller_Article"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("文章管理","Index","Article")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+        &lt;li class="controller_User"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("用户管理","Index","User")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;input id="controller" type="hidden" value="@Html.ViewContext.RouteData.Values["controller"]"/&gt;
+    &lt;input id="action" type="hidden" value="@Html.ViewContext.RouteData.Values["action"]"/&gt;
 
 **View 中的代码如上所示：**
 
@@ -64,33 +64,33 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
 
 &nbsp;
 
-<pre class="brush:js">$(function () {
-    SetNavClass('mainNav', 'active');
-});
+    $(function () {
+        SetNavClass('mainNav', 'active');
+    });
 
-function SetNavClass(ulId, className) {
-    var controller = $('#controller').val();
-    var action = $('#action').val();
-    eval('controller_' + controller + ' = true');
-    eval('action_' + action + ' = true');
-    list = $('#' + ulId + ' *');
+    function SetNavClass(ulId, className) {
+        var controller = $('#controller').val();
+        var action = $('#action').val();
+        eval('controller_' + controller + ' = true');
+        eval('action_' + action + ' = true');
+        list = $('#' + ulId + ' *');
 
-    for (var k = 0; k &lt; list.length; k++) {
-        item = list[k];
-        str = GetClassName(item).toLowerCase();
-        try {
-            if (eval(str)) $(item).addClass(className);
-        } catch (e) { }
+        for (var k = 0; k &lt; list.length; k++) {
+            item = list[k];
+            str = GetClassName(item).toLowerCase();
+            try {
+                if (eval(str)) $(item).addClass(className);
+            } catch (e) { }
+        }
     }
-}
-function GetClassName(item) {
-    var classStr = $(item).attr('class');
-    if (classStr == null) return "";
-    classes = classStr.split(' ');
-    for (var k = 0; k &lt; classes.length; k++) {
-        if (classes[k].indexOf('controller') &gt; -1 || classes[k].indexOf('action') &gt; -1) return classes[k];
+    function GetClassName(item) {
+        var classStr = $(item).attr('class');
+        if (classStr == null) return "";
+        classes = classStr.split(' ');
+        for (var k = 0; k &lt; classes.length; k++) {
+            if (classes[k].indexOf('controller') &gt; -1 || classes[k].indexOf('action') &gt; -1) return classes[k];
+        }
     }
-}</pre>
 
 **以上是 Javascript 的代码：**
 
@@ -119,8 +119,8 @@ function GetClassName(item) {
 
 &nbsp;
 
-<pre class="brush:xml">&lt;li class="controller_Home||controller_About"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("首页", "Index", "Home")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li class="controller_Article&&action_Add"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("文章管理", "Index", "Article")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;</pre>
+    &lt;li class="controller_Home||controller_About"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("首页", "Index", "Home")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="controller_Article&&action_Add"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("文章管理", "Index", "Article")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 
 **以上两行代码表示：**
 

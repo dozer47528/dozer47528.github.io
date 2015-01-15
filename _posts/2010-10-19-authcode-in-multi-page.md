@@ -99,25 +99,25 @@ tags:
 
 &nbsp;
 
-<pre class="brush:csharp">public partial class _Default : System.Web.UI.Page
-{
-    public string imageURL;
-    public string sessionID;
-
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class _Default : System.Web.UI.Page
     {
-        var ticks = DateTime.Now.Ticks.ToString();
-        imageURL = "AuthCode.ashx?id=" + ticks;
-        sessionID = ticks;
-    }
+        public string imageURL;
+        public string sessionID;
 
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
-        Response.Write("&lt;script&gt;alert('" + am.Authorize(Request["sessionID"], TextBox1.Text).ToString() + "');&lt;/script&gt;");
-        TextBox1.Text = "";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            var ticks = DateTime.Now.Ticks.ToString();
+            imageURL = "AuthCode.ashx?id=" + ticks;
+            sessionID = ticks;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
+            Response.Write("&lt;script&gt;alert('" + am.Authorize(Request["sessionID"], TextBox1.Text).ToString() + "');&lt;/script&gt;");
+            TextBox1.Text = "";
+        }
     }
-}</pre>
 
 **生成：**
 
@@ -137,16 +137,16 @@ tags:
 
 &nbsp;
 
-<pre class="brush:xml">&lt;asp:TextBox ID="TextBox1" runat="server"&gt;&lt;/asp:TextBox&gt;
-&lt;img id="AuthImage" src="&lt;%=imageURL %&gt;" alt="Alternate Text" onclick="javascript:Refesh();"/&gt;
-&lt;input type="hidden" id="sessionID" name="sessionID" value="&lt;%=sessionID %&gt;" /&gt;
-&lt;script type="text/javascript"&gt;
-    function Refesh() {
-        var ticks = new Date().getTime();
-        document.getElementById('AuthImage').setAttribute('src', 'authcode.ashx?id=' + ticks);
-        document.getElementById('sessionID').value = ticks;
-    }
-&lt;/script&gt;</pre>
+    &lt;asp:TextBox ID="TextBox1" runat="server"&gt;&lt;/asp:TextBox&gt;
+    &lt;img id="AuthImage" src="&lt;%=imageURL %&gt;" alt="Alternate Text" onclick="javascript:Refesh();"/&gt;
+    &lt;input type="hidden" id="sessionID" name="sessionID" value="&lt;%=sessionID %&gt;" /&gt;
+    &lt;script type="text/javascript"&gt;
+        function Refesh() {
+            var ticks = new Date().getTime();
+            document.getElementById('AuthImage').setAttribute('src', 'authcode.ashx?id=' + ticks);
+            document.getElementById('sessionID').value = ticks;
+        }
+    &lt;/script&gt;
 
 图片：读取后端代码中的图片地址
 
@@ -158,25 +158,25 @@ tags:
 
 &nbsp;
 
-<pre class="brush:csharp">public class AuthCode : IHttpHandler, IRequiresSessionState
-{
-    public void ProcessRequest(HttpContext context)
+    public class AuthCode : IHttpHandler, IRequiresSessionState
     {
-        string id = context.Request["id"];
-        AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
-        context.Response.ContentType = "image/jpeg";
-        context.Response.Clear();
-        context.Response.BinaryWrite(am.Create(id).ToArray());
-    }
-
-    public bool IsReusable
-    {
-        get
+        public void ProcessRequest(HttpContext context)
         {
-            return false;
+            string id = context.Request["id"];
+            AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
+            context.Response.ContentType = "image/jpeg";
+            context.Response.Clear();
+            context.Response.BinaryWrite(am.Create(id).ToArray());
+        }
+
+        public bool IsReusable
+        {
+            get
+            {
+                return false;
+            }
         }
     }
-}</pre>
 
 AuthCodeBuilder：这是一个继承了IAuthCodeBuilder借口的类，大家可以自己写，也可以参考我里面的源代码
 
@@ -208,45 +208,45 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 
 &nbsp;
 
-<pre class="brush:csharp">public class HomeController : Controller
-{
-    public ActionResult Index()
+    public class HomeController : Controller
     {
-        Bind();
-        ViewData["Message"] = "欢迎使用 ASP.NET MVC!";
-
-        return View();
-    }
-
-    [HttpPost]
-    public ActionResult Index(string sessionID,string code)
-    {
-        Bind();
-        AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
-        if (am.Authorize(sessionID, code))
+        public ActionResult Index()
         {
-            Response.Write("&lt;script&gt;alert('成功！');&lt;/script&gt;");
+            Bind();
+            ViewData["Message"] = "欢迎使用 ASP.NET MVC!";
+
+            return View();
         }
-        else
+
+        [HttpPost]
+        public ActionResult Index(string sessionID,string code)
         {
-            Response.Write("&lt;script&gt;alert('失败！');&lt;/script&gt;");
+            Bind();
+            AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
+            if (am.Authorize(sessionID, code))
+            {
+                Response.Write("&lt;script&gt;alert('成功！');&lt;/script&gt;");
+            }
+            else
+            {
+                Response.Write("&lt;script&gt;alert('失败！');&lt;/script&gt;");
+            }
+            return View();
         }
-        return View();
-    }
 
-    public ActionResult AuthCode(string id)
-    {
-        AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
-        return File(am.Create(id).ToArray(), "image/jpeg");
-    }
+        public ActionResult AuthCode(string id)
+        {
+            AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
+            return File(am.Create(id).ToArray(), "image/jpeg");
+        }
 
-    protected void Bind()
-    {
-        var ticks = DateTime.Now.Ticks.ToString();
-        ViewData["imageURL"] = "home/authcode/" + ticks;
-        ViewData["sessionID"] = ticks;
+        protected void Bind()
+        {
+            var ticks = DateTime.Now.Ticks.ToString();
+            ViewData["imageURL"] = "home/authcode/" + ticks;
+            ViewData["sessionID"] = ticks;
+        }
     }
-}</pre>
 
 其中，包含了每次刷新页面都重新生成验证码（Bind方法）、验证和图片生成（AuthCode方法）
 
@@ -255,36 +255,34 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 **2、前端页面 Index.aspx**
 
 &nbsp;
-{% raw %}
 
     <%using (Html.BeginForm())
-    
+
       {%>
-    
+
     <input type="text" name="code" value="" />
-    
+
     <img id="AuthImage" src="<%=ViewData["imageURL"] %>" alt="Alternate Text" onclick="javascript:Refesh();" />
-    
+
     <input type="hidden" id="sessionID" name="sessionID" value="<%=ViewData["sessionID"] %>" />
-    
+
     <script type="text/javascript">
-    
+
         function Refesh() {
-    
+
             var ticks = new Date().getTime();
-    
+
             document.getElementById('AuthImage').setAttribute('src', 'home/authcode/' + ticks);
-    
+
             document.getElementById('sessionID').value = ticks;
-    
+
         }
-    
+
     </script>
-    
+
     <input type="submit" name="submit" value="提交" />
-    
+
     <%}%>
-{% endraw %}
 
 基本和Asp.net的一样，只是针对MVC修改了一下
 
@@ -302,24 +300,24 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 
 &nbsp;
 
-<pre class="brush:csharp">/// &lt;summary&gt;
-/// 得到请求ID
-/// &lt;/summary&gt;
-/// &lt;returns&gt;&lt;/returns&gt;
-protected virtual string GetSessionID()
-{
-    throw new NotImplementedException("请重写该方法后再调用！");
-}
+    /// &lt;summary&gt;
+    /// 得到请求ID
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    protected virtual string GetSessionID()
+    {
+        throw new NotImplementedException("请重写该方法后再调用！");
+    }
 
-/// &lt;summary&gt;
-/// 自动获取当前请求ID的验证，请重写GetSessionID()方法后再调用！
-/// &lt;/summary&gt;
-/// &lt;param name="authcode"&gt;验证码&lt;/param&gt;
-/// &lt;returns&gt;是否通过&lt;/returns&gt;
-public virtual bool Authorize(string authcode)
-{
-    return Authorize(GetSessionID(), authcode);
-}</pre>
+    /// &lt;summary&gt;
+    /// 自动获取当前请求ID的验证，请重写GetSessionID()方法后再调用！
+    /// &lt;/summary&gt;
+    /// &lt;param name="authcode"&gt;验证码&lt;/param&gt;
+    /// &lt;returns&gt;是否通过&lt;/returns&gt;
+    public virtual bool Authorize(string authcode)
+    {
+        return Authorize(GetSessionID(), authcode);
+    }
 
 他们会调用GetSessionID这个虚方法，然后在调用多参数的重载方法。
 

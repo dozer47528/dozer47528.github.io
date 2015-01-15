@@ -44,20 +44,20 @@ Google 后发现其实老外早有研究过了：
 
 （具体实现方法：<a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7" target="_blank"><strong>http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7</strong></a>）
 
-<pre class="brush:csharp">namespace System.Runtime.CompilerServices
-{
-    /// &lt;remarks&gt;
-    /// This attribute allows us to define extension methods without
-    /// requiring .NET Framework 3.5. For more information, see the section,
-    /// &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7"&gt;Extension Methods in .NET Framework 2.0 Apps&lt;/a&gt;,
-    /// of &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx"&gt;Basic Instincts: Extension Methods&lt;/a&gt;
-    /// column in &lt;a href="http://msdn.microsoft.com/msdnmag/"&gt;MSDN Magazine&lt;/a&gt;,
-    /// issue &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc135410.aspx"&gt;Nov 2007&lt;/a&gt;.
-    /// &lt;/remarks&gt;
+    namespace System.Runtime.CompilerServices
+    {
+        /// &lt;remarks&gt;
+        /// This attribute allows us to define extension methods without
+        /// requiring .NET Framework 3.5. For more information, see the section,
+        /// &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7"&gt;Extension Methods in .NET Framework 2.0 Apps&lt;/a&gt;,
+        /// of &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx"&gt;Basic Instincts: Extension Methods&lt;/a&gt;
+        /// column in &lt;a href="http://msdn.microsoft.com/msdnmag/"&gt;MSDN Magazine&lt;/a&gt;,
+        /// issue &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc135410.aspx"&gt;Nov 2007&lt;/a&gt;.
+        /// &lt;/remarks&gt;
 
-    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class | AttributeTargets.Assembly)]
-    internal sealed class ExtensionAttribute : Attribute { }
-}</pre>
+        [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class | AttributeTargets.Assembly)]
+        internal sealed class ExtensionAttribute : Attribute { }
+    }
 
 其实扩展方法是一个编译器的功能，VS2008开始支持，并不影响 IL 代码，所以通过这个方法就可以在 2.0 中使用扩展方法了。
 

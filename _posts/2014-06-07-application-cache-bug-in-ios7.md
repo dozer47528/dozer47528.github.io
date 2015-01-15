@@ -55,27 +55,27 @@ tags:
 
 好了，上代码：
 
-<pre class="lang:js decode:true">var historyUrl = [];
+    var historyUrl = [];
 
-window.addEventListener('hashchange', function() {
-    historyUrl.push(location.hash);
-    
-    //历史记录太多的话删掉一点，数量自己控制
-    if (historyUrl.length &gt; 10) {
-        historyUrl.shift();
+    window.addEventListener('hashchange', function() {
+        historyUrl.push(location.hash);
+
+        //历史记录太多的话删掉一点，数量自己控制
+        if (historyUrl.length &gt; 10) {
+            historyUrl.shift();
+        }
+        console.log(historyUrl);
+    });
+
+    history.back = function() {
+        if (historyUrl.length &lt; 2) {
+            location.hash = 'index';
+            return;
+        }
+
+        historyUrl.pop();
+        var hash = historyUrl.pop();
+        location.hash = hash;
     }
-    console.log(historyUrl);
-});
-
-history.back = function() {
-    if (historyUrl.length &lt; 2) {
-        location.hash = 'index';
-        return;
-    }
-
-    historyUrl.pop();
-    var hash = historyUrl.pop();
-    location.hash = hash;
-}</pre>
 
 解决起来还是非常简单的！

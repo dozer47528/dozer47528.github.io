@@ -35,7 +35,7 @@ JavaScript 中常常会见到这两个函数，发 POST 请求的时候，同样
 
 那你的处理方式就应该是这样的：
 
-<pre class="lang:js decode:true crayon-selected">encodeURI('http://www.test.com/?.html') + '?' + encodeURIComponent('q') + '=' + encodeURIComponent('select count(*) from user where date&gt;='2014')</pre>
+`encodeURI('http://www.test.com/?.html') + '?' + encodeURIComponent('q') + '=' + encodeURIComponent('select count(*) from user where date&gt;='2014')`
 
 &nbsp;
 
@@ -75,29 +75,29 @@ MDN文档：
 
 还好在网上找到了实现方法：
 
-<pre class="lang:java decode:true">public static String encodeURIComponent(String s)
-{
-    String result = null;
-
-    try
+    public static String encodeURIComponent(String s)
     {
-        result = URLEncoder.encode(s, "utf-8")
-                .replaceAll("\\+", "%20")
-                .replaceAll("\\%21", "!")
-                .replaceAll("\\%27", "'")
-                .replaceAll("\\%28", "(")
-                .replaceAll("\\%29", ")")
-                .replaceAll("\\%7E", "~");
-    }
+        String result = null;
 
-    // This exception should never occur.
-    catch (UnsupportedEncodingException e)
-    {
-        result = s;
-    }
+        try
+        {
+            result = URLEncoder.encode(s, "utf-8")
+                    .replaceAll("\\+", "%20")
+                    .replaceAll("\\%21", "!")
+                    .replaceAll("\\%27", "'")
+                    .replaceAll("\\%28", "(")
+                    .replaceAll("\\%29", ")")
+                    .replaceAll("\\%7E", "~");
+        }
 
-    return result;
-}</pre>
+        // This exception should never occur.
+        catch (UnsupportedEncodingException e)
+        {
+            result = s;
+        }
+
+        return result;
+    }
 
 &nbsp;
 

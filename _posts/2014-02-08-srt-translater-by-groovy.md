@@ -58,19 +58,19 @@ http://translate.google.com/toolkit
 
 期间遇到了一个难题，上述接口毕竟不是专门的接口，所以它返回的不是标准的 json，它返回的竟然是 js ！
 
-<pre class="lang:js decode:true">[[["你好世界","Hello World","Nǐ hǎo shìjiè",""]],,"en",,[["你好",[1],false,false,867,0,1,0],["世界",[2],false,false,867,1,2,0]],[["Hello",1,[["你好",867,false,false],["您好",102,false,false],["打招呼",0,false,false],["招呼",0,false,false],["啰",0,false,false]],[[0,5]],"Hello World"],["World",2,[["世界",867,false,false],["全球",0,false,false],["世",0,false,false],["国际",0,false,false],["的世界",0,false,false]],[[6,11]],""]],,,[["en"]],2]</pre>
+`[[["你好世界","Hello World","Nǐ hǎo shìjiè",""]],,"en",,[["你好",[1],false,false,867,0,1,0],["世界",[2],false,false,867,1,2,0]],[["Hello",1,[["你好",867,false,false],["您好",102,false,false],["打招呼",0,false,false],["招呼",0,false,false],["啰",0,false,false]],[[0,5]],"Hello World"],["World",2,[["世界",867,false,false],["全球",0,false,false],["世",0,false,false],["国际",0,false,false],["的世界",0,false,false]],[[6,11]],""]],,,[["en"]],2]`
 
 一开始想办法用文本解析，但是还要处理各种转义符，非常麻烦。
 
 后来想到既然 Groovy 可以动态执行代码，为何不当它是 Groovy 代码执行？上面不就是声明了一个数组嘛，语法和 Groovy 里的一样。
 
-<pre class="lang:java decode:true">def result = Eval.me(html)</pre>
+`def result = Eval.me(html)`
 
 然后就这样一行代码解决了。
 
 但是上面有用多个逗号代表空元素的语法 Groovy 不支持，所以只能用正则表达式替换掉了。
 
-<pre class="lang:java decode:true ">html = html.replaceAll(/,+/, ",")</pre>
+`html = html.replaceAll(/,+/, ",")`
 
 &nbsp;
 

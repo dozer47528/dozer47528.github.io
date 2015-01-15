@@ -79,304 +79,304 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 各个方法中展示了各种功能点。
 
-<pre class="lang:c# decode:true brush: csharp; gutter: true">[TestClass]
-public class SalesforceQueryTest
-{
-    #region HelpMethod
-    protected SalesforceHelper Helper = new SalesforceHelper();
-    protected SalesforceQuery&lt;T&gt; Query&lt;T&gt;(SelectTypeEnum selectType = SelectTypeEnum.SelectIdAndUseAttachModel) where T : sObject
+    [TestClass]
+    public class SalesforceQueryTest
     {
-        return Helper.Query&lt;T&gt;(selectType);
-    }
-    #endregion
-
-    #region Where
-    [TestMethod]
-    public void WhereTest()
-    {
-        var result = Query&lt;Contract&gt;()
-            .Where(c =&gt; c.CreatedDate &gt; DateTime.Now.AddMonths(-1))
-            .ToList();
-
-        Assert.IsTrue(result.Any());
-    }
-
-    [TestMethod]
-    public void WhereRelatedTest()
-    {
-        var result = Query&lt;Contract&gt;().Where(c =&gt; c.Owner.Name != "").FirstOrDefault();
-        Assert.IsNotNull(result);
-    }
-    #endregion
-
-    #region First
-
-    [TestMethod]
-    public void First_NoneTest()
-    {
-        try
+        #region HelpMethod
+        protected SalesforceHelper Helper = new SalesforceHelper();
+        protected SalesforceQuery&lt;T&gt; Query&lt;T&gt;(SelectTypeEnum selectType = SelectTypeEnum.SelectIdAndUseAttachModel) where T : sObject
         {
-            var result = Query&lt;User&gt;().First(u =&gt; u.Name == Guid.NewGuid().ToString());
-            Assert.Fail("the First() method did not throw any exception");
+            return Helper.Query&lt;T&gt;(selectType);
         }
-        catch { }
-    }
+        #endregion
 
-    [TestMethod]
-    public void First_OneTest()
-    {
-        // find an user
-        var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
-        Assert.IsNotNull(firstUser);
-
-        var result = Query&lt;User&gt;().First(u =&gt; u.Id == firstUser.Id);
-        Assert.IsNotNull(result);
-    }
-
-    [TestMethod]
-    public void First_ManyTest()
-    {
-        var result = Query&lt;User&gt;().First();
-        Assert.IsNotNull(result);
-    }
-
-    [TestMethod]
-    public void FirstOrDefault_NoneTest()
-    {
-        //query for an inexistent user should not throw an exception
-        var result2 = Query&lt;User&gt;().FirstOrDefault(u =&gt; u.Name == Guid.NewGuid().ToString());
-        Assert.IsNull(result2);
-    }
-
-    [TestMethod]
-    public void FirstOrDefault_OneTest()
-    {
-        // find an user
-        var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
-        Assert.IsNotNull(firstUser);
-
-        var result = Query&lt;User&gt;().FirstOrDefault(u =&gt; u.Id == firstUser.Id);
-        Assert.IsNotNull(result);
-    }
-
-    [TestMethod]
-    public void FirstOrDefault_ManyTest()
-    {
-        var result1 = Query&lt;User&gt;().FirstOrDefault();
-        Assert.IsNotNull(result1);
-    }
-    #endregion
-
-    #region Single
-    [TestMethod]
-    public void Single_NoneTest()
-    {
-        try
+        #region Where
+        [TestMethod]
+        public void WhereTest()
         {
-            var result = Query&lt;User&gt;().Single(u =&gt; u.Name == Guid.NewGuid().ToString());
-            Assert.Fail("the First() method did not throw any exception");
+            var result = Query&lt;Contract&gt;()
+                .Where(c =&gt; c.CreatedDate &gt; DateTime.Now.AddMonths(-1))
+                .ToList();
+
+            Assert.IsTrue(result.Any());
         }
-        catch { }
-    }
 
-    [TestMethod]
-    public void Single_OneTest()
-    {
-        // find an user
-        var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
-        Assert.IsNotNull(firstUser);
-
-        var result = Query&lt;User&gt;().Single(u =&gt; u.Id == firstUser.Id);
-        Assert.IsNotNull(result);
-    }
-
-    [TestMethod]
-    public void Single_ManyTest()
-    {
-        try
+        [TestMethod]
+        public void WhereRelatedTest()
         {
-            var result = Query&lt;User&gt;().Single();
-            Assert.Fail("the Single() method did not throw any exception");
+            var result = Query&lt;Contract&gt;().Where(c =&gt; c.Owner.Name != "").FirstOrDefault();
+            Assert.IsNotNull(result);
         }
-        catch { }
-    }
+        #endregion
 
-    [TestMethod]
-    public void SingleOrDefault_NoneTest()
-    {
-        var result = Query&lt;User&gt;().SingleOrDefault(u =&gt; u.Name == Guid.NewGuid().ToString());
-        Assert.IsNull(result);
-    }
+        #region First
 
-    [TestMethod]
-    public void SingleOrDefault_OneTest()
-    {
-        // find an user
-        var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
-        Assert.IsNotNull(firstUser);
-
-        var result = Query&lt;User&gt;().SingleOrDefault(u =&gt; u.Id == firstUser.Id);
-        Assert.IsNotNull(result);
-    }
-
-    [TestMethod]
-    public void SingleOrDefault_ManyTest()
-    {
-        try
+        [TestMethod]
+        public void First_NoneTest()
         {
-            var result = Query&lt;User&gt;().SingleOrDefault();
-            Assert.Fail("the SingleOrDefault() method did not throw any exception");
-        }
-        catch { }
-    }
-    #endregion
-
-    #region Any
-    [TestMethod]
-    public void Any_NoneTest()
-    {
-        var result = Query&lt;User&gt;().Any(u =&gt; u.Name == Guid.NewGuid().ToString());
-        Assert.IsFalse(result);
-    }
-
-    [TestMethod]
-    public void Any_ManyTest()
-    {
-        var result = Query&lt;User&gt;().Any();
-        Assert.IsTrue(result);
-    }
-    #endregion
-
-    #region Count
-    [TestMethod]
-    public void Count_NoneTest()
-    {
-        var result = Query&lt;User&gt;().Count(u =&gt; u.Name == Guid.NewGuid().ToString());
-        Assert.AreEqual(result, 0);
-    }
-
-    [TestMethod]
-    public void Count_OneTest()
-    {
-        // find an user
-        var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
-        Assert.IsNotNull(firstUser);
-
-        var result = Query&lt;User&gt;().Count(u =&gt; u.Id == firstUser.Id);
-        Assert.AreEqual(result, 1);
-    }
-
-    [TestMethod]
-    public void Count_ManyTest()
-    {
-        var result = Query&lt;User&gt;().Count();
-        Assert.IsTrue(result &gt; 0);
-    }
-    #endregion
-
-    #region Select
-    [TestMethod]
-    public void SelectTest()
-    {
-        var user = Query&lt;User&gt;()
-            .Select(u =&gt; new User { Name = u.Name })
-            .FirstOrDefault();
-        Assert.IsNotNull(user.Name);
-    }
-
-    [TestMethod]
-    public void SelectRelatedTest()
-    {
-        var result = Query&lt;Contract&gt;().Select(c =&gt; new Contract
-        {
-            Id = c.Id,
-            IsDeleted = c.IsDeleted,
-            Account = new Account
+            try
             {
-                Name = c.Account.Name,
-                Owner = new User { Name = c.Account.Owner.Name },
-            },
-        }).FirstOrDefault();
+                var result = Query&lt;User&gt;().First(u =&gt; u.Name == Guid.NewGuid().ToString());
+                Assert.Fail("the First() method did not throw any exception");
+            }
+            catch { }
+        }
 
-        Assert.IsNotNull(result);
-        Assert.IsNotNull(result.IsDeleted);
-        Assert.IsNotNull(result.Account.Name);
-        Assert.IsNotNull(result.Account.Owner.Name);
-        Assert.IsNull(result.Account.Owner.Phone);
+        [TestMethod]
+        public void First_OneTest()
+        {
+            // find an user
+            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            Assert.IsNotNull(firstUser);
+
+            var result = Query&lt;User&gt;().First(u =&gt; u.Id == firstUser.Id);
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void First_ManyTest()
+        {
+            var result = Query&lt;User&gt;().First();
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void FirstOrDefault_NoneTest()
+        {
+            //query for an inexistent user should not throw an exception
+            var result2 = Query&lt;User&gt;().FirstOrDefault(u =&gt; u.Name == Guid.NewGuid().ToString());
+            Assert.IsNull(result2);
+        }
+
+        [TestMethod]
+        public void FirstOrDefault_OneTest()
+        {
+            // find an user
+            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            Assert.IsNotNull(firstUser);
+
+            var result = Query&lt;User&gt;().FirstOrDefault(u =&gt; u.Id == firstUser.Id);
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void FirstOrDefault_ManyTest()
+        {
+            var result1 = Query&lt;User&gt;().FirstOrDefault();
+            Assert.IsNotNull(result1);
+        }
+        #endregion
+
+        #region Single
+        [TestMethod]
+        public void Single_NoneTest()
+        {
+            try
+            {
+                var result = Query&lt;User&gt;().Single(u =&gt; u.Name == Guid.NewGuid().ToString());
+                Assert.Fail("the First() method did not throw any exception");
+            }
+            catch { }
+        }
+
+        [TestMethod]
+        public void Single_OneTest()
+        {
+            // find an user
+            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            Assert.IsNotNull(firstUser);
+
+            var result = Query&lt;User&gt;().Single(u =&gt; u.Id == firstUser.Id);
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void Single_ManyTest()
+        {
+            try
+            {
+                var result = Query&lt;User&gt;().Single();
+                Assert.Fail("the Single() method did not throw any exception");
+            }
+            catch { }
+        }
+
+        [TestMethod]
+        public void SingleOrDefault_NoneTest()
+        {
+            var result = Query&lt;User&gt;().SingleOrDefault(u =&gt; u.Name == Guid.NewGuid().ToString());
+            Assert.IsNull(result);
+        }
+
+        [TestMethod]
+        public void SingleOrDefault_OneTest()
+        {
+            // find an user
+            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            Assert.IsNotNull(firstUser);
+
+            var result = Query&lt;User&gt;().SingleOrDefault(u =&gt; u.Id == firstUser.Id);
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void SingleOrDefault_ManyTest()
+        {
+            try
+            {
+                var result = Query&lt;User&gt;().SingleOrDefault();
+                Assert.Fail("the SingleOrDefault() method did not throw any exception");
+            }
+            catch { }
+        }
+        #endregion
+
+        #region Any
+        [TestMethod]
+        public void Any_NoneTest()
+        {
+            var result = Query&lt;User&gt;().Any(u =&gt; u.Name == Guid.NewGuid().ToString());
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void Any_ManyTest()
+        {
+            var result = Query&lt;User&gt;().Any();
+            Assert.IsTrue(result);
+        }
+        #endregion
+
+        #region Count
+        [TestMethod]
+        public void Count_NoneTest()
+        {
+            var result = Query&lt;User&gt;().Count(u =&gt; u.Name == Guid.NewGuid().ToString());
+            Assert.AreEqual(result, 0);
+        }
+
+        [TestMethod]
+        public void Count_OneTest()
+        {
+            // find an user
+            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            Assert.IsNotNull(firstUser);
+
+            var result = Query&lt;User&gt;().Count(u =&gt; u.Id == firstUser.Id);
+            Assert.AreEqual(result, 1);
+        }
+
+        [TestMethod]
+        public void Count_ManyTest()
+        {
+            var result = Query&lt;User&gt;().Count();
+            Assert.IsTrue(result &gt; 0);
+        }
+        #endregion
+
+        #region Select
+        [TestMethod]
+        public void SelectTest()
+        {
+            var user = Query&lt;User&gt;()
+                .Select(u =&gt; new User { Name = u.Name })
+                .FirstOrDefault();
+            Assert.IsNotNull(user.Name);
+        }
+
+        [TestMethod]
+        public void SelectRelatedTest()
+        {
+            var result = Query&lt;Contract&gt;().Select(c =&gt; new Contract
+            {
+                Id = c.Id,
+                IsDeleted = c.IsDeleted,
+                Account = new Account
+                {
+                    Name = c.Account.Name,
+                    Owner = new User { Name = c.Account.Owner.Name },
+                },
+            }).FirstOrDefault();
+
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.IsDeleted);
+            Assert.IsNotNull(result.Account.Name);
+            Assert.IsNotNull(result.Account.Owner.Name);
+            Assert.IsNull(result.Account.Owner.Phone);
+        }
+        #endregion
+
+        #region SelectType
+        [TestMethod]
+        public void SelectIdAndUseAttachModelTest()
+        {
+            var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseAttachModel)
+                .Select(u =&gt; new User { Name = u.Name })
+                .FirstOrDefault();
+
+            Assert.IsNotNull(user.Id);
+            Assert.IsNotNull(user.Name);
+            Assert.IsNull(user.MobilePhone);
+        }
+
+        [TestMethod]
+        public void SelectIdAndUseReplaceModel_NoSelectTest()
+        {
+            var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseReplaceModel)
+                .FirstOrDefault();
+
+            Assert.IsNotNull(user.Id);
+            Assert.IsNull(user.Name);
+            Assert.IsNull(user.MobilePhone);
+        }
+
+        [TestMethod]
+        public void SelectIdAndUseReplaceModel_UseSelectTest()
+        {
+            var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseReplaceModel)
+                .Select(u =&gt; new User { Name = u.Name })
+                .FirstOrDefault();
+
+            Assert.IsNull(user.Id);
+            Assert.IsNotNull(user.Name);
+        }
+
+        [TestMethod]
+        public void SelectAllAndUseAttachModelTest()
+        {
+            var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseAttachModel)
+                .Select(u =&gt; new User { Name = u.Name })
+                .FirstOrDefault();
+
+            Assert.IsNotNull(user.Id);
+            Assert.IsNotNull(user.Name);
+            Assert.IsNotNull(user.CreatedDate);
+        }
+
+        [TestMethod]
+        public void SelectAllAndUseReplaceModel_NoSelectTest()
+        {
+            var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseReplaceModel)
+                .FirstOrDefault();
+
+            Assert.IsNotNull(user.Id);
+            Assert.IsNotNull(user.Name);
+            Assert.IsNotNull(user.CreatedDate);
+        }
+
+        [TestMethod]
+        public void SelectAllAndUseReplaceModel_UseSelectTest()
+        {
+            var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseReplaceModel)
+                .Select(u =&gt; new User { Name = u.Name })
+                .FirstOrDefault();
+
+            Assert.IsNull(user.Id);
+            Assert.IsNotNull(user.Name);
+            Assert.IsNull(user.CreatedDate);
+        }
+        #endregion
     }
-    #endregion
-
-    #region SelectType
-    [TestMethod]
-    public void SelectIdAndUseAttachModelTest()
-    {
-        var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseAttachModel)
-            .Select(u =&gt; new User { Name = u.Name })
-            .FirstOrDefault();
-
-        Assert.IsNotNull(user.Id);
-        Assert.IsNotNull(user.Name);
-        Assert.IsNull(user.MobilePhone);
-    }
-
-    [TestMethod]
-    public void SelectIdAndUseReplaceModel_NoSelectTest()
-    {
-        var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseReplaceModel)
-            .FirstOrDefault();
-
-        Assert.IsNotNull(user.Id);
-        Assert.IsNull(user.Name);
-        Assert.IsNull(user.MobilePhone);
-    }
-
-    [TestMethod]
-    public void SelectIdAndUseReplaceModel_UseSelectTest()
-    {
-        var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseReplaceModel)
-            .Select(u =&gt; new User { Name = u.Name })
-            .FirstOrDefault();
-
-        Assert.IsNull(user.Id);
-        Assert.IsNotNull(user.Name);
-    }
-
-    [TestMethod]
-    public void SelectAllAndUseAttachModelTest()
-    {
-        var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseAttachModel)
-            .Select(u =&gt; new User { Name = u.Name })
-            .FirstOrDefault();
-
-        Assert.IsNotNull(user.Id);
-        Assert.IsNotNull(user.Name);
-        Assert.IsNotNull(user.CreatedDate);
-    }
-
-    [TestMethod]
-    public void SelectAllAndUseReplaceModel_NoSelectTest()
-    {
-        var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseReplaceModel)
-            .FirstOrDefault();
-
-        Assert.IsNotNull(user.Id);
-        Assert.IsNotNull(user.Name);
-        Assert.IsNotNull(user.CreatedDate);
-    }
-
-    [TestMethod]
-    public void SelectAllAndUseReplaceModel_UseSelectTest()
-    {
-        var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseReplaceModel)
-            .Select(u =&gt; new User { Name = u.Name })
-            .FirstOrDefault();
-
-        Assert.IsNull(user.Id);
-        Assert.IsNotNull(user.Name);
-        Assert.IsNull(user.CreatedDate);
-    }
-    #endregion
-}</pre>
 
 &nbsp;
 

@@ -55,31 +55,31 @@ tags:
 
 **2、开始写 bat 文件**
 
-<pre class="brush:shell">@echo  *****************
-@echo  * HOSTS 切换器  *
-@echo  * 1--清空       *
-@echo  * 2--IPV4       *
-@echo  * 3--IPV6       *
-@echo  *****************
-@choice /c     123
+    @echo  *****************
+    @echo  * HOSTS 切换器  *
+    @echo  * 1--清空       *
+    @echo  * 2--IPV4       *
+    @echo  * 3--IPV6       *
+    @echo  *****************
+    @choice /c     123
 
-if errorlevel 3 goto IPV6
-if errorlevel 2 goto IPV4
-if errorlevel 1 goto CLEAR
+    if errorlevel 3 goto IPV6
+    if errorlevel 2 goto IPV4
+    if errorlevel 1 goto CLEAR
 
-:CLEAR
-copy /y "C:\\Windows\\System32\\drivers\\etc\\hosts.ics" "C:\\Windows\\System32\\drivers\\etc\\HOSTS"
-goto END
+    :CLEAR
+    copy /y "C:\\Windows\\System32\\drivers\\etc\\hosts.ics" "C:\\Windows\\System32\\drivers\\etc\\HOSTS"
+    goto END
 
-:IPV4
-copy /y "C:\\Windows\\System32\\drivers\\etc\\hosts.ipv4" "C:\\Windows\\System32\\drivers\\etc\\HOSTS"
-goto END
+    :IPV4
+    copy /y "C:\\Windows\\System32\\drivers\\etc\\hosts.ipv4" "C:\\Windows\\System32\\drivers\\etc\\HOSTS"
+    goto END
 
-:IPV6
-copy /y "C:\\Windows\\System32\\drivers\\etc\\hosts.ipv6" "C:\\Windows\\System32\\drivers\\etc\\HOSTS"
-goto END
+    :IPV6
+    copy /y "C:\\Windows\\System32\\drivers\\etc\\hosts.ipv6" "C:\\Windows\\System32\\drivers\\etc\\HOSTS"
+    goto END
 
-:END</pre>
+    :END
 
 这里非常容易理解，按照上面写就行了
 

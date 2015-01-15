@@ -29,9 +29,9 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
 
 ### 什么类型可以进行 LINQ 查询？
 
-<pre class="brush:csharp">var queryLondonCustomers = from cust in customers
-                           where cust.City == "London"
-                           select cust;</pre>
+    var queryLondonCustomers = from cust in customers
+                               where cust.City == "London"
+                               select cust;
 
 很简单的几行代码，这就是 LINQ，这里有几个关键字： <span style="color: #0000ff;">from</span>, <span style="color: #0000ff;">in</span>, <span style="color: #0000ff;">where</span>, <span style="color: #0000ff;">select …</span>
 
@@ -64,26 +64,26 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
 
 一段代码
 
-<pre class="brush:csharp">class Program
-{
-    static void Main(string[] args)
+    class Program
     {
-        var data = Enumerable.Range(1, 5).ToArray();
+        static void Main(string[] args)
+        {
+            var data = Enumerable.Range(1, 5).ToArray();
 
-        var q = from _ in data
-                where _ &gt; 3
-                select _;
+            var q = from _ in data
+                    where _ &gt; 3
+                    select _;
+        }
     }
-}</pre>
 
 &nbsp;
 
 让我们看看它的 IL 代码（部分）
 
-<pre class="brush:csharp">IL_0029: ldsfld class [mscorlib]System.Func`2&lt;int32, bool&gt; ConsoleApplication1.Program::'CS$&lt;&gt;9__CachedAnonymousMethodDelegate1'
-IL_002e: call class [mscorlib]System.Collections.Generic.IEnumerable`1&lt;!!0&gt; [System.Core]System.Linq.Enumerable::Where&lt;int32&gt;(class [mscorlib]System.Collections.Generic.IEnumerable`1&lt;!!0&gt;, class [mscorlib]System.Func`2&lt;!!0, bool&gt;)
-IL_0033: stloc.1
-IL_0034: ret</pre>
+    IL_0029: ldsfld class [mscorlib]System.Func`2&lt;int32, bool&gt; ConsoleApplication1.Program::'CS$&lt;&gt;9__CachedAnonymousMethodDelegate1'
+    IL_002e: call class [mscorlib]System.Collections.Generic.IEnumerable`1&lt;!!0&gt; [System.Core]System.Linq.Enumerable::Where&lt;int32&gt;(class [mscorlib]System.Collections.Generic.IEnumerable`1&lt;!!0&gt;, class [mscorlib]System.Func`2&lt;!!0, bool&gt;)
+    IL_0033: stloc.1
+    IL_0034: ret
 
 &nbsp;
 
@@ -91,31 +91,31 @@ IL_0034: ret</pre>
 
 让我们找到它的出处
 
-<pre class="brush:csharp">namespace System.Linq
-{
-    public static class Enumerable
+    namespace System.Linq
     {
-        public static IEnumerable&lt;TSource&gt; Where&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate) {
-            if (source == null) throw Error.ArgumentNull("source");
-            if (predicate == null) throw Error.ArgumentNull("predicate");
-            if (source is Iterator&lt;TSource&gt;) return ((Iterator&lt;TSource&gt;)source).Where(predicate);
-            if (source is TSource[]) return new WhereArrayIterator&lt;TSource&gt;((TSource[])source, predicate);
-            if (source is List&lt;TSource&gt;) return new WhereListIterator&lt;TSource&gt;((List&lt;TSource&gt;)source, predicate);
-            return new WhereEnumerableIterator&lt;TSource&gt;(source, predicate);
+        public static class Enumerable
+        {
+            public static IEnumerable&lt;TSource&gt; Where&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate) {
+                if (source == null) throw Error.ArgumentNull("source");
+                if (predicate == null) throw Error.ArgumentNull("predicate");
+                if (source is Iterator&lt;TSource&gt;) return ((Iterator&lt;TSource&gt;)source).Where(predicate);
+                if (source is TSource[]) return new WhereArrayIterator&lt;TSource&gt;((TSource[])source, predicate);
+                if (source is List&lt;TSource&gt;) return new WhereListIterator&lt;TSource&gt;((List&lt;TSource&gt;)source, predicate);
+                return new WhereEnumerableIterator&lt;TSource&gt;(source, predicate);
+            }
         }
     }
-}</pre>
 
 &nbsp;
 
 其实，它最终只是调用了 IEnumerable<T> 的一个扩展方法，难怪别人总说上面的代码其实等效于这个
 
-<pre class="brush:csharp">var data = Enumerable.Range(1, 5).ToArray();
-var q = from _ in data
-        where _ &gt; 3
-        select _;
+    var data = Enumerable.Range(1, 5).ToArray();
+    var q = from _ in data
+            where _ &gt; 3
+            select _;
 
-var q2 = data.Where(_ =&gt; _ &gt; 3);//等效于上面一行代码</pre>
+    var q2 = data.Where(_ =&gt; _ &gt; 3);//等效于上面一行代码
 
 &nbsp;
 
@@ -141,62 +141,62 @@ var q2 = data.Where(_ =&gt; _ &gt; 3);//等效于上面一行代码</pre>
 
 先看看 .net 源码中的函数吧，这样我们才能知道这个函数需要传入什么，需要返回什么。
 
-<pre class="brush:csharp">namespace System.Linq
-{
-    public static class Enumerable
+    namespace System.Linq
     {
-        public static IEnumerable&lt;TSource&gt; Where&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate) {
-        }
-        public static IEnumerable&lt;TResult&gt; Select&lt;TSource, TResult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TResult&gt; selector) {
+        public static class Enumerable
+        {
+            public static IEnumerable&lt;TSource&gt; Where&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate) {
+            }
+            public static IEnumerable&lt;TResult&gt; Select&lt;TSource, TResult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TResult&gt; selector) {
+            }
         }
     }
-}</pre>
 
 这里不用看具体的实现，只要看传入的参数和返回类型就行了。
 
 那么接下来就让我们写自己的类型吧！
 
-<pre class="brush:csharp">class Program
-{
-    static void Main(string[] args)
+    class Program
     {
-        var mySchool = new School();
-        var q = from _ in mySchool
-                where _.Contains("a")
-                select _;
-    }
-}
-
-class School
-{
-    protected List&lt;string&gt; Student { get; set; }
-    public School()
-    {
-        //生成一个 Student 序列
-        Student = new List&lt;string&gt;
-                        {
-                            "abc",
-                            "xyz",
-                            "123"
-                        };
-    }
-    public School Where(Func&lt;string, bool&gt; predicate)
-    {
-        //这里对List有增删了，所以不能直接用foreach，删除不满足条件的学生
-        for (var k = 0; k &lt; Student.Count; k++)
+        static void Main(string[] args)
         {
-            if (predicate(Student[k])) continue;
-            Student.RemoveAt(k);
-            k--;
+            var mySchool = new School();
+            var q = from _ in mySchool
+                    where _.Contains("a")
+                    select _;
         }
-        return this;
     }
-    public School Select(Func&lt;School, School&gt; selector)
+
+    class School
     {
-        //这里就不实现了
-        return this;
+        protected List&lt;string&gt; Student { get; set; }
+        public School()
+        {
+            //生成一个 Student 序列
+            Student = new List&lt;string&gt;
+                            {
+                                "abc",
+                                "xyz",
+                                "123"
+                            };
+        }
+        public School Where(Func&lt;string, bool&gt; predicate)
+        {
+            //这里对List有增删了，所以不能直接用foreach，删除不满足条件的学生
+            for (var k = 0; k &lt; Student.Count; k++)
+            {
+                if (predicate(Student[k])) continue;
+                Student.RemoveAt(k);
+                k--;
+            }
+            return this;
+        }
+        public School Select(Func&lt;School, School&gt; selector)
+        {
+            //这里就不实现了
+            return this;
+        }
     }
-}</pre>
 
 这里的场景：
 

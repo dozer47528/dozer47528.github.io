@@ -8,7 +8,7 @@ wpzoom_post_title:
 wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
-  - 
+  -
 categories:
   - 编程技术
 tags:
@@ -67,14 +67,14 @@ github 上没有成本，只有一个半成品(<a href="https://github.com/phone
 
 iOS 下的方法定义
 
-<pre class="lang:objc decode:true">- (void)initGA:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)exitGA:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)sendEvent:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)sendView:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)setCustomDimension:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)setCustomMetric:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)sendTiming:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
-- (void)sendException:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;</pre>
+    - (void)initGA:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+    - (void)exitGA:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+    - (void)sendEvent:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+    - (void)sendView:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+    - (void)setCustomDimension:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+    - (void)setCustomMetric:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+    - (void)sendTiming:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+    - (void)sendException:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
 
 &nbsp;
 

@@ -24,17 +24,17 @@ tags:
 
 问题代码如下：
 
-<pre class="brush: csharp; gutter: true">private void button1_Click(object sender, RoutedEventArgs e)
-{
-    GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
-    watcher.PositionChanged += new EventHandler&lt;GeoPositionChangedEventArgs&lt;GeoCoordinate&gt;&gt;(watcher_PositionChanged);
-    watcher.Start();
-}
+    private void button1_Click(object sender, RoutedEventArgs e)
+    {
+        GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
+        watcher.PositionChanged += new EventHandler&lt;GeoPositionChangedEventArgs&lt;GeoCoordinate&gt;&gt;(watcher_PositionChanged);
+        watcher.Start();
+    }
 
-void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs&lt;GeoCoordinate&gt; e)
-{
-    Debug.WriteLine(e.Position.Timestamp.ToString());
-}</pre>
+    void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs&lt;GeoCoordinate&gt; e)
+    {
+        Debug.WriteLine(e.Position.Timestamp.ToString());
+    }
 
 上述代码中，理论上 watcher 实例在按钮点击事件后应该会被销毁，所以下面的 PositionChanged 事件应该也不会被触发。
 
@@ -73,27 +73,27 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
 
 为了寻找最后的结果，决定反编译一下这个类：
 
-<pre class="brush: csharp; gutter: true">public override bool TryStart(bool suppressPermissionPrompt, TimeSpan timeout)
-{
-    if (!this.IsStarted)
+    public override bool TryStart(bool suppressPermissionPrompt, TimeSpan timeout)
     {
-        this.IsStarted = true;
-        if (this.Status != GeoPositionStatus.Ready || this.m_position.Location.IsUnknown)
+        if (!this.IsStarted)
         {
-            this.m_eventGetLocDone = new ManualResetEvent(false);
-            ThreadPool.QueueUserWorkItem(GetInitialLocationData, suppressPermissionPrompt);
-            if (timeout != TimeSpan.Zero && !this.m_eventGetLocDone.WaitOne(timeout))
+            this.IsStarted = true;
+            if (this.Status != GeoPositionStatus.Ready || this.m_position.Location.IsUnknown)
             {
-                this.Stop();
+                this.m_eventGetLocDone = new ManualResetEvent(false);
+                ThreadPool.QueueUserWorkItem(GetInitialLocationData, suppressPermissionPrompt);
+                if (timeout != TimeSpan.Zero && !this.m_eventGetLocDone.WaitOne(timeout))
+                {
+                    this.Stop();
+                }
+            }
+            else
+            {
+                this.OnPositionChanged(new GeoPositionChangedEventArgs&lt;GeoCoordinate&gt;(this.m_position));
             }
         }
-        else
-        {
-            this.OnPositionChanged(new GeoPositionChangedEventArgs&lt;GeoCoordinate&gt;(this.m_position));
-        }
+        return this.IsStarted;
     }
-    return this.IsStarted;
-}</pre>
 
 原来，**这个 start() 函数把实例内部的另外一个方法加入了线程池，并保持运行。**
 
@@ -116,25 +116,25 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
 
 我这里测试了一下 **<a href="http://msdn.microsoft.com/zh-cn/library/system.net.webclient(v=vs.80).aspx" target="_blank">WebClient</a>**：
 
-<pre class="brush: csharp; gutter: true">private void Form1_Load(object sender, EventArgs e)
-{
-    for (var k = 0; k &lt; 10000; k++)
+    private void Form1_Load(object sender, EventArgs e)
     {
-        StartWebClient();
+        for (var k = 0; k &lt; 10000; k++)
+        {
+            StartWebClient();
+        }
     }
-}
-private void StartWebClient()
-{
-    WebClient client = new WebClient();
-    client.DownloadStringCompleted += client_DownloadStringCompleted;
-    client.DownloadStringAsync(new Uri("http://www.dozer.cc"));
-}
-int count = 0;
-public void client_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
-{
-    count++;
-    label1.Text = count.ToString();
-}</pre>
+    private void StartWebClient()
+    {
+        WebClient client = new WebClient();
+        client.DownloadStringCompleted += client_DownloadStringCompleted;
+        client.DownloadStringAsync(new Uri("http://www.dozer.cc"));
+    }
+    int count = 0;
+    public void client_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+    {
+        count++;
+        label1.Text = count.ToString();
+    }
 
 测试后发现，WebClient 也和上面的一样！DownloadStringCompleted 事件根本也会被触发！
 

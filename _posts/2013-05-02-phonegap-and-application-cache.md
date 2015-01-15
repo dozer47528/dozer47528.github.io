@@ -29,13 +29,13 @@ HTTP 协议中控制缓存也比较纠结，总会有个 <a href="http://www.w3.
 正当我纠结怎么实现的时候，发现了 HTML5 种已经有类似的东西了，而且实现的功能和我的需求一模一样。因为它就是为离线应用设计的。
 
 > 离线访问对基于网络的应用而言越来越重要。虽然所有浏览器都有缓存机制，但它们并不可靠，也不一定总能起到预期的作用。HTML5 使用 ApplicationCache 接口解决了由离线带来的部分难题。
-> 
+>
 > 使用缓存接口可为您的应用带来以下三个优势：
-> 
+>
 > 1.  离线浏览 &#8211; 用户可在离线时浏览您的完整网站
 > 2.  速度 &#8211; 缓存资源为本地资源，因此加载速度较快。
 > 3.  服务器负载更少 &#8211; 浏览器只会从发生了更改的服务器下载资源。
-> 
+>
 > 应用缓存（又称 AppCache）可让开发人员指定浏览器应缓存哪些文件以供离线用户访问。即使用户在离线状态下按了刷新按钮，您的应用也会正常加载和运行。
 
 详细介绍：<a href="http://www.html5rocks.com/zh/tutorials/appcache/beginner/" target="_blank"><strong>http://www.html5rocks.com/zh/tutorials/appcache/beginner/</strong></a>
@@ -50,7 +50,7 @@ HTTP 协议中控制缓存也比较纠结，总会有个 <a href="http://www.w3.
 
 例如：
 
-<pre class="toolbar:2 lang:default decode:true">AddType text/cache-manifest .appcache</pre>
+`AddType text/cache-manifest .appcache`
 
 既然没有标准的后缀名，那我就偷懒了，一开始尝试的时候我直接用了 <span style="background-color: #eeeeee;">.txt</span> 格式。
 
@@ -99,23 +99,23 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
 
 后来同样是在网上找到了解决方案：
 
-<pre class="lang:java decode:true">public class HelloWorld extends DroidGap {
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		// Set by &lt;content src="index.html" /&gt; in config.xml
+    public class HelloWorld extends DroidGap {
+    	@Override
+    	public void onCreate(Bundle savedInstanceState) {
+    		super.onCreate(savedInstanceState);
+    		// Set by &lt;content src="index.html" /&gt; in config.xml
 
-		super.init();
-		android.webkit.WebSettings settings = super.appView.getSettings();
-		String appCachePath = this.getCacheDir().getAbsolutePath();
-		settings.setAppCachePath(appCachePath);
-		settings.setAllowFileAccess(true);
-		settings.setAppCacheEnabled(true);
+    		super.init();
+    		android.webkit.WebSettings settings = super.appView.getSettings();
+    		String appCachePath = this.getCacheDir().getAbsolutePath();
+    		settings.setAppCachePath(appCachePath);
+    		settings.setAllowFileAccess(true);
+    		settings.setAppCacheEnabled(true);
 
-		// super.loadUrl(Config.getStartUrl());
-		super.loadUrl("http://192.168.0.104:8080/cache/index.html");
-	}
-}</pre>
+    		// super.loadUrl(Config.getStartUrl());
+    		super.loadUrl("http://192.168.0.104:8080/cache/index.html");
+    	}
+    }
 
 为什么要多加这些代码？因为 Android 中的 Web浏览器控件默认是禁用 Application Cache 功能的。加上以上代码后恢复正常。
 

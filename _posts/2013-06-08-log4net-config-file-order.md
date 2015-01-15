@@ -8,7 +8,7 @@ wpzoom_post_title:
 wpzoom_post_readmore:
   - Yes
 wpzoom_post_url:
-  - 
+  -
 categories:
   - 编程技术
 tags:
@@ -104,10 +104,10 @@ log4net 认为你根本就没想配置它…
 
 下面说说第二种方式，在配置文件中加配置：
 
-<pre class="lang:xhtml decode:true">&lt;appSettings&gt;
-  &lt;add key="log4net.Config" value="log4net.config"/&gt;
-  &lt;add key="log4net.Config.Watch" value="True"/&gt;
-&lt;/appSettings&gt;</pre>
+    &lt;appSettings&gt;
+      &lt;add key="log4net.Config" value="log4net.config"/&gt;
+      &lt;add key="log4net.Config.Watch" value="True"/&gt;
+    &lt;/appSettings&gt;
 
 官网说，如果你用了 assembly attribute 的配置方式，配置文件中的这两个节点会把 attribute 上的写死属性给覆盖。
 
@@ -121,7 +121,7 @@ log4net 认为你根本就没想配置它…
 
 最后说说显示调用的方式：
 
-<pre class="lang:c# decode:true">log4net.Config.XmlConfigurator.Configure(new FileInfo("log4net.xml"));</pre>
+`log4net.Config.XmlConfigurator.Configure(new FileInfo("log4net.xml"));`
 
 一般都是在程序的入口处加上这句话，这样就可以设置配置文件的位置了。
 

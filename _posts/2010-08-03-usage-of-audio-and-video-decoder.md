@@ -94,15 +94,15 @@ C#中调用它们的方法和平时调用CMD差不多
 
 &nbsp;
 
-<pre class="brush:csharp">Process p = new Process();
-p.StartInfo.FileName = "c:\\lame.exe";//这里用lame举例子
-p.StartInfo.Arguments = " --vbr-new -V 7 -b -B -q 2 --noreplaygain --add-id3v2 \"c:\\test.mp3\" \"c:\\test2.mp3\"";//这里是参数
-p.StartInfo.UseShellExecute = false;
-p.StartInfo.RedirectStandardInput = true;//可能接受来自调用程序的输入信息
-p.StartInfo.RedirectStandardOutput = true;//由调用程序获取输出信息
-p.StartInfo.CreateNoWindow = true;//不显示程序窗口
-p.Start();//启动程序
-p.WaitForExit();//如果想等待程序退出后再运行，就加上这条，如果不等待，直接继续运行就不要这行了</pre>
+    Process p = new Process();
+    p.StartInfo.FileName = "c:\\lame.exe";//这里用lame举例子
+    p.StartInfo.Arguments = " --vbr-new -V 7 -b -B -q 2 --noreplaygain --add-id3v2 \"c:\\test.mp3\" \"c:\\test2.mp3\"";//这里是参数
+    p.StartInfo.UseShellExecute = false;
+    p.StartInfo.RedirectStandardInput = true;//可能接受来自调用程序的输入信息
+    p.StartInfo.RedirectStandardOutput = true;//由调用程序获取输出信息
+    p.StartInfo.CreateNoWindow = true;//不显示程序窗口
+    p.Start();//启动程序
+    p.WaitForExit();//如果想等待程序退出后再运行，就加上这条，如果不等待，直接继续运行就不要这行了
 
 但是有个问题还没解决，就是怎么实时获取转换状态~
 

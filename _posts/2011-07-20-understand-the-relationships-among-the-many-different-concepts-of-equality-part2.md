@@ -61,31 +61,31 @@ tags:
 
 让我们一步步地去实现它，下面是一个第一个示例：
 
-<pre class="brush:csharp">public class Foo : IEquatable&lt;Foo&gt;
-{
-	public override bool Equals(object right)
-	{
-		// check null:
-		// this pointer is never null in C# methods.
-		if (object.ReferenceEquals(right, null))
-			return false;
-		if (object.ReferenceEquals(this, right))
-			return true;
+    public class Foo : IEquatable&lt;Foo&gt;
+    {
+    	public override bool Equals(object right)
+    	{
+    		// check null:
+    		// this pointer is never null in C# methods.
+    		if (object.ReferenceEquals(right, null))
+    			return false;
+    		if (object.ReferenceEquals(this, right))
+    			return true;
 
-		// Discussed below.
-		if (this.GetType() != right.GetType())
-			return false;
-		// Compare this type's contents here:
-		return this.Equals(right as Foo);
-	}
-	#region IEquatable&lt;Foo&gt; Members
-	public bool Equals(Foo other)
-	{
-		// 写一些代码，判断两个类型在逻辑上是否相等。
-		return true; //这是伪代码
-	}
-	#endregion
-}</pre>
+    		// Discussed below.
+    		if (this.GetType() != right.GetType())
+    			return false;
+    		// Compare this type's contents here:
+    		return this.Equals(right as Foo);
+    	}
+    	#region IEquatable&lt;Foo&gt; Members
+    	public bool Equals(Foo other)
+    	{
+    		// 写一些代码，判断两个类型在逻辑上是否相等。
+    		return true; //这是伪代码
+    	}
+    	#endregion
+    }
 
 &nbsp;
 

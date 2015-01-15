@@ -42,23 +42,23 @@ tags:
 
 **代码段一：**
 
-<pre class="brush:csharp">static void Main(string[] args)
-{
-    int a;
-    Test1(out a);//编译通过
+    static void Main(string[] args)
+    {
+        int a;
+        Test1(out a);//编译通过
 
-    int b;
-    Test2(ref b);//编译失败
-}
+        int b;
+        Test2(ref b);//编译失败
+    }
 
-static void Test1(out int a)
-{
-    a = 1;
-}
-static void Test2(ref int b)
-{
-    b = 1;
-}</pre>
+    static void Test1(out int a)
+    {
+        a = 1;
+    }
+    static void Test2(ref int b)
+    {
+        b = 1;
+    }
 
 这两个关键字看起来用法一样，为什么会有合格现象？
 
@@ -72,30 +72,30 @@ static void Test2(ref int b)
 
 **代码二：**
 
-<pre class="brush:csharp">static void Main(string[] args)
-{
-    object a = new object(), b = new object(), c = new object();
+    static void Main(string[] args)
+    {
+        object a = new object(), b = new object(), c = new object();
 
-    Test1(out a);
-    Test2(ref b);
-    Test3(c);
-    //最终 a,b,c 分别是什么？
-    //a,b = null
-    //c 还是 object
-}
+        Test1(out a);
+        Test2(ref b);
+        Test3(c);
+        //最终 a,b,c 分别是什么？
+        //a,b = null
+        //c 还是 object
+    }
 
-static void Test1(out object a)
-{
-    a = null;
-}
-static void Test2(ref object b)
-{
-    b = null;
-}
-static void Test3(object c)
-{
-    c = null;
-}</pre>
+    static void Test1(out object a)
+    {
+        a = null;
+    }
+    static void Test2(ref object b)
+    {
+        b = null;
+    }
+    static void Test3(object c)
+    {
+        c = null;
+    }
 
 新建三个 object，object是引用类型；三个函数，分别是 out,ref和普通调用；执行了一样的语句；最后的结果为什么是这样呢？
 
@@ -145,17 +145,17 @@ return 语句的特点：接收 return 的变量事先不需要赋值（当然�
 
 我们来把 “传值类型的引用” 和 “传引用类型” 来做一个类比：
 
-<pre class="brush:csharp">static void Main(string[] args)
-{
-    int a;
-    Test1(ref a);//错误	1	使用了未赋值的局部变量“a”
+    static void Main(string[] args)
+    {
+        int a;
+        Test1(ref a);//错误	1	使用了未赋值的局部变量“a”
 
-    object b;
-    Test2(b);//错误	2	使用了未赋值的局部变量“b”
-}
-static void Test1(ref int a) { }
+        object b;
+        Test2(b);//错误	2	使用了未赋值的局部变量“b”
+    }
+    static void Test1(ref int a) { }
 
-static void Test2(object b) { }</pre>
+    static void Test2(object b) { }
 
 传入加了 ref 的值类型 和 传入一个引用类型 的作用、行为、特点都是类似的。
 
@@ -171,19 +171,19 @@ static void Test2(object b) { }</pre>
 
 我们可以看一下三个操作的 IL 代码：
 
-<pre class="brush:csharp">private static void Main(string[] args)
-{
-    //IL_0000: nop
-    object a;//没做任何事
+    private static void Main(string[] args)
+    {
+        //IL_0000: nop
+        object a;//没做任何事
 
-    //IL_0002: ldnull
-    //IL_0003: stloc.1
-    object b = null;//在栈中增加了一个指针，指向 null
+        //IL_0002: ldnull
+        //IL_0003: stloc.1
+        object b = null;//在栈中增加了一个指针，指向 null
 
-    //IL_0004: newobj instance void [mscorlib]System.Object::.ctor()
-    //IL_0009: stloc.2
-    object c = new object();//在栈中增加了一个指针，指向新建的 object 对象
-}</pre>
+        //IL_0004: newobj instance void [mscorlib]System.Object::.ctor()
+        //IL_0009: stloc.2
+        object c = new object();//在栈中增加了一个指针，指向新建的 object 对象
+    }
 
 传入引用类型的目的是把一个已经存在的对象的地址传过去，而如果你只是进行了 object a 声明，并没做复制，这行代码跟没做任何事！
 
@@ -199,48 +199,48 @@ static void Test2(object b) { }</pre>
 
 原函数：
 
-<pre class="brush:csharp">private static void Test1(out int a)
-{
-    a = 1;
-}
-private static void Test2(ref int a)
-{
-    a = 1;
-}</pre>
+    private static void Test1(out int a)
+    {
+        a = 1;
+    }
+    private static void Test2(ref int a)
+    {
+        a = 1;
+    }
 
 IL代码：
 
-<pre class="brush:csharp">.method private hidebysig static
-		void Test1 (
-			[out] int32& a
-		) cil managed
-	{
-		// Method begins at RVA 0x2053
-		// Code size 5 (0x5)
-		.maxstack 8
+    .method private hidebysig static
+    		void Test1 (
+    			[out] int32& a
+    		) cil managed
+    	{
+    		// Method begins at RVA 0x2053
+    		// Code size 5 (0x5)
+    		.maxstack 8
 
-		IL_0000: nop
-		IL_0001: ldarg.0
-		IL_0002: ldc.i4.1
-		IL_0003: stind.i4
-		IL_0004: ret
-	} // end of method Program::Test1
+    		IL_0000: nop
+    		IL_0001: ldarg.0
+    		IL_0002: ldc.i4.1
+    		IL_0003: stind.i4
+    		IL_0004: ret
+    	} // end of method Program::Test1
 
-	.method private hidebysig static
-		void Test2 (
-			int32& a
-		) cil managed
-	{
-		// Method begins at RVA 0x2059
-		// Code size 5 (0x5)
-		.maxstack 8
+    	.method private hidebysig static
+    		void Test2 (
+    			int32& a
+    		) cil managed
+    	{
+    		// Method begins at RVA 0x2059
+    		// Code size 5 (0x5)
+    		.maxstack 8
 
-		IL_0000: nop
-		IL_0001: ldarg.0
-		IL_0002: ldc.i4.1
-		IL_0003: stind.i4
-		IL_0004: ret
-	} // end of method Program::Test2</pre>
+    		IL_0000: nop
+    		IL_0001: ldarg.0
+    		IL_0002: ldc.i4.1
+    		IL_0003: stind.i4
+    		IL_0004: ret
+    	} // end of method Program::Test2
 
 发现了吗？ 它们在函数内部完全是一样的！因为他们的原理都是传入了这个变量的引用。只是 out 关键字前面出现了一个标记 [out]
 
@@ -266,30 +266,30 @@ IL代码：
 
 我们再来看一下最上面的代码段二：
 
-<pre class="brush:csharp">static void Main(string[] args)
-{
-    object a = new object(), b = new object(), c = new object();
+    static void Main(string[] args)
+    {
+        object a = new object(), b = new object(), c = new object();
 
-    Test1(out a);
-    Test2(ref b);
-    Test3(c);
-    //最终 a,b,c 分别是什么？
-    //a,b = null
-    //c 还是 object
-}
+        Test1(out a);
+        Test2(ref b);
+        Test3(c);
+        //最终 a,b,c 分别是什么？
+        //a,b = null
+        //c 还是 object
+    }
 
-static void Test1(out object a)
-{
-    a = null;
-}
-static void Test2(ref object b)
-{
-    b = null;
-}
-static void Test3(object c)
-{
-    c = null;
-}</pre>
+    static void Test1(out object a)
+    {
+        a = null;
+    }
+    static void Test2(ref object b)
+    {
+        b = null;
+    }
+    static void Test3(object c)
+    {
+        c = null;
+    }
 
 out 关键字就相当于 return ，所以内部赋值为 null ，就相当于 return 了 null
 
@@ -331,36 +331,36 @@ out 关键字就相当于 return ，所以内部赋值为 null ，就相当于 r
 
 虽然在函数内部的语句是一样的，其实内部机制完全不同。我们可以看一下IL代码，一看就知道了！
 
-<pre class="brush:csharp">.method private hidebysig static
-		void Test1 (
-			object a
-		) cil managed
-	{
-		// Method begins at RVA 0x2053
-		// Code size 5 (0x5)
-		.maxstack 8
+    .method private hidebysig static
+    		void Test1 (
+    			object a
+    		) cil managed
+    	{
+    		// Method begins at RVA 0x2053
+    		// Code size 5 (0x5)
+    		.maxstack 8
 
-		IL_0000: nop
-		IL_0001: ldnull
-		IL_0002: starg.s a
-		IL_0004: ret
-	} // end of method Program::Test1
+    		IL_0000: nop
+    		IL_0001: ldnull
+    		IL_0002: starg.s a
+    		IL_0004: ret
+    	} // end of method Program::Test1
 
-	.method private hidebysig static
-		void Test2 (
-			object& a
-		) cil managed
-	{
-		// Method begins at RVA 0x2059
-		// Code size 5 (0x5)
-		.maxstack 8
+    	.method private hidebysig static
+    		void Test2 (
+    			object& a
+    		) cil managed
+    	{
+    		// Method begins at RVA 0x2059
+    		// Code size 5 (0x5)
+    		.maxstack 8
 
-		IL_0000: nop
-		IL_0001: ldarg.0//多了这行代码
-		IL_0002: ldnull
-		IL_0003: stind.ref
-		IL_0004: ret
-	} // end of method Program::Test2</pre>
+    		IL_0000: nop
+    		IL_0001: ldarg.0//多了这行代码
+    		IL_0002: ldnull
+    		IL_0003: stind.ref
+    		IL_0004: ret
+    	} // end of method Program::Test2
 
 上面是直接传入，并赋 null 值的
 
@@ -376,14 +376,14 @@ out 关键字就相当于 return ，所以内部赋值为 null ，就相当于 r
 
 再看了一个例子：
 
-<pre class="brush:csharp">private static void Test1(List&lt;int&gt; list)
-{
-    list.Clear();
-}
-private static void Test2(ref List&lt;int&gt; list)
-{
-    list = new List&lt;int&gt;();
-}</pre>
+    private static void Test1(List&lt;int&gt; list)
+    {
+        list.Clear();
+    }
+    private static void Test2(ref List&lt;int&gt; list)
+    {
+        list = new List&lt;int&gt;();
+    }
 
 同样是清空一个 List，如果没加 ref ，只能用 clear。
 
