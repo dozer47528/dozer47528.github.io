@@ -256,10 +256,6 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 
 &nbsp;
 
-    <%using (Html.BeginForm())
-
-      {%>
-
     <input type="text" name="code" value="" />
 
     <img id="AuthImage" src="<%=ViewData["imageURL"] %>" alt="Alternate Text" onclick="javascript:Refesh();" />
@@ -281,8 +277,6 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
     </script>
 
     <input type="submit" name="submit" value="提交" />
-
-    <%}%>
 
 基本和Asp.net的一样，只是针对MVC修改了一下
 
