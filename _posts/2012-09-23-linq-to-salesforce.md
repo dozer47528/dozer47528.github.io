@@ -92,7 +92,7 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 #### 使用步骤1：
 
-继承 <span style="background-color: #eeeeee;">SalesforceProviderBase<T></span> ，实现自己的 <span style="background-color: #eeeeee;">SalesforceProvider<T></span> ，这里需要重写 2 个方法：
+继承 `SalesforceProviderBase<T>` ，实现自己的 `SalesforceProvider<T>` ，这里需要重写 2 个方法：
 
     protected abstract int GetCount(string cmd);
     protected abstract IEnumerable<T> GetEnumerable(string cmd);
@@ -122,9 +122,9 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 #### 注意事项：
 
-*   实现 SalesforceProviderBase<T> 中的 GetEnumerable 方法的时候请注意利用迭代器模式取回所有数据，因为 Salesforce 默认只会返回 200 条数据。
-*   `SOQL` 没有 `join` 查询，如果要查询关联对象的话，SOQL 是这样实现的：<span style="background-color: #eeeeee;">[SELECT Accoint.Name From Contract]<span style="background-color: #ffffff;">，而在 Linq To Salesforce 中，这种查询可能会有点麻烦，具体的可以参考 测试项目中的 `SelectRelatedTest` 测试。</span></span>
-*   <span style="background-color: #eeeeee;"><span style="background-color: #eeeeee;"><span style="background-color: #ffffff;">创建查询对象的时候，</span></span></span>SelectTypeEnum 是什么？因为 Salesforce 的特殊性（没有<span style="background-color: #eeeeee;"> Select *</span>，没有 `join`），我默认提供了四种查询查询模式：默认查询Id字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询Id字段后面再调用 Select 方法的时候附加上 Select 中的类容（默认）；默认查询所有字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询所有字段后面再调用 Select 方法的时候附加上 Select 中的类容。
+*   实现 `SalesforceProviderBase<T>` 中的 GetEnumerable 方法的时候请注意利用迭代器模式取回所有数据，因为 Salesforce 默认只会返回 200 条数据。
+*   `SOQL` 没有 `join` 查询，如果要查询关联对象的话，SOQL 是这样实现的：`[SELECT Accoint.Name From Contract]`，而在 Linq To Salesforce 中，这种查询可能会有点麻烦，具体的可以参考 测试项目中的 `SelectRelatedTest` 测试。
+*   创建查询对象的时候，`SelectTypeEnum` 是什么？因为 Salesforce 的特殊性（没有`Select *`，没有 `join`），我默认提供了四种查询查询模式：默认查询Id字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询Id字段后面再调用 Select 方法的时候附加上 Select 中的类容（默认）；默认查询所有字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询所有字段后面再调用 Select 方法的时候附加上 Select 中的类容。
 *   别用 `DateTime` 类型和 Salesforce 中的日期类型做比较，因为在 .net 中没有日期类型，所以它们都被转换成了 `DateTime`。但在 `SOQL` 中，他们的格式是不一样的。所以如果要用日期类型作为筛选条件，那么请使用 `SalesforceDate` 这个对象。
 
 &nbsp;

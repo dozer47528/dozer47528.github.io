@@ -262,7 +262,7 @@ NUnit 运行结果如下：
 
 后来研究后发现，在出错的项目中， Test 的运行目录不是在 `bin/Debug` 下，
 
-而是在 <span style="background-color: #eeeeee;">TestResults/dozer_DOZER-PC 2012-11-27 11_11_22/Out</span>
+而是在 `TestResults/dozer_DOZER-PC 2012-11-27 11_11_22/Out`
 
 而且这个文件夹会在每次运行测试的时候创建一个新的。里面的 dll 并不是从 `bin/Debug` 中复制过去的，所以我工具修改后的 dll 没有起到作用。
 

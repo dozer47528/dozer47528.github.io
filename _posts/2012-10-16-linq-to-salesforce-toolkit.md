@@ -49,7 +49,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 复制 `SalesforceHelper.cs` 和 `SalesforceProvider.cs` 两个文件到你自己的项目中。
 
-删除两个文件中的引用：<span style="background-color: #eeeeee;">using LinqToSalesforce.Toolkit.Mock;</span>
+删除两个文件中的引用：`using LinqToSalesforce.Toolkit.Mock;`
 
 注意，Mock 文件夹不需要复制！这两个类需要依赖 Salesforce API ，而我这里并没有使用真的 Salesforce API，而是写了一些 Mock 类。
 

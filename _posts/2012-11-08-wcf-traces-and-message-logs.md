@@ -45,9 +45,9 @@ Google 后发现，因为这个工具是 VS2010 自带的，它并不知道你�
 
 修改方法很简单，在 web.config 中搜索：`System.Diagnostics.XmlWriterTraceListener`
 
-然后把原来的： <span style="background-color: #eeeeee;">type=&#8221;System.Diagnostics.XmlWriterTraceListener, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35&#8243;</span>
+然后把原来的：`type="System.Diagnostics.XmlWriterTraceListener, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"`
 
-改成：`type=&#8221;System.Diagnostics.XmlWriterTraceListener&#8221;` 即可。
+改成：`type="System.Diagnostics.XmlWriterTraceListener"` 即可。
 
 我本来配置成 3.5 的，但是不知道为何还是不行，后来把版本信息去掉后反而可以了。
 

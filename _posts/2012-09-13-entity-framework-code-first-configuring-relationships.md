@@ -147,7 +147,7 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 其实这里的语义很清晰，如果我把这段英文直接翻译成中文，我觉得可以是这样子的。
 
-“我有许多的 `Article`，它有一个 `Owner`且是必须的，外键被映射成了 <span style="color: #000000; background-color: #eeeeee;">UserID</span>”
+“我有许多的 `Article`，它有一个 `Owner`且是必须的，外键被映射成了 `UserID`”
 
 是不是很清晰的关系？另外，两个实体间的关系只要在任意一个实体上配置一次就行了，但是配置方法不同。
 

@@ -119,7 +119,7 @@ tags:
 
 ### 控制实体是否映射到数据库
 
-在 DbContext 中，如果你新增了一个 <span style="background-color: #eeeeee;">DbSet<Entity></span> 属性，这个实体就会被映射到数据库中；
+在 DbContext 中，如果你新增了一个 `DbSet<Entity>` 属性，这个实体就会被映射到数据库中；
 
 另外，一个已经映射到数据库中的实体引用了另一个实体，那么它也会被映射到数据库中；
 
