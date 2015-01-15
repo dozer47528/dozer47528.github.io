@@ -153,7 +153,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
                 var url = context.Request.AppRelativeCurrentExecutionFilePath;
 
                 //判断后缀是否为指定的后缀，是的话就替换成 .ascx
-                //if (url.IndexOf('?') &lt; 0 || url.IndexOf('?') &gt; url.IndexOf(FLAG)) { url = url.Replace(FLAG, ".ascx"); }//去掉这里的注释即可实现自定义后缀
+                //if (url.IndexOf('?') < 0 || url.IndexOf('?') > url.IndexOf(FLAG)) { url = url.Replace(FLAG, ".ascx"); }//去掉这里的注释即可实现自定义后缀
 
                 //加载控件，并输出页面
                 var control = page.LoadControl(url);
@@ -176,11 +176,11 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 **接下来修改 Web.Config 文件，在这里添加一条记录，让所有的 .ascx 页面都由这个 AjaxHandler 来处理：**
 
-    &lt;system.web&gt;
-          &lt;httpHandlers&gt;
-            &lt;add verb="*" path="*.ascx" type="WebApplication1.AjaxHandler,WebApplication1"/&gt;
-          &lt;/httpHandlers&gt;
-        &lt;/system.web&gt;
+    <system.web>
+          <httpHandlers>
+            <add verb="*" path="*.ascx" type="WebApplication1.AjaxHandler,WebApplication1"/>
+          </httpHandlers>
+        </system.web>
 
 这里，type 中传入的两个参数分别是这个 HttpHandler 的完整名称，包括前面的命名空间；都好后面是这个 HttpHandler 所在的 dll 文件名。
 
@@ -210,7 +210,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 得到了如下代码：
 
-`&lt;a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#testDiv" href="/Home/ajax"&gt;刷新&lt;/a&gt;`
+`<a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#testDiv" href="/Home/ajax">刷新</a>`
 
 这里的 html 代码和是否使用 MVC 没有关系，那我们就尝试着直接在 WebForm 里直接打入以上代码吧。
 
@@ -222,25 +222,25 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 最终代码如下：
 
-    &lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1.Default" %&gt;
+    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1.Default" %>
 
-    &lt;%@ Register Src="TimeList.ascx" TagName="TimeList" TagPrefix="uc1" %&gt;
-    &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-    &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-    &lt;head runat="server"&gt;
-        &lt;script src="Scripts/jquery-1.5.1.js" type="text/javascript"&gt;&lt;/script&gt;
-        &lt;script src="Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;form id="form1" runat="server"&gt;
-        &lt;div id="timeList"&gt;
-            &lt;uc1:TimeList ID="TimeList1" runat="server" /&gt;
-        &lt;/div&gt;
-        &lt;a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#timeList"
-            href="/timelist.ascx"&gt;刷新&lt;/a&gt;
-        &lt;/form&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
+    <%@ Register Src="TimeList.ascx" TagName="TimeList" TagPrefix="uc1" %>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <script src="Scripts/jquery-1.5.1.js" type="text/javascript"></script>
+        <script src="Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+        <div id="timeList">
+            <uc1:TimeList ID="TimeList1" runat="server" />
+        </div>
+        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#timeList"
+            href="/timelist.ascx">刷新</a>
+        </form>
+    </body>
+    </html>
 
 &nbsp;
 
@@ -274,7 +274,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 .aspx 页面：
 
-`&lt;a &lt;%=GetAttributes(new WebApplication1.AjaxOptions{ UpdateTargetId = "timeList"}) %&gt; href="/timelist.ascx"&gt;刷新&lt;/a&gt;`
+`<a <%=GetAttributes(new WebApplication1.AjaxOptions{ UpdateTargetId = "timeList"}) %> href="/timelist.ascx">刷新</a>`
 
 看上去还没那么优雅，但是已经能实现这个功能了！
 

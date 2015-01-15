@@ -376,13 +376,13 @@ out 关键字就相当于 return ，所以内部赋值为 null ，就相当于 r
 
 再看了一个例子：
 
-    private static void Test1(List&lt;int&gt; list)
+    private static void Test1(List<int> list)
     {
         list.Clear();
     }
-    private static void Test2(ref List&lt;int&gt; list)
+    private static void Test2(ref List<int> list)
     {
-        list = new List&lt;int&gt;();
+        list = new List<int>();
     }
 
 同样是清空一个 List，如果没加 ref ，只能用 clear。

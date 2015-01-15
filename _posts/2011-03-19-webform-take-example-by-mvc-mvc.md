@@ -61,13 +61,13 @@ MVC 其实是 Model, View, Controller 的意思，它是一种思想~
     {
         public class MasterPageHelper : MasterPage
         {
-            protected IDictionary&lt;string, object&gt; ViewData
+            protected IDictionary<string, object> ViewData
             {
                 get
                 {
                     return
-                        (Dictionary&lt;string, object&gt;)
-                        (Session["ViewData"] ?? (Session["ViewData"] = new Dictionary&lt;string, object&gt;()));
+                        (Dictionary<string, object>)
+                        (Session["ViewData"] ?? (Session["ViewData"] = new Dictionary<string, object>()));
                 }
             }
             protected dynamic Model

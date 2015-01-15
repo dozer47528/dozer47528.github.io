@@ -47,7 +47,7 @@ Salesforce API 请求数据库的时候和执行 SQL 语句差不多，但是你
 
 ### 利用迭代器封装细节
 
-    public IEnumerable&lt;Contact&gt; GetAllContact()
+    public IEnumerable<Contact> GetAllContact()
     {
         QueryResult results = null;
         do

@@ -84,7 +84,7 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public virtual IList&lt;Article&gt; Articles { get; set; }
+        public virtual IList<Article> Articles { get; set; }
     }
     public class Article
     {
@@ -100,8 +100,8 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
     public class TestContext : DbContext
     {
 
-        public DbSet&lt;User&gt; UserSet { get { return Set&lt;User&gt;(); } }
-        public DbSet&lt;Article&gt; ArticleSet { get { return Set&lt;Article&gt;(); } }
+        public DbSet<User> UserSet { get { return Set<User>(); } }
+        public DbSet<Article> ArticleSet { get { return Set<Article>(); } }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -113,26 +113,26 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
         }
     }
 
-    public class UserTypeConfiguration : EntityTypeConfiguration&lt;User&gt;
+    public class UserTypeConfiguration : EntityTypeConfiguration<User>
     {
         public UserTypeConfiguration()
         {
-            HasKey(u =&gt; u.ID);
-            Property(u =&gt; u.ID)
+            HasKey(u => u.ID);
+            Property(u => u.ID)
                 .IsRequired()
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            HasMany(u =&gt; u.Articles)
-                .WithRequired(a =&gt; a.Owner)
-                .Map(x =&gt; x.MapKey("UserID"));
+            HasMany(u => u.Articles)
+                .WithRequired(a => a.Owner)
+                .Map(x => x.MapKey("UserID"));
             ToTable("User");
         }
     }
-    public class ArticleTypeConfiguration : EntityTypeConfiguration&lt;Article&gt;
+    public class ArticleTypeConfiguration : EntityTypeConfiguration<Article>
     {
         public ArticleTypeConfiguration()
         {
-            HasKey(a =&gt; a.ID);
-            Property(a =&gt; a.ID)
+            HasKey(a => a.ID);
+            Property(a => a.ID)
                 .IsRequired()
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             ToTable("Article");
@@ -141,9 +141,9 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 别的都是基本配置，这里最关键的一段代码是：
 
-    HasMany(u =&gt; u.Articles)
-                    .WithRequired(a =&gt; a.Owner)
-                    .Map(x =&gt; x.MapKey("UserID"));
+    HasMany(u => u.Articles)
+                    .WithRequired(a => a.Owner)
+                    .Map(x => x.MapKey("UserID"));
 
 其实这里的语义很清晰，如果我把这段英文直接翻译成中文，我觉得可以是这样子的。
 
@@ -153,9 +153,9 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 上面是配置在主对象 <span style="background-color: #eeeeee;">User </span>上的，如果配置在 <span style="background-color: #eeeeee;">Article </span>上，语句应该是这样写的：
 
-    HasRequired(a =&gt; a.Owner)
-                    .WithMany(u =&gt; u.Articles)
-                    .Map(x =&gt; x.MapKey("UserID"));
+    HasRequired(a => a.Owner)
+                    .WithMany(u => u.Articles)
+                    .Map(x => x.MapKey("UserID"));
 
 “我有一个 <span style="background-color: #eeeeee;">Owner </span>切是必须的，它有很多的 <span style="background-color: #eeeeee;">Article</span>，外键被映射成了 <span style="background-color: #eeeeee;">UserID</span>”
 
@@ -165,9 +165,9 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 其实一对一不就是这样的吗：我有一个 XXX，它有一个 XXX，外键被映射成了 XXX。
 
-    HasRequired(a =&gt; a.Owner)
-                    .WithOptional(u =&gt; u.Article)
-                    .Map(x =&gt; x.MapKey("UserID"));
+    HasRequired(a => a.Owner)
+                    .WithOptional(u => u.Article)
+                    .Map(x => x.MapKey("UserID"));
 
 &nbsp;
 
@@ -183,9 +183,9 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 因为多对多的话，必须要配置一张映射表，具体的配置方法如下：
 
-    HasMany(a =&gt; a.Categories)
-                    .WithMany(c =&gt; c.Articles)
-                    .Map(x =&gt; x.ToTable("ArticleCategory")
+    HasMany(a => a.Categories)
+                    .WithMany(c => c.Articles)
+                    .Map(x => x.ToTable("ArticleCategory")
                                .MapLeftKey("ArticleID")
                                .MapRightKey("CategoryID"));
 

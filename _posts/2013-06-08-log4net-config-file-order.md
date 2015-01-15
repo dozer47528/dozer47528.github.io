@@ -104,10 +104,10 @@ log4net 认为你根本就没想配置它…
 
 下面说说第二种方式，在配置文件中加配置：
 
-    &lt;appSettings&gt;
-      &lt;add key="log4net.Config" value="log4net.config"/&gt;
-      &lt;add key="log4net.Config.Watch" value="True"/&gt;
-    &lt;/appSettings&gt;
+    <appSettings>
+      <add key="log4net.Config" value="log4net.config"/>
+      <add key="log4net.Config.Watch" value="True"/>
+    </appSettings>
 
 官网说，如果你用了 assembly attribute 的配置方式，配置文件中的这两个节点会把 attribute 上的写死属性给覆盖。
 

@@ -103,7 +103,7 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
     	@Override
     	public void onCreate(Bundle savedInstanceState) {
     		super.onCreate(savedInstanceState);
-    		// Set by &lt;content src="index.html" /&gt; in config.xml
+    		// Set by <content src="index.html" /> in config.xml
 
     		super.init();
     		android.webkit.WebSettings settings = super.appView.getSettings();

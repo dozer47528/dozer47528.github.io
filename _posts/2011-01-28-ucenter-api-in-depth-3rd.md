@@ -91,18 +91,18 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
 
         $rndkey = array();
         // 产生密匙簿
-        for($i = 0; $i &lt;= 255; $i++) {
+        for($i = 0; $i <= 255; $i++) {
             $rndkey[$i] = ord($cryptkey[$i % $key_length]);
          }
          // 用固定的算法，打乱密匙簿，增加随机性，好像很复杂，实际上对并不会增加密文的强度
-        for($j = $i = 0; $i &lt; 256; $i++) {
+        for($j = $i = 0; $i < 256; $i++) {
             $j = ($j + $box[$i] + $rndkey[$i]) % 256;
             $tmp = $box[$i];
             $box[$i] = $box[$j];
             $box[$j] = $tmp;
          }
         // 核心加解密部分
-        for($a = $j = $i = 0; $i &lt; $string_length; $i++) {
+        for($a = $j = $i = 0; $i < $string_length; $i++) {
             $a = ($a + 1) % 256;
             $j = ($j + $box[$a]) % 256;
             $tmp = $box[$a];
@@ -114,7 +114,7 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
 
         if($operation == 'DECODE') {
             // 验证数据有效性，请看未加密明文的格式
-            if((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() &gt; 0) && substr($result, 10, 16) == substr(md5(substr($result, 26).$keyb), 0, 16)) {
+            if((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() > 0) && substr($result, 10, 16) == substr(md5(substr($result, 26).$keyb), 0, 16)) {
                 return substr($result, 26);
              } else {
                 return '';
@@ -136,14 +136,14 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
 
 ### C# 版
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// AuthCode解码&编码
-    /// &lt;/summary&gt;
-    /// &lt;param name="sourceStr"&gt;原始字符串&lt;/param&gt;
-    /// &lt;param name="operation"&gt;操作类型&lt;/param&gt;
-    /// &lt;param name="keyStr"&gt;API KEY&lt;/param&gt;
-    /// &lt;param name="expiry"&gt;过期时间 0代表永不过期&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <param name="sourceStr">原始字符串</param>
+    /// <param name="operation">操作类型</param>
+    /// <param name="keyStr">API KEY</param>
+    /// <param name="expiry">过期时间 0代表永不过期</param>
+    /// <returns></returns>
     private static string AuthCode(string sourceStr, AuthCodeMethod operation, string keyStr, int expiry = 0)
     {
         var ckeyLength = 4;
@@ -154,7 +154,7 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
 
         var keya = Md5(SubBytes(key, 0, 0x10));
         var keyb = Md5(SubBytes(key, 0x10, 0x10));
-        var keyc = (ckeyLength &gt; 0)
+        var keyc = (ckeyLength > 0)
                         ? ((operation == AuthCodeMethod.Decode)
                                 ? SubBytes(source, 0, ckeyLength)
                                 : RandomBytes(ckeyLength))
@@ -184,18 +184,18 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         var sourceLength = source.Length;
 
         var box = new int[256];
-        for (var k = 0; k &lt; 256; k++)
+        for (var k = 0; k < 256; k++)
         {
             box[k] = k;
         }
 
         var rndkey = new int[256];
-        for (var i = 0; i &lt; 256; i++)
+        for (var i = 0; i < 256; i++)
         {
             rndkey[i] = cryptkey[i % keyLength];
         }
 
-        for (int j = 0, i = 0; i &lt; 256; i++)
+        for (int j = 0, i = 0; i < 256; i++)
         {
             j = (j + box[i] + rndkey[i]) % 256;
             var tmp = box[i];
@@ -204,7 +204,7 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         }
 
         var result = new byte[sourceLength];
-        for (int a = 0, j = 0, i = 0; i &lt; sourceLength; i++)
+        for (int a = 0, j = 0, i = 0; i < sourceLength; i++)
         {
             a = (a + 1) % 256;
             j = (j + box[a]) % 256;
@@ -219,7 +219,7 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         {
             var time = long.Parse(BytesToString(SubBytes(result, 0, 10)));
             if ((time == 0 ||
-                    time - PhpTimeNow() &gt; 0) &&
+                    time - PhpTimeNow() > 0) &&
                 BytesToString(SubBytes(result, 10, 16)) == BytesToString(SubBytes(Md5(AddBytes(SubBytes(result, 26), keyb)), 0, 16)))
             {
                 return BytesToString(SubBytes(result, 26));
@@ -229,21 +229,21 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         return BytesToString(keyc) + Convert.ToBase64String(result).Replace("=", "");
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// Byte数组转字符串
-    /// &lt;/summary&gt;
-    /// &lt;param name="b"&gt;数组&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <param name="b">数组</param>
+    /// <returns></returns>
     public static string BytesToString(byte[] b)
     {
         return new string(Encode.GetChars(b));
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// 计算Md5
-    /// &lt;/summary&gt;
-    /// &lt;param name="b"&gt;byte数组&lt;/param&gt;
-    /// &lt;returns&gt;计算好的字符串&lt;/returns&gt;
+    /// </summary>
+    /// <param name="b">byte数组</param>
+    /// <returns>计算好的字符串</returns>
     public static byte[] Md5(byte[] b)
     {
         var cryptHandler = new MD5CryptoServiceProvider();
@@ -251,7 +251,7 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         var ret = "";
         foreach (var a in hash)
         {
-            if (a &lt; 16)
+            if (a < 16)
             { ret += "0" + a.ToString("x"); }
             else
             { ret += a.ToString("x"); }
@@ -259,11 +259,11 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         return Encode.GetBytes(ret);
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// Byte数组相加
-    /// &lt;/summary&gt;
-    /// &lt;param name="bytes"&gt;数组&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <param name="bytes">数组</param>
+    /// <returns></returns>
     public static byte[] AddBytes(params byte[][] bytes)
     {
         var index = 0;
@@ -284,41 +284,41 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         return result;
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// Byte数组分割
-    /// &lt;/summary&gt;
-    /// &lt;param name="b"&gt;数组&lt;/param&gt;
-    /// &lt;param name="start"&gt;开始&lt;/param&gt;
-    /// &lt;param name="length"&gt;结束&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <param name="b">数组</param>
+    /// <param name="start">开始</param>
+    /// <param name="length">结束</param>
+    /// <returns></returns>
     public static byte[] SubBytes(byte[] b, int start, int length = int.MaxValue)
     {
-        if (start &gt;= b.Length) return new byte[0];
-        if (start &lt; 0) start = 0;
-        if (length &lt; 0) length = 0;
-        if (length&gt;b.Length || start + length &gt; b.Length) length = b.Length - start;
+        if (start >= b.Length) return new byte[0];
+        if (start < 0) start = 0;
+        if (length < 0) length = 0;
+        if (length>b.Length || start + length > b.Length) length = b.Length - start;
         var result = new byte[length];
         var index = 0;
-        for(var k = start;k&lt; start + length;k++)
+        for(var k = start;k< start + length;k++)
         {
             result[index++] = b[k];
         }
         return result;
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// 计算Php格式的当前时间
-    /// &lt;/summary&gt;
-    /// &lt;returns&gt;Php格式的时间&lt;/returns&gt;
+    /// </summary>
+    /// <returns>Php格式的时间</returns>
     public static long PhpTimeNow()
     {
         return DateTimeToPhpTime(DateTime.UtcNow);
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// PhpTime转DataTime
-    /// &lt;/summary&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <returns></returns>
     public static DateTime PhpTimeToDateTime(long time)
     {
         var timeStamp = new DateTime(1970, 1, 1); //得到1970年的时间戳
@@ -326,22 +326,22 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         return new DateTime(t);
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// DataTime转PhpTime
-    /// &lt;/summary&gt;
-    /// &lt;param name="datetime"&gt;时间&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <param name="datetime">时间</param>
+    /// <returns></returns>
     public static long DateTimeToPhpTime(DateTime datetime)
     {
         var timeStamp = new DateTime(1970, 1, 1);  //得到1970年的时间戳
         return (datetime.Ticks - timeStamp.Ticks) / 10000000;  //注意这里有时区问题，用now就要减掉8个小时
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// 随机字符串
-    /// &lt;/summary&gt;
-    /// &lt;param name="lens"&gt;长度&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <param name="lens">长度</param>
+    /// <returns></returns>
     public static byte[] RandomBytes(int lens)
     {
         var chArray = new[]
@@ -354,16 +354,16 @@ UCenter API 中的加密解密函数，被称为 php 领域的经典之作，也
         var length = chArray.Length;
         var result = new byte[lens];
         var random = new Random();
-        for (var i = 0; i &lt; lens; i++)
+        for (var i = 0; i < lens; i++)
         {
             result[i] = (byte) chArray[random.Next(length)];
         }
         return result;
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// 操作类型
-    /// &lt;/summary&gt;
+    /// </summary>
     enum AuthCodeMethod
     {
         Encode,

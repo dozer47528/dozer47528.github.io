@@ -79,7 +79,7 @@ iii)写在Model中：一些底层的标准应该写在这一层，因为这些�
     public ActionResult Exp1(Models.UserModel user)
     {
         //判断
-        if (user.Name.Length &gt; 20)
+        if (user.Name.Length > 20)
         {
             //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
             ModelState.AddModelError("Name", "名字不得超过20个字符");
@@ -180,7 +180,7 @@ OK，下面我可以运行了。。。
         {
             public static void Edit(Models.UserModel user, ModelStateDictionary ModelState)
             {
-                if (user.Name.Length &gt; 20)
+                if (user.Name.Length > 20)
                 {
                     //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
                     ModelState.AddModelError("Name", "名字不得超过20个字符");
@@ -246,7 +246,7 @@ OK，直接运行，结果和上一个方法一样
     public class ModelExceptions : Exception
     {
         //存放错误信息的List
-        List&lt;string[]&gt; errors = new List&lt;string[]&gt;();
+        List<string[]> errors = new List<string[]>();
 
         //判断是否有错误
         public bool IsValid
@@ -310,7 +310,7 @@ OK，直接运行，结果和上一个方法一样
     public static void Edit(Models.UserModel user)
     {
         var e = new ModelExceptions();
-        if (user.Name.Length &gt; 20)
+        if (user.Name.Length > 20)
         {
             //如果错误，调用ModelState的AddModelError方法，第一个参数需要输入出错的字段名
             e.AddError("Name", "名字不得超过20个字符");
@@ -427,7 +427,7 @@ OK，那在Controller和BLL中需要做什么？我们需要做一定的修改
     public static void Edit(Models.UserModel user,bool IsValid)
     {
         var e = new ModelExceptions();
-        if (user.Name.Length &gt; 20)
+        if (user.Name.Length > 20)
         {
             e.AddError("Name", "名字不得超过20个字符");
         }

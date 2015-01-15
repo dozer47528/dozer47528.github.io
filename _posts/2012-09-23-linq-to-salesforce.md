@@ -55,10 +55,10 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 自己实现 Linq To Salesforce 最关键的就是把<a href="http://msdn.microsoft.com/zh-cn/library/bb397951.aspx" target="_blank"><strong>表达式树</strong></a>转换成SOQL：
 
-    var result = Query&lt;Contract&gt;()
-                    .Where(c =&gt; c.CreatedDate &gt; DateTime.Now.AddMonths(-1))
+    var result = Query<Contract>()
+                    .Where(c => c.CreatedDate > DateTime.Now.AddMonths(-1))
                     .ToList();
-    // SELECT Id FROM Contract WHERE CreatedDate &gt; 20120801T00:00:00.000Z
+    // SELECT Id FROM Contract WHERE CreatedDate > 20120801T00:00:00.000Z
 
 所以，关键点就是解析表达式树了，你可以自己用自己的逻辑实现解析表达式树，但是更推荐用微软的 IQueryable、IQueryProvider 和 ExpressionVisitor 来实现标准的表达式树解析。
 
@@ -95,7 +95,7 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 继承 <span style="background-color: #eeeeee;">SalesforceProviderBase<T></span> ，实现自己的 <span style="background-color: #eeeeee;">SalesforceProvider<T></span> ，这里需要重写 2 个方法：
 
     protected abstract int GetCount(string cmd);
-    protected abstract IEnumerable&lt;T&gt; GetEnumerable(string cmd);
+    protected abstract IEnumerable<T> GetEnumerable(string cmd);
 
 传入的参数都是已经解析好的 <span style="background-color: #eeeeee;">SOQL</span> 语句，第一个方法是用来返回总数的，第二个方法是用来返回 IEnumerable<T> 的。
 
@@ -107,15 +107,15 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 创建 IQueryable<T> 对象：
 
-    protected SalesforceQuery&lt;T&gt; Query&lt;T&gt;(SelectTypeEnum selectType = SelectTypeEnum.SelectIdAndUseAttachModel) where T : sObject
+    protected SalesforceQuery<T> Query<T>(SelectTypeEnum selectType = SelectTypeEnum.SelectIdAndUseAttachModel) where T : sObject
     {
-          return new SalesforceQuery&lt;T&gt;(new SalesforceProviderSample&lt;T&gt; { SelectType = selectType });
+          return new SalesforceQuery<T>(new SalesforceProviderSample<T> { SelectType = selectType });
     }
 
 接下来直接对这个对象调用 LINQ 方法即可：
 
-    var result = Query&lt;Contract&gt;()
-        .Where(c =&gt; c.CreatedDate &gt; DateTime.Now.AddMonths(-1))
+    var result = Query<Contract>()
+        .Where(c => c.CreatedDate > DateTime.Now.AddMonths(-1))
         .ToList();
 
 &nbsp;

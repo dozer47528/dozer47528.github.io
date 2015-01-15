@@ -141,7 +141,7 @@ tags:
         }
 
         @Override
-        public void checkMemberAccess(Class&lt;?&gt; clazz, int which) {
+        public void checkMemberAccess(Class<?> clazz, int which) {
         }
 
         @Override

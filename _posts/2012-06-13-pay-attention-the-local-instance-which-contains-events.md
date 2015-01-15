@@ -27,11 +27,11 @@ tags:
     private void button1_Click(object sender, RoutedEventArgs e)
     {
         GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
-        watcher.PositionChanged += new EventHandler&lt;GeoPositionChangedEventArgs&lt;GeoCoordinate&gt;&gt;(watcher_PositionChanged);
+        watcher.PositionChanged += new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(watcher_PositionChanged);
         watcher.Start();
     }
 
-    void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs&lt;GeoCoordinate&gt; e)
+    void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
     {
         Debug.WriteLine(e.Position.Timestamp.ToString());
     }
@@ -89,7 +89,7 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
             }
             else
             {
-                this.OnPositionChanged(new GeoPositionChangedEventArgs&lt;GeoCoordinate&gt;(this.m_position));
+                this.OnPositionChanged(new GeoPositionChangedEventArgs<GeoCoordinate>(this.m_position));
             }
         }
         return this.IsStarted;
@@ -118,7 +118,7 @@ GPS 位置每改变一次，所有的实例就会输出调试信息。
 
     private void Form1_Load(object sender, EventArgs e)
     {
-        for (var k = 0; k &lt; 10000; k++)
+        for (var k = 0; k < 10000; k++)
         {
             StartWebClient();
         }

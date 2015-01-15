@@ -49,13 +49,13 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
 
 ### 解决方案
 
-    &lt;ul id="top-navigation"&gt;
-        &lt;li class="controller_Home"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("首页","Index","Home")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-        &lt;li class="controller_Article"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("文章管理","Index","Article")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-        &lt;li class="controller_User"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("用户管理","Index","User")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;input id="controller" type="hidden" value="@Html.ViewContext.RouteData.Values["controller"]"/&gt;
-    &lt;input id="action" type="hidden" value="@Html.ViewContext.RouteData.Values["action"]"/&gt;
+    <ul id="top-navigation">
+        <li class="controller_Home"><span><span>@Html.ActionLink("首页","Index","Home")</span></span></li>
+        <li class="controller_Article"><span><span>@Html.ActionLink("文章管理","Index","Article")</span></span></li>
+        <li class="controller_User"><span><span>@Html.ActionLink("用户管理","Index","User")</span></span></li>
+    </ul>
+    <input id="controller" type="hidden" value="@Html.ViewContext.RouteData.Values["controller"]"/>
+    <input id="action" type="hidden" value="@Html.ViewContext.RouteData.Values["action"]"/>
 
 **View 中的代码如上所示：**
 
@@ -75,7 +75,7 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
         eval('action_' + action + ' = true');
         list = $('#' + ulId + ' *');
 
-        for (var k = 0; k &lt; list.length; k++) {
+        for (var k = 0; k < list.length; k++) {
             item = list[k];
             str = GetClassName(item).toLowerCase();
             try {
@@ -87,8 +87,8 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
         var classStr = $(item).attr('class');
         if (classStr == null) return "";
         classes = classStr.split(' ');
-        for (var k = 0; k &lt; classes.length; k++) {
-            if (classes[k].indexOf('controller') &gt; -1 || classes[k].indexOf('action') &gt; -1) return classes[k];
+        for (var k = 0; k < classes.length; k++) {
+            if (classes[k].indexOf('controller') > -1 || classes[k].indexOf('action') > -1) return classes[k];
         }
     }
 
@@ -119,8 +119,8 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
 
 &nbsp;
 
-    &lt;li class="controller_Home||controller_About"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("首页", "Index", "Home")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-    &lt;li class="controller_Article&&action_Add"&gt;&lt;span&gt;&lt;span&gt;@Html.ActionLink("文章管理", "Index", "Article")&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+    <li class="controller_Home||controller_About"><span><span>@Html.ActionLink("首页", "Index", "Home")</span></span></li>
+    <li class="controller_Article&&action_Add"><span><span>@Html.ActionLink("文章管理", "Index", "Article")</span></span></li>
 
 **以上两行代码表示：**
 

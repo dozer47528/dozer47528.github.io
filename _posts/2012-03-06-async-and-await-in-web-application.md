@@ -128,9 +128,9 @@ tags:
 
     public class HomeController : AsyncController
     {
-        public async Task&lt;ActionResult&gt; Test()
+        public async Task<ActionResult> Test()
         {
-            var result = await Task.Run(() =&gt;
+            var result = await Task.Run(() =>
             {
                 Thread.Sleep(5000);
                 return "hello";
@@ -222,32 +222,32 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
     {
         public partial class WebService
         {
-            /// &lt;summary&gt;
+            /// <summary>
             /// 无 CancellationToken 的调用
-            /// &lt;/summary&gt;
-            /// &lt;returns&gt;&lt;/returns&gt;
-            public Task&lt;string&gt; HelloWorldTaskSync()
+            /// </summary>
+            /// <returns></returns>
+            public Task<string> HelloWorldTaskSync()
             {
                 return HelloWorldTaskSync(new CancellationToken());
             }
 
-            /// &lt;summary&gt;
+            /// <summary>
             /// 有 CancellationToken 的调用
-            /// &lt;/summary&gt;
-            /// &lt;param name="token"&gt;&lt;/param&gt;
-            /// &lt;returns&gt;&lt;/returns&gt;
-            public Task&lt;string&gt; HelloWorldTaskSync(CancellationToken token)
+            /// </summary>
+            /// <param name="token"></param>
+            /// <returns></returns>
+            public Task<string> HelloWorldTaskSync(CancellationToken token)
             {
-                TaskCompletionSource&lt;string&gt; tcs = new TaskCompletionSource&lt;string&gt;();
+                TaskCompletionSource<string> tcs = new TaskCompletionSource<string>();
 
-                token.Register(() =&gt;
+                token.Register(() =>
                 {
                     //注册 CancellationToken
                     this.CancelAsync(null);
                 });
 
                 //注册完成事件
-                this.HelloWorldCompleted += (object sender, HelloWorldCompletedEventArgs args) =&gt;
+                this.HelloWorldCompleted += (object sender, HelloWorldCompletedEventArgs args) =>
                 {
                     if (args.Cancelled == true)
                     {

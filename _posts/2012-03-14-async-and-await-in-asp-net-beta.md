@@ -17,9 +17,9 @@ tags:
 
 在我的上一篇文章<a href="/2012/03/async-and-await-in-web-application/" target="_blank"><strong>《async 与 await 在 Web 下的应用》</strong></a>中，我提到了 asp.net 4.5 在 Web.Config 中的一个奇怪配置：
 
-    &lt;appSettings&gt;
-      &lt;add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" /&gt;
-    &lt;/appSettings&gt;
+    <appSettings>
+      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
+    </appSettings>
 
 在 <a href="http://stackoverflow.com/questions/9562836/whats-the-meaning-of-usetaskfriendlysynchronizationcontext" target="_blank"><strong>Stack Overflow</strong></a> 上提问后，终于有人回答我了。
 
@@ -76,28 +76,28 @@ tags:
 
 #### 代码段二：
 
-    &lt;appSettings&gt;
-      &lt;add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" /&gt;
-    &lt;/appSettings&gt;
+    <appSettings>
+      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
+    </appSettings>
 
 &nbsp;
 
-    &lt;%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="AsyncAwait.WebForm1"
-        Async="true" %&gt;
+    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="AsyncAwait.WebForm1"
+        Async="true" %>
 
-    &lt;!DOCTYPE html&gt;
-    &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-    &lt;head runat="server"&gt;
-        &lt;title&gt;&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;form id="form1" runat="server"&gt;
-        &lt;div&gt;
-            &lt;%:Msg %&gt;
-        &lt;/div&gt;
-        &lt;/form&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title></title>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+        <div>
+            <%:Msg %>
+        </div>
+        </form>
+    </body>
+    </html>
 
 后端代码和上面一样的代码，只不过把 UseTaskFriendlySynchronizationContext 的配置改成了 true，并且把数据显示到了页面上。
 

@@ -46,26 +46,26 @@ Javascript 底层是单线程的，但是浏览器在加载页面的时候是可
 
 HTML 页面：
 
-    &lt;!DOCTYPE HTML&gt;
-    &lt;html&gt;
-     &lt;head&gt;
-    	  &lt;script&gt;
+    <!DOCTYPE HTML>
+    <html>
+     <head>
+    	  <script>
     		function ReCall(data){
     			alert(data);
     		}
     		var win = window.open();
-    		win.document.write('&lt;script src="work.js" type="text/javascript" &gt;&lt;\/script&gt;');
-    	  &lt;/script&gt;
-      &lt;/head&gt;
-     &lt;body&gt;
-    	&lt;button onclick="alert('ok!')"&gt;click me!&lt;/button&gt;
-     &lt;/body&gt;
-    &lt;/html&gt;
+    		win.document.write('<script src="work.js" type="text/javascript" ><\/script>');
+    	  </script>
+      </head>
+     <body>
+    	<button onclick="alert('ok!')">click me!</button>
+     </body>
+    </html>
 
 JS 文件：
 
     function onmessage() {
-    	for(var k=0;k&lt;10000000;k++){
+    	for(var k=0;k<10000000;k++){
     		console.log('test');
     	}
     	self.opener=null;

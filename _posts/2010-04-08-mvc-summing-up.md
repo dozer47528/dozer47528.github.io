@@ -97,14 +97,14 @@ MVC提供的4个Filter很方便，但是有一个问题，Filter中不能直接�
         protected ViewDataDictionary ViewData;
         protected TempDataDictionary TempData;
         protected HttpRequestBase Request;
-        protected Dictionary&lt;string, string&gt; RouteValues;
+        protected Dictionary<string, string> RouteValues;
         protected UrlHelper Url;
 
         protected void Initialize(ControllerContext filterContext)
         {
             //初始化
             Request = filterContext.RequestContext.HttpContext.Request;
-            RouteValues = new Dictionary&lt;string, string&gt;();
+            RouteValues = new Dictionary<string, string>();
             foreach (var v in filterContext.RequestContext.RouteData.Values)
             {
                 RouteValues.Add(v.Key, v.Value.ToString());
@@ -154,9 +154,9 @@ MVC提供的4个Filter很方便，但是有一个问题，Filter中不能直接�
     public ActionResult Test()
     {
         //弹出对话框
-        Response.Write(&lt;script&gt;alert('test');&lt;/script&gt;));
+        Response.Write(<script>alert('test');</script>));
         //跳转到index
-        Response.Write("&lt;script&gt;window.location.href='" + Url.Action("index") + "';&lt;/script&gt;");
+        Response.Write("<script>window.location.href='" + Url.Action("index") + "';</script>");
         return null;
     }
 
@@ -181,11 +181,11 @@ MVC提供的4个Filter很方便，但是有一个问题，Filter中不能直接�
 
 &nbsp;
 
-    &lt;%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %&gt;
-    &lt;script type="text/jscript"&gt;
-    alert('&lt;%=ViewData["JSAlert"] %&gt;');
-    window.location.href = '&lt;%=ViewData["JSHref"] %&gt;';
-    &lt;/script&gt;
+    <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+    <script type="text/jscript">
+    alert('<%=ViewData["JSAlert"] %>');
+    window.location.href = '<%=ViewData["JSHref"] %>';
+    </script>
 
 &nbsp;
 
@@ -222,21 +222,21 @@ MVC提供的4个Filter很方便，但是有一个问题，Filter中不能直接�
 &nbsp;
 
     //Web.config下，假设有这个字段
-    &lt;connectionStrings&gt;
-    &lt;add name="ModelContainer"
+    <connectionStrings>
+    <add name="ModelContainer"
         connectionString="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string="Data Source=192.168.174.131,1433;Initial Catalog=Port80;User ID=port80;Password=port80;MultipleActiveResultSets=True""
-        providerName="System.Data.EntityClient"/&gt;
-    &lt;/connectionStrings&gt;
+        providerName="System.Data.EntityClient"/>
+    </connectionStrings>
 
     //在Web.Debug.config下
 
-    &lt;connectionStrings&gt;
-    &lt;add name="ModelContainer"
-            connectionString&lt;/span&gt;="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string="Data Source=.\sqlexpress;Initial Catalog=Port80;Integrated Security=True""
+    <connectionStrings>
+    <add name="ModelContainer"
+            connectionString</span>="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string="Data Source=.\sqlexpress;Initial Catalog=Port80;Integrated Security=True""
             providerName="System.Data.EntityClient"
             xdt:Transform="Replace"
-            xdt:Locator="Match(name)"/&gt;
-    &lt;/connectionStrings&gt;
+            xdt:Locator="Match(name)"/>
+    </connectionStrings>
 
 &nbsp;
 

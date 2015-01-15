@@ -71,7 +71,7 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
             var data = Enumerable.Range(1, 5).ToArray();
 
             var q = from _ in data
-                    where _ &gt; 3
+                    where _ > 3
                     select _;
         }
     }
@@ -80,8 +80,8 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
 
 让我们看看它的 IL 代码（部分）
 
-    IL_0029: ldsfld class [mscorlib]System.Func`2&lt;int32, bool&gt; ConsoleApplication1.Program::'CS$&lt;&gt;9__CachedAnonymousMethodDelegate1'
-    IL_002e: call class [mscorlib]System.Collections.Generic.IEnumerable`1&lt;!!0&gt; [System.Core]System.Linq.Enumerable::Where&lt;int32&gt;(class [mscorlib]System.Collections.Generic.IEnumerable`1&lt;!!0&gt;, class [mscorlib]System.Func`2&lt;!!0, bool&gt;)
+    IL_0029: ldsfld class [mscorlib]System.Func`2<int32, bool> ConsoleApplication1.Program::'CS$<>9__CachedAnonymousMethodDelegate1'
+    IL_002e: call class [mscorlib]System.Collections.Generic.IEnumerable`1<!!0> [System.Core]System.Linq.Enumerable::Where<int32>(class [mscorlib]System.Collections.Generic.IEnumerable`1<!!0>, class [mscorlib]System.Func`2<!!0, bool>)
     IL_0033: stloc.1
     IL_0034: ret
 
@@ -95,13 +95,13 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
     {
         public static class Enumerable
         {
-            public static IEnumerable&lt;TSource&gt; Where&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate) {
+            public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate) {
                 if (source == null) throw Error.ArgumentNull("source");
                 if (predicate == null) throw Error.ArgumentNull("predicate");
-                if (source is Iterator&lt;TSource&gt;) return ((Iterator&lt;TSource&gt;)source).Where(predicate);
-                if (source is TSource[]) return new WhereArrayIterator&lt;TSource&gt;((TSource[])source, predicate);
-                if (source is List&lt;TSource&gt;) return new WhereListIterator&lt;TSource&gt;((List&lt;TSource&gt;)source, predicate);
-                return new WhereEnumerableIterator&lt;TSource&gt;(source, predicate);
+                if (source is Iterator<TSource>) return ((Iterator<TSource>)source).Where(predicate);
+                if (source is TSource[]) return new WhereArrayIterator<TSource>((TSource[])source, predicate);
+                if (source is List<TSource>) return new WhereListIterator<TSource>((List<TSource>)source, predicate);
+                return new WhereEnumerableIterator<TSource>(source, predicate);
             }
         }
     }
@@ -112,10 +112,10 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
 
     var data = Enumerable.Range(1, 5).ToArray();
     var q = from _ in data
-            where _ &gt; 3
+            where _ > 3
             select _;
 
-    var q2 = data.Where(_ =&gt; _ &gt; 3);//等效于上面一行代码
+    var q2 = data.Where(_ => _ > 3);//等效于上面一行代码
 
 &nbsp;
 
@@ -145,9 +145,9 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
     {
         public static class Enumerable
         {
-            public static IEnumerable&lt;TSource&gt; Where&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate) {
+            public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate) {
             }
-            public static IEnumerable&lt;TResult&gt; Select&lt;TSource, TResult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TResult&gt; selector) {
+            public static IEnumerable<TResult> Select<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult> selector) {
             }
         }
     }
@@ -169,21 +169,21 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
 
     class School
     {
-        protected List&lt;string&gt; Student { get; set; }
+        protected List<string> Student { get; set; }
         public School()
         {
             //生成一个 Student 序列
-            Student = new List&lt;string&gt;
+            Student = new List<string>
                             {
                                 "abc",
                                 "xyz",
                                 "123"
                             };
         }
-        public School Where(Func&lt;string, bool&gt; predicate)
+        public School Where(Func<string, bool> predicate)
         {
             //这里对List有增删了，所以不能直接用foreach，删除不满足条件的学生
-            for (var k = 0; k &lt; Student.Count; k++)
+            for (var k = 0; k < Student.Count; k++)
             {
                 if (predicate(Student[k])) continue;
                 Student.RemoveAt(k);
@@ -191,7 +191,7 @@ MSDN 上的这篇文章（**<a href="http://msdn.microsoft.com/zh-cn/library/bb8
             }
             return this;
         }
-        public School Select(Func&lt;School, School&gt; selector)
+        public School Select(Func<School, School> selector)
         {
             //这里就不实现了
             return this;

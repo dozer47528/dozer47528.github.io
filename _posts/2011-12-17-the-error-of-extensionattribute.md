@@ -46,14 +46,14 @@ Google 后发现其实老外早有研究过了：
 
     namespace System.Runtime.CompilerServices
     {
-        /// &lt;remarks&gt;
+        /// <remarks>
         /// This attribute allows us to define extension methods without
         /// requiring .NET Framework 3.5. For more information, see the section,
-        /// &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7"&gt;Extension Methods in .NET Framework 2.0 Apps&lt;/a&gt;,
-        /// of &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx"&gt;Basic Instincts: Extension Methods&lt;/a&gt;
-        /// column in &lt;a href="http://msdn.microsoft.com/msdnmag/"&gt;MSDN Magazine&lt;/a&gt;,
-        /// issue &lt;a href="http://msdn.microsoft.com/en-us/magazine/cc135410.aspx"&gt;Nov 2007&lt;/a&gt;.
-        /// &lt;/remarks&gt;
+        /// <a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7">Extension Methods in .NET Framework 2.0 Apps</a>,
+        /// of <a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx">Basic Instincts: Extension Methods</a>
+        /// column in <a href="http://msdn.microsoft.com/msdnmag/">MSDN Magazine</a>,
+        /// issue <a href="http://msdn.microsoft.com/en-us/magazine/cc135410.aspx">Nov 2007</a>.
+        /// </remarks>
 
         [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class | AttributeTargets.Assembly)]
         internal sealed class ExtensionAttribute : Attribute { }

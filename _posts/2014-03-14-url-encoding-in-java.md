@@ -35,7 +35,7 @@ JavaScript 中常常会见到这两个函数，发 POST 请求的时候，同样
 
 那你的处理方式就应该是这样的：
 
-`encodeURI('http://www.test.com/?.html') + '?' + encodeURIComponent('q') + '=' + encodeURIComponent('select count(*) from user where date&gt;='2014')`
+`encodeURI('http://www.test.com/?.html') + '?' + encodeURIComponent('q') + '=' + encodeURIComponent('select count(*) from user where date>='2014')`
 
 &nbsp;
 

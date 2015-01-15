@@ -98,7 +98,7 @@ Routing，MVC 中的路由功能，和 Url 重写类似，但是更高层一点~
 
 MVC 中有了 Controller 和 Action 后生成链接非常方便，其实在 Asp.net 4.0 中也有这样的功能
 
-`&lt;%: GetRouteUrl("Default", new {controller = "home" })%&gt;`
+`<%: GetRouteUrl("Default", new {controller = "home" })%>`
 
 上述代码便可以生成指向 Home_Index 页面的链接
 

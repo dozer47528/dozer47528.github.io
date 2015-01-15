@@ -50,14 +50,14 @@ tags:
 
     class VetContext:DbContext
     {
-      public DbSet&lt;Patient&gt; Patients { get; set; }
-      public DbSet&lt;Visit&gt; Visits { get; set; }
+      public DbSet<Patient> Patients { get; set; }
+      public DbSet<Visit> Visits { get; set; }
       protected override void OnModelCreating(DbModelBuilder modelBuilder)
       {
-        modelBuilder.Entity&lt;AnimalType&gt;()
+        modelBuilder.Entity<AnimalType>()
                     .ToTable("Species");
-        modelBuilder.Entity&lt;AnimalType&gt;()
-                    .Property(p =&gt; p.TypeName).IsRequired();
+        modelBuilder.Entity<AnimalType>()
+                    .Property(p => p.TypeName).IsRequired();
        }
     }
 

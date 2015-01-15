@@ -52,8 +52,8 @@ tags:
     public class QueryGroup
         {
             public GroupType GroupType { get; set; }
-            public List&lt;QueryItem&gt; Items { get; set; }
-            public List&lt;QueryGroup&gt; Groups { get; set; }
+            public List<QueryItem> Items { get; set; }
+            public List<QueryGroup> Groups { get; set; }
         }
 
         public class QueryItem
@@ -96,53 +96,53 @@ tags:
 
 &nbsp;
 
-    &lt;div style="display: none;"&gt;
-        &lt;div class="query-group-template"&gt;
-            &lt;div class="query-group well"&gt;
-                &lt;div class="query-title"&gt;
-                    &lt;span class="help-inline"&gt;匹配以下&lt;/span&gt;
-                    &lt;select class="input-small group-type"&gt;
-                        &lt;option value="1"&gt;全部&lt;/option&gt;
-                        &lt;option value="2"&gt;任何&lt;/option&gt;
-                    &lt;/select&gt;
-                    &lt;span class="help-inline"&gt;规则：&lt;/span&gt;
-                    &lt;button type="button" class="btn btn-mini btn-success add-query-item" title="增加一个条件"&gt;
-                        &lt;i class="icon-plus icon-white"&gt;&lt;/i&gt;
-                    &lt;/button&gt;
-                    &lt;button type="button" class="btn btn-mini btn-info add-query-group" title="增加一组条件"&gt;
-                        &lt;i class="icon-th-list icon-white"&gt;&lt;/i&gt;
-                    &lt;/button&gt;
-                    &lt;button type="button" class="btn btn-mini btn-danger delete-query-group" title="删除这组条件"&gt;
-                        &lt;i class="icon-minus icon-white"&gt;&lt;/i&gt;
-                    &lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="query-item-template"&gt;
-            &lt;div class="query-item"&gt;
-                &lt;input type="text" value="" placeholder="字段名" title="字段名" class="property-name" /&gt;
-                &lt;select class="input-mini operate-type" title="条件"&gt;
-                    &lt;option value="1"&gt;==&lt;/option&gt;
-                    &lt;option value="2"&gt;!=&lt;/option&gt;
-                    &lt;option value="3"&gt;&gt;&lt;/option&gt;
-                    &lt;option value="4"&gt;&gt;=&lt;/option&gt;
-                    &lt;option value="5"&gt;&lt;&lt;/option&gt;
-                    &lt;option value="6"&gt;&lt;=&lt;/option&gt;
-                    &lt;option value="7"&gt;LK&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;input type="text" class="query-value" value="" placeholder="值" title="值" /&gt;
-                &lt;select class="input-medium value-type"&gt;
-                    &lt;option value="3"&gt;String&lt;/option&gt;
-                    &lt;option value="1"&gt;Int&lt;/option&gt;
-                    &lt;option value="2"&gt;Double&lt;/option&gt;
-                    &lt;option value="4"&gt;DateTime&lt;/option&gt;
-                &lt;/select&gt;
-                &lt;button type="button" class="btn btn-mini btn-danger delete-query-item" title="删除条件"&gt;
-                    &lt;i class="icon-minus icon-white"&gt;&lt;/i&gt;
-                &lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+    <div style="display: none;">
+        <div class="query-group-template">
+            <div class="query-group well">
+                <div class="query-title">
+                    <span class="help-inline">匹配以下</span>
+                    <select class="input-small group-type">
+                        <option value="1">全部</option>
+                        <option value="2">任何</option>
+                    </select>
+                    <span class="help-inline">规则：</span>
+                    <button type="button" class="btn btn-mini btn-success add-query-item" title="增加一个条件">
+                        <i class="icon-plus icon-white"></i>
+                    </button>
+                    <button type="button" class="btn btn-mini btn-info add-query-group" title="增加一组条件">
+                        <i class="icon-th-list icon-white"></i>
+                    </button>
+                    <button type="button" class="btn btn-mini btn-danger delete-query-group" title="删除这组条件">
+                        <i class="icon-minus icon-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="query-item-template">
+            <div class="query-item">
+                <input type="text" value="" placeholder="字段名" title="字段名" class="property-name" />
+                <select class="input-mini operate-type" title="条件">
+                    <option value="1">==</option>
+                    <option value="2">!=</option>
+                    <option value="3">></option>
+                    <option value="4">>=</option>
+                    <option value="5"><</option>
+                    <option value="6"><=</option>
+                    <option value="7">LK</option>
+                </select>
+                <input type="text" class="query-value" value="" placeholder="值" title="值" />
+                <select class="input-medium value-type">
+                    <option value="3">String</option>
+                    <option value="1">Int</option>
+                    <option value="2">Double</option>
+                    <option value="4">DateTime</option>
+                </select>
+                <button type="button" class="btn btn-mini btn-danger delete-query-item" title="删除条件">
+                    <i class="icon-minus icon-white"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
 这里其实不难，最关键的地方其实是各个按钮的事件了。
 
@@ -154,16 +154,16 @@ tags:
 
 这里逻辑其实非常简单：
 
-    $('#queryContainer').append($('.query-group-template&gt;.query-group').clone())
-        $('#queryContainer&gt;.query-group').first().find('.delete-query-group').remove();
+    $('#queryContainer').append($('.query-group-template>.query-group').clone())
+        $('#queryContainer>.query-group').first().find('.delete-query-group').remove();
 
         $('button.add-query-item').live('click', function () {
-            $(this).parent().parent().append($('.query-item-template&gt;.query-item').clone());
+            $(this).parent().parent().append($('.query-item-template>.query-item').clone());
             return false;
         });
 
         $('button.add-query-group').live('click', function () {
-            $(this).parent().parent().append($('.query-group-template&gt;.query-group').clone());
+            $(this).parent().parent().append($('.query-group-template>.query-group').clone());
             return false;
         });
 
@@ -228,7 +228,7 @@ tags:
         queryGroup.GroupType = parseInt(group.find('.group-type').val());
 
         var queryItems = group.children('.query-item');
-        for (var k = 0; k &lt; queryItems.length; k++) {
+        for (var k = 0; k < queryItems.length; k++) {
             var queryItem = new QueryItem();
             queryItem.Name = $(queryItems[k]).find('.property-name').val();
             queryItem.OperatorType = parseInt($(queryItems[k]).find('.operate-type').val());
@@ -238,7 +238,7 @@ tags:
         }
 
         var childGroups = group.children('.query-group');
-        for (var k = 0; k &lt; childGroups.length; k++) {
+        for (var k = 0; k < childGroups.length; k++) {
             queryGroup.Groups.push(GetQueryGroup(childGroups[k]));
         }
 
@@ -260,7 +260,7 @@ tags:
 数据结构在上面已经定义过了，只要字段名和 json 中的一样，就可以直接反序列化。
 
     var json = Uri.UnescapeDataString(Request["query"]);
-    var item = JsonConvert.DeserializeObject&lt;QueryGroup&gt;(json);
+    var item = JsonConvert.DeserializeObject<QueryGroup>(json);
 
 两行代码，它就变成 .net 中的对象了！
 
@@ -273,8 +273,8 @@ tags:
     public class QueryGroup
         {
             public GroupType GroupType { get; set; }
-            public List&lt;QueryItem&gt; Items { get; set; }
-            public List&lt;QueryGroup&gt; Groups { get; set; }
+            public List<QueryItem> Items { get; set; }
+            public List<QueryGroup> Groups { get; set; }
 
             public ICriteria ToICriteria()
             {
@@ -303,9 +303,9 @@ tags:
                 return result;
             }
 
-            private List&lt;ICriteria&gt; GetICriteriaList()
+            private List<ICriteria> GetICriteriaList()
             {
-                var list = new List&lt;ICriteria&gt;();
+                var list = new List<ICriteria>();
                 foreach (var item in Items)
                 {
                     list.Add(new Criteria(item.Name, item.OperatorType, new QueryValue(item.ValueType, item.Value, FieldHierarchyLevel.Child)));

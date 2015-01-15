@@ -33,7 +33,7 @@ tags:
     public class Destination
 
     //Fluent API
-    modelBuilder.Entity&lt;Destination&gt;().ToTable("Locations", "dbo");
+    modelBuilder.Entity<Destination>().ToTable("Locations", "dbo");
 
 <!--more-->
 
@@ -47,13 +47,13 @@ tags:
 
     //Fluent API
     public class DestinationConfiguration :
-     EntityTypeConfiguration&lt;Destination&gt;
+     EntityTypeConfiguration<Destination>
     {
       public DestinationConfiguration()
       {
-        Property(d =&gt; d.Nam
+        Property(d => d.Nam
           .IsRequired().HasColumnName("LocationName");
-        Property(d =&gt; d.DestinationId).HasColumnName("LocationID");
+        Property(d => d.DestinationId).HasColumnName("LocationID");
 
 &nbsp;
 
@@ -66,8 +66,8 @@ tags:
     public class PersonPhoto
 
     //Fluent API
-    modelBuilder.Entity&lt;Person&gt;().ToTable("People");
-    modelBuilder.Entity&lt;PersonPhoto&gt;().ToTable("People");
+    modelBuilder.Entity<Person>().ToTable("People");
+    modelBuilder.Entity<PersonPhoto>().ToTable("People");
 
 有人会问，这样做的好处是什么？那最大的好处当然是延迟加载啦。
 
@@ -91,25 +91,25 @@ tags:
 除了定义引用外，也可以直接把实体B的字段引射到实体A上，也就是把两个表映射到同一个实体中。
 
     public class DestinationConfiguration :
-      EntityTypeConfiguration&lt;Destination&gt;
+      EntityTypeConfiguration<Destination>
     {
       public DestinationConfiguration()
       {
-        Property(d =&gt; d.Name)
+        Property(d => d.Name)
          .IsRequired().HasColumnName("LocationName");
-        Property(d =&gt; d.DestinationId).HasColumnName("LocationID");
-        Property(d =&gt; d.Description).HasMaxLength(500);
-        Property(d =&gt; d.Photo).HasColumnType("image");
+        Property(d => d.DestinationId).HasColumnName("LocationID");
+        Property(d => d.Description).HasMaxLength(500);
+        Property(d => d.Photo).HasColumnType("image");
         // ToTable("Locations", "baga");
-        Map(m =&gt;
+        Map(m =>
             {
-              m.Properties(d =&gt; new
+              m.Properties(d => new
                  {d.Name, d.Country, d.Description });
               m.ToTable("Locations");
             });
-        Map(m =&gt;
+        Map(m =>
             {
-              m.Properties(d =&gt; new { d.Photo });
+              m.Properties(d => new { d.Photo });
               m.ToTable("LocationPhotos");
             });
       }
@@ -134,7 +134,7 @@ tags:
     public class MyInMemoryOnlyClass
 
     //Fluent API
-    modelBuilder.Ignore&lt;MyInMemoryOnlyClass&gt;();
+    modelBuilder.Ignore<MyInMemoryOnlyClass>();
 
 配置后，就算这个实体被另一个已经映射的实体引用，那么它也不会被映射到数据库中。
 
@@ -147,7 +147,7 @@ tags:
     public string TodayForecast
 
     //Fluent API
-    Ignore(d =&gt; d.TodayForecast);
+    Ignore(d => d.TodayForecast);
 
 &nbsp;
 
@@ -174,23 +174,23 @@ tags:
 你也可以用 Fluent API 来配置这个用来鉴别的列叫什么，和鉴别方式：
 
     //通过文本来鉴别
-    Map(m =&gt;
+    Map(m =>
         {
             m.ToTable("Lodgings");
             m.Requires("LodgingType").HasValue("Standard");
         })
-    .Map&lt;Resort&gt;(m =&gt;
+    .Map<Resort>(m =>
         {
             m.Requires("LodgingType").HasValue("Resort");
         });
 
     //通过布尔类型来鉴别
-    Map(m =&gt;
+    Map(m =>
     {
       m.ToTable("Lodging");
       m.Requires("IsResort").HasValue(false);
     })
-    .Map&lt;Resort&gt;(m =&gt;
+    .Map<Resort>(m =>
     {
       m.Requires("IsResort").HasValue(true);
     });
@@ -211,13 +211,13 @@ tags:
 
     //Fluent API
     //可以是
-    modelBuilder.Entity&lt;Resort&gt;().ToTable("Resorts");
+    modelBuilder.Entity<Resort>().ToTable("Resorts");
 
     //或者
-    modelBuilder.Entity&lt;Lodging&gt;().Map(m =&gt;
+    modelBuilder.Entity<Lodging>().Map(m =>
        {
          m.ToTable("Lodgings");
-       }).Map&lt;Resort&gt;(m =&gt;
+       }).Map<Resort>(m =>
        {
          m.ToTable("Resorts");
        });
@@ -228,12 +228,12 @@ tags:
 
 TPC 和 TPT 的区别就是，TPT 的子类只存放比父类多出来的几个字段，而 TPC 会存放所有的字段。
 
-    modelBuilder.Entity&lt;Lodging&gt;()
-     .Map(m =&gt;
+    modelBuilder.Entity<Lodging>()
+     .Map(m =>
      {
        m.ToTable("Lodgings");
      })
-     .Map&lt;Resort&gt;(m =&gt;
+     .Map<Resort>(m =>
      {
        m.ToTable("Resorts");
        m.MapInheritedProperties();

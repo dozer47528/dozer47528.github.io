@@ -67,7 +67,7 @@ tags:
     		var watcher = new Stopwatch ();
     		watcher.Start ();
 
-    		for (var k = 0; k &lt; TestTimes; k++) {
+    		for (var k = 0; k < TestTimes; k++) {
     		}
     		watcher.Stop ();
     		return watcher.ElapsedTicks;
@@ -78,7 +78,7 @@ tags:
     		var watcher = new Stopwatch ();
     		watcher.Start ();
 
-    		for (var k = 0; k &lt; TestTimes; k++) {
+    		for (var k = 0; k < TestTimes; k++) {
     			Debug.WriteLine (k);
     		}
     		watcher.Stop ();
@@ -90,7 +90,7 @@ tags:
     		var watcher = new Stopwatch ();
     		watcher.Start ();
 
-    		for (var k = 0; k &lt; TestTimes; k++) {
+    		for (var k = 0; k < TestTimes; k++) {
     			Console.WriteLine (k);
     		}
     		watcher.Stop ();
@@ -102,7 +102,7 @@ tags:
     		var watcher = new Stopwatch ();
     		watcher.Start ();
 
-    		for (var k = 0; k &lt; TestTimes; k++) {
+    		for (var k = 0; k < TestTimes; k++) {
     			log.Debug (k);
     		}
     		watcher.Stop ();
@@ -114,7 +114,7 @@ tags:
     		var watcher = new Stopwatch ();
     		watcher.Start ();
 
-    		for (var k = 0; k &lt; TestTimes; k++) {
+    		for (var k = 0; k < TestTimes; k++) {
     			log.Error (k);
     		}
     		watcher.Stop ();

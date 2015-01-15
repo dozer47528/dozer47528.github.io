@@ -72,7 +72,7 @@ CORS Proxy 的原理其实很简单，主要就做三件事情：
         private final String HTTPS_PREFIX = "https/";
 
         @RequestMapping(value = "/**")
-        public ResponseEntity&lt;byte[]&gt; proxy(HttpServletRequest request, @RequestBody byte[] body, @RequestHeader MultiValueMap&lt;String, String&gt; headers) throws UnsupportedEncodingException {
+        public ResponseEntity<byte[]> proxy(HttpServletRequest request, @RequestBody byte[] body, @RequestHeader MultiValueMap<String, String> headers) throws UnsupportedEncodingException {
 
             String url = request.getRequestURI();
             String queryString = request.getQueryString();
@@ -84,21 +84,21 @@ CORS Proxy 的原理其实很简单，主要就做三件事情：
             String targetUrl = getTargetUrl(url);
 
             if (!targetUrlFilter.checkUrl(targetUrl)) {
-                return new ResponseEntity&lt;byte[]&gt;(HttpStatus.FORBIDDEN);
+                return new ResponseEntity<byte[]>(HttpStatus.FORBIDDEN);
             }
 
-            ResponseEntity&lt;byte[]&gt; result = null;
+            ResponseEntity<byte[]> result = null;
             try {
-                result = restTemplate.exchange(new URI(targetUrl), HttpMethod.valueOf(request.getMethod()), new HttpEntity&lt;byte[]&gt;(body, headers), byte[].class);
+                result = restTemplate.exchange(new URI(targetUrl), HttpMethod.valueOf(request.getMethod()), new HttpEntity<byte[]>(body, headers), byte[].class);
             } catch (HttpClientErrorException exp) {
-                return new ResponseEntity&lt;byte[]&gt;(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
+                return new ResponseEntity<byte[]>(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
             } catch (HttpServerErrorException exp) {
-                return new ResponseEntity&lt;byte[]&gt;(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
+                return new ResponseEntity<byte[]>(exp.getResponseBodyAsByteArray(), getResponseHeaders(exp.getResponseHeaders()), exp.getStatusCode());
             } catch (Exception exp) {
-                return new ResponseEntity&lt;byte[]&gt;(exp.getMessage().getBytes("utf-8"), getResponseHeaders(new HttpHeaders()), HttpStatus.INTERNAL_SERVER_ERROR);
+                return new ResponseEntity<byte[]>(exp.getMessage().getBytes("utf-8"), getResponseHeaders(new HttpHeaders()), HttpStatus.INTERNAL_SERVER_ERROR);
             }
 
-            return new ResponseEntity&lt;byte[]&gt;(result.getBody(), getResponseHeaders(result.getHeaders()), result.getStatusCode());
+            return new ResponseEntity<byte[]>(result.getBody(), getResponseHeaders(result.getHeaders()), result.getStatusCode());
         }
 
         @Resource(name = "restTemplate")
@@ -128,7 +128,7 @@ CORS Proxy 的原理其实很简单，主要就做三件事情：
 
         private HttpHeaders getResponseHeaders(HttpHeaders originHeaders) {
             HttpHeaders header = new HttpHeaders();
-            for (Entry&lt;String, List&lt;String&gt;&gt; item : originHeaders.entrySet()) {
+            for (Entry<String, List<String>> item : originHeaders.entrySet()) {
                 if (headerFilter.needRemoveHeader(item.getKey(), item.getValue().toString())) {
                     continue;
                 }
@@ -147,7 +147,7 @@ CORS Proxy 的原理其实很简单，主要就做三件事情：
 
         @Override
         protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-            for(Map.Entry&lt;? extends String, ? extends List&lt;String&gt;&gt; header: headerHelper.getHeadersMap().entrySet()){
+            for(Map.Entry<? extends String, ? extends List<String>> header: headerHelper.getHeadersMap().entrySet()){
                 Joiner joiner = Joiner.on("; ").skipNulls();
                 String value = joiner.join(header.getValue());
                 response.addHeader(header.getKey(),value);

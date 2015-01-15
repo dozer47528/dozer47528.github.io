@@ -120,7 +120,7 @@ Java 实现起来也非常简单，同样是用一个开源的类库。作者已
 
 同样贴上代码：
 
-    &lt;?php
+    <?php
 
     // Put your device token here (without spaces):
     $deviceToken = 'xxxxxx';
@@ -149,8 +149,8 @@ Java 实现起来也非常简单，同样是用一个开源的类库。作者已
 
     // Create the payload body
     $body['aps'] = array(
-    	'alert' =&gt; $message,
-    	'sound' =&gt; 'default'
+    	'alert' => $message,
+    	'sound' => 'default'
     	);
 
     // Encode the payload as JSON

@@ -61,7 +61,7 @@ tags:
 
 让我们一步步地去实现它，下面是一个第一个示例：
 
-    public class Foo : IEquatable&lt;Foo&gt;
+    public class Foo : IEquatable<Foo>
     {
     	public override bool Equals(object right)
     	{
@@ -78,7 +78,7 @@ tags:
     		// Compare this type's contents here:
     		return this.Equals(right as Foo);
     	}
-    	#region IEquatable&lt;Foo&gt; Members
+    	#region IEquatable<Foo> Members
     	public bool Equals(Foo other)
     	{
     		// 写一些代码，判断两个类型在逻辑上是否相等。

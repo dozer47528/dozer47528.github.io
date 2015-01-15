@@ -68,8 +68,8 @@ Mono.Cecil 可以帮助你修改编译好的 dll 文件。
         var asmDef = AssemblyDefinition.ReadAssembly(file,
                               new ReaderParameters { ReadSymbols = hasSymbols });
         var classTypes = asmDef.Modules
-                                .SelectMany(m =&gt; m.Types)
-                                .Where(t =&gt; t.IsClass)
+                                .SelectMany(m => m.Types)
+                                .Where(t => t.IsClass)
                                 .ToList();
 
         foreach (var type in classTypes)
@@ -201,11 +201,11 @@ TestDll 是非虚函数，而且是密封类：
         [TestMethod]
         public void TestMethod1()
         {
-            var test = new Mock&lt;TestClass&gt;();
-            test.Setup(t =&gt; t.NormalMethod()).Returns("Mock");
-            test.Setup(t =&gt; t.VirtualMethod()).Returns("Mock");
-            test.Setup(t =&gt; t.SealedMethod()).Returns("Mock");
-            test.Setup(t =&gt; t.AbstractMethod()).Returns("Mock");
+            var test = new Mock<TestClass>();
+            test.Setup(t => t.NormalMethod()).Returns("Mock");
+            test.Setup(t => t.VirtualMethod()).Returns("Mock");
+            test.Setup(t => t.SealedMethod()).Returns("Mock");
+            test.Setup(t => t.AbstractMethod()).Returns("Mock");
 
             Assert.AreEqual(test.Object.NormalMethod(), "Mock");
             Assert.AreEqual(test.Object.VirtualMethod(), "Mock");
@@ -304,7 +304,7 @@ NUnit 运行结果如下：
 
 我在 Moq 中 Mock 了 Protect 方法，没有报错，看上去 Mock 成功了：
 
-`test.Protected().Setup&lt;string&gt;("PrivateMethod").Returns("Mock");`
+`test.Protected().Setup<string>("PrivateMethod").Returns("Mock");`
 
 但是在调用了时候还是调用了原来的方法。
 

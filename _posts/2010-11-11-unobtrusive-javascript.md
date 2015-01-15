@@ -13,15 +13,15 @@ tags:
 
 ### Unobtrusive JavaScript 是什么？
 
-    &lt;!--以下是常规Javascript下写出来的Ajax--&gt;
-    &lt;div id="test"&gt;
-        &lt;a href="/" onclick="Sys.Mvc.AsyncHyperlink.handleClick(this, new Sys.UI.DomEvent(event), { insertionMode: Sys.Mvc.InsertionMode.replace, httpMethod: 'GET', updateTargetId: 'test' });"&gt;测试&lt;/a&gt;
-    &lt;/div&gt;
+    <!--以下是常规Javascript下写出来的Ajax-->
+    <div id="test">
+        <a href="/" onclick="Sys.Mvc.AsyncHyperlink.handleClick(this, new Sys.UI.DomEvent(event), { insertionMode: Sys.Mvc.InsertionMode.replace, httpMethod: 'GET', updateTargetId: 'test' });">测试</a>
+    </div>
 
-    &lt;!--以下是Unobtrusive Javascript下写出来的Ajax--&gt;
-    &lt;div id="test"&gt;
-        &lt;a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#test" href="/"&gt;测试&lt;/a&gt;
-    &lt;/div&gt;
+    <!--以下是Unobtrusive Javascript下写出来的Ajax-->
+    <div id="test">
+        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#test" href="/">测试</a>
+    </div>
 
 以上的代码分别是 MVC 3 在“关闭”和“开启” Unobtrusive JavaScript 后生成的 Ajax.ActionLink。
 
@@ -45,10 +45,10 @@ Unobtrusive JavaScript 的好处显而易见，但是如何在MVC3使用Unobtrus
 
 &nbsp;
 
-    &lt;script src="@Url.Content("~/Scripts/jquery-1.4.1.min.js")" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"&gt;&lt;/script&gt;
+    <script src="@Url.Content("~/Scripts/jquery-1.4.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 
 &nbsp;
 
@@ -133,12 +133,12 @@ MVC 中 AjaxHelper 的扩展方法，提供了一系列的 Ajax 方法，例如�
 
 &nbsp;
 
-    &lt;form
+    <form
         action="/ajax/callback"
         id="form0"
         method="post"
         onclick="Sys.Mvc.AsyncForm.handleClick(this, new Sys.UI.DomEvent(event));"
-        onsubmit="Sys.Mvc.AsyncForm.handleSubmit(this, new Sys.UI.DomEvent(event), { insertionMode: Sys.Mvc.InsertionMode.replace, loadingElementId: 'loading', updateTargetId: 'updateme' });"&gt;
+        onsubmit="Sys.Mvc.AsyncForm.handleSubmit(this, new Sys.UI.DomEvent(event), { insertionMode: Sys.Mvc.InsertionMode.replace, loadingElementId: 'loading', updateTargetId: 'updateme' });">
 
 &nbsp;
 
@@ -152,13 +152,13 @@ MVC1 和 MVC2 中就是这样做的。
 
 &nbsp;
 
-    &lt;form
+    <form
         action="/ajax/callback"
         data-ajax="true"
         data-ajax-loading="#loading"
         data-ajax-mode="replace"
         data-ajax-update="#updateme"
-        method="post"&gt;
+        method="post">
 
 &nbsp;
 
@@ -371,24 +371,24 @@ data : 仅限 OnSuccess
 
 &nbsp;
 
-    &lt;label for="FirstName"&gt;FirstName&lt;/label&gt;
-    &lt;input class="text-box single-line" id="FirstName" name="FirstName" type="text" value="" /&gt;
-    &lt;span class="field-validation-valid" id="FirstName_validationMessage"&gt;&lt;/span&gt;
+    <label for="FirstName">FirstName</label>
+    <input class="text-box single-line" id="FirstName" name="FirstName" type="text" value="" />
+    <span class="field-validation-valid" id="FirstName_validationMessage"></span>
 
-    &lt;label for="LastName"&gt;LastName&lt;/label&gt;
-    &lt;input class="text-box single-line" id="LastName" name="LastName" type="text" value="" /&gt;
-    &lt;span class="field-validation-valid" id="LastName_validationMessage"&gt;&lt;/span&gt;
+    <label for="LastName">LastName</label>
+    <input class="text-box single-line" id="LastName" name="LastName" type="text" value="" />
+    <span class="field-validation-valid" id="LastName_validationMessage"></span>
 
-    &lt;label for="Age"&gt;Age&lt;/label&gt;
-    &lt;input class="text-box single-line" id="Age" name="Age" type="text" value="" /&gt;
-    &lt;span class="field-validation-valid" id="Age_validationMessage"&gt;&lt;/span&gt;
+    <label for="Age">Age</label>
+    <input class="text-box single-line" id="Age" name="Age" type="text" value="" />
+    <span class="field-validation-valid" id="Age_validationMessage"></span>
 
-    &lt;script type="text/javascript"&gt;
-    //&lt;![CDATA[
+    <script type="text/javascript">
+    //<![CDATA[
     if (!window.mvcClientValidationMetadata) { window.mvcClientValidationMetadata = []; }
     window.mvcClientValidationMetadata.push({"Fields":[{"FieldName":"FirstName","ReplaceValidationMessageContents":true,"ValidationMessageId":"FirstName_validationMessage","ValidationRules":[{"ErrorMessage":"The FirstName field is required.","ValidationParameters":{},"ValidationType":"required"}]},{"FieldName":"LastName","ReplaceValidationMessageContents":true,"ValidationMessageId":"LastName_validationMessage","ValidationRules":[{"ErrorMessage":"The LastName field is required.","ValidationParameters":{},"ValidationType":"required"},{"ErrorMessage":"The field LastName must be a string with a maximum length of 60.","ValidationParameters":{"max":60},"ValidationType":"length"}]},{"FieldName":"Age","ReplaceValidationMessageContents":true,"ValidationMessageId":"Age_validationMessage","ValidationRules":[{"ErrorMessage":"The field Age must be between 1 and 130.","ValidationParameters":{"min":1,"max":130},"ValidationType":"range"},{"ErrorMessage":"The Age field is required.","ValidationParameters":{},"ValidationType":"required"},{"ErrorMessage":"The field Age must be a number.","ValidationParameters":{},"ValidationType":"number"}]}],"FormId":"form0","ReplaceValidationSummary":true,"ValidationSummaryId":"validationSummary"});
-    //]]&gt;
-    &lt;/script&gt;
+    //]]>
+    </script>
 
 &nbsp;
 
@@ -404,17 +404,17 @@ data : 仅限 OnSuccess
 
 &nbsp;
 
-    &lt;label for="FirstName"&gt;FirstName&lt;/label&gt;
-    &lt;input class="text-box single-line" data-val="true" data-val-required="The FirstName field is required." id="FirstName" name="FirstName" type="text" value="" /&gt;
-    &lt;span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"&gt;&lt;/span&gt;
+    <label for="FirstName">FirstName</label>
+    <input class="text-box single-line" data-val="true" data-val-required="The FirstName field is required." id="FirstName" name="FirstName" type="text" value="" />
+    <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
 
-    &lt;label for="LastName"&gt;LastName&lt;/label&gt;
-    &lt;input class="text-box single-line" data-val="true" data-val-length="The field LastName must be a string with a maximum length of 60." data-val-length-max="60" data-val-required="The LastName field is required." id="LastName" name="LastName" type="text" value="" /&gt;
-    &lt;span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"&gt;&lt;/span&gt;
+    <label for="LastName">LastName</label>
+    <input class="text-box single-line" data-val="true" data-val-length="The field LastName must be a string with a maximum length of 60." data-val-length-max="60" data-val-required="The LastName field is required." id="LastName" name="LastName" type="text" value="" />
+    <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
 
-    &lt;label for="Age"&gt;Age&lt;/label&gt;
-    &lt;input class="text-box single-line" data-val="true" data-val-number="The field Age must be a number." data-val-range="The field Age must be between 1 and 130." data-val-range-max="130" data-val-range-min="1" data-val-required="The Age field is required." id="Age" name="Age" type="text" value="" /&gt;
-    &lt;span class="field-validation-valid" data-valmsg-for="Age" data-valmsg-replace="true"&gt;&lt;/span&gt;
+    <label for="Age">Age</label>
+    <input class="text-box single-line" data-val="true" data-val-number="The field Age must be a number." data-val-range="The field Age must be between 1 and 130." data-val-range-max="130" data-val-range-min="1" data-val-required="The Age field is required." id="Age" name="Age" type="text" value="" />
+    <span class="field-validation-valid" data-valmsg-for="Age" data-valmsg-replace="true"></span>
 
 &nbsp;
 

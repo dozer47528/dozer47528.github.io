@@ -44,11 +44,11 @@ tags:
             {
                 //do something with item
             }
-            if (result.Count &lt; 200) { break; }
+            if (result.Count < 200) { break; }
         }
     }
 
-    public List&lt;string&gt; GetFromDatabase(int index, int size)
+    public List<string> GetFromDatabase(int index, int size)
     {
         //do something
         return result;
@@ -75,7 +75,7 @@ tags:
             Console.Write(item);
         }
     }
-    static IEnumerable&lt;string&gt; GetIEnumerableData()
+    static IEnumerable<string> GetIEnumerableData()
     {
         var index = 0;
         while (true)
@@ -85,15 +85,15 @@ tags:
             {
                 yield return item;
             }
-            if (result.Count &lt; 200) { break; }
+            if (result.Count < 200) { break; }
         }
     }
-    static List&lt;string&gt; GetFromDatabase(int index, int size)
+    static List<string> GetFromDatabase(int index, int size)
     {
-        var result = new List&lt;string&gt;();
-        for (var k = 0; k &lt; size; k++)
+        var result = new List<string>();
+        for (var k = 0; k < size; k++)
         {
-            if (size * index + k &gt; 1000000) { break; };
+            if (size * index + k > 1000000) { break; };
             result.Add(Guid.NewGuid().ToString());
         }
         return result;

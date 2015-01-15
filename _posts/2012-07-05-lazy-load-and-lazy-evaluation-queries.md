@@ -36,9 +36,9 @@ LINQ for IEnumerable 是针对于内存中数据的查询语句，数据既然�
 
 其实，这时候准确的说应该叫延迟求值查询（Lazy Evaluation Queries），而不是延迟加载。总之，它们还是有区别的！
 
-    var list = new List&lt;int&gt;{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    var result1 = list.Where(_ =&gt; _ &lt; 5).Where(_ =&gt; _ != 8);
-    var result2 = list.Where(_ =&gt; _ &lt; 5).ToList().Where(_ =&gt; _ != 8);
+    var list = new List<int>{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    var result1 = list.Where(_ => _ < 5).Where(_ => _ != 8);
+    var result2 = list.Where(_ => _ < 5).ToList().Where(_ => _ != 8);
 
 
 先看上述代码，大家觉得执行 result1 和 result2 的时候有什么区别吗？
@@ -128,13 +128,13 @@ LINQ 技术中，为 IQueryable<T> 接口和 IEnumerable<T> 写了两套扩展�
 
     static void Main(string[] args)
     {
-        var list = new List&lt;int&gt; { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        var list = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         var result = Test2(Test1(list));
         Console.WriteLine("这里并没有输出！");
         result.ToList();
     }
 
-    static IEnumerable&lt;int&gt; Test1(IEnumerable&lt;int&gt; list)
+    static IEnumerable<int> Test1(IEnumerable<int> list)
     {
         foreach (var l in list)
         {
@@ -143,7 +143,7 @@ LINQ 技术中，为 IQueryable<T> 接口和 IEnumerable<T> 写了两套扩展�
         }
     }
 
-    static IEnumerable&lt;int&gt; Test2(IEnumerable&lt;int&gt; list)
+    static IEnumerable<int> Test2(IEnumerable<int> list)
     {
         foreach (var l in list)
         {

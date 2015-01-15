@@ -62,7 +62,7 @@ tags:
 
 下面是一个简单的例子：
 
-`&lt;button id="cancel" type="button"  class="ui-state-default ui-corner-all"&gt;Cancel&lt;/button&gt;`
+`<button id="cancel" type="button"  class="ui-state-default ui-corner-all">Cancel</button>`
 
 <table>
   <tr>

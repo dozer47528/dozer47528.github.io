@@ -84,9 +84,9 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
     {
         #region HelpMethod
         protected SalesforceHelper Helper = new SalesforceHelper();
-        protected SalesforceQuery&lt;T&gt; Query&lt;T&gt;(SelectTypeEnum selectType = SelectTypeEnum.SelectIdAndUseAttachModel) where T : sObject
+        protected SalesforceQuery<T> Query<T>(SelectTypeEnum selectType = SelectTypeEnum.SelectIdAndUseAttachModel) where T : sObject
         {
-            return Helper.Query&lt;T&gt;(selectType);
+            return Helper.Query<T>(selectType);
         }
         #endregion
 
@@ -94,8 +94,8 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void WhereTest()
         {
-            var result = Query&lt;Contract&gt;()
-                .Where(c =&gt; c.CreatedDate &gt; DateTime.Now.AddMonths(-1))
+            var result = Query<Contract>()
+                .Where(c => c.CreatedDate > DateTime.Now.AddMonths(-1))
                 .ToList();
 
             Assert.IsTrue(result.Any());
@@ -104,7 +104,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void WhereRelatedTest()
         {
-            var result = Query&lt;Contract&gt;().Where(c =&gt; c.Owner.Name != "").FirstOrDefault();
+            var result = Query<Contract>().Where(c => c.Owner.Name != "").FirstOrDefault();
             Assert.IsNotNull(result);
         }
         #endregion
@@ -116,7 +116,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         {
             try
             {
-                var result = Query&lt;User&gt;().First(u =&gt; u.Name == Guid.NewGuid().ToString());
+                var result = Query<User>().First(u => u.Name == Guid.NewGuid().ToString());
                 Assert.Fail("the First() method did not throw any exception");
             }
             catch { }
@@ -126,17 +126,17 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         public void First_OneTest()
         {
             // find an user
-            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            var firstUser = Query<User>().Select(u => new User { Id = u.Id }).FirstOrDefault();
             Assert.IsNotNull(firstUser);
 
-            var result = Query&lt;User&gt;().First(u =&gt; u.Id == firstUser.Id);
+            var result = Query<User>().First(u => u.Id == firstUser.Id);
             Assert.IsNotNull(result);
         }
 
         [TestMethod]
         public void First_ManyTest()
         {
-            var result = Query&lt;User&gt;().First();
+            var result = Query<User>().First();
             Assert.IsNotNull(result);
         }
 
@@ -144,7 +144,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         public void FirstOrDefault_NoneTest()
         {
             //query for an inexistent user should not throw an exception
-            var result2 = Query&lt;User&gt;().FirstOrDefault(u =&gt; u.Name == Guid.NewGuid().ToString());
+            var result2 = Query<User>().FirstOrDefault(u => u.Name == Guid.NewGuid().ToString());
             Assert.IsNull(result2);
         }
 
@@ -152,17 +152,17 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         public void FirstOrDefault_OneTest()
         {
             // find an user
-            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            var firstUser = Query<User>().Select(u => new User { Id = u.Id }).FirstOrDefault();
             Assert.IsNotNull(firstUser);
 
-            var result = Query&lt;User&gt;().FirstOrDefault(u =&gt; u.Id == firstUser.Id);
+            var result = Query<User>().FirstOrDefault(u => u.Id == firstUser.Id);
             Assert.IsNotNull(result);
         }
 
         [TestMethod]
         public void FirstOrDefault_ManyTest()
         {
-            var result1 = Query&lt;User&gt;().FirstOrDefault();
+            var result1 = Query<User>().FirstOrDefault();
             Assert.IsNotNull(result1);
         }
         #endregion
@@ -173,7 +173,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         {
             try
             {
-                var result = Query&lt;User&gt;().Single(u =&gt; u.Name == Guid.NewGuid().ToString());
+                var result = Query<User>().Single(u => u.Name == Guid.NewGuid().ToString());
                 Assert.Fail("the First() method did not throw any exception");
             }
             catch { }
@@ -183,10 +183,10 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         public void Single_OneTest()
         {
             // find an user
-            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            var firstUser = Query<User>().Select(u => new User { Id = u.Id }).FirstOrDefault();
             Assert.IsNotNull(firstUser);
 
-            var result = Query&lt;User&gt;().Single(u =&gt; u.Id == firstUser.Id);
+            var result = Query<User>().Single(u => u.Id == firstUser.Id);
             Assert.IsNotNull(result);
         }
 
@@ -195,7 +195,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         {
             try
             {
-                var result = Query&lt;User&gt;().Single();
+                var result = Query<User>().Single();
                 Assert.Fail("the Single() method did not throw any exception");
             }
             catch { }
@@ -204,7 +204,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SingleOrDefault_NoneTest()
         {
-            var result = Query&lt;User&gt;().SingleOrDefault(u =&gt; u.Name == Guid.NewGuid().ToString());
+            var result = Query<User>().SingleOrDefault(u => u.Name == Guid.NewGuid().ToString());
             Assert.IsNull(result);
         }
 
@@ -212,10 +212,10 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         public void SingleOrDefault_OneTest()
         {
             // find an user
-            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            var firstUser = Query<User>().Select(u => new User { Id = u.Id }).FirstOrDefault();
             Assert.IsNotNull(firstUser);
 
-            var result = Query&lt;User&gt;().SingleOrDefault(u =&gt; u.Id == firstUser.Id);
+            var result = Query<User>().SingleOrDefault(u => u.Id == firstUser.Id);
             Assert.IsNotNull(result);
         }
 
@@ -224,7 +224,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         {
             try
             {
-                var result = Query&lt;User&gt;().SingleOrDefault();
+                var result = Query<User>().SingleOrDefault();
                 Assert.Fail("the SingleOrDefault() method did not throw any exception");
             }
             catch { }
@@ -235,14 +235,14 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void Any_NoneTest()
         {
-            var result = Query&lt;User&gt;().Any(u =&gt; u.Name == Guid.NewGuid().ToString());
+            var result = Query<User>().Any(u => u.Name == Guid.NewGuid().ToString());
             Assert.IsFalse(result);
         }
 
         [TestMethod]
         public void Any_ManyTest()
         {
-            var result = Query&lt;User&gt;().Any();
+            var result = Query<User>().Any();
             Assert.IsTrue(result);
         }
         #endregion
@@ -251,7 +251,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void Count_NoneTest()
         {
-            var result = Query&lt;User&gt;().Count(u =&gt; u.Name == Guid.NewGuid().ToString());
+            var result = Query<User>().Count(u => u.Name == Guid.NewGuid().ToString());
             Assert.AreEqual(result, 0);
         }
 
@@ -259,18 +259,18 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         public void Count_OneTest()
         {
             // find an user
-            var firstUser = Query&lt;User&gt;().Select(u =&gt; new User { Id = u.Id }).FirstOrDefault();
+            var firstUser = Query<User>().Select(u => new User { Id = u.Id }).FirstOrDefault();
             Assert.IsNotNull(firstUser);
 
-            var result = Query&lt;User&gt;().Count(u =&gt; u.Id == firstUser.Id);
+            var result = Query<User>().Count(u => u.Id == firstUser.Id);
             Assert.AreEqual(result, 1);
         }
 
         [TestMethod]
         public void Count_ManyTest()
         {
-            var result = Query&lt;User&gt;().Count();
-            Assert.IsTrue(result &gt; 0);
+            var result = Query<User>().Count();
+            Assert.IsTrue(result > 0);
         }
         #endregion
 
@@ -278,8 +278,8 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectTest()
         {
-            var user = Query&lt;User&gt;()
-                .Select(u =&gt; new User { Name = u.Name })
+            var user = Query<User>()
+                .Select(u => new User { Name = u.Name })
                 .FirstOrDefault();
             Assert.IsNotNull(user.Name);
         }
@@ -287,7 +287,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectRelatedTest()
         {
-            var result = Query&lt;Contract&gt;().Select(c =&gt; new Contract
+            var result = Query<Contract>().Select(c => new Contract
             {
                 Id = c.Id,
                 IsDeleted = c.IsDeleted,
@@ -310,8 +310,8 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectIdAndUseAttachModelTest()
         {
-            var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseAttachModel)
-                .Select(u =&gt; new User { Name = u.Name })
+            var user = Query<User>(SelectTypeEnum.SelectIdAndUseAttachModel)
+                .Select(u => new User { Name = u.Name })
                 .FirstOrDefault();
 
             Assert.IsNotNull(user.Id);
@@ -322,7 +322,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectIdAndUseReplaceModel_NoSelectTest()
         {
-            var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseReplaceModel)
+            var user = Query<User>(SelectTypeEnum.SelectIdAndUseReplaceModel)
                 .FirstOrDefault();
 
             Assert.IsNotNull(user.Id);
@@ -333,8 +333,8 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectIdAndUseReplaceModel_UseSelectTest()
         {
-            var user = Query&lt;User&gt;(SelectTypeEnum.SelectIdAndUseReplaceModel)
-                .Select(u =&gt; new User { Name = u.Name })
+            var user = Query<User>(SelectTypeEnum.SelectIdAndUseReplaceModel)
+                .Select(u => new User { Name = u.Name })
                 .FirstOrDefault();
 
             Assert.IsNull(user.Id);
@@ -344,8 +344,8 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectAllAndUseAttachModelTest()
         {
-            var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseAttachModel)
-                .Select(u =&gt; new User { Name = u.Name })
+            var user = Query<User>(SelectTypeEnum.SelectAllAndUseAttachModel)
+                .Select(u => new User { Name = u.Name })
                 .FirstOrDefault();
 
             Assert.IsNotNull(user.Id);
@@ -356,7 +356,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectAllAndUseReplaceModel_NoSelectTest()
         {
-            var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseReplaceModel)
+            var user = Query<User>(SelectTypeEnum.SelectAllAndUseReplaceModel)
                 .FirstOrDefault();
 
             Assert.IsNotNull(user.Id);
@@ -367,8 +367,8 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
         [TestMethod]
         public void SelectAllAndUseReplaceModel_UseSelectTest()
         {
-            var user = Query&lt;User&gt;(SelectTypeEnum.SelectAllAndUseReplaceModel)
-                .Select(u =&gt; new User { Name = u.Name })
+            var user = Query<User>(SelectTypeEnum.SelectAllAndUseReplaceModel)
+                .Select(u => new User { Name = u.Name })
                 .FirstOrDefault();
 
             Assert.IsNull(user.Id);

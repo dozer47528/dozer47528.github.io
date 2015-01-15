@@ -114,7 +114,7 @@ tags:
         protected void Button1_Click(object sender, EventArgs e)
         {
             AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
-            Response.Write("&lt;script&gt;alert('" + am.Authorize(Request["sessionID"], TextBox1.Text).ToString() + "');&lt;/script&gt;");
+            Response.Write("<script>alert('" + am.Authorize(Request["sessionID"], TextBox1.Text).ToString() + "');</script>");
             TextBox1.Text = "";
         }
     }
@@ -137,16 +137,16 @@ tags:
 
 &nbsp;
 
-    &lt;asp:TextBox ID="TextBox1" runat="server"&gt;&lt;/asp:TextBox&gt;
-    &lt;img id="AuthImage" src="&lt;%=imageURL %&gt;" alt="Alternate Text" onclick="javascript:Refesh();"/&gt;
-    &lt;input type="hidden" id="sessionID" name="sessionID" value="&lt;%=sessionID %&gt;" /&gt;
-    &lt;script type="text/javascript"&gt;
+    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <img id="AuthImage" src="<%=imageURL %>" alt="Alternate Text" onclick="javascript:Refesh();"/>
+    <input type="hidden" id="sessionID" name="sessionID" value="<%=sessionID %>" />
+    <script type="text/javascript">
         function Refesh() {
             var ticks = new Date().getTime();
             document.getElementById('AuthImage').setAttribute('src', 'authcode.ashx?id=' + ticks);
             document.getElementById('sessionID').value = ticks;
         }
-    &lt;/script&gt;
+    </script>
 
 图片：读取后端代码中的图片地址
 
@@ -225,11 +225,11 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
             AuthCodeManager am = new AuthCodeManager(new AuthCodeBuilder());
             if (am.Authorize(sessionID, code))
             {
-                Response.Write("&lt;script&gt;alert('成功！');&lt;/script&gt;");
+                Response.Write("<script>alert('成功！');</script>");
             }
             else
             {
-                Response.Write("&lt;script&gt;alert('失败！');&lt;/script&gt;");
+                Response.Write("<script>alert('失败！');</script>");
             }
             return View();
         }
@@ -300,20 +300,20 @@ IRequiresSessionState：这个，比较纠结了，必须继承这个借口，�
 
 &nbsp;
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// 得到请求ID
-    /// &lt;/summary&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
+    /// </summary>
+    /// <returns></returns>
     protected virtual string GetSessionID()
     {
         throw new NotImplementedException("请重写该方法后再调用！");
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     /// 自动获取当前请求ID的验证，请重写GetSessionID()方法后再调用！
-    /// &lt;/summary&gt;
-    /// &lt;param name="authcode"&gt;验证码&lt;/param&gt;
-    /// &lt;returns&gt;是否通过&lt;/returns&gt;
+    /// </summary>
+    /// <param name="authcode">验证码</param>
+    /// <returns>是否通过</returns>
     public virtual bool Authorize(string authcode)
     {
         return Authorize(GetSessionID(), authcode);

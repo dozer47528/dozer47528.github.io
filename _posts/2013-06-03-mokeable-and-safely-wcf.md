@@ -47,23 +47,23 @@ WCF 太让人纠结了！不仅用 using 会有问题， Mock 这方面设计的
 
     public static class Wcf
     {
-        public static void Use&lt;T&gt;(T proxy, Action&lt;T&gt; codeBlock)
+        public static void Use<T>(T proxy, Action<T> codeBlock)
         where T : class
         {
             try
             {
                 codeBlock(proxy);
 
-                if (proxy is ClientBase&lt;T&gt;)
+                if (proxy is ClientBase<T>)
                 {
-                    (proxy as ClientBase&lt;T&gt;).Close();
+                    (proxy as ClientBase<T>).Close();
                 }
             }
             catch
             {
-                if (proxy is ClientBase&lt;T&gt;)
+                if (proxy is ClientBase<T>)
                 {
-                    (proxy as ClientBase&lt;T&gt;).Abort();
+                    (proxy as ClientBase<T>).Abort();
                 }
                 throw;
             }
@@ -76,7 +76,7 @@ WCF 太让人纠结了！不仅用 using 会有问题， Mock 这方面设计的
 
     protected void Test()
     {
-        Wcf.Use(GetClient(), client =&gt;
+        Wcf.Use(GetClient(), client =>
             {
                 client.Call();
             });

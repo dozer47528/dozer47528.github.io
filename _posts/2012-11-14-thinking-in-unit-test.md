@@ -103,22 +103,22 @@ tags:
                 int result = 0;
                 if (b)
                 {
-                    if (a &gt; 10)
+                    if (a > 10)
                     {
                         result = 2;
                     }
-                    else if (a &gt; 5)
+                    else if (a > 5)
                     {
                         result = 3;
                     }
                 }
                 else
                 {
-                    if (a &lt; 3)
+                    if (a < 3)
                     {
                         result = 4;
                     }
-                    else if (a &lt; 4)
+                    else if (a < 4)
                     {
                         result = 5;
                     }
@@ -163,11 +163,11 @@ b:false    a:1
 
             private int Method3(int a, int result)
             {
-                if (a &lt; 3)
+                if (a < 3)
                 {
                     result = 4;
                 }
-                else if (a &lt; 4)
+                else if (a < 4)
                 {
                     result = 5;
                 }
@@ -176,11 +176,11 @@ b:false    a:1
 
             private int Method2(int a, int result)
             {
-                if (a &gt; 10)
+                if (a > 10)
                 {
                     result = 2;
                 }
-                else if (a &gt; 5)
+                else if (a > 5)
                 {
                     result = 3;
                 }
