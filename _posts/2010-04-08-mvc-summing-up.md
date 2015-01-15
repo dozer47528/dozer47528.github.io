@@ -48,7 +48,7 @@ tags:
 
 <span style="font-size: large;"><span style="color: #ff0000;"><strong>“/”应用程序中的服务器错误。</strong></span></span>
 
-<span style="color: #800000;"><strong>The controller name &#8216;Home&#8217; is ambiguous between the following types:</strong></span>
+<span style="color: #800000;"><strong>The controller name 'Home' is ambiguous between the following types:</strong></span>
 
 <span style="color: #800000;"><strong>MvcApplication1.Controllers.HomeController</strong></span>
 
