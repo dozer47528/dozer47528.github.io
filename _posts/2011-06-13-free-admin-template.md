@@ -1,5 +1,5 @@
 ---
-title: '免费后台模板 推荐&#038;下载'
+title: '免费后台模板 推荐&下载'
 author: Dozer
 layout: post
 permalink: /2011/06/free-admin-template/

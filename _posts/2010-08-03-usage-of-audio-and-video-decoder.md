@@ -1,5 +1,5 @@
 ---
-title: '关于各种音频&#038;视频解码器的使用'
+title: '关于各种音频&视频解码器的使用'
 author: Dozer
 layout: post
 permalink: /2010/08/usage-of-audio-and-video-decoder/
