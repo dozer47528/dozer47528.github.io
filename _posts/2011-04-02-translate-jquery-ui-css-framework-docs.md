@@ -88,7 +88,7 @@ jQuery UI 包含一个强大的 CSS 框架来帮助我们设计 jQuery 小部件
 
 **Icon types**
 
-当你给 a 设置了 &#8220;.ui-icon&#8221; class 后，你可以再设置一个描述性的 class，格式如下： .ui-icon-{icon type}-{icon sub description}-{direction}.
+当你给 a 设置了 ".ui-icon" class 后，你可以再设置一个描述性的 class，格式如下： .ui-icon-{icon type}-{icon sub description}-{direction}.
 
 例如一个单一的三角形图标： .ui-icon-triangle-1-e
 

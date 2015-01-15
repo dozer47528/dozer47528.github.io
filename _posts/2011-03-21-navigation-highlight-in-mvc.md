@@ -39,7 +39,7 @@ Javascript 有精粹也有糟粕，其中的 eval 是大多数动态语言都拥
 
 **基本思路：**
 
-给每一个 li（对应一个链接）设置一个 class，例如 class=&#8221;controller_Home&#8221;，
+给每一个 li（对应一个链接）设置一个 class，例如 class="controller_Home"，
 
 代表着，只要这张页面是的 controller 是 Home，就让这个链接高亮。
 

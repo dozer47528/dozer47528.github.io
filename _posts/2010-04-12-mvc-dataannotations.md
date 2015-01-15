@@ -127,7 +127,7 @@ OK，下面我可以运行了。。。
 
 其实关键就是利用了这个：<%= Html.ValidationMessageFor(model => model.Name) %>
 
-不理解强类型方法、或还在使用MVC1.0的读者可以看这个：<%= Html.ValidationMessage(&#8220;Name&#8221;) %>
+不理解强类型方法、或还在使用MVC1.0的读者可以看这个：<%= Html.ValidationMessage("Name") %>
 
 （除了ValidationMessage函数外，还有其它几个函数，可以达到不同的效果，读者可以自行研究下，这几个函数都是以Validation开头的）
 

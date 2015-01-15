@@ -194,7 +194,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 成功！还有一个问题，怎么使用自定义扩展名？
 
-只要把 HttpHandler 中的两行注释去掉，并且在 Web.Config 文件中的 path=&#8221;*.ascx&#8221; 改成 path=&#8221;.[自定义]&#8221; 就行了。
+只要把 HttpHandler 中的两行注释去掉，并且在 Web.Config 文件中的 path="*.ascx" 改成 path=".[自定义]" 就行了。
 
 &nbsp;
 

@@ -75,7 +75,7 @@ tags:
 
 &nbsp;
 
-3、另外几个构造函数，IAuthCodeBuilder前面已经解释过了，另外一个字符串是什么？因为最终是以字典的形式保存在Session中的，所以需要有个名字，默认是&#8221;AuthCode”。
+3、另外几个构造函数，IAuthCodeBuilder前面已经解释过了，另外一个字符串是什么？因为最终是以字典的形式保存在Session中的，所以需要有个名字，默认是"AuthCode”。
 
 &nbsp;
 

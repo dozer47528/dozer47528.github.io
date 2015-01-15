@@ -292,7 +292,7 @@ MVC1 和 MVC2 中就是这样做的。
   </tr>
 </table>
 
-除了这些属性外，还有一个额外的 data-ajax=&#8221;true&#8221; 属性，代表这是一个 Ajax 方法。
+除了这些属性外，还有一个额外的 data-ajax="true" 属性，代表这是一个 Ajax 方法。
 
 * = data-ajax-mode 只有在设置 UpdateTargetId 被设置后才有效。
 
@@ -424,9 +424,9 @@ data : 仅限 OnSuccess
 
 **属性是如何生成的**
 
-当表单中的一项在后端代码中有数据验证的时候，MVC 会现在 它的属性中加上 data-val=&#8221;true&#8221;，并且讲所有规则以 data-val-rulename=&#8221;message&#8221; 的形式，加在属性上。
+当表单中的一项在后端代码中有数据验证的时候，MVC 会现在 它的属性中加上 data-val="true"，并且讲所有规则以 data-val-rulename="message" 的形式，加在属性上。
 
-如果想使用默认的客户端验证信息，你只要把属性值留空，那么客户端验证会自动生成形如 data-val-rulename-paramname=&#8221;paramvalue&#8221; 的属性。
+如果想使用默认的客户端验证信息，你只要把属性值留空，那么客户端验证会自动生成形如 data-val-rulename-paramname="paramvalue" 的属性。
 
 &nbsp;
 

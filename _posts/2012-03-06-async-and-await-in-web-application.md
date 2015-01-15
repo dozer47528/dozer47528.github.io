@@ -102,7 +102,7 @@ tags:
 #### 在 asp.net WebForm 中：
 
 1.  <del>首先新建一个页面</del>
-2.  <del>打开 aspx 文件，然后再顶部的属性中加入：Async=&#8221;true&#8221;</del>
+2.  <del>打开 aspx 文件，然后再顶部的属性中加入：Async="true"</del>
 3.  <del>接下来在任何一个事件中，加入这两个关键字即可</del>
 4.  <del>另外在 Web.Config 中有两个奇怪的配置，有可能会导致出错，去掉有正常，这两个配置具体有什么用，我已经在 <a href="http://stackoverflow.com/questions/9562836/whats-the-meaning-of-usetaskfriendlysynchronizationcontext" target="_blank"><strong>StackOverFlow</strong></a> 上问别人了</del>
 

@@ -145,7 +145,7 @@ MVC提供的4个Filter很方便，但是有一个问题，Filter中不能直接�
 
 大家觉得MVC的架构变了，但其实原理和Asp.net一样，还是用 Response来输出数据
 
-所以，只要在 Action 的 Return 函数前调用 Response.Write(&#8220;text&#8221;); 即可实现。
+所以，只要在 Action 的 Return 函数前调用 Response.Write("text"); 即可实现。
 
 其实和以前一样，下面举个例子，在一个页面中弹出一个对话框后再跳转到别的页面
 

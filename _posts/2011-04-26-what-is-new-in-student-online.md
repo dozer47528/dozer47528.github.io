@@ -42,7 +42,7 @@ tags:
 
 这些本来设置的都是绝对链接，但因为这几个都是学生在线的子站，所以只要修改成相对链接即可。
 
-<a href=&#8221;http://online.cumt.edu.cn/discuz&#8221;>论坛</a> 修改成 <a href=&#8221;/discuz&#8221;>论坛</a>
+<a href="http://online.cumt.edu.cn/discuz">论坛</a> 修改成 <a href="/discuz">论坛</a>
 
 &nbsp;
 

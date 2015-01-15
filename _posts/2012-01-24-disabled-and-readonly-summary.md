@@ -98,11 +98,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      readonly=&#8221;readonly&#8221;
+      readonly="readonly"
     </td>
   </tr>
   
@@ -112,11 +112,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      onclick=&#8221;return false;&#8221;
+      onclick="return false;"
     </td>
   </tr>
   
@@ -126,11 +126,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      onclick=&#8221;return false;&#8221;
+      onclick="return false;"
     </td>
   </tr>
   
@@ -140,11 +140,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      readonly=&#8221;readonly&#8221;
+      readonly="readonly"
     </td>
   </tr>
   
@@ -154,11 +154,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      readonly=&#8221;readonly&#8221;
+      readonly="readonly"
     </td>
   </tr>
   
@@ -168,11 +168,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      onclick=&#8221;return false;&#8221;
+      onclick="return false;"
     </td>
   </tr>
   
@@ -182,11 +182,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      readonly=&#8221;readonly&#8221;
+      readonly="readonly"
     </td>
   </tr>
   
@@ -196,11 +196,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      readonly=&#8221;readonly&#8221;
+      readonly="readonly"
     </td>
   </tr>
   
@@ -210,11 +210,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      readonly=&#8221;readonly&#8221;
+      readonly="readonly"
     </td>
   </tr>
   
@@ -224,11 +224,11 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      readonly=&#8221;readonly&#8221;
+      readonly="readonly"
     </td>
   </tr>
   
@@ -238,15 +238,15 @@ js 是不可信的，严格的来说我这里的确是不安全的。
     </td>
     
     <td>
-      disabled=&#8221;disabled&#8221;
+      disabled="disabled"
     </td>
     
     <td>
-      onclick=&#8221;return false;&#8221;
+      onclick="return false;"
     </td>
   </tr>
 </table>
 
 1.  disabled 标签对所有表单元素都有效，全都不会被提交。
-2.  如果在前端给控件设置 readonly，或者 onclick=&#8221;return false&#8221; 后 Asp.net 可以接收到修改后的值。
+2.  如果在前端给控件设置 readonly，或者 onclick="return false" 后 Asp.net 可以接收到修改后的值。
 3.  如果在 Asp.net 中设置了 readonly 属性后，后端无法接收到修改后的值。
