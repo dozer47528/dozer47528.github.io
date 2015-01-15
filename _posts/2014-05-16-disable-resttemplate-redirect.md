@@ -61,16 +61,16 @@ tags:
 
 我们先来看一下  RestTemplate 的第二个构造函数：
 
-<pre class="lang:java decode:true">/**
- * Create a new instance of the {@link RestTemplate} based on the given {@link ClientHttpRequestFactory}.
- * @param requestFactory HTTP request factory to use
- * @see org.springframework.http.client.SimpleClientHttpRequestFactory
- * @see org.springframework.http.client.HttpComponentsClientHttpRequestFactory
- */
-public RestTemplate(ClientHttpRequestFactory requestFactory) {
-	this();
-	setRequestFactory(requestFactory);
-}</pre>
+	/**
+	 * Create a new instance of the {@link RestTemplate} based on the given {@link ClientHttpRequestFactory}.
+	 * @param requestFactory HTTP request factory to use
+	 * @see org.springframework.http.client.SimpleClientHttpRequestFactory
+	 * @see org.springframework.http.client.HttpComponentsClientHttpRequestFactory
+	 */
+	public RestTemplate(ClientHttpRequestFactory requestFactory) {
+		this();
+		setRequestFactory(requestFactory);
+	}
 
 切入点就在这里了！ 上面提到了两种 `ClientHttpRequestFactory`，网上很多教程是按照`HttpComponentsClientHttpRequestFactory`做的，但是实现起来机器复杂，而且我试了一下失败了…
 
@@ -78,28 +78,28 @@ public RestTemplate(ClientHttpRequestFactory requestFactory) {
 
 后来看了一下上面文章中提到的`SimpleClientHttpRequestFactory`中的一个方法：
 
-<pre class="lang:java decode:true">protected void prepareConnection(HttpURLConnection connection, String httpMethod) throws IOException {
-	if (this.connectTimeout &gt;= 0) {
-		connection.setConnectTimeout(this.connectTimeout);
+	protected void prepareConnection(HttpURLConnection connection, String httpMethod) throws IOException {
+		if (this.connectTimeout >= 0) {
+			connection.setConnectTimeout(this.connectTimeout);
+		}
+		if (this.readTimeout >= 0) {
+			connection.setReadTimeout(this.readTimeout);
+		}
+		connection.setDoInput(true);
+		if ("GET".equals(httpMethod)) {
+			connection.setInstanceFollowRedirects(true);
+		}
+		else {
+			connection.setInstanceFollowRedirects(false);
+		}
+		if ("PUT".equals(httpMethod) || "POST".equals(httpMethod) || "PATCH".equals(httpMethod)) {
+			connection.setDoOutput(true);
+		}
+		else {
+			connection.setDoOutput(false);
+		}
+		connection.setRequestMethod(httpMethod);
 	}
-	if (this.readTimeout &gt;= 0) {
-		connection.setReadTimeout(this.readTimeout);
-	}
-	connection.setDoInput(true);
-	if ("GET".equals(httpMethod)) {
-		connection.setInstanceFollowRedirects(true);
-	}
-	else {
-		connection.setInstanceFollowRedirects(false);
-	}
-	if ("PUT".equals(httpMethod) || "POST".equals(httpMethod) || "PATCH".equals(httpMethod)) {
-		connection.setDoOutput(true);
-	}
-	else {
-		connection.setDoOutput(false);
-	}
-	connection.setRequestMethod(httpMethod);
-}</pre>
 
 看到玄机了吗？这里发现是 GET 请求的话，就自动`setInstanceFollowRedirects`为`true`了。
 
@@ -107,16 +107,16 @@ public RestTemplate(ClientHttpRequestFactory requestFactory) {
 
 看完了源代码，改造起来就很简单了，自己继承一个新的类就行了：
 
-<pre class="lang:java decode:true">public class NoRedirectClientHttpRequestFactory extends
-		SimpleClientHttpRequestFactory {
-
-	@Override
-	protected void prepareConnection(HttpURLConnection connection,
-			String httpMethod) throws IOException {
-		super.prepareConnection(connection, httpMethod);
-		connection.setInstanceFollowRedirects(false);
+	public class NoRedirectClientHttpRequestFactory extends
+			SimpleClientHttpRequestFactory {
+	
+		@Override
+		protected void prepareConnection(HttpURLConnection connection,
+				String httpMethod) throws IOException {
+			super.prepareConnection(connection, httpMethod);
+			connection.setInstanceFollowRedirects(false);
+		}
 	}
-}</pre>
 
 每次执行完`super.prepareConnection`后，我再把`setInstanceFollowRedirects`强制设置成`false`。
 
@@ -124,15 +124,15 @@ public RestTemplate(ClientHttpRequestFactory requestFactory) {
 
 最后是`bean`配置：
 
-<pre class="lang:xhtml decode:true">&lt;bean id="proxyRestTemplate" class="org.springframework.web.client.RestTemplate"&gt;
-	&lt;constructor-arg&gt;
-		&lt;bean
-			class="com.dianping.ba.crm.mobile.utils.NoRedirectClientHttpRequestFactory"&gt;
-			&lt;property name="connectTimeout" value="6000" /&gt;
-			&lt;property name="readTimeout" value="60000" /&gt;
-		&lt;/bean&gt;
-	&lt;/constructor-arg&gt;
-&lt;/bean&gt;</pre>
+	<bean id="proxyRestTemplate" class="org.springframework.web.client.RestTemplate">
+		<constructor-arg>
+			<bean
+				class="com.dianping.ba.crm.mobile.utils.NoRedirectClientHttpRequestFactory">
+				<property name="connectTimeout" value="6000" />
+				<property name="readTimeout" value="60000" />
+			</bean>
+		</constructor-arg>
+	</bean>
 
 注入你自己的`ClientHttpRequestFactory`就行了！
 
