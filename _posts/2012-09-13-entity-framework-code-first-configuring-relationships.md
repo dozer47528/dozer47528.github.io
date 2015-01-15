@@ -53,7 +53,7 @@ Entity Framework 中配置了对象之间的引用关系后，在查询数据的
 
 Attribute 配置法（Data Annotations）无法 实现所有功能，建议使用 Fluent API 来实现，具体配置遵循一下标准：
 
-<span style="background-color: #eeeeee;">Entity.Has[Multiplicity](Property).With[Multiplicity](Property).Map(Option)</span>
+`Entity.Has[Multiplicity](Property).With[Multiplicity](Property).Map(Option)`
 
 其中，Has[Multiplicity] 包含以下三种方法：
 
@@ -147,17 +147,17 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 其实这里的语义很清晰，如果我把这段英文直接翻译成中文，我觉得可以是这样子的。
 
-“我有许多的 <span style="background-color: #eeeeee;">Article</span>，它有一个 <span style="background-color: #eeeeee;">Owner </span>且是必须的，外键被映射成了 <span style="color: #000000; background-color: #eeeeee;">UserID</span>”
+“我有许多的 `Article`，它有一个 `Owner`且是必须的，外键被映射成了 <span style="color: #000000; background-color: #eeeeee;">UserID</span>”
 
 是不是很清晰的关系？另外，两个实体间的关系只要在任意一个实体上配置一次就行了，但是配置方法不同。
 
-上面是配置在主对象 <span style="background-color: #eeeeee;">User </span>上的，如果配置在 <span style="background-color: #eeeeee;">Article </span>上，语句应该是这样写的：
+上面是配置在主对象 `User`上的，如果配置在 `Article`上，语句应该是这样写的：
 
     HasRequired(a => a.Owner)
                     .WithMany(u => u.Articles)
                     .Map(x => x.MapKey("UserID"));
 
-“我有一个 <span style="background-color: #eeeeee;">Owner </span>切是必须的，它有很多的 <span style="background-color: #eeeeee;">Article</span>，外键被映射成了 <span style="background-color: #eeeeee;">UserID</span>”
+“我有一个 `Owner`切是必须的，它有很多的 `Article`，外键被映射成了 `UserID`”
 
 &nbsp;
 

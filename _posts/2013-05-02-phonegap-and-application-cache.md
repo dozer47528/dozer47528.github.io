@@ -52,13 +52,13 @@ HTTP 协议中控制缓存也比较纠结，总会有个 <a href="http://www.w3.
 
 `AddType text/cache-manifest .appcache`
 
-既然没有标准的后缀名，那我就偷懒了，一开始尝试的时候我直接用了 <span style="background-color: #eeeeee;">.txt</span> 格式。
+既然没有标准的后缀名，那我就偷懒了，一开始尝试的时候我直接用了 `.txt` 格式。
 
 Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览器不正常！
 
 一开始我折腾了大半天，后来感觉会不会是 mime type 的问题？于是我设置了一下，后来就正常了！看上去一定要设置一下 mime type，不要偷懒！
 
-那后缀名到底是什么呢？虽然说没有标准，但是我发现 tomcat 的配置中默认已经有了，默认是 <span style="background-color: #eeeeee;">.appcache</span> ，然后看到网上的教程也都是它，所以基本上已经达成共识了。
+那后缀名到底是什么呢？虽然说没有标准，但是我发现 tomcat 的配置中默认已经有了，默认是 `.appcache` ，然后看到网上的教程也都是它，所以基本上已经达成共识了。
 
 &nbsp;
 
@@ -66,7 +66,7 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
 
 在折腾的过程中，发现了一个很纠结的问题。
 
-我的 <span style="background-color: #eeeeee;">index.html</span> 页面引用了一个 <span style="background-color: #eeeeee;">.css</span> 文件，和一个 <span style="background-color: #eeeeee;">.appcache</span> 文件，并把 <span style="background-color: #eeeeee;">.css</span> 文件加入了缓存清单中。诡异的是，<span style="background-color: #eeeeee;">index.html</span> 明明不在缓存清单中，却被缓存了起来。
+我的 `index.html` 页面引用了一个 `.css` 文件，和一个 `.appcache` 文件，并把 `.css` 文件加入了缓存清单中。诡异的是，`index.html` 明明不在缓存清单中，却被缓存了起来。
 
 那如果我的页面是一个动态网页怎么办？
 
@@ -74,7 +74,7 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
 
 为何？因为这个功能是用来做离线应用的，不把这个页面缓存起来就不能离线了。
 
-还好我们想做的是单页面应用程序，<span style="background-color: #eeeeee;">index</span> 页面本来就是不会动的，所以没有什么问题。
+还好我们想做的是单页面应用程序，`index` 页面本来就是不会动的，所以没有什么问题。
 
 那如果你的页面是一个动态网页怎么办？
 
@@ -125,23 +125,23 @@ Chrome 正常，iPhone 上的浏览器正常，但是 Android 手机上的浏览
 
 #### 跨域：
 
-Application Cache 和 ajax 请求一样无法跨域，PhoneGap 中一般是用一个本地的 <span style="background-color: #eeeeee;">index</span> 文件，然后把类库也打包在本地，而一些业务的 <span style="background-color: #eeeeee;">js</span> 和经常变的 <span style="background-color: #eeeeee;">css</span> 就放在服务器上。这样的话，就遇到跨域的问题了，<span style="background-color: #eeeeee;">index</span> 文件和 <span style="background-color: #eeeeee;">.appcache</span> 文件不在同一个域下。
+Application Cache 和 ajax 请求一样无法跨域，PhoneGap 中一般是用一个本地的 `index` 文件，然后把类库也打包在本地，而一些业务的 `js` 和经常变的 `css` 就放在服务器上。这样的话，就遇到跨域的问题了，`index` 文件和 `.appcache` 文件不在同一个域下。
 
 很纠结，很难解决，后来一想：打包在本地不就是为了缓存起来加快访问速度吗？Application Cache 也是解决同样的问题。既然有了 Application Cache，那为何还要把一些静态文件打包放在本地呢？
 
-嗯，把整个网站都放到服务器上，包括 <span style="background-color: #eeeeee;">index.html</span> ，然后问题就解决了。
+嗯，把整个网站都放到服务器上，包括 `index.html` ，然后问题就解决了。
 
 &nbsp;
 
 #### 禁用 Application Cache：
 
-在折腾的过程中，我想把缓存去掉了。于是我把 <span style="background-color: #eeeeee;">index.html</span> 中对缓存清单的引用去掉了，但是却没有效果！
+在折腾的过程中，我想把缓存去掉了。于是我把 `index.html` 中对缓存清单的引用去掉了，但是却没有效果！
 
 后来仔细想了一下，浏览器更新的流程如下：
 
-先缓存了 <span style="background-color: #eeeeee;">index.html</span> 和 <span style="background-color: #eeeeee;">.css</span> 文件，我把 index.html 中对缓存清单的引用去掉了，可是 <span style="background-color: #eeeeee;">.appcache</span> 文件还在服务器上。浏览器打开页面的时候直接去访问 <span style="background-color: #eeeeee;">.appcache</span> 文件，发现没有变更，就认为缓存没有更新了。
+先缓存了 `index.html` 和 `.css` 文件，我把 index.html 中对缓存清单的引用去掉了，可是 `.appcache` 文件还在服务器上。浏览器打开页面的时候直接去访问 `.appcache` 文件，发现没有变更，就认为缓存没有更新了。
 
-所以在这种场景下，修改<span style="background-color: #eeeeee;"> index.html</span> 是没有效果的，你必须把 <span style="background-color: #eeeeee;">.appcache</span> 删掉后才可以禁用 Application Cache。
+所以在这种场景下，修改`index.html` 是没有效果的，你必须把 `.appcache` 删掉后才可以禁用 Application Cache。
 
 &nbsp;
 
@@ -157,10 +157,10 @@ Application Cache 和 ajax 请求一样无法跨域，PhoneGap 中一般是用�
 
 另一个很郁闷的问题：如果你的缓存清单更新了，用户需要刷新2次后才能用到你最新的文件。
 
-第一次刷新会更新缓存的文件，但是页面已经加载好之前的文件了，<span style="background-color: #eeeeee;">js</span> 也已经执行完了。
+第一次刷新会更新缓存的文件，但是页面已经加载好之前的文件了，`js` 也已经执行完了。
 
 第二次刷新才会用到更新好的文件。
 
-仔细想想这样做也是有道理的，因为不可能每次刷新都去等缓存清单加载后再去加载。加载完成后也不可能再把新的文件替换并执行，特别是 <span style="background-color: #eeeeee;">js</span> 。
+仔细想想这样做也是有道理的，因为不可能每次刷新都去等缓存清单加载后再去加载。加载完成后也不可能再把新的文件替换并执行，特别是 `js` 。
 
 其实这个问题也是有办法解决的，因为缓存更新完毕后会触发一个事件，可以在这个事件里提醒用户是否要刷新页面？或者直接强制刷新？总之这里的问题其实不会很大。

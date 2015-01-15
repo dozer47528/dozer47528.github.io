@@ -80,7 +80,7 @@ tags:
     var firstPerson = people[0];
     SomeCustomMethodToDisplay(firstPerson.Photo.Caption);
 
-如上述代码所示，一开始读取 <span style="background-color: #eeeeee;">People</span> 的时候只会读取表中的一部分数据。当需要读取额外的数据的时候，Entity Framework 默认会使用延迟加载。
+如上述代码所示，一开始读取 `People` 的时候只会读取表中的一部分数据。当需要读取额外的数据的时候，Entity Framework 默认会使用延迟加载。
 
 &nbsp;
 
@@ -169,7 +169,7 @@ tags:
       public string Activities { get; set; }
     }
 
-这两个实体会被配置在同一张表中，并且会被自动加上一个 <span style="background-color: #eeeeee;">Discriminator</span> 列（默认是），用来区分存放在这个表中的到底是什么类型。
+这两个实体会被配置在同一张表中，并且会被自动加上一个 `Discriminator` 列（默认是），用来区分存放在这个表中的到底是什么类型。
 
 你也可以用 Fluent API 来配置这个用来鉴别的列叫什么，和鉴别方式：
 

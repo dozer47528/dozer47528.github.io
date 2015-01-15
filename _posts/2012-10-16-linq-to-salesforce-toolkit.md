@@ -47,7 +47,7 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 #### 使用 LinqToSalesforce.Toolkit 项目中的代码
 
-复制 <span style="background-color: #eeeeee;">SalesforceHelper.cs</span> 和 <span style="background-color: #eeeeee;">SalesforceProvider.cs</span> 两个文件到你自己的项目中。
+复制 `SalesforceHelper.cs` 和 `SalesforceProvider.cs` 两个文件到你自己的项目中。
 
 删除两个文件中的引用：<span style="background-color: #eeeeee;">using LinqToSalesforce.Toolkit.Mock;</span>
 
@@ -384,8 +384,8 @@ dll 只要使用 LinqToSalesforce 这个 dll 即可。
 
 测试项目是可以连上真实环境运行的，你只要修改配置文件，即可直接运行：
 
-1.  配置 config 中的 <span style="background-color: #eeeeee;">sfusername</span> 和 <span style="background-color: #eeeeee;">sfpassword</span>
-2.  如果你的项目是线上项目，修改下面的 <span style="background-color: #eeeeee;">https://test.salesforce.com/services/Soap/c/25.0</span>，改成 <span style="background-color: #eeeeee;">https://login.salesforce.com/services/Soap/c/25.0</span>
+1.  配置 config 中的 `sfusername` 和 `sfpassword`
+2.  如果你的项目是线上项目，修改下面的 `https://test.salesforce.com/services/Soap/c/25.0`，改成 `https://login.salesforce.com/services/Soap/c/25.0`
 
 这里为什么不用再引用自己的 Salesforce API 里？因为我这里引用了一个基础的 API，包含了 Salesforce 中基本的类，所以可以通用。
 

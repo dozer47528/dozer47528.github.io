@@ -64,9 +64,9 @@ tags:
             public DataType ValueType { get; set; }
         }
 
-<span style="background-color: #eeeeee;">QueryGroup</span> 包含了一组查询条件，也包含了一组子 <span style="background-color: #eeeeee;">QueryGroup</span>，另外还有一个重要的属性 <span style="background-color: #eeeeee;">GroupType</span> ，代表这组数据的逻辑关系是 And 还是 Or。也就是上述界面中的“任何”和“任意”选项。
+`QueryGroup` 包含了一组查询条件，也包含了一组子 `QueryGroup`，另外还有一个重要的属性 `GroupType` ，代表这组数据的逻辑关系是 And 还是 Or。也就是上述界面中的“任何”和“任意”选项。
 
-<span style="background-color: #eeeeee;">QueryItem</span> 内部属性分别是字段名、逻辑操作类型（等于、不等于、大于…）、和属性类型（整数、文本…）。
+`QueryItem` 内部属性分别是字段名、逻辑操作类型（等于、不等于、大于…）、和属性类型（整数、文本…）。
 
 &nbsp;
 
@@ -88,9 +88,9 @@ tags:
 
 先来看看前端设计方案吧，上面是动态条件，下面是一些固定的条件。
 
-这里的结构和上面的数据结构一致，把 html 分两类，<span style="background-color: #eeeeee;">QueryGroup</span> 和 <span style="background-color: #eeeeee;">QueryItem</span>。
+这里的结构和上面的数据结构一致，把 html 分两类，`QueryGroup` 和 `QueryItem`。
 
-分别放在两个隐藏的 <span style="background-color: #eeeeee;">div</span> 中，当做模版使用。
+分别放在两个隐藏的 `div` 中，当做模版使用。
 
 代码如下：
 
@@ -218,7 +218,7 @@ tags:
 
 实例化成对象的方法也非常简单，需要用到递归，基本逻辑是：
 
-对最外层 <span style="background-color: #eeeeee;">QueryGroup</span> 内部的对象循环一次，如果是 <span style="background-color: #eeeeee;">QueryItem</span> 就指着取值，如果还是 <span style="background-color: #eeeeee;">QueryGroup</span> 就递归调用此方法。
+对最外层 `QueryGroup` 内部的对象循环一次，如果是 `QueryItem` 就指着取值，如果还是 `QueryGroup` 就递归调用此方法。
 
 代码如下：
 
@@ -249,7 +249,7 @@ tags:
 
 最后，表单是表单提交，最终会生成一个对象，把这个对象序列化成 json 然后编码一下：
 
-<span style="background-color: #eeeeee;">encodeURIComponent(JSON.stringify(item))</span>
+`encodeURIComponent(JSON.stringify(item))`
 
 &nbsp;
 
@@ -268,7 +268,7 @@ tags:
 
 最后，生成查询条件其实也非常简单，也是一个方法，递归调用即可，基本逻辑和前段把表单数据实例化的过程很像。
 
-我在 <span style="background-color: #eeeeee;">QueryGroup</span> 中扩展了一个方法，其中 <span style="background-color: #eeeeee;">ICriteria</span> 和 <span style="background-color: #eeeeee;">IMongoQuery</span> 结构类似，用过 mongodb 的同学当它是 <span style="background-color: #eeeeee;">IMongoQuery</span> 即可，它只是包了一层，最终也是生成 <span style="background-color: #eeeeee;">IMongoQuery</span>。
+我在 `QueryGroup` 中扩展了一个方法，其中 `ICriteria` 和 `IMongoQuery` 结构类似，用过 mongodb 的同学当它是 `IMongoQuery` 即可，它只是包了一层，最终也是生成 `IMongoQuery`。
 
     public class QueryGroup
         {

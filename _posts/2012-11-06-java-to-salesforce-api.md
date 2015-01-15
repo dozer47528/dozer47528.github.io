@@ -77,7 +77,7 @@ tags:
 
 然后找到这个 jar 包：
 
-<span style="background-color: #eeeeee;">axis.jar/org.apache.axis.wsdl.WSDL2Java.class</span>
+`axis.jar/org.apache.axis.wsdl.WSDL2Java.class`
 
 里面有个 main 函数，运行它：
 

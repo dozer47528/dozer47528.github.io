@@ -36,7 +36,7 @@ tags:
 
 没错，这就是 Code First 的配置方法之一：Data Annotations
 
-直译叫做数据批注，原理就是在对应的字段上加上<span style="background-color: #eeeeee;"> System.ComponentModel.DataAnnotations</span> 命名空间下的一些 Attribute，就可以实现各种配置了。
+直译叫做数据批注，原理就是在对应的字段上加上` System.ComponentModel.DataAnnotations` 命名空间下的一些 Attribute，就可以实现各种配置了。
 
 这种作法在 Model First 和 Database First 的时代就有了，也可以同时被用来做 MVC 的数据验证。
 
@@ -107,7 +107,7 @@ tags:
   </tr>
 </table>
 
-长度是用来描述 <span style="background-color: #eeeeee;">String </span>或者 <span style="background-color: #eeeeee;">Byte </span>数组的，默认会被设置成对应类型的最大值。例如在 SQL Server 中，它们分别会被设置成 <span style="background-color: #eeeeee;">nvarchar(max)</span> 和 <span style="background-color: #eeeeee;">varbinary(max)</span>。
+长度是用来描述 `String`或者 `Byte`数组的，默认会被设置成对应类型的最大值。例如在 SQL Server 中，它们分别会被设置成 `nvarchar(max)` 和 `varbinary(max)`。
 
 &nbsp;
 

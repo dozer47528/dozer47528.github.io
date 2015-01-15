@@ -80,13 +80,13 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 
 #### 框架内容简介：
 
-<span style="background-color: #eeeeee;">SalesforceQuery</span>：职责是保存 IQueryProvider 和 Expression 的引用，并调用 <span style="background-color: #eeeeee;">IQueryProvider</span> 得到最终结果；
+`SalesforceQuery`：职责是保存 IQueryProvider 和 Expression 的引用，并调用 `IQueryProvider` 得到最终结果；
 
-<span style="background-color: #eeeeee;">SalesforceProviderBase</span>： <span style="background-color: #eeeeee;">IQueryProvider </span>的具体实现，抽象类，需要自己继承后实现关键算法，职责是调用 <span style="background-color: #eeeeee;">ExpressionVisitor</span> 把表达式树解析成 SOQL 语句；
+`SalesforceProviderBase`： `IQueryProvider `的具体实现，抽象类，需要自己继承后实现关键算法，职责是调用 `ExpressionVisitor` 把表达式树解析成 SOQL 语句；
 
-<span style="background-color: #eeeeee;">SalesforceVisitor</span>：<span style="background-color: #eeeeee;">ExpressionVisitor</span> 的具体实现，职责就是把表达式树解析成 SOQL 语句。
+`SalesforceVisitor`：`ExpressionVisitor` 的具体实现，职责就是把表达式树解析成 SOQL 语句。
 
-备注：<span style="background-color: #eeeeee;">SalesforceProviderBase</span> 为什么是抽象类，还需要手动实现关键算法？因为 Salesforce 的 API 是利用强类型 **<a href="http://www.w3.org/TR/wsdl" target="_blank">WSDL </a> **生成的，它们也不是统一的，每个组织都有自己的 WSDL 文件，所以如果没有统一的查询方法和对象，我无法在框架中实现它。但是，我的 <span style="background-color: #eeeeee;">Test</span> 项目中给出了一个实现示例，非常简单的示例。
+备注：`SalesforceProviderBase` 为什么是抽象类，还需要手动实现关键算法？因为 Salesforce 的 API 是利用强类型 **<a href="http://www.w3.org/TR/wsdl" target="_blank">WSDL </a> **生成的，它们也不是统一的，每个组织都有自己的 WSDL 文件，所以如果没有统一的查询方法和对象，我无法在框架中实现它。但是，我的 `Test` 项目中给出了一个实现示例，非常简单的示例。
 
 &nbsp;
 
@@ -97,7 +97,7 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
     protected abstract int GetCount(string cmd);
     protected abstract IEnumerable<T> GetEnumerable(string cmd);
 
-传入的参数都是已经解析好的 <span style="background-color: #eeeeee;">SOQL</span> 语句，第一个方法是用来返回总数的，第二个方法是用来返回 IEnumerable<T> 的。
+传入的参数都是已经解析好的 `SOQL` 语句，第一个方法是用来返回总数的，第二个方法是用来返回 IEnumerable<T> 的。
 
 项目中的 LinqToSalesforce.Test/SalesforceQuery/SalesforceProviderSample.cs 是一段实例代码。
 
@@ -123,9 +123,9 @@ Salesforce 的 API 调用方法还算简单，可以自动生成实体，但是�
 #### 注意事项：
 
 *   实现 SalesforceProviderBase<T> 中的 GetEnumerable 方法的时候请注意利用迭代器模式取回所有数据，因为 Salesforce 默认只会返回 200 条数据。
-*   <span style="background-color: #eeeeee;">SOQL</span> 没有 <span style="background-color: #eeeeee;">join</span> 查询，如果要查询关联对象的话，SOQL 是这样实现的：<span style="background-color: #eeeeee;">[SELECT Accoint.Name From Contract]<span style="background-color: #ffffff;">，而在 Linq To Salesforce 中，这种查询可能会有点麻烦，具体的可以参考 测试项目中的 <span style="background-color: #eeeeee;">SelectRelatedTest</span> 测试。</span></span>
-*   <span style="background-color: #eeeeee;"><span style="background-color: #eeeeee;"><span style="background-color: #ffffff;">创建查询对象的时候，</span></span></span>SelectTypeEnum 是什么？因为 Salesforce 的特殊性（没有<span style="background-color: #eeeeee;"> Select *</span>，没有 <span style="background-color: #eeeeee;">join</span>），我默认提供了四种查询查询模式：默认查询Id字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询Id字段后面再调用 Select 方法的时候附加上 Select 中的类容（默认）；默认查询所有字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询所有字段后面再调用 Select 方法的时候附加上 Select 中的类容。
-*   别用 <span style="background-color: #eeeeee;">DateTime</span> 类型和 Salesforce 中的日期类型做比较，因为在 .net 中没有日期类型，所以它们都被转换成了 <span style="background-color: #eeeeee;">DateTime</span>。但在 <span style="background-color: #eeeeee;">SOQL</span> 中，他们的格式是不一样的。所以如果要用日期类型作为筛选条件，那么请使用 <span style="background-color: #eeeeee;">SalesforceDate</span> 这个对象。
+*   `SOQL` 没有 `join` 查询，如果要查询关联对象的话，SOQL 是这样实现的：<span style="background-color: #eeeeee;">[SELECT Accoint.Name From Contract]<span style="background-color: #ffffff;">，而在 Linq To Salesforce 中，这种查询可能会有点麻烦，具体的可以参考 测试项目中的 `SelectRelatedTest` 测试。</span></span>
+*   <span style="background-color: #eeeeee;"><span style="background-color: #eeeeee;"><span style="background-color: #ffffff;">创建查询对象的时候，</span></span></span>SelectTypeEnum 是什么？因为 Salesforce 的特殊性（没有<span style="background-color: #eeeeee;"> Select *</span>，没有 `join`），我默认提供了四种查询查询模式：默认查询Id字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询Id字段后面再调用 Select 方法的时候附加上 Select 中的类容（默认）；默认查询所有字段后面再调用 Select 方法的时候使用 Select 中的类容；默认查询所有字段后面再调用 Select 方法的时候附加上 Select 中的类容。
+*   别用 `DateTime` 类型和 Salesforce 中的日期类型做比较，因为在 .net 中没有日期类型，所以它们都被转换成了 `DateTime`。但在 `SOQL` 中，他们的格式是不一样的。所以如果要用日期类型作为筛选条件，那么请使用 `SalesforceDate` 这个对象。
 
 &nbsp;
 

@@ -18,7 +18,7 @@ tags:
 
 很常见的问题，没有接口，那如何 <a href="http://zh.wikipedia.org/wiki/%E6%A8%A1%E6%8B%9F%E5%AF%B9%E8%B1%A1" target="_blank"><strong>Mock</strong></a> 非虚方法和<a href="http://msdn.microsoft.com/zh-cn/library/ms173150(v=vs.80).aspx" target="_blank"><strong>密封类</strong></a>？
 
-我在上一篇文章（<a title="单元测试有感" href="/2012/11/thinking-in-unit-test/" target="_blank"><strong>单元测试有感</strong></a>）中介绍了单元测试的原则，也提到了一些技巧，但是代码是以前写的，总会有很多不能克服的地方，还有也不可能把所有的方法改成 <span style="background-color: #eeeeee;">vitrual </span>，或者所有的类都有接口。
+我在上一篇文章（<a title="单元测试有感" href="/2012/11/thinking-in-unit-test/" target="_blank"><strong>单元测试有感</strong></a>）中介绍了单元测试的原则，也提到了一些技巧，但是代码是以前写的，总会有很多不能克服的地方，还有也不可能把所有的方法改成 `vitrual`，或者所有的类都有接口。
 
 &nbsp;
 
@@ -145,7 +145,7 @@ NUnit 项目同样是一个演示的测试项目，但是用的是 <a href="http
 
 `"$(ProjectDir)MockHelper\MockHelper.exe"`
 
-这里不用传参数，因为运行这个工具的是 Test 项目，而这个项目默认的运行位置就是 <span style="background-color: #eeeeee;">bin/Debug|Release</span>，所以需要修改的 dll 就在下面。
+这里不用传参数，因为运行这个工具的是 Test 项目，而这个项目默认的运行位置就是 `bin/Debug|Release`，所以需要修改的 dll 就在下面。
 
 &nbsp;
 
@@ -260,11 +260,11 @@ NUnit 运行结果如下：
 
 在我的 Demo 中它是可以的，但是到了真正的项目中，它却一直出错。
 
-后来研究后发现，在出错的项目中， Test 的运行目录不是在 <span style="background-color: #eeeeee;">bin/Debug</span> 下，
+后来研究后发现，在出错的项目中， Test 的运行目录不是在 `bin/Debug` 下，
 
 而是在 <span style="background-color: #eeeeee;">TestResults/dozer_DOZER-PC 2012-11-27 11_11_22/Out</span>
 
-而且这个文件夹会在每次运行测试的时候创建一个新的。里面的 dll 并不是从 <span style="background-color: #eeeeee;">bin/Debug</span> 中复制过去的，所以我工具修改后的 dll 没有起到作用。
+而且这个文件夹会在每次运行测试的时候创建一个新的。里面的 dll 并不是从 `bin/Debug` 中复制过去的，所以我工具修改后的 dll 没有起到作用。
 
 可是为什么我的 Demo 中没有这样？后来发现后面一个项目启用了**<a href="http://msdn.microsoft.com/zh-cn/library/ms182473(v=vs.80).aspx" target="_blank">测试部署</a>**功能，虽然不知道这个功能具体的用处，但是取消后出错的项目也正常了！
 
@@ -318,7 +318,7 @@ NUnit 运行结果如下：
 
 [<img class="alignnone size-medium wp-image-1014" title="non-virtual" alt="non-virtual" src="/uploads/2012/11/non-virtual-300x102.png" width="300" height="102" />][6]
 
-原来，我手动修改和自动修改有一个被忽略掉的地方，就是调用被修改函数的函数。这里的 IL 代码，一个是 <span style="background-color: #eeeeee;">call</span>，一个是 <span style="background-color: #eeeeee;">callvirt</span>。
+原来，我手动修改和自动修改有一个被忽略掉的地方，就是调用被修改函数的函数。这里的 IL 代码，一个是 `call`，一个是 `callvirt`。
 
 前者只会调用自身的函数，就算后面后覆盖（new），也不会受到影响。
 

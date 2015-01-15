@@ -43,11 +43,11 @@ WCF 开启调试模式非常简单，找到 web.config 文件，然后打开 VS�
 
 Google 后发现，因为这个工具是 VS2010 自带的，它并不知道你的 web.config 文件是什么版本的，所以在启动调试模式的时候会引入2个 dll，并且设置的是 4.0 版本的，那当然会出错了！
 
-修改方法很简单，在 web.config 中搜索：<span style="background-color: #eeeeee;">System.Diagnostics.XmlWriterTraceListener</span>
+修改方法很简单，在 web.config 中搜索：`System.Diagnostics.XmlWriterTraceListener`
 
 然后把原来的： <span style="background-color: #eeeeee;">type=&#8221;System.Diagnostics.XmlWriterTraceListener, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35&#8243;</span>
 
-改成：<span style="background-color: #eeeeee;">type=&#8221;System.Diagnostics.XmlWriterTraceListener&#8221;</span> 即可。
+改成：`type=&#8221;System.Diagnostics.XmlWriterTraceListener&#8221;` 即可。
 
 我本来配置成 3.5 的，但是不知道为何还是不行，后来把版本信息去掉后反而可以了。
 

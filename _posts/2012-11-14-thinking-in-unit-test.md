@@ -194,11 +194,11 @@ b:false    a:1
 
 好了，再回归主题：如何覆盖到所有的情况？
 
-上面的第二种写法，<span style="background-color: #eeeeee;">Method2</span> 和 <span style="background-color: #eeeeee;">Method3</span> 已经非常好测了，大家都会写。
+上面的第二种写法，`Method2` 和 `Method3` 已经非常好测了，大家都会写。
 
-那 <span style="background-color: #eeeeee;">Method1</span> 怎么测呢？如果 <span style="background-color: #eeeeee;">Method2</span> 和 <span style="background-color: #eeeeee;">Method3</span> 已经正确了，那我应该只测 <span style="background-color: #eeeeee;">Method1</span> 中的逻辑代码就行了。
+那 `Method1` 怎么测呢？如果 `Method2` 和 `Method3` 已经正确了，那我应该只测 `Method1` 中的逻辑代码就行了。
 
-那我怎么能去掉变量 <span style="background-color: #eeeeee;">a</span> 对 <span style="background-color: #eeeeee;">Method1</span> 的影响呢？因为 <span style="background-color: #eeeeee;">Method1</span> 中的逻辑只关心变量 <span style="background-color: #eeeeee;">b</span> 的值。
+那我怎么能去掉变量 `a` 对 `Method1` 的影响呢？因为 `Method1` 中的逻辑只关心变量 `b` 的值。
 
 有经验的同学肯定想到解决方案了：
 
@@ -214,11 +214,11 @@ b:false    a:1
             }
         }
 
-Mock 一个 <span style="background-color: #eeeeee;">TestClass</span> ，并把它的两个方法覆盖掉（记得把原来的两个方法加上 <span style="background-color: #eeeeee;">virtual</span> 关键字）。
+Mock 一个 `TestClass` ，并把它的两个方法覆盖掉（记得把原来的两个方法加上 `virtual` 关键字）。
 
 *这里的方案其实并不好，如果你是面向接口的编程的话，想要覆盖、替代一些方法会非常简单。*
 
-我把这两个函数的结果写死了，我就可以安心的测 <span style="background-color: #eeeeee;">Method1</span> 了！
+我把这两个函数的结果写死了，我就可以安心的测 `Method1` 了！
 
 当它们三个函数都测试通过了，那么它们整体也不会有问题了。
 
