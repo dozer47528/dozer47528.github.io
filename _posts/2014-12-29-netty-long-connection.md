@@ -140,6 +140,8 @@ for rapid development of maintainable high performance protocol servers & client
 
 [构建C1000K的服务器](http://www.ideawu.net/blog/archives/740.html)
 
+[100万并发连接服务器笔记之1M并发连接目标达成](http://www.blogjava.net/yongboy/archive/2013/04/11/397677.html)
+
 [淘宝技术分享 HTTP长连接200万尝试及调优](http://www.linuxde.net/2013/08/15150.html)
 
 &nbsp;
