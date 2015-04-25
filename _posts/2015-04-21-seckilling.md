@@ -191,8 +191,8 @@ tags:
     | Field     | Type             | Null | Key | Default | Extra          |
     +-----------+------------------+------+-----+---------+----------------+
     | id        | int(11) unsigned | NO   | PRI | NULL    | auto_increment |
-    | buy_max   | int(11)          | YES  |     | NULL    |                |
-    | buy_count | int(11)          | YES  |     | NULL    |                |
+    | buy_max   | int(11)          | NO   |     | NULL    |                |
+    | buy_count | int(11)          | NO   |     | NULL    |                |
     +-----------+------------------+------+-----+---------+----------------+
 
 &nbsp;
