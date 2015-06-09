@@ -30,6 +30,7 @@ permalink: /about/
 * [发如雪](http://www.cnblogs.com/faruxue/)
 * [浊酒](http://blog.xujif.com/)
 * [随网之舞](http://dancewithnet.com/)
+* [咀嚼之味](http://jerryzou.com/)
 
 --------
 
