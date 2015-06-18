@@ -4,7 +4,7 @@ author: Dozer
 layout: post
 permalink: /2015/06/github-pages-and-cdn/
 categories:
-  - 编程技术
+  - 互联网
 tags:
   - Github
   - CDN
