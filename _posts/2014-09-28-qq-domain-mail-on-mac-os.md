@@ -2,7 +2,7 @@
 title: Mac OS 中使用QQ域名邮箱
 author: Dozer
 layout: post
-permalink: /2014/09/qq-domain-mail-on-mac-os/
+permalink: /2014/09/qq-domain-mail-on-mac-os.html
 categories:
   - 操作系统
 tags:

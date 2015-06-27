@@ -2,7 +2,7 @@
 title: PhoneGap 与 Google Analytics
 author: Dozer
 layout: post
-permalink: /2013/10/phonegap-and-google-analytics/
+permalink: /2013/10/phonegap-and-google-analytics.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

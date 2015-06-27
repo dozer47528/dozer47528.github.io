@@ -2,7 +2,7 @@
 title: '不继承 IEnumerable<T> 或 IQueryable<T> 的类型怎么使用 LINQ 查询'
 author: Dozer
 layout: post
-permalink: /2011/08/to-enable-custom-linq-querying-of-generic-type/
+permalink: /2011/08/to-enable-custom-linq-querying-of-generic-type.html
 categories:
   - 编程技术
 tags:

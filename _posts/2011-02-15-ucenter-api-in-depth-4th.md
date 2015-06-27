@@ -2,7 +2,7 @@
 title: 深入研究 UCenter API 之 网站搭建
 author: Dozer
 layout: post
-permalink: /2011/02/ucenter-api-in-depth-4th/
+permalink: /2011/02/ucenter-api-in-depth-4th.html
 categories:
   - 编程技术
 tags:

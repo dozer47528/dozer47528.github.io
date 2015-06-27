@@ -2,7 +2,7 @@
 title: 零宽度空格
 author: Dozer
 layout: post
-permalink: /2014/06/zero-width-space/
+permalink: /2014/06/zero-width-space.html
 categories:
   - 编程技术
 tags:

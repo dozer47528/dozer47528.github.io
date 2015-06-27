@@ -2,7 +2,7 @@
 title: zepto 和 backbone 配合使用的坑
 author: Dozer
 layout: post
-permalink: /2013/08/problem-with-zepto-and-backbone/
+permalink: /2013/08/problem-with-zepto-and-backbone.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

@@ -2,7 +2,7 @@
 title: 建站指引 —— 域名
 author: Dozer
 layout: post
-permalink: /2013/02/site-domain/
+permalink: /2013/02/site-domain.html
 categories:
   - 互联网
 tags:

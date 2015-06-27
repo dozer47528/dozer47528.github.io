@@ -2,7 +2,7 @@
 title: Linq To Salesforce Toolkit
 author: Dozer
 layout: post
-permalink: /2012/10/linq-to-salesforce-toolkit/
+permalink: /2012/10/linq-to-salesforce-toolkit.html
 categories:
   - 编程技术
 tags:

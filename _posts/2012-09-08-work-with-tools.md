@@ -2,7 +2,7 @@
 title: 工具思维
 author: Dozer
 layout: post
-permalink: /2012/09/work-with-tools/
+permalink: /2012/09/work-with-tools.html
 categories:
   - 大杂烩
 tags:

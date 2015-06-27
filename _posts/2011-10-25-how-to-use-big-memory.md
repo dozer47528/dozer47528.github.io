@@ -2,7 +2,7 @@
 title: 大内存有大用处
 author: Dozer
 layout: post
-permalink: /2011/10/how-to-use-big-memory/
+permalink: /2011/10/how-to-use-big-memory.html
 categories:
   - 操作系统
 tags:

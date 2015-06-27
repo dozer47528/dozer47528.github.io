@@ -2,7 +2,7 @@
 title: Java 中的 URL编码
 author: Dozer
 layout: post
-permalink: /2014/03/url-encoding-in-java/
+permalink: /2014/03/url-encoding-in-java.html
 categories:
   - 编程技术
 tags:

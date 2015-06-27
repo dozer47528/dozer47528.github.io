@@ -2,7 +2,7 @@
 title: WordPress 迁移 Github Page + Jekyll
 author: Dozer
 layout: post
-permalink: /2014/08/wordpress-to-github-page-jekyll/
+permalink: /2014/08/wordpress-to-github-page-jekyll.html
 categories:
   - 互联网
 tags:

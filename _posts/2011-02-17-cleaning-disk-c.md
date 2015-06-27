@@ -2,7 +2,7 @@
 title: 关闭鸡肋功能，彻底清理C盘
 author: Dozer
 layout: post
-permalink: /2011/02/cleaning-disk-c/
+permalink: /2011/02/cleaning-disk-c.html
 categories:
   - 操作系统
 tags:

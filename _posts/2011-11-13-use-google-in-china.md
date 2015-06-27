@@ -2,7 +2,7 @@
 title: 用好 Google.com
 author: Dozer
 layout: post
-permalink: /2011/11/use-google-in-china/
+permalink: /2011/11/use-google-in-china.html
 categories:
   - 互联网
 tags:

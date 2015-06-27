@@ -2,7 +2,7 @@
 title: 禁用 RestTemplate 的自动重定向功能
 author: Dozer
 layout: post
-permalink: /2014/05/disable-resttemplate-redirect/
+permalink: /2014/05/disable-resttemplate-redirect.html
 categories:
   - 编程技术
 tags:

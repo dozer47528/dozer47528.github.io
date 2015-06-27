@@ -2,7 +2,7 @@
 title: 深入研究 UCenter API 之 加密与解密
 author: Dozer
 layout: post
-permalink: /2011/01/ucenter-api-in-depth-3rd/
+permalink: /2011/01/ucenter-api-in-depth-3rd.html
 categories:
   - 编程技术
 tags:

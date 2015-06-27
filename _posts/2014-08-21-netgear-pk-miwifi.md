@@ -2,7 +2,7 @@
 title: Netgear3700v4 PK 小米路由器 mini
 author: Dozer
 layout: post
-permalink: /2014/08/netgear-pk-miwifi/
+permalink: /2014/08/netgear-pk-miwifi.html
 categories:
   - 数码产品
 tags:

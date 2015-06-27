@@ -2,7 +2,7 @@
 title: 如何使用网页上的富文本编辑器
 author: Dozer
 layout: post
-permalink: /2011/06/how-to-use-rich-text-editor/
+permalink: /2011/06/how-to-use-rich-text-editor.html
 sfw_comment_form_password:
   - ils6Nebhaw5e
 categories:

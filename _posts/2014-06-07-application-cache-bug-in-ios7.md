@@ -2,7 +2,7 @@
 title: 使用 Application Cache 后在 iOS7 中出现的 bug
 author: Dozer
 layout: post
-permalink: /2014/06/application-cache-bug-in-ios7/
+permalink: /2014/06/application-cache-bug-in-ios7.html
 categories:
   - 编程技术
 tags:

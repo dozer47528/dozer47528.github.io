@@ -2,7 +2,7 @@
 title: 利用 WeakReference 关闭守护线程
 author: Dozer
 layout: post
-permalink: /2014/10/weakreference-exit-in-java/
+permalink: /2014/10/weakreference-exit-in-java.html
 categories:
   - 编程技术
 tags:

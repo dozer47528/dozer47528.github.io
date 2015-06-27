@@ -2,7 +2,7 @@
 title: 在 WP7 中同步多个 Google 日历
 author: Dozer
 layout: post
-permalink: /2012/03/sync-multi-calendar-in-wp/
+permalink: /2012/03/sync-multi-calendar-in-wp.html
 categories:
   - 手机
 tags:

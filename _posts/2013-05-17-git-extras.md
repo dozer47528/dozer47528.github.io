@@ -2,7 +2,7 @@
 title: git 环境搭建进阶
 author: Dozer
 layout: post
-permalink: /2013/05/git-extras/
+permalink: /2013/05/git-extras.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

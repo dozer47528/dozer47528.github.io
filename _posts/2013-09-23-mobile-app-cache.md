@@ -2,7 +2,7 @@
 title: Mobile App 缓存设计逻辑
 author: Dozer
 layout: post
-permalink: /2013/09/mobile-app-cache/
+permalink: /2013/09/mobile-app-cache.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

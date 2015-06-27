@@ -2,7 +2,7 @@
 title: 迭代器的妙用
 author: Dozer
 layout: post
-permalink: /2012/07/the-clever-use-of-the-iterator/
+permalink: /2012/07/the-clever-use-of-the-iterator.html
 categories:
   - 编程技术
 tags:

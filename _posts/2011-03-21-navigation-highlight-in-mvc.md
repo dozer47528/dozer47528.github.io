@@ -2,7 +2,7 @@
 title: MVC 下导航高亮的完美解决方案
 author: Dozer
 layout: post
-permalink: /2011/03/navigation-highlight-in-mvc/
+permalink: /2011/03/navigation-highlight-in-mvc.html
 categories:
   - 编程技术
 tags:

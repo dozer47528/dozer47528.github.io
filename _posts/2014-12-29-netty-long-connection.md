@@ -2,7 +2,7 @@
 title: Netty 长连接服务
 author: Dozer
 layout: post
-permalink: /2014/12/netty-long-connection/
+permalink: /2014/12/netty-long-connection.html
 categories:
   - 编程技术
 tags:

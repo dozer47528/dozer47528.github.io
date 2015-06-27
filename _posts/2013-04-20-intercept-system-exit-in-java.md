@@ -2,7 +2,7 @@
 title: Java 中拦截 System.exit
 author: Dozer
 layout: post
-permalink: /2013/04/intercept-system-exit-in-java/
+permalink: /2013/04/intercept-system-exit-in-java.html
 categories:
   - 编程技术
 tags:

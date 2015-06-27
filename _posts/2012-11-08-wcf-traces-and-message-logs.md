@@ -2,7 +2,7 @@
 title: 利用 WCF 调试模式寻找内部错误
 author: Dozer
 layout: post
-permalink: /2012/11/wcf-traces-and-message-logs/
+permalink: /2012/11/wcf-traces-and-message-logs.html
 categories:
   - 编程技术
 tags:

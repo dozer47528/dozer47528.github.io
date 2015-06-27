@@ -2,7 +2,7 @@
 title: 新版学生在线首页所用到的技术
 author: Dozer
 layout: post
-permalink: /2011/05/new-technology-in-student-online/
+permalink: /2011/05/new-technology-in-student-online.html
 categories:
   - 编程技术
 tags:

@@ -2,7 +2,7 @@
 title: '深入浅出 MVC 数据验证 2.0 [附演示源码]'
 author: Dozer
 layout: post
-permalink: /2010/04/mvc-dataannotations/
+permalink: /2010/04/mvc-dataannotations.html
 categories:
   - 编程技术
 tags:

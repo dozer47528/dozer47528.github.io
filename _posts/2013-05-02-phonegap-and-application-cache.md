@@ -2,7 +2,7 @@
 title: PhoneGap 与 Application Cache
 author: Dozer
 layout: post
-permalink: /2013/05/phonegap-and-application-cache/
+permalink: /2013/05/phonegap-and-application-cache.html
 categories:
   - 编程技术
 tags:

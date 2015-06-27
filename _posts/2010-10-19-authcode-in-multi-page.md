@@ -2,7 +2,7 @@
 title: 多页面验证码冲突的解决办法
 author: Dozer
 layout: post
-permalink: /2010/10/authcode-in-multi-page/
+permalink: /2010/10/authcode-in-multi-page.html
 categories:
   - 编程技术
 tags:

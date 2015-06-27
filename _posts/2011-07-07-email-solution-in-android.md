@@ -2,7 +2,7 @@
 title: Android系统中电子邮件的解决方案
 author: Dozer
 layout: post
-permalink: /2011/07/email-solution-in-android/
+permalink: /2011/07/email-solution-in-android.html
 categories:
   - 手机
 tags:

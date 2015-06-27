@@ -2,7 +2,7 @@
 title: 建站指引 —— 虚拟主机与VPS
 author: Dozer
 layout: post
-permalink: /2013/02/site-hosting-and-vps/
+permalink: /2013/02/site-hosting-and-vps.html
 categories:
   - 互联网
 tags:

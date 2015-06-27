@@ -2,7 +2,7 @@
 title: Google Analytics 自定义维度
 author: Dozer
 layout: post
-permalink: /2013/11/google-analytics-dmensions/
+permalink: /2013/11/google-analytics-dmensions.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

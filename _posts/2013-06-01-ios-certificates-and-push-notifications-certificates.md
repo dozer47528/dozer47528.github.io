@@ -2,7 +2,7 @@
 title: iOS 证书与推送证书的注意事项
 author: Dozer
 layout: post
-permalink: /2013/06/ios-certificates-and-push-notifications-certificates/
+permalink: /2013/06/ios-certificates-and-push-notifications-certificates.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

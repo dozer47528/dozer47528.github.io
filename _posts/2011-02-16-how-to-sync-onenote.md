@@ -2,7 +2,7 @@
 title: 如何同步 OneNote ？
 author: Dozer
 layout: post
-permalink: /2011/02/how-to-sync-onenote/
+permalink: /2011/02/how-to-sync-onenote.html
 categories:
   - 软件
 tags:

@@ -2,7 +2,7 @@
 title: '免费后台模板 推荐&下载'
 author: Dozer
 layout: post
-permalink: /2011/06/free-admin-template/
+permalink: /2011/06/free-admin-template.html
 categories:
   - 编程技术
 tags:

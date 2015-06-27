@@ -2,7 +2,7 @@
 title: 利用 DNSPod 解决 Godaddy 域名在国内无法解析的问题
 author: Dozer
 layout: post
-permalink: /2012/03/using-dnspod-solve-the-problem-of-godaddy-domain-can-not-resolving-in-china/
+permalink: /2012/03/using-dnspod-solve-the-problem-of-godaddy-domain-can-not-resolving-in-china.html
 categories:
   - 互联网
 tags:

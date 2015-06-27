@@ -2,7 +2,7 @@
 title: 建站指引 —— 博客程序
 author: Dozer
 layout: post
-permalink: /2013/02/site-blog-engine/
+permalink: /2013/02/site-blog-engine.html
 categories:
   - 互联网
 tags:

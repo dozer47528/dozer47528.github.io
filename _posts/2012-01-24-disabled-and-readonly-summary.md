@@ -2,7 +2,7 @@
 title: disabled 和 readonly 总结
 author: Dozer
 layout: post
-permalink: /2012/01/disabled-and-readonly-summary/
+permalink: /2012/01/disabled-and-readonly-summary.html
 categories:
   - 编程技术
 tags:

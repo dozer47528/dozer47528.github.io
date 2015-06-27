@@ -2,7 +2,7 @@
 title: 如何 Mock 非虚方法和密封类？
 author: Dozer
 layout: post
-permalink: /2012/11/how-to-mock-non-virtual-method-and-sealed-class/
+permalink: /2012/11/how-to-mock-non-virtual-method-and-sealed-class.html
 categories:
   - 编程技术
 tags:

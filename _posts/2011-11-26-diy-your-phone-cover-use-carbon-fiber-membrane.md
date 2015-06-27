@@ -2,7 +2,7 @@
 title: 用神奇的碳纤维膜DIY手机后盖
 author: Dozer
 layout: post
-permalink: /2011/11/diy-your-phone-cover-use-carbon-fiber-membrane/
+permalink: /2011/11/diy-your-phone-cover-use-carbon-fiber-membrane.html
 categories:
   - 大杂烩
 tags:

@@ -2,7 +2,7 @@
 title: 翔工作室皇藏峪之行
 author: Dozer
 layout: post
-permalink: /2011/08/huangcangyu/
+permalink: /2011/08/huangcangyu.html
 categories:
   - 大杂烩
 tags:

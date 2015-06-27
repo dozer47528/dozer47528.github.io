@@ -2,7 +2,7 @@
 title: Netty 自动重连
 author: Dozer
 layout: post
-permalink: /2015/05/netty-auto-reconnect/
+permalink: /2015/05/netty-auto-reconnect.html
 categories:
   - 编程技术
 tags:

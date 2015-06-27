@@ -2,7 +2,7 @@
 title: WCF 调用的那些事
 author: Dozer
 layout: post
-permalink: /2013/06/mokeable-and-safely-wcf/
+permalink: /2013/06/mokeable-and-safely-wcf.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

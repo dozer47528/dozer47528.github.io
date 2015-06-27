@@ -2,7 +2,7 @@
 title: 学生在线更新了什么？
 author: Dozer
 layout: post
-permalink: /2011/04/what-is-new-in-student-online/
+permalink: /2011/04/what-is-new-in-student-online.html
 categories:
   - 互联网
 tags:

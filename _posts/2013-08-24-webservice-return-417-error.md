@@ -2,7 +2,7 @@
 title: 调用 WebService 返回 417 错误
 author: Dozer
 layout: post
-permalink: /2013/08/webservice-return-417-error/
+permalink: /2013/08/webservice-return-417-error.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

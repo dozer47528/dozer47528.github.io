@@ -2,7 +2,7 @@
 title: Entity Framework Code First 配置介绍：引用关系
 author: Dozer
 layout: post
-permalink: /2012/09/entity-framework-code-first-configuring-relationships/
+permalink: /2012/09/entity-framework-code-first-configuring-relationships.html
 categories:
   - 编程技术
 tags:

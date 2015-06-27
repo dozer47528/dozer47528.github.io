@@ -2,7 +2,7 @@
 title: Hack a New Year
 author: Dozer
 layout: post
-permalink: /2013/01/hack-a-new-year/
+permalink: /2013/01/hack-a-new-year.html
 categories:
   - 大杂烩
 tags:

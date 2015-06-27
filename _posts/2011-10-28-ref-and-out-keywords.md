@@ -2,7 +2,7 @@
 title: 把 ref 和 out 关键字说透
 author: Dozer
 layout: post
-permalink: /2011/10/ref-and-out-keywords/
+permalink: /2011/10/ref-and-out-keywords.html
 categories:
   - 编程技术
 tags:

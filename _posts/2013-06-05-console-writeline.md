@@ -2,7 +2,7 @@
 title: Console.WriteLine 的坑
 author: Dozer
 layout: post
-permalink: /2013/06/console-writeline/
+permalink: /2013/06/console-writeline.html
 wpzoom_post_title:
   - Yes
 wpzoom_post_readmore:

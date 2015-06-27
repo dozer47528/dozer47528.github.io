@@ -2,7 +2,7 @@
 title: 深入研究 UCenter API 之 MVC 网站下的用法
 author: Dozer
 layout: post
-permalink: /2011/04/ucenter-api-in-depth-5th/
+permalink: /2011/04/ucenter-api-in-depth-5th.html
 categories:
   - 编程技术
 tags:

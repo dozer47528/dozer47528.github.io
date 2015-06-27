@@ -2,7 +2,7 @@
 title: 利用 CDN 解决百度爬虫被 Github Pages 拒绝的问题
 author: Dozer
 layout: post
-permalink: /2015/06/github-pages-and-cdn/
+permalink: /2015/06/github-pages-and-cdn.html
 categories:
   - 互联网
 tags:

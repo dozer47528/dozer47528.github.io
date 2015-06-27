@@ -2,7 +2,7 @@
 title: 责任链模式
 author: Dozer
 layout: post
-permalink: /2014/11/chain-of-responsibility/
+permalink: /2014/11/chain-of-responsibility.html
 categories:
   - 编程技术
 tags:

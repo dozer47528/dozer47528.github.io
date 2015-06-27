@@ -2,7 +2,7 @@
 title: 点评校园极客大赛
 author: Dozer
 layout: post
-permalink: /2014/07/dp-hackathon/
+permalink: /2014/07/dp-hackathon.html
 categories:
   - 大杂烩
 tags:

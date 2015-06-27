@@ -2,7 +2,7 @@
 title: iOS 推送的服务端实现
 author: Dozer
 layout: post
-permalink: /2013/03/push-notifications-server-side-implement/
+permalink: /2013/03/push-notifications-server-side-implement.html
 categories:
   - 编程技术
 tags:

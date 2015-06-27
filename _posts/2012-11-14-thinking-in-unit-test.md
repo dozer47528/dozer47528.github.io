@@ -2,7 +2,7 @@
 title: 单元测试有感
 author: Dozer
 layout: post
-permalink: /2012/11/thinking-in-unit-test/
+permalink: /2012/11/thinking-in-unit-test.html
 categories:
   - 编程技术
 tags:

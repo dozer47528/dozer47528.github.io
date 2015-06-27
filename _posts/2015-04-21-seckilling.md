@@ -2,7 +2,7 @@
 title: “秒杀”问题的数据库和SQL设计
 author: Dozer
 layout: post
-permalink: /2015/04/seckilling/
+permalink: /2015/04/seckilling.html
 categories:
   - 编程技术
 tags:

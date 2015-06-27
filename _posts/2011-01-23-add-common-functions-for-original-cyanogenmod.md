@@ -2,7 +2,7 @@
 title: 为原版 CyanogenMod 添加常用功能
 author: Dozer
 layout: post
-permalink: /2011/01/add-common-functions-for-original-cyanogenmod/
+permalink: /2011/01/add-common-functions-for-original-cyanogenmod.html
 categories:
   - 手机
 tags:

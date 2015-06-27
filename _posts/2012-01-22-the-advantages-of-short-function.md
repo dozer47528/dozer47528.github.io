@@ -2,7 +2,7 @@
 title: 短函数的优点
 author: Dozer
 layout: post
-permalink: /2012/01/the-advantages-of-short-function/
+permalink: /2012/01/the-advantages-of-short-function.html
 categories:
   - 编程技术
 tags:

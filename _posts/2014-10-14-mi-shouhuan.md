@@ -2,7 +2,7 @@
 title: 小米手环评测
 author: Dozer
 layout: post
-permalink: /2014/10/mi-shouhuan/
+permalink: /2014/10/mi-shouhuan.html
 categories:
   - 数码产品
 tags:

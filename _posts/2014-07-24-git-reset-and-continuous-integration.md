@@ -2,7 +2,7 @@
 title: git reset 在持续集成系统中的问题
 author: Dozer
 layout: post
-permalink: /2014/07/git-reset-and-continuous-integration/
+permalink: /2014/07/git-reset-and-continuous-integration.html
 categories:
   - 编程技术
 tags:
