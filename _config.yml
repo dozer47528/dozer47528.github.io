@@ -19,7 +19,7 @@ author:
 
 
 # Build settings
-paginate: 10
+paginate: 20
 paginate_path: "page/:num/"
 highlighter: pygments
 markdown: kramdown
