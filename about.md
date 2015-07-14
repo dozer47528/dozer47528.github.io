@@ -24,6 +24,7 @@ permalink: /about.html
 * [7 Design](http://www.zcool.com.cn/u/483558/)
 * [island205](http://island205.com/)
 * [evanhsiwood](http://evanhsiwood.com/)
+* [BILL的私房钱](http://jingege.github.io/)
 * [Rain Man](http://www.cnblogs.com/rainman/)
 * [TEDLIFE](http://www.tedlife.com)
 * [书豪](http://caosh.me/)
