@@ -181,7 +181,7 @@ eclipse 其实可以自动生成，底层其实就是调用了 Axis。
 
 ### 示例代码
 
-下载地址：<a href="/wp-content/uploads/2012/11/Salesforce1.zip" target="_blank"><strong>http://www.dozer.cc/uploads/2012/11/Salesforce1.zip</strong></a>
+下载地址：<a href="/uploads/2012/11/Salesforce1.zip" target="_blank"><strong>http://www.dozer.cc/uploads/2012/11/Salesforce1.zip</strong></a>
 
 &nbsp;
 

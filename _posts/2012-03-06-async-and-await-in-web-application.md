@@ -370,7 +370,7 @@ EAP 就是基于事件的异步，上面那篇文章中其实也提到了，但�
 
 ### 源代码和工具下载
 
-<a href="/wp-content/uploads/2012/03/AsyncSample.zip" target="_blank">AsyncSample</a>
+<a href="/uploads/2012/03/AsyncSample.zip" target="_blank">AsyncSample</a>
 
 *请用 Visual Studio 11 打开*
 

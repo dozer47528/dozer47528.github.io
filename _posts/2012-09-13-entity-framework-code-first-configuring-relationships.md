@@ -199,7 +199,7 @@ Attribute 配置法（Data Annotations）无法 实现所有功能，建议使�
 
 以上就是 Code First 中配置引用关系的基本方法，涵盖了一对一、一对多和多对多三种关系，非常地灵活。
 
-示例代码下载：<a href="/wp-content/uploads/2012/09/Code-First.rar" target="_blank"><strong>传送门</strong></a>
+示例代码下载：<a href="/uploads/2012/09/Code-First.rar" target="_blank"><strong>传送门</strong></a>
 
  [1]: /2012/09/entity-framework-code-first-configuring-intro/ "Entity Framework Code First 配置介绍"
  [2]: /2012/09/entity-framework-code-first-configuring-property/ "Entity Framework Code First 配置介绍：属性"
