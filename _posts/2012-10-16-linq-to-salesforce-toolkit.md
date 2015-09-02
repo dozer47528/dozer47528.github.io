@@ -13,7 +13,7 @@ tags:
 
 ### 简介
 
-上篇文章中（**<a title="Linq To Salesforce" href="/2012/09/linq-to-salesforce/" target="_blank">Linq To Salesforce</a>**），我只要介绍了 Linq To Salesforce 的基本原理。
+上篇文章中（**<a title="Linq To Salesforce" href="/2012/09/linq-to-salesforce.html" target="_blank">Linq To Salesforce</a>**），我只要介绍了 Linq To Salesforce 的基本原理。
 
 但很多人更关心的是如何使用，后来我又写了一个 Tooltik 项目，不仅包括了查询，还包括了一些基本的增删改的封装，可以帮助开发者快速开发和 Salesforce API 交互的应用程序，算是开袋即食吧！
 

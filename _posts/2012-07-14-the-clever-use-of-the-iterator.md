@@ -16,7 +16,7 @@ tags:
 
 ### 延迟查询与延迟求值查询
 
-在我的<a href="/2012/07/lazy-load-and-lazy-evaluation-queries/" target="_blank"><strong>上一篇文章</strong></a>中，给大家介绍了延迟查询与延迟求值查询的实现原理和注意事项。
+在我的<a href="/2012/07/lazy-load-and-lazy-evaluation-queries.html" target="_blank"><strong>上一篇文章</strong></a>中，给大家介绍了延迟查询与延迟求值查询的实现原理和注意事项。
 
 前几天在项目开发的时候，发现了一个非常好的应用场景，可以利用延迟查询与延迟求值查询达到非常棒的结果！
 

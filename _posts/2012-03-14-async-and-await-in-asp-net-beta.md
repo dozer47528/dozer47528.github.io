@@ -15,7 +15,7 @@ tags:
 
 ### 发现问题
 
-在我的上一篇文章<a href="/2012/03/async-and-await-in-web-application/" target="_blank"><strong>《async 与 await 在 Web 下的应用》</strong></a>中，我提到了 asp.net 4.5 在 Web.Config 中的一个奇怪配置：
+在我的上一篇文章<a href="/2012/03/async-and-await-in-web-application.html" target="_blank"><strong>《async 与 await 在 Web 下的应用》</strong></a>中，我提到了 asp.net 4.5 在 Web.Config 中的一个奇怪配置：
 
     <appSettings>
       <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />

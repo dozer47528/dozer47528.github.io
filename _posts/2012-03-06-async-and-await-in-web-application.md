@@ -116,7 +116,7 @@ tags:
         //do more
     }
 
-<span style="color: #ff0000;">在 asp.net WebForm 的正确用法请参考最新文章，上述方法被证实有错误：<a href="/2012/03/async-and-await-in-asp-net-beta/" target="_blank"><span style="color: #ff0000;"><strong>传送门</strong></span></a></span>
+<span style="color: #ff0000;">在 asp.net WebForm 的正确用法请参考最新文章，上述方法被证实有错误：<a href="/2012/03/async-and-await-in-asp-net-beta.html" target="_blank"><span style="color: #ff0000;"><strong>传送门</strong></span></a></span>
 
 &nbsp;
 

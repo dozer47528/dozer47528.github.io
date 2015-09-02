@@ -114,7 +114,7 @@ DNSPOD 是一个国内的免费 NameServer。个人用户免费且几乎没有�
 
 真的是非常厚道！它只赚大客户的钱。
 
-这里具体的可以看我的另一篇文章：**<a title="利用 DNSPod 解决 Godaddy 域名在国内无法解析的问题" href="/2012/03/using-dnspod-solve-the-problem-of-godaddy-domain-can-not-resolving-in-china/" target="_blank">利用 DNSPod 解决 Godaddy 域名在国内无法解析的问题</a>**
+这里具体的可以看我的另一篇文章：**<a title="利用 DNSPod 解决 Godaddy 域名在国内无法解析的问题" href="/2012/03/using-dnspod-solve-the-problem-of-godaddy-domain-can-not-resolving-in-china.html" target="_blank">利用 DNSPod 解决 Godaddy 域名在国内无法解析的问题</a>**
 
 &nbsp;
 

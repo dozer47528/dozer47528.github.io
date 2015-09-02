@@ -35,13 +35,13 @@ tags:
 
 同步登陆：UCenter API in Asp.net
 
-学习方法：**<a href="/2011/01/ucenter-api-in-depth-1st/" target="_blank">深入研究 UCenter API 系列文章</a>**
+学习方法：**<a href="/2011/01/ucenter-api-in-depth-1st.html" target="_blank">深入研究 UCenter API 系列文章</a>**
 
 &nbsp;
 
 数据验证：MVC 数据验证框架
 
-学习方法：**<a href="/2010/04/mvc-dataannotations/" target="_blank">深入浅出 MVC 数据验证 2.0 [附演示源码]</a>**
+学习方法：**<a href="/2010/04/mvc-dataannotations.html" target="_blank">深入浅出 MVC 数据验证 2.0 [附演示源码]</a>**
 
 &nbsp;
 

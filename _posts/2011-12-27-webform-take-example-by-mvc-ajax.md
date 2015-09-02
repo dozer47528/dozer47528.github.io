@@ -91,9 +91,9 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 后台能输出 UserControl 后其实已经非常简单了，前端部分自己写 js 就可以实现了，点击后 Ajax 请求 UserControl 的地址，得到数据后填充即可。
 
-但是体验过 MVC 中 Ajax 的人都知道，这部分在 MVC 中也是不用写任何代码的，特别是 MVC 中的 <a href="/2010/11/unobtrusive-javascript/" target="_blank"><strong>Unobtrusive JavaScript</strong></a>，让代码更优美了。
+但是体验过 MVC 中 Ajax 的人都知道，这部分在 MVC 中也是不用写任何代码的，特别是 MVC 中的 <a href="/2010/11/unobtrusive-javascript.html" target="_blank"><strong>Unobtrusive JavaScript</strong></a>，让代码更优美了。
 
-所以，这里的难点并不是前端代码，而是如何使用  **<a href="/2010/11/unobtrusive-javascript/" target="_blank">Unobtrusive JavaScript</a>。**
+所以，这里的难点并不是前端代码，而是如何使用  **<a href="/2010/11/unobtrusive-javascript.html" target="_blank">Unobtrusive JavaScript</a>。**
 
 &nbsp;
 
@@ -202,7 +202,7 @@ MVC 中的 Ajax 写法可以说是吸取了以上几种方法的有点，摒弃�
 
 ### 如何在 WebForm 中使用 MVC 的 Unobtrusive JavaScript
 
-看过 <a href="/2010/11/unobtrusive-javascript/" target="_blank"><strong>Unobtrusive JavaScript</strong></a> 的人都知道，这种方式可以让 js 代码和 html 完全分离。也就是说，只要 WebForm 输出了同样格式的 html，并引用了相关的 js，就可以实现这个功能了！让我们一步步实现它。
+看过 <a href="/2010/11/unobtrusive-javascript.html" target="_blank"><strong>Unobtrusive JavaScript</strong></a> 的人都知道，这种方式可以让 js 代码和 html 完全分离。也就是说，只要 WebForm 输出了同样格式的 html，并引用了相关的 js，就可以实现这个功能了！让我们一步步实现它。
 
 &nbsp;
 
