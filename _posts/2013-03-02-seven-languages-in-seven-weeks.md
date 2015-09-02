@@ -36,7 +36,7 @@ tags:
 
 还记得高中的时候想：老师是怎么排课表的呢？能不能用一个算法来排一个课表？
 
-现在回想起来，如果老师们有 Prolog，那这一切是不是就太简单了？ <img src="http://www.dozer.cc/wp-includes/images/smilies/icon_cool.gif" alt="8-)" class="wp-smiley" /> 
+现在回想起来，如果老师们有 Prolog，那这一切是不是就太简单了？
 
 用 Prolog 编程，其实不是在编程，而是告诉程序一条条规则，也就是逻辑约束。
 
