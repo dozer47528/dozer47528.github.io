@@ -181,3 +181,8 @@ ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
 
+pre {
+    padding: 0px !important;
+    margin: 0px !important;;
+    border: none !important;;
+}
