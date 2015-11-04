@@ -1,10 +1,13 @@
 <div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+    <h1>{{ page.title }} {% if page.tagline %}
+        <small>{{page.tagline}}</small>
+        {% endif %}
+    </h1>
 </div>
 
 <article>
 
-	<div class="col-sm-10">
+    <div class="col-sm-10">
 	 <span class="post-date">
 	   {% assign d = page.date | date: "%d" | plus:'0' %}
 	   {{ page.date | date: "%B" }}
@@ -16,102 +19,140 @@
 	   {% endcase %}
 	   {{ page.date | date: "%Y" }}
 	 </span>
-	  <div class="article_body">
-	  {{ content }}
-      <p>&nbsp;</p>
-      <h3>支持</h3>
-      <!--<p>如果您觉得我的文章对您有帮助，可以通过购买 <a href="https://www.digitalocean.com/?refcode=d73fb699c056">DigitalOcean</a> 来支持我！您将获得5刀优惠券，我可以得到25刀优惠券。</p>
-      <p><a href="https://www.digitalocean.com/?refcode=d73fb699c056">DigitalOcean</a> 的 VPS，5刀每月超高性价比，新加坡机房超级稳定，可以用来干什么你懂得。</p>
-      <p>&nbsp;</p>-->
-      <p>
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />本作品由<a xmlns:cc="http://creativecommons.org/ns#" href="{{ site.url }}" property="cc:attributionName" rel="cc:attributionURL">Dozer</a>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。
-      </p>
-	  </div>
 
-		{% unless page.categories == empty %}
-		<ul class="tag_box list-unstyled list-inline">
-		  <li><i class="fa fa-folder-open"></i></li>
-		  {% assign categories_list = page.categories %}
-		  {% if categories_list.first[0] == null %}
-			{% for category in categories_list %}
-				<li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category }}-ref">
-					{{ category | join: "/" }} <span>({{ site.categories[category].size }})</span>
-					{% unless forloop.last %},{% endunless %}
-				</a></li>
-			{% endfor %}
-		  {% else %}
-			{% for category in categories_list %}
-				<li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category[0] }}-ref">
-					{{ category[0] | join: "/" }} <span>/{{ category[1].size }})</span>
-				</a></li>
-			{% endfor %}
-		  {% endif %}
-		</ul>
-		{% endunless %}
+        <div class="article_body">
+            {{ content }}
 
-		{% unless page.tags == empty %}
-		<ul class="list-inline">
-		  <li><i class="fa fa-tags"></i></li>
-		  {% assign tags_list = page.tags %}
-		  {% if tags_list.first[0] == null %}
-			{% for tag in tags_list %}
-				<li>
-					<a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag }}-ref">
-					{{ tag }} <span>({{ site.tags[tag].size }})</span>
-					{% unless forloop.last %},{% endunless %}
-					</a>
-				</li>
-			{% endfor %}
-		  {% else %}
-			{% for tag in tags_list %}
-				<li>
-					<a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}-ref">
-						{{ tag[0] }} <span>({{ tag[1].size }})</span>
-						{% unless forloop.last %},{% endunless %}
-					</a>
-				</li>
+            <div>
+                本作品由
+                <a href="{{ site.url }}">Dozer</a>
+                创作，采用
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+                进行许可。
+            </div>
+            &nbsp;
+            <! -- 添加捐赠图标 -->
+            <div class="post-donate">
+                <div id="donate_board" class="donate_bar center">
+                    <a id="btn_donate" class="btn_donate" href="javascript:;" title="Donate 打赏"></a>
+                </div>
 
-			{% endfor %}
-		  {% endif %}
-		  {% assign tags_list = nil %}
-		</ul>
-		{% endunless %}
-    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'dozer'; // required: replace example with your forum shortname
+                <!-- 支付宝打赏图案 -->
+                <span class="donate_guide donate_bar center hidden">
+                    <img src="/assets/image/alipay_donate.png" title="支付宝打赏" height="180px" width="180px">
+                </span>
+                <span>&nbsp;</span>
+                <!-- 微信打赏图案 -->
+                <span class="donate_guide donate_bar center hidden">
+                    <img src="/assets/image/weixin_donate.png" title="微信打赏" height="180px" width="180px">
+                </span>
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <script type="text/javascript">
+                    document.getElementById('btn_donate').onclick = function () {
+                        $('#donate_board').addClass('hidden');
+                        $('.donate_guide').removeClass('hidden');
+                    }
+                </script>
+            </div>
+            <! -- 添加捐赠图标 -->
+        </div>
 
-    <div class="clearfix"></div>
+        {% unless page.categories == empty %}
+        <ul class="tag_box list-unstyled list-inline">
+            <li><i class="fa fa-folder-open"></i></li>
+            {% assign categories_list = page.categories %}
+            {% if categories_list.first[0] == null %}
+            {% for category in categories_list %}
+            <li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category }}-ref">
+                {{ category | join: "/" }} <span>({{ site.categories[category].size }})</span>
+                {% unless forloop.last %},{% endunless %}
+            </a></li>
+            {% endfor %}
+            {% else %}
+            {% for category in categories_list %}
+            <li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category[0] }}-ref">
+                {{ category[0] | join: "/" }} <span>/{{ category[1].size }})</span>
+            </a></li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+        {% endunless %}
 
-		<ul class="pager">
-		  {% if page.previous %}
-		  <li class="previous"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
-		  {% else %}
-		  <li class="previous disabled"><a>&larr; Previous</a></li>
-		  {% endif %}
-		  {% if page.next %}
-		  <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-		  {% else %}
-			<li class="next disabled"><a>Next &rarr;</a>
-		  {% endif %}
-		</ul>
+        {% unless page.tags == empty %}
+        <ul class="list-inline">
+            <li><i class="fa fa-tags"></i></li>
+            {% assign tags_list = page.tags %}
+            {% if tags_list.first[0] == null %}
+            {% for tag in tags_list %}
+            <li>
+                <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag }}-ref">
+                    {{ tag }} <span>({{ site.tags[tag].size }})</span>
+                    {% unless forloop.last %},{% endunless %}
+                </a>
+            </li>
+            {% endfor %}
+            {% else %}
+            {% for tag in tags_list %}
+            <li>
+                <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}-ref">
+                    {{ tag[0] }} <span>({{ tag[1].size }})</span>
+                    {% unless forloop.last %},{% endunless %}
+                </a>
+            </li>
 
-		<hr>
-	</div>
+            {% endfor %}
+            {% endif %}
+            {% assign tags_list = nil %}
+        </ul>
+        {% endunless %}
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone"
+                                                                                          data-cmd="qzone"
+                                                                                          title="分享到QQ空间"></a><a
+                href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq"
+                                                                                   data-cmd="tqq" title="分享到腾讯微博"></a><a
+                href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin"
+                                                                                    data-cmd="weixin" title="分享到微信"></a>
+        </div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'dozer'; // required: replace example with your forum shortname
 
-	<div class="col-sm-2 sidebar-2">
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-	</div>
+        <div class="clearfix"></div>
+
+        <ul class="pager">
+            {% if page.previous %}
+            <li class="previous"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}"
+                                    title="{{ page.previous.title }}">&larr; Previous</a></li>
+            {% else %}
+            <li class="previous disabled"><a>&larr; Previous</a></li>
+            {% endif %}
+            {% if page.next %}
+            <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}"
+                                title="{{ page.next.title }}">Next &rarr;</a></li>
+            {% else %}
+            <li class="next disabled"><a>Next &rarr;</a>
+                {% endif %}
+        </ul>
+
+        <hr>
+    </div>
+
+    <div class="col-sm-2 sidebar-2">
+
+    </div>
 </article>
 <div class="clearfix"></div>

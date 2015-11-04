@@ -185,3 +185,25 @@ pre {
     padding: 0px !important;
     border: none !important;
 }
+
+.post-donate {
+	text-align: center;
+}
+
+.donate_bar a.btn_donate {
+	display: inline-block;
+	width: 82px;
+	height: 82px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../image/btn_reward.gif)no-repeat;
+	-webkit-transition: background 0s;
+	-moz-transition: background 0s;
+	-o-transition: background 0s;
+	-ms-transition: background 0s;
+	transition: background 0s
+}
+
+.donate_bar a.btn_donate:hover {
+	background-position: 0 -82px
+}
