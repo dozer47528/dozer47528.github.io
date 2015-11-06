@@ -86,6 +86,7 @@ article .share .gplus:hover {
 
 article{
 	margin-bottom: 40px;
+	overflow: scroll;
 }
 
 .article_body{
