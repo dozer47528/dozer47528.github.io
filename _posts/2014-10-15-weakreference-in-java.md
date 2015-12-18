@@ -6,7 +6,7 @@ permalink: /2014/10/weakreference-exit-in-java.html
 categories:
   - 编程技术
 tags:
-  - java
+  - Java
   - 多线程
 ---
 

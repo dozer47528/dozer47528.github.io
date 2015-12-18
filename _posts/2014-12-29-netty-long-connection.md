@@ -6,7 +6,7 @@ permalink: /2014/12/netty-long-connection.html
 categories:
   - 编程技术
 tags:
-  - java
+  - Java
   - Netty
   - NIO
   - 长连接

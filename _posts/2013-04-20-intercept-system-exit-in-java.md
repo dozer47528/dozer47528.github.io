@@ -6,7 +6,7 @@ permalink: /2013/04/intercept-system-exit-in-java.html
 categories:
   - 编程技术
 tags:
-  - java
+  - Java
 ---
 
 ### 场景

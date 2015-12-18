@@ -6,7 +6,7 @@ permalink: /2014/11/chain-of-responsibility.html
 categories:
   - 编程技术
 tags:
-  - java
+  - Java
   - 设计模式
   - jmh
 ---

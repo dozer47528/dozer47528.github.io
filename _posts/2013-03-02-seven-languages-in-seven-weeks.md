@@ -8,7 +8,7 @@ categories:
 tags:
   - DotNet
   - CSharp
-  - java
+  - Java
   - 并行
 ---
 

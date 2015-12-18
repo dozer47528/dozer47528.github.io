@@ -7,7 +7,7 @@ categories:
   - 编程技术
 tags:
   - CORS
-  - java
+  - Java
   - Spring
 ---
 ### Cors Proxy 该不该自动重定向

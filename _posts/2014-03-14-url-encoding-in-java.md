@@ -6,7 +6,7 @@ permalink: /2014/03/url-encoding-in-java.html
 categories:
   - 编程技术
 tags:
-  - java
+  - Java
 ---
 
 ### URL编码
