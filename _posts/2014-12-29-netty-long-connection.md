@@ -47,7 +47,7 @@ for rapid development of maintainable high performance protocol servers & client
 * `Zero-Copy` 技术尽量减少内存拷贝
 * 为 Linux 实现 Native 版 Socket
 * 写同一份代码，兼容 java 1.7 的 NIO2 和 1.7 之前版本的 NIO
-* `Pooled Buffers` 大大减轻声请 `Buffer` 和释放 `Buffer` 的压力
+* `Pooled Buffers` 大大减轻 `Buffer` 和释放 `Buffer` 的压力
 * ……
 
 特性太多，大家可以去看一下《Netty in Action》这本书了解更多。
