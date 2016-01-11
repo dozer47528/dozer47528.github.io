@@ -208,3 +208,29 @@ pre {
 .donate_bar a.btn_donate:hover {
 	background-position: 0 -82px
 }
+
+
+#toc {
+	float: right;
+	border: 1px solid #eee;
+	padding: 10px;
+}
+
+#toc ul {
+		padding: 0px;
+		margin: 0px;
+    list-style: none;
+}
+
+#toc li {
+		padding: 2px 0 2px 0;
+}
+
+#toc .h3 {
+		font-size: 14px;
+}
+
+#toc .h4 {
+		font-size: 12px;
+    padding-left: 10px;
+}
