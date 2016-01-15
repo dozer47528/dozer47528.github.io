@@ -1,0 +1,21 @@
+---
+layout: page
+title: Archives
+header: Posts By Archives
+group: navigation
+---
+
+<article class="archives">
+  <ul>
+  {%for post in site.posts %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+      {% if year != nyear %}
+        </ul>
+        <h3>{{ post.date | date: '%Y' }}</h3>
+        <ul class="past">
+      {% endif %}
+      <li style="line-height: 30px;"><a href="{{ post.url }}">{{ post.title }}</a> <span class="text-muted">- {{ post.date | date: "%B %d, %Y" }}</span></li>
+  {% endfor %}
+  </ul>
+</article>

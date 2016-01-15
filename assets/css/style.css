@@ -214,6 +214,7 @@ pre {
 	float: right;
 	border: 1px solid #eee;
 	padding: 10px;
+	margin: 0 0 10px 10px;
 }
 
 #toc ul {
@@ -233,4 +234,9 @@ pre {
 #toc .h4 {
 		font-size: 12px;
     padding-left: 10px;
+}
+
+.archives ul{
+	list-style-type: none;
+	padding: 0px;
 }
