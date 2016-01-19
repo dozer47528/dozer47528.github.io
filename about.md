@@ -35,6 +35,15 @@ permalink: /about.html
 
 --------
 
+### 开源项目
+
+* [Alfred2 Hasher](https://github.com/dozer47528/alfred2-hasher)
+* [UCenter API For DotNet](https://github.com/dozer47528/UCenter-API-For-DotNet)
+* [Linq to Salesforce](https://github.com/dozer47528/LinqToSalesforce)
+* [Cordova Google Analytics Plugin](https://github.com/dozer47528/cordova-google-analytics-plugin)
+
+--------
+
 ### 给我留言
 
 <div id="disqus_thread"></div>
