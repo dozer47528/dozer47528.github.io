@@ -32,6 +32,7 @@ permalink: /about.html
 * [浊酒](http://blog.xujif.com/)
 * [随网之舞](http://dancewithnet.com/)
 * [咀嚼之味](http://jerryzou.com/)
+* [Andy's Blog](http://codinglife.in/)
 
 --------
 
