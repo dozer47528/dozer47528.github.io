@@ -8,9 +8,9 @@ permalink: /about.html
 	new dozer()
 	{
 	    name = "Dozer",
-	    from = "翔工作室",
-	    company = "大众点评网",
-	    tags = ["开源", "无语言歧视", "互联网", "数码产品"],
+	    from = "大众点评网",
+	    company = "Narvii",
+	    tags = ["开源", "互联网", "数码产品"],
 	    zhihu = "www.zhihu.com/people/dozer",
 	    gmail = "dozer.cc(d)gmail.com (请把(d)替换成@)",
 	    email = "mail(d)dozer.cc (请把(d)替换成@)",
