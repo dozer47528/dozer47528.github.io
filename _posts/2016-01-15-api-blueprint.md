@@ -93,7 +93,9 @@ Mock Server 就要靠另一个工具了：[drakov](https://github.com/Aconex/dra
 
 `drakov -f "*.md"`
 
-你会看到如下信息： ![drakov](/uploads/2016/01/drakov.png)
+你会看到如下信息：
+
+![drakov](/uploads/2016/01/drakov.png)
 
 然后直接去浏览器中访问即可。
 
