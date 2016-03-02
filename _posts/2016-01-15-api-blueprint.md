@@ -1,5 +1,5 @@
 ---
-title: API 蓝图
+title: API Blueprint
 author: Dozer
 layout: post
 permalink: /2016/01/api-blueprint.html
@@ -21,7 +21,7 @@ tags:
 
 <!--more-->
 
- 
+ &nbsp;
 
 ### apiary
 
@@ -39,7 +39,7 @@ tags:
 
 相关标准和工具在这里：[https://apiblueprint.org/](https://apiblueprint.org/)
 
- 
+&nbsp; 
 
 ### 编辑器
 
@@ -51,7 +51,7 @@ Atom 下插件最多，总之编辑器完全不是个问题。
 
 API Blueprint 有自己的后缀名：`apib`，而且 github 可以识别它！
 
- 
+ &nbsp;
 
 ### Renderer
 
@@ -77,7 +77,7 @@ Renderer 是什么呢？它主要负责把你用 Markdown 写的文档渲染成�
 
 它可以多种模板，也可以自定义样式，更多需求可以看它的文档。
 
- 
+ &nbsp;
 
 ### Mock Server
 
@@ -99,7 +99,7 @@ Mock Server 就要靠另一个工具了：[drakov](https://github.com/Aconex/dra
 
 然后直接去浏览器中访问即可。
 
- 
+&nbsp;
 
 ### 自动化
 
