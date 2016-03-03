@@ -95,7 +95,7 @@ tags:
 &nbsp;
 
 #### webhook.js
-这个脚本负责监听来`webhook`，启动部署。
+这个脚本负责监听 `webhook`，启动部署。
 
     var http = require('http');
     var exec = require('child_process').exec;
@@ -118,6 +118,8 @@ tags:
 Github 上可以这么设置：
 
 ![webhook](/uploads/2016/03/webhook.png)
+
+如果你在内网，不方便暴露到公网，可以忽略这个功能，脚本内部也是自动刷新，5分钟一次。
 
 &nbsp;
 
@@ -168,5 +170,4 @@ Docker 镜像：[https://hub.docker.com/r/dozer47528/api-blueprint-docker/](http
 
 * 支持私有仓库，例如 Bitbucket
 * 支持自定义`aglio`样式，我现在在脚本里写死了一个我自己比较喜欢的样式，最好可以在`docker run`的时候把样式传进去
-* Webhook 需要支持安全码校验，Github 本身有这个功能，但我这边还没支持，不支持的话可能被别人滥用
-* 还不知道 Docker 的日志怎么处理比较好，出了问题很难排查，这个也需要优化一下
+* 有些服务部署在内网，不方便设置 webhook，要支持自动刷新数据（已完成）
