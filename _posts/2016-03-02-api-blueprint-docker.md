@@ -102,9 +102,27 @@ tags:
 
     var cmdStr = 'bash -c /usr/local/bin/deploy.sh';
 
-    http.createServer(function(req, res) {
+    setInterval(function() {
+      console.log("Start auto reload.")
       exec(cmdStr, function(err, stdout, stderr) {
-        console.log("Update success!")
+        if (err) {
+          console.error(err);
+        } else {
+          console.log("Update success!");
+          console.log(stdout);
+        }
+      });
+    }, 5 * 60 * 1000);
+
+    http.createServer(function(req, res) {
+      console.log("Start webhook reload.")
+      exec(cmdStr, function(err, stdout, stderr) {
+        if (err) {
+          console.error(err);
+        } else {
+          console.log("Update success!");
+          console.log(stdout);
+        }
       });
       res.writeHead(200, {
         'Content-Type': 'text/plain'
@@ -148,6 +166,34 @@ Docker 镜像：[https://hub.docker.com/r/dozer47528/api-blueprint-docker/](http
 
 &nbsp;
 
+#### 如何支持私有仓库？
+
+首先在宿主机上配置完`ssh`，然后在启动的时候隐射一下文件`-v ~/.ssh:/root/.ssh`。
+
+完整的命令类似于这样：
+
+    docker run --name test \
+    -v ~/.ssh:/root/.ssh \
+    -e "repository=https://github.com/dozer47528/api-blueprint-test.git" \
+    -p 80:80 -p 8080:8080 -p 3000:3000 \
+    -d dozer47528/api-blueprint-docker
+
+&nbsp;
+
+#### 如何修改`aglio`的启动参数？
+
+启动的时候加上这个参数：`-e "aglio=--theme-template triple"`
+
+完整的命令类似于这样：
+
+    docker run --name test \
+    -e "aglio=--theme-template triple" \
+    -e "repository=https://github.com/dozer47528/api-blueprint-test.git" \
+    -p 80:80 -p 8080:8080 -p 3000:3000 \
+    -d dozer47528/api-blueprint-docker
+
+&nbsp;
+
 ### 文档怎么写？
 
 自己的文档怎么写？首先，我这边只会转换`apib`结尾的文档，这是 API Blueprint 的标准后缀名。
@@ -168,6 +214,6 @@ Docker 镜像：[https://hub.docker.com/r/dozer47528/api-blueprint-docker/](http
 
 还有一些不完善的地方需要改进：
 
-* 支持私有仓库，例如 Bitbucket
-* 支持自定义`aglio`样式，我现在在脚本里写死了一个我自己比较喜欢的样式，最好可以在`docker run`的时候把样式传进去
+* 支持私有仓库，例如 Bitbucket（已完成）
+* 支持自定义`aglio`样式，我现在在脚本里写死了一个我自己比较喜欢的样式，最好可以在`docker run`的时候把样式传进去（已完成）
 * 有些服务部署在内网，不方便设置 webhook，要支持自动刷新数据（已完成）
