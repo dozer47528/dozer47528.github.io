@@ -192,6 +192,9 @@ Docker 镜像：[https://hub.docker.com/r/dozer47528/api-blueprint-docker/](http
     -p 80:80 -p 8080:8080 -p 3000:3000 \
     -d dozer47528/api-blueprint-docker
 
+
+`aglio`的文章文档在这边：[https://github.com/danielgtaylor/aglio#executable]()
+
 &nbsp;
 
 ### 文档怎么写？
