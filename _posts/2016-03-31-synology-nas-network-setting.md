@@ -2,7 +2,7 @@
 title: 将群晖 NAS 安全地暴露到公网中
 author: Dozer
 layout: post
-permalink: /2016/04/synology-nas-network-setting.html
+permalink: /2016/03/synology-nas-network-setting.html
 categories:
   - 互联网
 tags:
@@ -50,7 +50,7 @@ tags:
 
 #### 光纤猫和路由器的设置
 
-![Modem](/uploads/2016/04/modem.png)
+![Modem](/uploads/2016/03/modem.png)
 
 进入光纤猫后，连接名称里找到`Internet`，模式改成`Bridge`，然后选一个端口。
 
@@ -76,7 +76,7 @@ tags:
 
 端口转发在不同的路由器中配置方法不太一样，但非常简单，我这里就简单地截个图。另外，需要用端口转发的目标机器最好固定一下 IP，不要使用 DHCP，否则 IP 变了转发就失效了。
 
-![Port](/uploads/2016/04/port.png)
+![Port](/uploads/2016/03/port.png)
 
 &nbsp;
 
@@ -88,7 +88,7 @@ DDNS 主要是在路由器中配置，家里的华硕路由器有免费的 DDNS 
 
 有了一个免费的 DDNS 域名后，再到自己的域名中配置一个 CNAME 就可以了。
 
-![DDNS](/uploads/2016/04/ddns.png)
+![DDNS](/uploads/2016/03/ddns.png)
 
 大致的原理就是，路由器每次获得一个新的公网 IP 后，都会向 DDNS 服务供应商注册，然后 DDNS 供应商的免费域名就会指向这个 IP 了。你可以直接用这个域名，但是一般都很丑，所以我更喜欢用自己的域名，做一下 CNAME。
 
@@ -105,7 +105,7 @@ DDNS 主要是在路由器中配置，家里的华硕路由器有免费的 DDNS 
 &nbsp;
 
 #### 自签发
-![Self](/uploads/2016/04/self-ssl.png)
+![Self](/uploads/2016/03/self-ssl.png)
 
 群晖的 NAS 做自签发很简单，界面点点就行了，然后下载根证书，需要用的地方安装一下根证书即可。
 
@@ -119,7 +119,7 @@ Let's Encrypt 是最近很火的开源免费证书供应商，现在还在 Beta�
 
 但是群晖在最新版本的系统中竟然整合了 Let's Encrypt，同样也是界面点点就可以申请了！
 
-![Let's Encrypt](/uploads/2016/04/letsencrypt.png)
+![Let's Encrypt](/uploads/2016/03/letsencrypt.png)
 
 但是悲剧的是，在证书签发过程中，Let's Encrypt 服务器需要访问你机器的80端口来验证你对这个域名的拥有权，而电信是封家庭用户的80端口的！
 
@@ -139,7 +139,7 @@ Let's Encrypt 是最近很火的开源免费证书供应商，现在还在 Beta�
 
 WoSign 免费证书申请非常简单，几十分钟就搞定了。然后下载证书和密钥，解压其中的 Nginx 版本，导入群晖即可。
 
-![Import](/uploads/2016/04/import-ssl.png)
+![Import](/uploads/2016/03/import-ssl.png)
 
 &nbsp;
 
@@ -149,7 +149,7 @@ WoSign 免费证书申请非常简单，几十分钟就搞定了。然后下载�
 
 最终效果如下：
 
-![Website](/uploads/2016/04/website-ssl.png)
+![Website](/uploads/2016/03/website-ssl.png)
 
 &nbsp;
 
