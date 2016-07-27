@@ -1,5 +1,5 @@
 ---
-title: Python 中使用 mysql 连接池的问题
+title: Python 中的 MySQL 数据库连接池
 author: Dozer
 layout: post
 permalink: /2016/07/mysql-connection-pool-in-python.html
