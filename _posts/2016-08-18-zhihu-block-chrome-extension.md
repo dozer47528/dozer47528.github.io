@@ -52,7 +52,9 @@ tags:
 
 但是对方的回答、评论你还是会看到。
 
-其实，自己写个插件来实现这个其实是非常简单的一件事情。
+其实，自己写个插件来实现这个是非常简单的一件事情。
+
+废话少说，放码过来！
 
 &nbsp;
 
@@ -93,7 +95,6 @@ tags:
                 blockUser();
             });
 
-
             $(document).ajaxComplete(function (event, request, settings) {
                 blockUser();
             });
@@ -111,9 +112,9 @@ tags:
 
 #### 两个关键点
 
-第一个难点是知乎会有很多 ajax 请求，所以脚本不能只在页面加载完成后执行，还需要在没次 ajax 请求后执行。知乎用的是 jQyery，直接用`$(document).ajaxComplete`就可以了。
+第一个难点是知乎会有很多 ajax 请求，所以脚本不能只在页面加载完成后执行，还需要在每次 ajax 请求后执行。知乎用的是 jQyery，直接用`$(document).ajaxComplete`就可以了。
 
-接下来一个难点是，Chrome 插件的 Javascript 默认是和页面隔离的，坐上面的操作。网上找到的解决方案也很简单，把 Javascript 代码插入原页面，这样就可以执行了。
+接下来一个难点是，Chrome 插件的 Javascript 默认是和页面隔离的。网上找到的解决方案也很简单，把 Javascript 代码插入原页面，这样就可以执行了。
 
 &nbsp;
 
