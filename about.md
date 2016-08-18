@@ -33,6 +33,7 @@ permalink: /about.html
 * [随网之舞](http://dancewithnet.com/)
 * [咀嚼之味](http://jerryzou.com/)
 * [Andy's Blog](http://codinglife.in/)
+* [Wang Yapu Blog](https://wangyapu0714.github.io/)
 
 --------
 
