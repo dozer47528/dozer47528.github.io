@@ -124,6 +124,8 @@ tags:
 
 Chrome Web Store: [https://chrome.google.com/webstore/detail/知乎用户屏蔽插件/ahdjhhjbjfhoohjgaddgpbhkccbfmbpn](https://chrome.google.com/webstore/detail/%E7%9F%A5%E4%B9%8E%E7%94%A8%E6%88%B7%E5%B1%8F%E8%94%BD%E6%8F%92%E4%BB%B6/ahdjhhjbjfhoohjgaddgpbhkccbfmbpn)
 
-Github: [https://github.com/dozer47528/zhihu-block-chrome-extension](https://github.com/dozer47528/zhihu-block-chrome-extension)
+Github： [https://github.com/dozer47528/zhihu-block-chrome-extension](https://github.com/dozer47528/zhihu-block-chrome-extension)
+
+免翻墙下载地址：[https://github.com/dozer47528/zhihu-block-chrome-extension/releases](https://github.com/dozer47528/zhihu-block-chrome-extension/releases)
 
 好用的话就打赏一下呗！为了上传这个插件，我也是花了5刀的。
