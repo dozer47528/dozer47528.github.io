@@ -10,7 +10,7 @@ tags:
 
 ---
 
-### 电信糟糕的国际联路
+### 电信糟糕的国际链路
 
 记得在一年前的某一天，电信宽带的国际链路突然变龟速，国外的网站甚至打都打不开。本来去年年底就想换联通宽带的，但是看到电信有200M体验活动，而联通只有50M，所以又被电信骗过去了。
 
@@ -131,7 +131,7 @@ tags:
 
 最后来一段视频直观感受下联通的速度：
 
-<video src="/uploads/2016/12/cu-demo.mp4" controls>
+<video src="/uploads/2016/12/cu-demo.mp4" controls preload="none">
   你的浏览器不支持 <code>video</code> 标签.
 </video>
 
