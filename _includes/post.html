@@ -25,12 +25,10 @@
             {{ content }}
             <p>本作品由 <a href="{{ site.url }}">Dozer</a> 创作，采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可。</p>
             &nbsp;
-            <! -- 添加捐赠图标 -->
             <div class="post-donate">
                 <div id="donate_board" class="donate_bar center">
                     <a id="btn_donate" class="btn_donate" href="javascript:;" title="Donate 打赏"></a>
                 </div>
-
                 <!-- 支付宝打赏图案 -->
                 <span class="donate_guide donate_bar center hidden">
 			<img src="/assets/image/alipay_donate.png" data-toggle="popover" data-placement="top" data-content="支付宝扫一扫"	title="支付宝打赏" height="180px" width="180px">
@@ -48,7 +46,6 @@
                     }
                 </script>
             </div>
-            <! -- 添加捐赠图标 -->
         </div>
 
         {% unless page.categories == empty %}
@@ -99,32 +96,23 @@
             {% assign tags_list = nil %}
         </ul>
         {% endunless %}
-        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone"
-                                                                                          data-cmd="qzone"
-                                                                                          title="分享到QQ空间"></a><a
-                href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq"
-                                                                                   data-cmd="tqq" title="分享到腾讯微博"></a><a
-                href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin"
-                                                                                    data-cmd="weixin" title="分享到微信"></a>
-        </div>
         <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'dozer'; // required: replace example with your forum shortname
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
+        <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        var disqus_config = function () {
+        this.page.url = '{{ site.url }}{{page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{ page.url }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//dozer.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <div class="clearfix"></div>
 
         <ul class="pager">

@@ -5,7 +5,7 @@ email: mail@dozer.cc
 description: 'Dozer&#039;s Technology Blog'
 keywords: 'Dozer,dozer,blog,java,互联网,翔工作室,大众点评'
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.dozer.cc" # the base hostname & protocol for your site
+url: "https://www.dozer.cc" # the base hostname & protocol for your site
 github: dozer47528
 twitter: dozer47528
 
