@@ -11,7 +11,7 @@ tags:
 
 ### 游戏视频（手动模式+换挡拨片）
 
-<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=q0505suumo3&auto=0" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"/>
+<iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=q0505suumo3&tiny=0&auto=0" allowfullscreen></iframe>
 
 <!--more-->
 &nbsp;
@@ -186,7 +186,7 @@ G29 方向盘除了虚位问题比较大外，震动反馈和力反馈还不错�
 
 最后上一段视频：
 
-<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=q0505k2jbyb&auto=0" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"/>
+<iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=q0505k2jbyb&tiny=0&auto=0" allowfullscreen></iframe>
 
 &nbsp;
 
