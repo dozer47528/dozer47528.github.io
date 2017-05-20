@@ -4,7 +4,6 @@ author: Dozer
 layout: post
 permalink: /2012/01/use-the-mobile-phones-to-mark-your-photo-with-gps.html
 categories:
-  - 手机
   - 软件
 tags:
   - Android

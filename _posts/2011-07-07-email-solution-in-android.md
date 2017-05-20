@@ -4,7 +4,7 @@ author: Dozer
 layout: post
 permalink: /2011/07/email-solution-in-android.html
 categories:
-  - 手机
+  - 数码产品
 tags:
   - Gmail
   - IMAP

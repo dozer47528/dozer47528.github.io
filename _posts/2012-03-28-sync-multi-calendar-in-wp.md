@@ -4,7 +4,7 @@ author: Dozer
 layout: post
 permalink: /2012/03/sync-multi-calendar-in-wp.html
 categories:
-  - 手机
+  - 软件
 tags:
   - Google
   - WP7
