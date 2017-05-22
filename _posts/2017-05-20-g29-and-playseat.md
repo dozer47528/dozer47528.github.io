@@ -2,7 +2,7 @@
 title: 罗技 G29 与 Playseat 挑战者评测
 author: Dozer
 layout: post
-permalink: /2017/05/g29-and-playseat
+permalink: /2017/05/g29-and-playseat.html
 categories:
   - 数码产品
 tags:
