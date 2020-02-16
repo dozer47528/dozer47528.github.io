@@ -5,35 +5,27 @@ permalink: /about.html
 ---
 ### 关于我
 
-	new dozer()
-	{
-	    name = "Dozer",
-	    from = "大众点评网",
-	    company = "Narvii",
-	    tags = ["开源", "互联网", "数码产品"],
-	    zhihu = "www.zhihu.com/people/dozer",
-	    gmail = "dozer.cc(d)gmail.com (请把(d)替换成@)",
-	    email = "mail(d)dozer.cc (请把(d)替换成@)",
-	    copyright = "如需转载，请注明出处，谢谢配合！",
-	}
+```
+new dozer()
+{
+	name = "Dozer",
+	company = ["Amino Apps", "大众点评网"],
+	tags = ["开源", "互联网", "数码产品"],
+	email = "mail(d)dozer.cc (请把(d)替换成@)",
+	copyright = "如需转载，请注明出处，谢谢配合！",
+}
+```
 
 --------
 
 ### 友情链接
 
-* [7 Design](http://www.zcool.com.cn/u/483558/)
-* [island205](http://island205.com/)
-* [evanhsiwood](http://evanhsiwood.com/)
+* [高策的个人博客](http://gaocegege.com/)
 * [BILL的私房钱](http://jingege.github.io/)
 * [Rain Man](http://www.cnblogs.com/rainman/)
-* [TEDLIFE](http://www.tedlife.com)
 * [书豪](http://caosh.me/)
 * [发如雪](http://www.cnblogs.com/faruxue/)
-* [浊酒](http://blog.xujif.com/)
-* [随网之舞](http://dancewithnet.com/)
 * [咀嚼之味](http://jerryzou.com/)
-* [Andy's Blog](http://codinglife.in/)
-* [Wang Yapu Blog](https://wangyapu0714.github.io/)
 
 --------
 
