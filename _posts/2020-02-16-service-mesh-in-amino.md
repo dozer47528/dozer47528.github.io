@@ -2,7 +2,7 @@
 title: Amino Service Mesh 实践（零）：转型之路
 author: Dozer
 layout: post
-permalink: /2020/02/service-mesh-in-amino-1.html
+permalink: /2020/02/service-mesh-in-amino.html
 categories:
   - 系统架构
 tags:
