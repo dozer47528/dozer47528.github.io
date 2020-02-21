@@ -372,7 +372,7 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 > 以下内容如果没有链接代表还未完成。
 
 1. [Amino Service Mesh 实践（一）：从 kops 到 ESK](/2020/02/migrate-kops-to-eks.html)
-2. Amino Service Mesh 实践（二）：Istio Mixer 模块的性能问题与替代方案
+2. [Amino Service Mesh 实践（二）：Istio Mixer 模块的性能问题与替代方案](/2020/02/replace-istio-mixer.html)
 3. Amino Service Mesh 实践（三）：数据库中间件的选择
 4. Amino Service Mesh 实践（四）：从开源 Ingress 到自研 API Gateway
 5. Amino Service Mesh 实践（五）：优雅启动和优雅关闭
