@@ -34,7 +34,7 @@ Ingress 的相关概念可以直接看 Kubernetes 的文档，讲的很清楚了
 
 从严格的技术实现来看，Istio Gateway 不能算是一个 Ingress Controller，因为它并不是根据 Kubernetes 里的`Ingress`资源来定义路由规则的。
 
-Kubernetes Ingress 的理念是想做一层抽象，配置和实现解耦，所有的配置都是配`Ingress`，而不需要关心具体的技术实现。
+Kubernetes Ingress 的理念是想做一层抽象，配置和实现解耦，所有的配置都是配置`Ingress`，而不需要关心具体的技术实现。
 
 Istio Gateway 不用`Ingress`来配置，而是使用了自己的一套资源来配置，实际的功能上也比 Kubernetes Ingress 更丰富。因为技术实现脱离了 Kubernetes Ingress，所以我觉得严格的定义来看它不是一个 Ingress Controller。
 
@@ -50,7 +50,7 @@ Istio Gateway 不用`Ingress`来配置，而是使用了自己的一套资源来
 
 但是它有什么问题呢？
 
-很早版本的 Istio 和 Helm 配合使用时有很多问题的，经常遇到升级版本出问题导致整个 Istio 只能卸载重来的情况。Istio 也一直在努力改善这个问题，例如现在版本把 CRDs 和 Helm Chart 分离，新开发的 Istio Operator 完全脱离 Helm。这些都是为了摆脱 Helm 带来的问题，毕竟部署 Istio 还是有点复杂的，模块太多。
+很早版本的 Istio 和 Helm 配合使用时有很多问题的，经常遇到升级版本出问题导致整个 Istio 只能卸载重来的情况。Istio 也一直在努力改善这个问题，例如现在版本把 CRDs 和 Helm Chart 分离；还有开发中的 Istio Operator 完全脱离 Helm。这些都是为了摆脱 Helm 带来的问题，毕竟部署 Istio 还是有点复杂的，模块太多。
 
 另外从 Istio 的设计理念角度看，整个集群就算没有 Istio 也可以正常运作的，无非就是缺失一些辅助功能。遇到上述问题的时候，我们只能把 Istio 卸载重装，而在这个过程中，最大的问题就是 Istio Gateway 了。
 
@@ -68,7 +68,7 @@ Istio Gateway 不用`Ingress`来配置，而是使用了自己的一套资源来
 
 一开始我们搭建 Nginx Ingress 的时候是包着 Istio 的，因为如果不包着 Istio，Nginx Ingress 访问集群内部服务的时候就无法用到 Istio 相关功能了。
 
-Envoy + Pilot 的配合其实是替代了 Kubernetes 内置的`Service`，做了一套自己的服务发现机制，因为这样才能实现更强大的流量控制功能。例如 A 服务访问 B 服务，B 服务中有一台主机会偶发性报 500，但它的 Kubernetes 健康检查缺是正常的，没有完全挂掉。如果配置了`DestinationRule`的`outlierDetection`后，Envoy 会自动拆除目标机器。
+Envoy + Pilot 的配合其实是替代了 Kubernetes 内置的`Service`，做了一套自己的服务发现机制，因为这样才能实现更强大的流量控制功能。例如 A 服务访问 B 服务，B 服务中有一台主机会偶发性报 500，但它的 Kubernetes 健康检查却是正常的，没有完全挂掉。如果配置了`DestinationRule`的`outlierDetection`后，Envoy 会自动拆除目标机器。
 
 和所有的流量控制一样，这套逻辑是在调用方来实现，而不是服务提供方实现的。按照这张图的例子，`user-service`的信息会由 Pilot 通过 xDS 协议推送给 Envoy，Envoy 就知道如果要访问`user-service`的时候要访问哪些 IP 了。启用 Istio 后`user-service`里面的`Service`并没有实际的作用了，只是用来给 Pilot 分析这个服务对应着哪些`Pod`而已。实际的流量也不会像 Kubernetes 里的`Service`一样通过`iptables`规则 NAT 转发到对应的`Pod`了。
 
@@ -94,7 +94,7 @@ sudo ifconfig lo0 alias 100.64.0.0 255.255.255.0
 
 解决办法也很简答，让 SS HTTP Proxy 监听`0.0.0.0:1087`，然后把你的局域网内网 IP 配置到 Docker 代理中就行了。
 
-但你在公司，家庭来回切换的时候，内网 IP 是一直会变的，所以可以通过这个`alias`给你的网卡加一个别名，然后配置到 Docker 代理中就行了。
+但你在公司，家庭来回切换的时候，内网 IP 是一直会变的，所以可以通过这个`alias`给你的网卡加一个别名，然后配置到 Docker 代理中就行了。一般配置一个不冲突的局域网 IP 就行了。
 
 &nbsp;
 
@@ -121,7 +121,7 @@ helm upgrade -i nginx-ingress stable/nginx-ingress
 
 #### 创建服务
 
-安装一个假的`user-service`：
+安装一个测试用的`user-service`：
 
 ```yaml
 apiVersion: apps/v1
@@ -216,7 +216,7 @@ curl localhost:8080 -H Host:user-service.dozer.cc
 
 #### 检查结果
 
-Nginx 是根据`Host`来把流量分发到对应的服务的，所以要在`curl`里制定一下`Host`。然后看一下`user-service`的 Access Log，就可以看到访问日志了：
+Nginx 是根据`Host`来把流量分发到对应的服务的，所以要在`curl`里传一下`Host`。然后看一下`user-service`的 Access Log，就可以看到访问日志了：
 
 ```sh
 kubectl logs -l app=user-service -c nginx
@@ -236,7 +236,7 @@ kubectl logs -l app=user-service -c nginx
 
 #### 再创建一个服务
 
-我们现在配置一个`user-service-canary`：
+我们再创建一个服务`user-service-canary`做灰度发布：
 
 ```yaml
 apiVersion: apps/v1
@@ -303,13 +303,15 @@ spec:
 
 #### 无法命中`user-service-canary`
 
-然而，再以上面的方式访问，却发现永远无法命中`user-service-canary`，难道是 Istio 的问题？
+然而，再以`curl`访问的时候，却发现永远无法命中`user-service-canary`，难道是 Istio 的问题？
+
+尝试直接启动一个`Pod`然后在内部 debug 一下。
 
 ```sh
 kubectl run debug --generator=run-pod/v1 --rm --image=curlimages/curl:latest -it sh
 ```
 
-尝试直接启动一个`Pod`然后在内部 debug 一下，结果发现一切正常，可以命中`user-service-canary`。
+结果发现一切正常，可以命中`user-service-canary`。
 
 后来看了一下 Nginx Ingress Access Log，发现了一些奇怪的现象：
 
@@ -369,11 +371,11 @@ istioctl dashboard envoy {pod-name}
 
 ### Nginx Ingress 入口流量问题
 
-没过多久，新的问题出现了。我们看监控的时候总是发现 Nginx Ingress 运行的时候`Pod` 流量非常不均衡。很明显是启动早的流量多，启动晚的流量少。
+另外一个问题也很棘手，我们看监控的时候总是发现 Nginx Ingress 运行的时候`Pod` 流量非常不均衡。很明显是启动早的流量多，启动晚的流量少。
 
-这种现象在做负载均衡器的时候很常见，一般是 HTTP Keep Alive 机制导致的。
+这种现象在做负载均衡的时候很常见，一般是 HTTP Keep Alive 机制导致的。
 
-我们的集群并不是直接暴露在公网的，公网流量是经过 AWS Load Balancer 进来的。一般来说，暴露在公网的负载均衡器一定要足够稳定，否则一旦出现故障虽然可以通过 DNS 切换做故障转移，但是总是需要一点时间的。所以直接把集群内的机器暴露在公网是不合适的，集群内的机器稳定性远不如 AWS Load Balancer。另外从安全的角度，直接把集群暴露在公网也是非常危险的。
+我们的集群并不是直接暴露在公网的，公网流量是经过 AWS Load Balancer 进来的。暴露在公网的负载均衡器一定要足够稳定，否则一旦出现故障虽然可以通过 DNS 切换做故障转移，但是总是需要一点时间的。所以直接把集群内的机器暴露在公网是不合适的，集群内的机器稳定性远不如 AWS Load Balancer。另外从安全的角度，直接把集群暴露在公网也是非常危险的。
 
 ![ALB with Ingress and Service](/uploads/2020/02/alb-ingress-service.png)
 
@@ -520,11 +522,9 @@ ESTAB      0            0                       127.0.0.1:http                  
 
 随着业务的发展，自研 API Gateway 的需求越来越大了，很多功能需要整合到 API Gateway 中，单纯的反向代理已经很难满足我们的需求了。
 
-可预知的需求有：智能路由，限流熔断，分布式追踪，统一身份校验，CDN 静态资源防盗链 签名，I18N，安全防护等。
+相关需求有：智能路由，限流熔断，分布式追踪，统一身份校验，CDN 静态资源防盗链签名，I18N，安全防护等。
 
-因为我们内部已经有不少业务用 golang 来实现了，golang 在 Service Mesh 这块也很有优势。
-
-正巧有一天看到了一篇 [Caddy](https://caddyserver.com/) Plugin 开发的技术文章，发现给予 Caddy 的插件机制开发一个 API Gateway 在开发效率，运行性能等方面都很有优势。
+正巧有一天看到了一篇 [Caddy](https://caddyserver.com/) Plugin 开发的技术文章，发现基于 Caddy 的插件机制开发一个 API Gateway 在开发效率，运行性能等方面都很有优势。我们内部已经有不少业务用 golang 来实现了，golang 在 Service Mesh 这块也很有优势。
 
 目前我们集群内所有流量都已经通过我们新开发的 API Gateway 来路由了，上述提到的需求我们也都已经实现。实现业务不难，难的是性能和稳定性。
 
@@ -532,7 +532,7 @@ ESTAB      0            0                       127.0.0.1:http                  
 
 #### 性能
 
-讲真，用回了 golang 的 pprof 后发现真的是非常好用。
+讲真，用了 golang 的 pprof 后发现真的是非常好用。
 
 经过压测和线上的分析后发现，主要的性能瓶颈就是 gzip, gunzip, json encode, json decode 等。可以发现这些都有一个共同的特点，大量的字符流和字节流的操作。
 
@@ -541,15 +541,21 @@ gzip 和 json 相关的都是很常用的技术，网上也有了很多的优化
 - [https://github.com/klauspost/compress](https://github.com/klauspost/compress)
 - [https://github.com/valyala/fastjson](https://github.com/valyala/fastjson)
 
-这两个库简单地替换以后，CPU 使用率就降低了 20% 以上。
+这两个库简单地替换以后，CPU 使用率就降低了 20% 以上。它们的优化方向主要是对象复用，还有一些算法的改进。
 
-再往下扣性能会发现大部分瓶颈都是在 GC 这块。这也是合情合理的，因为 API Gateway 作为一个反向代理，要把数据`decode`后还要做大量处理，然后再`encode`后返回给用户。
+再往下看性能会发现大部分瓶颈都是在 GC 这块。这也是合情合理的，因为 API Gateway 作为一个反向代理，要把数据`decode`后还要做大量处理，然后再`encode`后返回给用户。这个过程和 gzip, json 处理类似，都是大量的字符流和字节流操作。
 
-这块的性能优化思路也不难，优化算法+对象复用。
+所以优化的思路和上面提到的两个库差不多，优化算法+对象复用。
+
+因为这里的算法大多是特定业务的算法，不是像刷题算法那样是一个很单纯的问题，所以就不多介绍了，本质上就是一些文本处理的优化算法。而且这块收益也不是非常大。
+
+这里主要看一下对象复用带来地收益。
 
 ![Grafana Gateway Pool](/uploads/2020/02/grafana-gateway-pool.png)
 
 上图是对象池取对象的每秒调用次数和新建对象的每秒调用次数对比，很明显用了对象池后，大部分对象都得到了复用，命中率非常高。
+
+![Grafana Gateway GC](/uploads/2020/02/grafana-gateway-gc.png)
 
 经过优化后，GC 次数和释放的数据也大大降低，CPU 使用率又有了大幅的降低。
 
@@ -557,7 +563,7 @@ gzip 和 json 相关的都是很常用的技术，网上也有了很多的优化
 
 #### 稳定性
 
-API Gateway 刚上线以后，遇到了一些问题，下游业务常常会因为底层数据库或者是别的什么原因导致卡了一下，这一瞬间的并发请求数就会非常大，单机就会到几千甚至几万的并发请求。
+API Gateway 上线运行一段时间后，又一些问题，下游业务常常会因为底层数据库或者是别的什么原因导致卡了一下，这一瞬间的并发请求数就会非常大，单个实例就会到几千甚至几万的并发请求。
 
 大部分简单的 HTTP Server 都是多线程模式，每个请求由一个线程负责处理。当并发请求量一高，在 Java 中一个线程就要占用 1M 的栈，1000个并发请求就要占用 1G 的内存。一般 HTTP Server 都会在这种时候拒绝请求。
 
@@ -565,15 +571,15 @@ API Gateway 刚上线以后，遇到了一些问题，下游业务常常会因�
 
 而 golang 就没这个烦恼了，golang 协程的开销极小，编程的思路还是同步写法，但底层自动帮你处理了。于是它自信满满地把这些请求全部发送给了下游。
 
-但是当下游返回数据的时候它就懵了，几万个请求同时在 API Gateway 内部处理，返回的数据 10k, 100k 是很常见的，还要在内存里 gunzip 一下，那就更可怕了。
+当下游返回数据的时候它就懵了，虽然没有了线程的开销，但几万个请求同时在 API Gateway 内部处理，返回的数据 10k, 100k 是很常见的，还要在内存里 gunzip 一下，虽然处理能力比 Java 强得多，但到了上千近万还是扛不住。
 
-于是我们线上就经常会 OOM，一个实例 OOM，还会导致所有别的实例雪崩，线上还真的因此挂了很多次。
+而 golang 程序正常的时候占用内存极小，所以尽量节约资源，不会给它分配过多的内存，于是我们线上就经常会 OOM，一个实例 OOM，还会导致所有别的实例雪崩，线上还真的因此挂了很多次。
 
 一开始我们也是简单地和传统 HTTP Server 限制一下最大并发请求数，可是这个数字太小就会出现很多被拒绝的请求，太大又会 OOM。
 
 后来仔细想了想，这个问题对于 golang 来说其实很好解决。一个请求过来后会检查当前并发请求数，如果数量太多就开始`sleep`自旋等待，最终要么等并发数降下去后继续执行，要么过了超时时间再抛错。
 
-这个功能上线后，API Gateway 自身的稳定性大大提高，再也不会因为下游的不稳定而造成 OOM 了，而且在几秒内的卡顿不会拒绝任何一个请求。
+这个功能上线后，API Gateway 自身的稳定性大大提高，再也不会因为下游的不稳定而造成 OOM 了，在几秒内的卡顿不仅不会 OOM，也不会拒绝任何一个请求。
 
 ![Gateway](/uploads/2020/02/gateway.png)
 
