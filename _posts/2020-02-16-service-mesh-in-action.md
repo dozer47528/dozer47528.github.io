@@ -313,6 +313,8 @@ Java 程序启动太慢，Golang 程序启动太快… 如何做到优雅启动�
 
 主要靠开源项目 [k8s-prometheus-adapte](https://github.com/DirectXMan12/k8s-prometheus-adapter) 解决，整体难度不大。
 
+但后面可以讲讲为什么需要让`HorizontalPodAutoscaler` 支持自定义 Metrics。`(11)`
+
 &nbsp;
 
 ##### AWS 账号与 Kubernetes 账号身份认证打通
@@ -371,7 +373,7 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 
 > 以下内容如果没有链接代表还未完成。
 
-1. [Service Mesh 实践（一）：从 kops 到 ESK](/2020/02/migrate-kops-to-eks.html)
+1. [Service Mesh 实践（一）：从 kops 到 EKS](/2020/02/migrate-kops-to-eks.html)
 2. [Service Mesh 实践（二）：Istio Mixer 模块的性能问题与替代方案](/2020/02/replace-istio-mixer.html)
 3. [Service Mesh 实践（三）：数据库中间件](/2020/02/database-middleware.html)
 4. [Service Mesh 实践（四）：从开源 Ingress 到自研 API Gateway](/2020/02/api-gateway.html)
@@ -381,3 +383,4 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 8. Service Mesh 实践（八）：Fluent Bit 自定义 Parser
 9. Service Mesh 实践（九）：分布式上下文
 10. Service Mesh 实践（十）：为什么 Golang 更适合 Service Mesh
+11. Service Mesh 实践（十一）：HorizontalPodAutoscaler 支持自定义 Metrics
