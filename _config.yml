@@ -1,9 +1,9 @@
 # Site settings
-title: Dozer Zone
-name: Dozer Zone
+title: Dozer的技术小站
+name: Dozer的技术小站
 email: mail@dozer.cc
 description: 'Dozer&#039;s Technology Blog'
-keywords: 'Dozer,dozer,blog,java,互联网,翔工作室,大众点评'
+keywords: 'Dozer,dozer,blog,java,golang,互联网,翔工作室,大众点评,Amino'
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.dozer.cc" # the base hostname & protocol for your site
 github: dozer47528
