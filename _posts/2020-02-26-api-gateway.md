@@ -1,5 +1,5 @@
 ---
-title: Amino Service Mesh 实践（四）：从开源 Ingress 到自研 API Gateway
+title: Service Mesh 实践（四）：从开源 Ingress 到自研 API Gateway
 author: Dozer
 layout: post
 permalink: /2020/02/api-gateway.html

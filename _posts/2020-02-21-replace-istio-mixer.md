@@ -1,5 +1,5 @@
 ---
-title: Amino Service Mesh 实践（二）：Istio Mixer 模块的性能问题与替代方案
+title: Service Mesh 实践（二）：Istio Mixer 模块的性能问题与替代方案
 author: Dozer
 layout: post
 permalink: /2020/02/replace-istio-mixer.html
@@ -101,7 +101,7 @@ Prometheus 本身技术方案是完全不影响业务代码性能的，业务代
 
 &nbsp;
 
-### Amino 的改造方案
+### 改造方案
 
 最后，我们的方案就是去掉 Mixer 模块，自己搭建 Jaeger、Prometheus、Grafana 还有 Fluent Bit。
 

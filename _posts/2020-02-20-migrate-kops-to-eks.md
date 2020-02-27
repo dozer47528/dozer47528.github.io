@@ -1,5 +1,5 @@
 ---
-title: Amino Service Mesh 实践（一）：从 kops 到 ESK
+title: Service Mesh 实践（一）：从 kops 到 ESK
 author: Dozer
 layout: post
 permalink: /2020/02/migrate-kops-to-eks.html

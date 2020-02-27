@@ -1,5 +1,5 @@
 ---
-title: Amino Service Mesh 实践（三）：数据库中间件
+title: Service Mesh 实践（三）：数据库中间件
 author: Dozer
 layout: post
 permalink: /2020/02/database-middleware.html
