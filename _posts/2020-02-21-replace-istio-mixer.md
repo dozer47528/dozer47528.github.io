@@ -41,7 +41,7 @@ Istio 的架构设计让人看着非常舒服，分工明确，扩展性强。
 
 最近，Istio 团队也意识到了这个问题，并已经开始重构。据说即将发布的 Istio 1.5 就会把 Mixer 整合进 Envoy 中。这样减少了额外的远程调用，可以减少延迟降低 CPU 消耗。
 
-其实再去回看蚂蚁金服的 [SOFAMesh](https://www.sofastack.tech/projects/sofa-mesh/overview/) 就会发现，SOFAMesh 在很早就意识到了这个问题，并切着手进行了改造。直接把 Envoy 用自研的模块取代，并把 Mixer 整合进去了。整个改造思路和 Istio 未来的设计是一致的。
+其实再去回看蚂蚁金服的 [SOFAMesh](https://www.sofastack.tech/projects/sofa-mesh/overview/) 就会发现，SOFAMesh 在很早就意识到了这个问题，并且着手进行了改造。直接把 Envoy 用自研的模块取代，并把 Mixer 整合进去了。整个改造思路和 Istio 未来的设计是类似的。
 
 &nbsp;
 
@@ -63,7 +63,7 @@ Istio 的架构设计让人看着非常舒服，分工明确，扩展性强。
 
 可见这个功能对大部分人来说是不需要的。
 
-禁用掉`Policy Check`后，P90 和 P95 好了很多，因为之前它需要定期去检查各种规则。
+禁用掉`Policy Check`后，P95 好了很多，因为之前它需要定期去检查各种规则。
 
 &nbsp;
 
