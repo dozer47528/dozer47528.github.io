@@ -144,7 +144,7 @@ Containers:
 
 &nbsp;
 
-### Java 程序启动时负载过高
+### Java 程序启动时负载过高延迟过大
 
 Golang 的问题是启动太快了，而 Java 的问题就是启动太慢了…
 
