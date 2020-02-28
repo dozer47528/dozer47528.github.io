@@ -377,7 +377,7 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 2. [Service Mesh 实践（二）：Istio Mixer 模块的性能问题与替代方案](/2020/02/replace-istio-mixer.html)
 3. [Service Mesh 实践（三）：数据库中间件](/2020/02/database-middleware.html)
 4. [Service Mesh 实践（四）：从开源 Ingress 到自研 API Gateway](/2020/02/api-gateway.html)
-5. Service Mesh 实践（五）：优雅启动和优雅关闭
+5. [Service Mesh 实践（五）：优雅启动和优雅关闭](/2020/02/graceful-start-and-shutdown.html)
 6. Service Mesh 实践（六）：Internationalization Language
 7. Service Mesh 实践（七）：CI / CD 的变迁
 8. Service Mesh 实践（八）：Fluent Bit 自定义 Parser
