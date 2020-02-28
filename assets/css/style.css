@@ -252,3 +252,16 @@ pre {
 	list-style-type: none;
 	padding: 0px;
 }
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid #ddd;
+}
+  
+th, td {
+	padding: 4px;
+	border: 1px solid #ddd;
+}
+  
+tr:nth-child(even) {background-color: #f2f2f2;}
