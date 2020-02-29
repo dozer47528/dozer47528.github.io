@@ -16,7 +16,7 @@ tags:
 
 Istio 的架构设计让人看着非常舒服，分工明确，扩展性强。
 
-<img width="500" src="/uploads/2020/02/istio-arch.svg" alt="The overall architecture of an Istio-based application.">
+![The overall architecture of an Istio-based application.](/uploads/2020/02/istio-arch)
 
 特别是 Mixer 模块，包含`Telemetry`和`Policy Check`两个模块，数据平面的 Envoy 会把所有请求异步发送给 Mixer 用作遥测，也会定时检查对应规则判断是否可以调用目标服务。
 
