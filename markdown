@@ -34,17 +34,7 @@ if __name__ == "__main__":
 
     content = re.sub('<!--more-->', '', content)
 
-    # Remove link
-    for url in re.findall("(?<!!)\[[^\]]*\]\([^\)]*\)",content):
-        url_title, url_link = url[1:-1].split("](")
-        if str(url_link).startswith("/"):
-            url_link = base_url + url_link
-        if url_title == url_link:
-            content = content.replace(url, " %s " % url_link)
-        else:
-            content = content.replace(url, " %s %s " % (url_title, url_link))
-
-    content = re.sub('\]\(/uploads/', '](%s/uploads/' % base_url, content)
+    content = re.sub('\]\(/', '](%s/' % base_url, content)
 
     if opts.weixin:
         content += '\n&nbsp;\n\n👇更好的排版请点击原文连接👇'

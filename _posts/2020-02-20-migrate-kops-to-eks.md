@@ -14,7 +14,7 @@ tags:
 
 如果仅从易用性这个角度看，kops 是完胜 EKS 的，下面有一个官方的演示视频。
 
-[<img src="https://asciinema.org/a/97298.png" width="500" />](https://asciinema.org/a/97298)
+[kops 演示视频](https://asciinema.org/a/97298)
 
 所有的操作都可以在命令行里完成，包括建集群，改集群。
 
