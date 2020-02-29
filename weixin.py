@@ -10,7 +10,7 @@ file = open(file_name, 'r')
 
 content = file.read()
 
-content = re.sub('---.*---', '', content, flags=re.S)
+content = re.sub('---.*?---', '', content, flags=re.S)
 
 content = re.sub('<!--more-->', '', content)
 
@@ -19,7 +19,8 @@ for img_exp in re.findall("!\[[^\]]*\]\([^\)]*\)",content):
     img_path = img_exp[:-1].split("(")[1][1:]
     with open(img_path, 'r') as img_file:
         img_base64 = img_file.read().encode('base64').replace("\n", "")
-        img_html = '<img src="data:image/jpeg;base64, %s" />' % img_base64
+        img_ext = img_path.split(".")[-1]
+        img_html = '<img src="data:image/%s;base64, %s" />' % (img_ext, img_base64)
         content = content.replace(img_exp, img_html)
 
 # Replace external link
