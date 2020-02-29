@@ -13,7 +13,6 @@ categories:
   - 编程技术
 tags:
   - javascript
-  - zepto
 ---
 
 ### 问题代码

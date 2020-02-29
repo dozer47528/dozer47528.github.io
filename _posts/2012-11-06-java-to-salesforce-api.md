@@ -7,8 +7,6 @@ categories:
   - 编程技术
 tags:
   - Java
-  - Salesforce
-  - wsdl
 ---
 
 ### .net to java

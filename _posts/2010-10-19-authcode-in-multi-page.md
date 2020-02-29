@@ -8,7 +8,6 @@ categories:
 tags:
   - AspDotNet
   - MVC
-  - 验证码
 ---
 
 ### <span style="line-height: 19px;"><strong>场景：</strong></span>

@@ -6,7 +6,6 @@ permalink: /2010/02/run-mvc-in-iis6.html
 categories:
   - 编程技术
 tags:
-  - IIS6
   - MVC
 ---
 

@@ -7,7 +7,7 @@ categories:
   - 编程技术
 tags:
   - Python
-  - Alfred2
+  - Mac
 ---
 
 ### 工具化思维

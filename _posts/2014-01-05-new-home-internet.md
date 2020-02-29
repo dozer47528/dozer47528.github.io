@@ -6,8 +6,6 @@ permalink: /2014/01/new-home-internet.html
 categories:
   - 互联网
 tags:
-  - 交换机
-  - 路由器
 ---
 
 ### 100M

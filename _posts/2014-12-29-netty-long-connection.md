@@ -8,10 +8,7 @@ categories:
 tags:
   - Java
   - Netty
-  - NIO
-  - 长连接
   - Android
-  - Push Notifications
 ---
 
 ### 推送服务

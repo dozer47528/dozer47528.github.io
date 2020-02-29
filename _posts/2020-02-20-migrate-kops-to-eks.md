@@ -7,7 +7,7 @@ categories:
   - 系统架构
 tags:
   - Kubernetes
-  - EKS
+  - Service Mesh
 ---
 
 ### kops 问题出在哪？

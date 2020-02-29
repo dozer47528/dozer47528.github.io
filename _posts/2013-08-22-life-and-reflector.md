@@ -12,8 +12,6 @@ wpzoom_post_url:
 categories:
   - 大杂烩
 tags:
-  - TDD
-  - 重构
 ---
 
 ### 怎么样才是NB的工程师

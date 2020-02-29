@@ -7,7 +7,6 @@ categories:
   - 编程技术
 tags:
   - MySQL
-  - 连接池
   - Python
 ---
 

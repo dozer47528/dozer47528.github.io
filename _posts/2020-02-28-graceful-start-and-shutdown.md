@@ -10,6 +10,7 @@ tags:
   - Golang
   - Kubernetes
   - Istio
+  - Service Mesh
 ---
 
 ### 传统做法

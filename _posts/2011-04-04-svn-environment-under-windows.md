@@ -6,12 +6,6 @@ permalink: /2011/04/svn-environment-under-windows.html
 categories:
   - 编程技术
 tags:
-  - ankhsvn
-  - CVS
-  - SVN
-  - TortoiseSVN
-  - VisualSVN
-  - 版本控制
 ---
 
 ### SVN 是什么？

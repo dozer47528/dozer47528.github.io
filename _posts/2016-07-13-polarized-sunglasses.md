@@ -6,7 +6,6 @@ permalink: /2016/07/polarized-sunglasses.html
 categories:
   - 数码产品
 tags:
-  - 偏光
 ---
 
 ### 探索精神

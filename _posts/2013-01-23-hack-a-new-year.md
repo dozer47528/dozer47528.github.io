@@ -6,7 +6,6 @@ permalink: /2013/01/hack-a-new-year.html
 categories:
   - 大杂烩
 tags:
-  - Hackathon
 ---
 
 ### Hack a New Year

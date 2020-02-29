@@ -6,8 +6,6 @@ permalink: /2014/10/mi-shouhuan.html
 categories:
   - 数码产品
 tags:
-  - 手环
-  - 小米
 ---
 
 ### 坑爹的咕咚手环

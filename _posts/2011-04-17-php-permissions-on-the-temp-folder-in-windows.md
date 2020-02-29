@@ -6,9 +6,7 @@ permalink: /2011/04/php-permissions-on-the-temp-folder-in-windows.html
 categories:
   - 操作系统
 tags:
-  - IIS
   - Php
-  - 服务器
 ---
 
 ### 服务器抽风…

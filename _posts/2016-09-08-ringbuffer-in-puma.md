@@ -6,9 +6,7 @@ permalink: /2016/09/ringbuffer-in-puma.html
 categories:
   - 编程技术
 tags:
-  - RingBuffer
   - 设计模式
-  - Puma
 ---
 
 ### 什么是 RingBuffer

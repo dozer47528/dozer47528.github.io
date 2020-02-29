@@ -6,7 +6,6 @@ permalink: /2014/07/dp-hackathon.html
 categories:
   - 大杂烩
 tags:
-  - Hackathon
 ---
 
 ### 极客世界杯

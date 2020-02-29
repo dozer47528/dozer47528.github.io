@@ -6,7 +6,6 @@ permalink: /2016/01/api-blueprint.html
 categories:
   - 编程技术
 tags:
-  - 团队
 ---
 
 ### 对 API 文档的幻想

@@ -6,10 +6,6 @@ permalink: /2011/07/email-solution-in-android.html
 categories:
   - 数码产品
 tags:
-  - Gmail
-  - IMAP
-  - PushMail
-  - QQ邮箱
 ---
 
 ### 纠结的电子邮件使用体验

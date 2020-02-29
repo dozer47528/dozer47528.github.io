@@ -13,7 +13,6 @@ categories:
   - 互联网
 tags:
   - Google
-  - Google Analytics
 ---
 
 ### 什么是自定义维度

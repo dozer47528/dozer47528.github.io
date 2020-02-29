@@ -6,7 +6,6 @@ permalink: /2014/05/disable-resttemplate-redirect.html
 categories:
   - 编程技术
 tags:
-  - CORS
   - Java
   - Spring
 ---

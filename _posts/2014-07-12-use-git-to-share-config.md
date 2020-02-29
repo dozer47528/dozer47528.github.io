@@ -6,9 +6,6 @@ permalink: /2014/07/use-git-to-share-config.html
 categories:
   - 操作系统
 tags:
-  - cygwin
-  - git
-  - Github
   - Linux
   - Mac
   - Windows

@@ -6,7 +6,6 @@ permalink: /2011/05/new-technology-in-student-online.html
 categories:
   - 编程技术
 tags:
-  - 学生在线
 ---
 
 ### 前言

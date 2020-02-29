@@ -6,10 +6,6 @@ permalink: /2012/09/linq-to-salesforce.html
 categories:
   - 编程技术
 tags:
-  - LINQ
-  - LINQ Provider
-  - Salesforce
-  - 表达式树
 ---
 
 ### 锤子与钉子

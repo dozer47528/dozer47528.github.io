@@ -7,9 +7,7 @@ categories:
   - 编程技术
 tags:
   - AspDotNet
-  - Entiy Framework
   - MVC
-  - 数据验证
 ---
 
 > 今天在这里给大家介绍一下MVC的数据验证框架。

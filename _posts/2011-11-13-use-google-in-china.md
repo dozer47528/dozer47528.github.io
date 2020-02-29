@@ -6,7 +6,6 @@ permalink: /2011/11/use-google-in-china.html
 categories:
   - 互联网
 tags:
-  - GFW
   - Google
 ---
 

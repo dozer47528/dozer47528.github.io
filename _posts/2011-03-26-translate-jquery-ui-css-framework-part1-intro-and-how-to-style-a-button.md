@@ -9,7 +9,6 @@ tags:
   - CSS
   - html
   - jQuery
-  - jQuery UI
 ---
 原文链接：<a href="http://www.fbloggs.com/2010/01/20/the-jquery-ui-css-framework-part-1-intro-and-how-to-style-a-button/" target="_blank"><strong>传送门</strong></a>
 

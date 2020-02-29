@@ -6,8 +6,6 @@ permalink: /2011/05/godaddy-and-gfw.html
 categories:
   - 互联网
 tags:
-  - Godaddy
-  - 虚拟主机
 ---
 前段时间帮别人买虚拟主机，公司，不差钱。
 

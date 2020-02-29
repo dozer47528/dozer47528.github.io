@@ -6,8 +6,6 @@ permalink: /2010/08/usage-of-audio-and-video-decoder.html
 categories:
   - 软件
 tags:
-  - Mediacoder
-  - 解码器
 ---
 
 ### 一、开源？免费？怎么用啊…

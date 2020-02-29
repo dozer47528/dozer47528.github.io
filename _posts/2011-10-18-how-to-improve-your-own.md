@@ -6,10 +6,7 @@ permalink: /2011/10/how-to-improve-your-own.html
 categories:
   - 大杂烩
 tags:
-  - 交流能力
-  - 团队精神
-  - 学习能力
-  - 面试
+  - 总结
 ---
 
 好久没写博客了，从八月底开始一直忙着找招聘、实习、回校、找租房等事情…

@@ -6,12 +6,7 @@ permalink: /2012/11/how-to-mock-non-virtual-method-and-sealed-class.html
 categories:
   - 编程技术
 tags:
-  - Mock
-  - non-virtual
-  - sealed
   - 单元测试
-  - 密封类
-  - 非虚函数
 ---
 
 ### 问题

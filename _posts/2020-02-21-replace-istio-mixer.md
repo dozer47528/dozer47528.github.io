@@ -7,10 +7,7 @@ categories:
   - 系统架构
 tags:
   - Istio
-  - Prometheus
-  - Grafana
-  - Fluent Bit
-  - Elastic APM
+  - Service Mesh
 ---
 
 ### 寄以厚望的 Mixer

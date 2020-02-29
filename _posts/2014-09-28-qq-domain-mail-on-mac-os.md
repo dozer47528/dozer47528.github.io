@@ -7,10 +7,6 @@ categories:
   - 操作系统
 tags:
   - Mac
-  - IMAP
-  - 域名
-  - QQ邮箱
-
 ---
 
 ### Google 被墙之后

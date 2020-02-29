@@ -6,8 +6,6 @@ permalink: /2012/03/using-dnspod-solve-the-problem-of-godaddy-domain-can-not-res
 categories:
   - 互联网
 tags:
-  - DNS
-  - Godaddy
 ---
 
 ### 我们是共产主义的接班人

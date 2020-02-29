@@ -9,7 +9,6 @@ tags:
   - CSS
   - html
   - jQuery
-  - jQuery UI
 ---
 
 ### jQuery UI CSS Framework

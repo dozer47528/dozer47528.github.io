@@ -7,10 +7,6 @@ categories:
   - 编程技术
 tags:
   - MySQL
-  - MHA
-  - c3p0
-  - Socket
-  - TCP
 ---
 
 ### 问题来源

@@ -7,8 +7,6 @@ categories:
   - 编程技术
 tags:
   - git
-  - Jenkins
-  - 持续集成
 ---
 
 ### 持续集成

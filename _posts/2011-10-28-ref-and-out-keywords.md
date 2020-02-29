@@ -8,10 +8,6 @@ categories:
 tags:
   - DotNet
   - CSharp
-  - out
-  - ref
-  - 值类型
-  - 引用类型
 ---
 
 ### ref 和 out 的区别

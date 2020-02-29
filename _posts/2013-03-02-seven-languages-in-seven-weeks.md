@@ -9,7 +9,6 @@ tags:
   - DotNet
   - CSharp
   - Java
-  - 并行
 ---
 
 ### 七周七语言

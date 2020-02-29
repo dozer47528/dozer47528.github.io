@@ -7,7 +7,6 @@ categories:
   - 编程技术
 tags:
   - shell
-  - zsh
 ---
 
 ### fish shell

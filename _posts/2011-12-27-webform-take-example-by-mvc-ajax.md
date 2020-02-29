@@ -6,7 +6,6 @@ permalink: /2011/12/webform-take-example-by-mvc-ajax.html
 categories:
   - 编程技术
 tags:
-  - Ajax
   - AspDotNet
   - javascript
   - MVC

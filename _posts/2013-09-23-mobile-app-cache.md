@@ -12,9 +12,6 @@ wpzoom_post_url:
 categories:
   - 编程技术
 tags:
-  - HTML5
-  - PhoneGap
-  - 缓存
 ---
 
 ### 出了什么问题？

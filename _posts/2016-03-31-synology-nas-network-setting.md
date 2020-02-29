@@ -6,12 +6,6 @@ permalink: /2016/03/synology-nas-network-setting.html
 categories:
   - 互联网
 tags:
-  - NAS
-  - SSL
-  - HTTPS
-  - DDNS
-  - 路由器
-  - 光纤猫
 ---
 
 ### 群晖 NAS

@@ -7,7 +7,6 @@ categories:
   - 编程技术
 tags:
   - 数据库
-  - 一致性
   - MySQL
 ---
 

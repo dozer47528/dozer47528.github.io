@@ -7,8 +7,6 @@ categories:
   - 软件
 tags:
   - Android
-  - GPS
-  - 摄影
 ---
 
 现在智能手机上的相机都有一个功能：地理位置标记

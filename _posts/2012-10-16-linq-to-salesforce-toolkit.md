@@ -6,9 +6,6 @@ permalink: /2012/10/linq-to-salesforce-toolkit.html
 categories:
   - 编程技术
 tags:
-  - LINQ
-  - LINQ Provider
-  - Salesforce
 ---
 
 ### 简介

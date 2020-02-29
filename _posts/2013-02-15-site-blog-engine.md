@@ -6,7 +6,6 @@ permalink: /2013/02/site-blog-engine.html
 categories:
   - 互联网
 tags:
-  - Wordpress
 ---
 ### 选择博客程序
 

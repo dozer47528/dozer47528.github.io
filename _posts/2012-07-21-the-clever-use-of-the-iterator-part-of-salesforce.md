@@ -8,11 +8,6 @@ categories:
 tags:
   - DotNet
   - CSharp
-  - Salesforce
-  - yield
-  - 延迟加载
-  - 延迟求值查询
-  - 迭代器
 ---
 
 ### 上期回顾

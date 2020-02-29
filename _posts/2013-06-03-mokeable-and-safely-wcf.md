@@ -13,8 +13,6 @@ categories:
   - 编程技术
 tags:
   - DotNet
-  - Mock
-  - WCF
 ---
 
 ### WCF 的问题和 using 语句块

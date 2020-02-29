@@ -6,7 +6,6 @@ permalink: /2017/05/g29-and-playseat.html
 categories:
   - 数码产品
 tags:
-  - PS4
 ---
 
 ### 想要一套不占地方的赛车座椅

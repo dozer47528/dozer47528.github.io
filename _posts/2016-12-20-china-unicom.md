@@ -6,8 +6,6 @@ permalink: /2016/12/china-unicom.html
 categories:
   - 互联网
 tags:
-  - 宽带
-
 ---
 
 ### 电信糟糕的国际链路

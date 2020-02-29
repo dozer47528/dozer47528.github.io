@@ -6,7 +6,6 @@ permalink: /2020/02/service-mesh-in-action.html
 categories:
   - 系统架构
 tags:
-  - 微服务
   - Service Mesh
   - Kubernetes
   - Istio

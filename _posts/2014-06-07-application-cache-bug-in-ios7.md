@@ -6,7 +6,6 @@ permalink: /2014/06/application-cache-bug-in-ios7.html
 categories:
   - 编程技术
 tags:
-  - Application Cache
   - iOS
   - javascript
 ---

@@ -7,7 +7,6 @@ categories:
   - 操作系统
 tags:
   - Windows
-  - Windows7
 ---
 
 ### 前言

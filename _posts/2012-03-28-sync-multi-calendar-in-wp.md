@@ -7,7 +7,6 @@ categories:
   - 软件
 tags:
   - Google
-  - WP7
 ---
 
 ### WP7 上同步 Google 服务

@@ -6,7 +6,6 @@ permalink: /2012/11/wcf-traces-and-message-logs.html
 categories:
   - 编程技术
 tags:
-  - WCF
 ---
 
 ### 诡异的BUG

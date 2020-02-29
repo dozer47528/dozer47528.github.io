@@ -13,7 +13,6 @@ categories:
   - 编程技术
 tags:
   - DotNet
-  - log4net
 ---
 
 ### 坑坑坑

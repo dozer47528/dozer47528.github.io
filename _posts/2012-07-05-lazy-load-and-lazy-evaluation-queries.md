@@ -8,8 +8,6 @@ categories:
 tags:
   - DotNet
   - CSharp
-  - 延迟加载
-  - 延迟求值查询
 ---
 
 ### 对延迟加载的片面认识

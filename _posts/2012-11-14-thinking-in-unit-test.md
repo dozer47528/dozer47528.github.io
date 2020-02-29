@@ -6,7 +6,6 @@ permalink: /2012/11/thinking-in-unit-test.html
 categories:
   - 编程技术
 tags:
-  - Mock
   - 单元测试
 ---
 

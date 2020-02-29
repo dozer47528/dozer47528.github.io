@@ -6,8 +6,6 @@ permalink: /2013/02/site-domain.html
 categories:
   - 互联网
 tags:
-  - DNS
-  - 域名
 ---
 
 ### 漫漫长路

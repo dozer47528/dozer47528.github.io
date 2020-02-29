@@ -6,7 +6,6 @@ permalink: /2012/07/why-the-web-worker-can-not-call-a-function.html
 categories:
   - 编程技术
 tags:
-  - HTML5
   - javascript
 ---
 

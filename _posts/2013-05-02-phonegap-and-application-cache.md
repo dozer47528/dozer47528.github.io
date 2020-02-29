@@ -6,10 +6,7 @@ permalink: /2013/05/phonegap-and-application-cache.html
 categories:
   - 编程技术
 tags:
-  - Application Cache
   - html
-  - HTML5
-  - PhoneGap
 ---
 
 ### 一个想法

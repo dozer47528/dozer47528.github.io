@@ -6,9 +6,6 @@ permalink: /2011/10/how-to-use-big-memory.html
 categories:
   - 操作系统
 tags:
-  - 内存
-  - 磁盘
-  - 缓存
 ---
 
 现在的内存啊，主流都是4G，两根4G的DDR3 1333内存也才300元，150就可以买一根了~真是白菜价啊~

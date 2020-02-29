@@ -6,7 +6,6 @@ permalink: /2016/06/the-eq-of-engineers.html
 categories:
   - 大杂烩
 tags:
-  - 心灵鸡汤
 ---
 
 ### 一件小事

@@ -13,8 +13,6 @@ categories:
   - 编程技术
 tags:
   - Google
-  - Google Analytics
-  - PhoneGap
 ---
 
 ### 怎么整合 GA

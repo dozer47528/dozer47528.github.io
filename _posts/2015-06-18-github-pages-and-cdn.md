@@ -6,8 +6,6 @@ permalink: /2015/06/github-pages-and-cdn.html
 categories:
   - 互联网
 tags:
-  - Github
-  - CDN
 ---
 
 ### 百度爬虫被 Github Pages 拒绝

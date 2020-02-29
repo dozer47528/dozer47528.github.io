@@ -13,8 +13,6 @@ categories:
   - 编程技术
 tags:
   - AspDotNet
-  - IIS
-  - IIS6
 ---
 
 ### 错误现象

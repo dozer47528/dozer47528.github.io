@@ -7,8 +7,6 @@ categories:
   - 数码产品
 tags:
   - Linux
-  - NAS
-  - 树莓派
 ---
 
 ### 小米路由器

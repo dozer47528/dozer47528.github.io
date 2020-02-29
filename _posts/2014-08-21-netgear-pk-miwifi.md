@@ -6,10 +6,6 @@ permalink: /2014/08/netgear-pk-miwifi.html
 categories:
   - 数码产品
 tags:
-  - 路由器
-  - 小米
-  - Netgear
-
 ---
 
 ### 入手小米路由器 mini

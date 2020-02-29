@@ -6,9 +6,6 @@ permalink: /2012/09/entity-framework-code-first-configuring-database-mappings.ht
 categories:
   - 编程技术
 tags:
-  - Code First
-  - Entiy Framework
-  - Fluent API
 ---
 
 ### 目录

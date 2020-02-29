@@ -6,7 +6,6 @@ permalink: /2014/03/use-spring-mvc-and-resttemplate-impl-corsproxy.html
 categories:
   - 编程技术
 tags:
-  - CORS
   - Java
   - Spring
 ---

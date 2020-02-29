@@ -8,7 +8,6 @@ categories:
 tags:
   - javascript
   - MVC
-  - 数据验证
 ---
 
 ### Unobtrusive JavaScript 是什么？

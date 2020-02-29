@@ -6,8 +6,6 @@ permalink: /2012/09/work-with-tools.html
 categories:
   - 大杂烩
 tags:
-  - Facebook
-  - 工具
 ---
 
 ### Facebook 的工具思维

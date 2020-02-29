@@ -7,7 +7,6 @@ categories:
   - 操作系统
 tags:
   - Windows
-  - 搜索
 ---
 
 ### 怎么快速启动程序？

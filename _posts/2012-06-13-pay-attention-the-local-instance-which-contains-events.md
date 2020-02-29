@@ -8,8 +8,6 @@ categories:
 tags:
   - DotNet
   - CSharp
-  - GC
-  - 垃圾回收
 ---
 
 ### GeoCoordinateWatcher 的诡异问题

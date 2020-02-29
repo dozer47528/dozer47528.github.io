@@ -6,11 +6,6 @@ permalink: /2013/02/site-hosting-and-vps.html
 categories:
   - 互联网
 tags:
-  - Godaddy
-  - VPS
-  - 云主机
-  - 虚拟主机
-  - 阿里云
 ---
 
 ### 何处来安放你，我的网站？

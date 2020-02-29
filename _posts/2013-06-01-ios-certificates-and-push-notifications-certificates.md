@@ -13,8 +13,6 @@ categories:
   - 编程技术
 tags:
   - iOS
-  - 推送
-  - 证书
 ---
 
 ### iOS 证书与推送证书

@@ -8,7 +8,7 @@ categories:
 tags:
   - 数据库
   - MySQL
-  - Aurora
+  - Service Mesh
 ---
 
 ### 为什么要用数据库中间件

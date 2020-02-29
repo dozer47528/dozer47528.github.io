@@ -12,9 +12,7 @@ wpzoom_post_url:
 categories:
   - 编程技术
 tags:
-  - cygwin
   - git
-  - msysgit
   - shell
 ---
 

@@ -6,9 +6,8 @@ permalink: /2020/02/api-gateway.html
 categories:
   - 系统架构
 tags:
-  - Kubernets
-  - Ingress
-  - API Gateway
+  - Kubernetes
+  - Service Mesh
 ---
 
 ### Kubernetes Ingress

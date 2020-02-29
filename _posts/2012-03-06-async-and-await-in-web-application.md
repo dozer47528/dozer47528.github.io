@@ -7,10 +7,7 @@ categories:
   - 编程技术
 tags:
   - AspDotNet
-  - async
-  - await
   - MVC
-  - 异步
 ---
 
 ### .net 中的异步

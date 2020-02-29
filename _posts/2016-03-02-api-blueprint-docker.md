@@ -6,8 +6,6 @@ permalink: /2016/03/api-blueprint-docker.html
 categories:
   - 编程技术
 tags:
-  - 团队
-  - Docker
 ---
 
 ### API Blueprint

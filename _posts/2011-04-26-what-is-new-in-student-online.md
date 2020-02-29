@@ -6,8 +6,6 @@ permalink: /2011/04/what-is-new-in-student-online.html
 categories:
   - 互联网
 tags:
-  - 学生在线
-  - 翔工作室
 ---
 
 ### 新的学生在线

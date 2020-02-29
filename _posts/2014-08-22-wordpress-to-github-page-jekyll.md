@@ -6,10 +6,6 @@ permalink: /2014/08/wordpress-to-github-page-jekyll.html
 categories:
   - 互联网
 tags:
-  - Wordpress
-  - Github
-  - Jekyll
-
 ---
 
 ### 关于这次迁移

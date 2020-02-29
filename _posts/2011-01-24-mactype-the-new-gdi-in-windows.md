@@ -6,12 +6,8 @@ permalink: /2011/01/mactype-the-new-gdi-in-windows.html
 categories:
   - 软件
 tags:
-  - ezgdi
-  - GDI
   - Mac
-  - MacType
   - Windows
-  - x64
 ---
 
 ### 基础知识：图形设备接口（GraphicsDeviceInterface）

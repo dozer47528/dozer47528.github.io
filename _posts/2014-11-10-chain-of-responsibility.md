@@ -8,7 +8,6 @@ categories:
 tags:
   - Java
   - 设计模式
-  - jmh
 ---
 
 ### Chain of Responsibility

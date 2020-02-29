@@ -7,9 +7,7 @@ categories:
   - 编程技术
 tags:
   - AspDotNet
-  - Discuz
   - MVC
-  - Ucenter
 ---
 <div>
   <strong><br /> </strong>

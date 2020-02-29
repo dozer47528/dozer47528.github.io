@@ -7,13 +7,10 @@ categories:
   - 编程技术
 tags:
   - Android
-  - APNS
   - CSharp
   - iOS
   - Java
   - Php
-  - Push Notifications
-  - 推送
 ---
 
 ### Apple Push Notification Service

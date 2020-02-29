@@ -3,16 +3,9 @@ title: 你是怎么对待上帝的？
 author: Dozer
 layout: post
 permalink: /2013/10/customer-is-god.html
-wpzoom_post_title:
-  - Yes
-wpzoom_post_readmore:
-  - Yes
-wpzoom_post_url:
-  - 
 categories:
   - 大杂烩
 tags:
-  - 心灵鸡汤
 ---
 
 ### 一次不愉快的体验

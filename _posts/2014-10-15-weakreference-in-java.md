@@ -7,7 +7,6 @@ categories:
   - 编程技术
 tags:
   - Java
-  - 多线程
 ---
 
 ### 不要让 this 在构造期间逸出

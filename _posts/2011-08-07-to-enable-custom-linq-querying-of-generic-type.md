@@ -7,9 +7,6 @@ categories:
   - 编程技术
 tags:
   - DotNet
-  - CLR
-  - IL
-  - LINQ
 ---
 
 最近想研究如何自定义 LINQ Provider ，但是一直无法入手，先写点收获吧~

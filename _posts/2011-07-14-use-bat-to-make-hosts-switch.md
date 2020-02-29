@@ -6,7 +6,6 @@ permalink: /2011/07/use-bat-to-make-hosts-switch.html
 categories:
   - 操作系统
 tags:
-  - HOSTS
 ---
 
 ### 切换 HOSTS 文件的困扰
