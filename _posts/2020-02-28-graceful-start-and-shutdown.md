@@ -159,7 +159,7 @@ global:
 
 1.18 中你可以把一个容器标记成`sidecar`，它会保证一定在你的程序启动前完成启动，也会保证在你的容器关闭后再关闭自己。
 
-![sidecar-lifecycle-2](https://banzaicloud.com/img/blog/istio/sidecar-lifecycle-2.gif)
+![sidecar-lifecycle-2](/uploads/2020/02/sidecar-lifecycle-2.gif)
 
 有了这个功能后，就能完美解决上面几个问题了。
 
