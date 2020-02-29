@@ -9,13 +9,6 @@ tags:
   - PS4
 ---
 
-### 游戏视频（手动模式+换挡拨片）
-
-<iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=q0505suumo3&tiny=0&auto=0" allowfullscreen></iframe>
-
-<!--more-->
-&nbsp;
-
 ### 想要一套不占地方的赛车座椅
 
 很早之前，在咸鱼买了一套罗技 G29 赛车游戏方向盘，全新的一套2500以上，用1600的价格买到一套二手的，算是捡了个便宜。
@@ -25,6 +18,12 @@ tags:
 于是在网上寻觅赛车座椅，价格倒不是问题，可以接受，但这个体积实在是…
 
 ![Playseat](/uploads/2017/05/ps4_9.png)
+
+<!--more-->
+
+&nbsp;
+
+<iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=q0505suumo3&tiny=0&auto=0" allowfullscreen></iframe>
 
 &nbsp;
 
