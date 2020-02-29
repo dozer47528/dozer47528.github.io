@@ -26,7 +26,9 @@ if __name__ == "__main__":
 
     content = file.read()
 
-    link = "http://www.dozer.cc" + re.search('permalink:\s*(.*)', content).group(1)
+    base_url = "https://www.dozer.cc"
+
+    link =  base_url + re.search('permalink:\s*(.*)', content).group(1)
 
     content = re.sub('---.*?---', '', content, flags=re.S, count=1)
 
@@ -36,13 +38,13 @@ if __name__ == "__main__":
     for url in re.findall("(?<!!)\[[^\]]*\]\([^\)]*\)",content):
         url_title, url_link = url[1:-1].split("](")
         if str(url_link).startswith("/"):
-            url_link = "https://www.dozer.cc" + url_link
+            url_link = base_url + url_link
         if url_title == url_link:
             content = content.replace(url, " %s " % url_link)
         else:
             content = content.replace(url, " %s %s " % (url_title, url_link))
 
-    content = re.sub('\]\(/uploads/', '](http://www.dozer.cc/uploads/', content)
+    content = re.sub('\]\(/uploads/', '](%s/uploads/' % base_url, content)
 
     if opts.weixin:
         content += '\n&nbsp;\n\n👇更好的排版请点击原文连接👇'
