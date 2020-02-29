@@ -29,6 +29,16 @@
 	<!-- Le styles -->
 	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.BASE_PATH }}/{{ site.rss_path }}">
 	<link href="{{ site.BASE_PATH }}/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15745144-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-15745144-3');
+	</script>
 </head>
 <body>
 	<nav class="navbar navbar-default visible-xs" role="navigation">
@@ -109,7 +119,6 @@
 <link href="{{ site.BASE_PATH }}/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="{{ site.BASE_PATH }}/assets/resources/hightlight/default.min.css" rel="stylesheet">
 <link href="{{ site.BASE_PATH }}/assets/resources/fancybox/jquery.fancybox.css" rel="stylesheet">
-<script type="text/javascript" src="//tajs.qq.com/stats?sId=52286272" charset="UTF-8"></script>
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/hightlight/highlight.min.js"></script>
