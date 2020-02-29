@@ -104,7 +104,7 @@ Containers:
 
 总结起来就是一句话，Golang 启动太快了！那 Java 为什么没问题了？因为 Java 启动太慢了，至少几十秒，自然就不会出现这个现象了。
 
-目前我们的解决办法也很简单粗暴，所有 Golang 程序启动前 sleep 3 秒就解决了。
+目前我们的解决办法也很简单粗暴，所有 Golang 程序启动前 sleep 3 秒就解决了。另外也可以修改`Deployment`，加一个`lifecycle.preStart`，`sleep`几秒就行了。
 
 &nbsp;
 
@@ -132,9 +132,28 @@ Containers:
 
 我们一开始用了一种简单粗暴的解决办法，修改了 Istio 代码，强制让 Envoy 在退出前 sleep 几秒，这种现象就会大大改善了。
 
-可是这个方案非常的不优雅，到底应该 sleep 几秒？太短了效果不好，太长了影响重启速度。这问题社区内一直没有很好的解决办法。
+最新新发布的 Istio 1.4 中已经支持通过参数修改 Envoy 的 `lifecycle` 了。
 
-真的要解决这个问题还是需要 Kubernetes 官方的支持了，因为同一个`Pod`中多个容器一般都是有一些依赖关系的，没有启动顺序这个功能的话会出很多问题。值得高兴的是，Kubernetes 准备在 1.18 中支持这种场景了。
+![Injection Template](/uploads/2020/02/injection-template.png)
+
+修改方法很简单，在 Istio 配置中加入这部分就行了：
+
+```yaml
+global:
+  proxy:
+    lifecycle:
+      preStop:
+        exec:
+          command: ["/bin/sh", "-c", "sleep 15"]
+```
+
+但是文档还没更新，应该是还没来得及。其实我本来在写博客的时候也不知道这个变了，我只是想说一下应该改哪，翻阅源码的时候才看到它们已经支持了。
+
+&nbsp;
+
+### Kubernetes 对 Sidecar 的支持
+
+真的要解决上面两个问题还是需要 Kubernetes 官方的支持了，因为同一个`Pod`中多个容器一般都是有一些依赖关系的，没有启动顺序这个功能的话会出很多问题。值得高兴的是，Kubernetes 准备在 1.18 中支持这种场景了。
 
 [https://banzaicloud.com/blog/k8s-sidecars/](https://banzaicloud.com/blog/k8s-sidecars/)
 
@@ -142,7 +161,7 @@ Containers:
 
 ![sidecar-lifecycle-2](https://banzaicloud.com/img/blog/istio/sidecar-lifecycle-2.gif)
 
-有了这个功能后，就能解决上面几个问题了。
+有了这个功能后，就能完美解决上面几个问题了。
 
 &nbsp;
 
@@ -516,11 +535,16 @@ Kubernetes 本身没有这个能力，但是通过 Istio 其实是可以是实�
 
 &nbsp;
 
-### 问题并未解决
+### 总结
 
-上面提的几个问题和很多方案，我们都在线上试验过，上面的测试结果也都是我严格控制环境测出来的。虽然有一定收获，但都有一些小问题。
+上面提的几个问题和很多方案，我们都在线上试验过，上面的测试结果也都是我严格控制环境测出来的。
+
+针对三种情况，目前都有可以改善的不完美解决办法：
+
+1. Golang + Istio 启动失败：让业务容器比 Envoy 晚启动几秒
+2. Istio 优雅关闭：配置 Istio 安装参数，让 Envoy 比业务容器晚关闭几秒
+3. Java 程序启动时负载过高延迟过大：用 OpenJ9 或者自研发布控制工具
 
 还好这个问题不算一个特别大的问题，只是作为一个工程师想尽量让启动和关闭的场景下可以 0 报错。
 
 后面我们还会继续探索，想办法解决这些问题。
-
