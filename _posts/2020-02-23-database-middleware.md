@@ -210,14 +210,12 @@ mysql_query_rules:
 - ProxySQL: CPU 1, Memory 256Mi, Max Connection 2048
 - Sysbench: CPU 1, Memory 1Gi
 
-```
 | Threads | MySQL Min | ProxySQL Min | MySQL Avg | ProxySQL Avg | MySQL Max  | ProxySQL Max | MySQL P95 | ProxySQL P95 |
 |---------|-----------|--------------|-----------|--------------|------------|--------------|-----------|--------------|
 | 10      | 1.38 ms   | 5.65 ms      | 8.40 ms   | 8.63 ms      | 72.90 ms   | 215.26 ms    | 38.94 ms  | 13.22 ms     |
 | 50      | 1.39 ms   | 5.60 ms      | 42.66 ms  | 44.50 ms     | 280.67 ms  | 224.27 ms    | 92.42 ms  | 82.96 ms     |
 | 100     | 1.47 ms   | 5.54 ms      | 87.65 ms  | 87.22 ms     | 605.22 ms  | 504.15 ms    | 189.93 ms | 155.80 ms    |
 | 500     | 4.32 ms   | 13.20 ms     | 569.17 ms | 436.58 ms    | 2751.15 ms | 3829.34 ms   | 893.56 ms | 831.46 ms    |
-```
 
 从结果可以看出来并发量增加后最后的瓶颈都是 MySQL 了，并且随着并发量的增加，ProxySQL 的性能损耗基本是常数级别的，Avg 这一栏在并发数是 10,50 的时候都是慢 2ms 左右。
 
@@ -235,7 +233,6 @@ mysql_query_rules:
 - ProxySQL: CPU 1, Memory 256Mi, Max Connection 2048
 - Sysbench: CPU 1, Memory 1Gi, Rate 256/s
 
-```
 | Threads | MySQL Min | ProxySQL Min | MySQL Avg | ProxySQL Avg | MySQL Max | ProxySQL Max | MySQL P95 | ProxySQL P95 |
 |---------|-----------|--------------|-----------|--------------|-----------|--------------|-----------|--------------|
 | 10      | 3.24 ms   | 4.37 ms      | 3.82 ms   | 4.95 ms      | 33.06 ms  | 15.21 ms     | 4.33 ms   | 5.37 ms      |
@@ -244,7 +241,6 @@ mysql_query_rules:
 | 500     | 3.25 ms   | 5.04 ms      | 3.87 ms   | 6.05 ms      | 12.26 ms  | 17.71 ms     | 4.49 ms   | 6.91 ms      |
 | 1000    | 3.23 ms   | 5.73 ms      | 3.84 ms   | 7.56 ms      | 14.47 ms  | 17.80 ms     | 4.41 ms   | 8.90 ms      |
 | 2000    | 3.21 ms   | 7.99 ms      | 3.84 ms   | 11.15 ms     | 48.86 ms  | 45.65 ms     | 4.41 ms   | 17.63 ms     |
-```
 
 在这样的压力下，MySQL 非常稳，而 ProxySQL 的性能却随着连接数的增加而变差了。ProxySQL 默认 4 个线程，Sysbench 并发高的话 4 个线程可能会过小，尝试修改这个参数。
 
@@ -256,14 +252,12 @@ mysql_query_rules:
 - ProxySQL: CPU 1, Memory 256Mi, Max Connection 2048, Threads 8
 - Sysbench: CPU 1, Memory 1Gi, Rate 256/s
 
-```
 | Sysbench Threads | ProxySQL Threads | Min     | Avg      | Max      | P95      |
 |------------------|------------------|---------|----------|----------|----------|
 | 1000             | 4                | 5.73 ms | 7.56 ms  | 17.80 ms | 8.90 ms  |
 | 1000             | 8                | 4.97 ms | 6.01 ms  | 50.00 ms | 6.91 ms  |
 | 2000             | 4                | 7.99 ms | 11.15 ms | 45.65 ms | 17.63 ms |
 | 2000             | 8                | 5.68 ms | 7.54 ms  | 58.87 ms | 9.91 ms  |
-```
 
 很明显这里有了质的提升，而且还有优化空间。但线程肯定也不是越多越好的，ProxySQL 是 IO 密集型的，但还要结合它的 IO 模型。
 

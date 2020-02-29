@@ -73,7 +73,8 @@ app-tester-7b999ff58c-4l7zb   2/2     Running        1          81s
 
 ```sh
 kubectl describe pods app-tester-7b999ff58c-4l7zb
-
+```
+```
 Containers:
   app-tester:
     Container ID:  docker://2ef6f6bb8af84aca41f8d67ed30a348f528a6066260e8e2373f530e7d71a4c0d

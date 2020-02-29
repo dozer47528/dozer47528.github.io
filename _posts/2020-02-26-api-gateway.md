@@ -220,7 +220,8 @@ Nginx 是根据`Host`来把流量分发到对应的服务的，所以要在`curl
 
 ```sh
 kubectl logs -l app=user-service -c nginx
-
+```
+```
 127.0.0.1 - - [25/Feb/2020:11:56:51 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.64.1" "127.0.0.1"
 ```
 
