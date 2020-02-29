@@ -34,7 +34,6 @@ if __name__ == "__main__":
 
     # Remove link
     for url in re.findall("(?<!!)\[[^\]]*\]\([^\)]*\)",content):
-        print url
         url_title, url_link = url[1:-1].split("](")
         if str(url_link).startswith("/"):
             url_link = "https://www.dozer.cc" + url_link
