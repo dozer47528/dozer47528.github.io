@@ -167,6 +167,19 @@ article table {
     margin-bottom: 1em;
 }
 
+article blockquote {
+    border-left-color: rgb(221, 221, 221);
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-left-width: 4px;
+    color: rgb(119, 119, 119);
+    quotes: none;
+    border-left: 3px solid rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.05);
+}
+
 article th,
 td {
     padding: 4px;
