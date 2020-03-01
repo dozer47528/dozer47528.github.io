@@ -24,28 +24,6 @@
             </div>
             {{ content }}
             <p>本作品由 <a href="{{ site.url }}">Dozer</a> 创作，采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a> 进行许可。</p>
-            &nbsp;
-            <div class="post-donate">
-                <div id="donate_board" class="donate_bar center">
-                    <a id="btn_donate" class="btn_donate" href="javascript:;" title="Donate 打赏"></a>
-                </div>
-                <!-- 支付宝打赏图案 -->
-                <span class="donate_guide donate_bar center hidden">
-			<img src="/assets/image/alipay_donate.png" data-toggle="popover" data-placement="top" data-content="支付宝扫一扫"	title="支付宝打赏" height="180px" width="180px">
-                </span>
-                <span>&nbsp;</span>
-                <!-- 微信打赏图案 -->
-                <span class="donate_guide donate_bar center hidden">
-                    <img src="/assets/image/weixin_donate.png" title="微信打赏" height="180px" width="180px">
-                </span>
-
-                <script type="text/javascript">
-                    document.getElementById('btn_donate').onclick = function () {
-                        $('#donate_board').addClass('hidden');
-                        $('.donate_guide').removeClass('hidden');
-                    }
-                </script>
-            </div>
         </div>
 
         {% unless page.categories == empty %}
