@@ -246,11 +246,13 @@ mysql_query_rules:
 
 ![Rate](/uploads/2020/02/mysql-proxysql-rate.png)
 
-在这样的压力下，MySQL 非常稳，而 ProxySQL 的性能却随着连接数的增加而变差了。ProxySQL 默认 4 个线程，Sysbench 并发高的话 4 个线程可能会过小，尝试修改这个参数。
+在这样的压力下，MySQL 非常稳，而 ProxySQL 的性能却随着连接数的增加而变差了。良好设计后的数据库实例本身就应该由单一的几个业务访问，而不是让服务都能访问，所以在 1000 一下的连接数下的性能损耗完全是可以接受的。
+
+是否可以尝试改善一下大量连接下的性能？ProxySQL 默认 4 个线程，Sysbench 并发高的话 4 个线程会不会太小？
 
 &nbsp;
 
-### 提升 ProxySQL 线程数
+### 尝试提升 ProxySQL 线程数
 
 - MySQL: CPU 2, Memory 4Gi, Max Connection 2048
 - ProxySQL: CPU 1, Memory 256Mi, Max Connection 2048, Threads 8
@@ -277,16 +279,14 @@ mysql_query_rules:
 
 所以在容器化下跑这些东西还是要压测一下才能比较靠谱。
 
-因为我们目前只是轻量级使用 ProxySQL，所以暂时还没做更深入的性能优化。
-
-后面还要继续调优的话，可以看看官方文档，还有这里有些博客，也有很多介绍：[MySQL-中间件：ProxySQL]https://www.junmajinlong.com/mysql/index/#3-2-MySQL-%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%9AProxySQL
+后面还要继续调优的话，可以看看官方文档，还有这里有些博客，也有很多介绍：[MySQL-中间件：ProxySQL](https://www.junmajinlong.com/mysql/index/#3-2-MySQL-%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%9AProxySQL)
 
 &nbsp;
 
 ### 后续
 
-后面我们要重度使用的话，不仅仅要做一下性能调优，还有很多工具需要做一下。
+目前 ProxySQL 连接数在 1000 一下的情况下性能完全够用，后面我们要重度使用的话，还是要做一下性能调优的。
 
-ProxySQL 本身把所有配置写入了自己内置的一个数据库中，启动的时候可以读一份配置，运行的时候也可以直接修改。后面数据库实例多了，做一些管理工具是必须的。
+另外 ProxySQL 本身把所有配置写入了自己内置的一个数据库中，启动的时候可以读一份配置，运行的时候也可以直接修改。后面数据库实例多了，做一些管理工具是必须的。
 
-另外 ProxySQL 自身监控数据也已经非常多了，但还是需要做一些整合，例如配合 Prometheus 和 Grafana，把它们呈现出来。
+还有 ProxySQL 自身监控数据也已经非常多了，但还是需要做一些整合，例如配合 Prometheus 和 Grafana，把它们呈现出来。
