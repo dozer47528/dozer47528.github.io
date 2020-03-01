@@ -263,12 +263,30 @@ mysql_query_rules:
 | 2000             | 4                | 7.99 ms | 11.15 ms | 45.65 ms | 17.63 ms |
 | 2000             | 8                | 5.68 ms | 7.54 ms  | 58.87 ms | 9.91 ms  |
 
-很明显这里除了 Max 外都有了质的提升，而且还有优化空间。线程肯定也不是越多越好的，ProxySQL 是 IO 密集型的，但还要结合它的 IO 模型。ProxySQL 默认只配置 4 个线程来看，所以猜测它肯定不是同步 IO，不然是不可能做到高性能的。
+这里就出现了一个很有意思的现象了，除了 Max 外比的都降低了。
+
+如果它并发做得好，在线程数大于 CPU 数的前提下，线程数越少越好。
+
+官方的一个 Issue 也很好地解释了应该如何配置线程数：[How can i find the correct number of mysql-threads](https://github.com/sysown/proxysql/issues/1166)
+
+但为什么我配置的 CPU `limits` 是 1，加大了线程数却有效果呢？因为 Kubernetes `limits` 里配置的 1 不是给你一个核，而是指相当于 1 个核的 CPU 时间。
+
+这篇文章讲解的很好：[Kubernetes Container Resource Requirements — Part 2: CPU](https://medium.com/expedia-group-tech/kubernetes-container-resource-requirements-part-2-cpu-83ca227a18b1)
+
+我的电脑是 8 核的 CPU，所以配置成 8 个线程后整体延迟下降了。但是，虽然 8 个核都可以用到，但都是残血的。所以有些线程跑到一半资源又被别的线程抢过去了，导致 Max 增加。
+
+所以在容器化下跑这些东西还是要压测一下才能比较靠谱。
+
+因为我们目前只是轻量级使用 ProxySQL，所以暂时还没做更深入的性能优化。
+
+后面还要继续调优的话，可以看看官方文档，还有这里有些博客，也有很多介绍：[MySQL-中间件：ProxySQL]https://www.junmajinlong.com/mysql/index/#3-2-MySQL-%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%9AProxySQL
 
 &nbsp;
 
 ### 后续
 
-ProxySQL 是无状态的，所以做 HA 很简单，直接在 Kubernetes 里多部署几个实例就行了，这样水平扩展也可以同时提高整体性能。
+后面我们要重度使用的话，不仅仅要做一下性能调优，还有很多工具需要做一下。
 
-但后续肯定是要深入调优一下的，如果想深入调优，最好可以大致看一下它的源码，对调参的方向会更有帮助，最后还是要以测试结果为准。
+ProxySQL 本身把所有配置写入了自己内置的一个数据库中，启动的时候可以读一份配置，运行的时候也可以直接修改。后面数据库实例多了，做一些管理工具是必须的。
+
+另外 ProxySQL 自身监控数据也已经非常多了，但还是需要做一些整合，例如配合 Prometheus 和 Grafana，把它们呈现出来。
