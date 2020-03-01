@@ -31,7 +31,7 @@ Ingress 的相关概念可以直接看 Kubernetes 的文档，讲的很清楚了
 
 两年前比较靠谱的方案主要是 Nginx Ingress 和 Istio Gateway，而现在技术方案已经非常多了。所有传统负载均衡厂商基本都为 Kubernetes 开发了 Ingress。
 
-从严格的技术实现来看，Istio Gateway 不能算是一个 Ingress Controller，因为它并不是根据 Kubernetes 里的`Ingress`资源来定义路由规则的。
+从严格的定义看，Istio Gateway 不能算是一个 Ingress Controller，因为它并不是根据 Kubernetes 里的`Ingress`资源来定义路由规则的。
 
 Kubernetes Ingress 的理念是想做一层抽象，配置和实现解耦，所有的配置都是配置`Ingress`，而不需要关心具体的技术实现。
 
@@ -408,11 +408,11 @@ AWS Load Balancer 虽然没有 Keep Alive 最大请求数这个功能，但是�
 
 按照我当时的理解，如果有 3 个 Nginx Ingress，并且有 3 个连接，那么 AWS Load Balancer 会均衡分配连接。
 
-为了验证 AWS 有没有在忽悠我们，还是决定自己验证一下。AWS 遇到问题第一位帮我们解决问题的客服一般都是复制粘贴工程师，不太懂技术，但会找到一些文档并贴给我们。
+为了验证 AWS 有没有在忽悠我们，还是决定自己验证一下。AWS 遇到问题第一位帮我们解决问题的客服一般不会深入看我们的案例，只会找到一些文档并贴给我们。
 
 我们登上了宿主机并利用`ss`看了下来自于 AWS Load Balancer 的 TCP 连接数，但是竟然找不到来自 AWS Load Balancer 的连接！
 
-知道什么叫绝望了？这就是绝望。
+嗯，有点懵了。
 
 &nbsp;
 
@@ -477,7 +477,7 @@ DNAT       tcp  --  anywhere             anywhere             tcp to:100.64.229.
 
 先尝试进入 Nginx Ingress 抓包，明明是有断开连接的，接下来再准备看看 Nginx Ingress 里的 TCP 连接情况。
 
-这是上面提到的`Pod`内抓包工具就不够用了，我还需要在`Pod`运行更多的命令。而容器化后的镜像大多是精简过的镜像，很多都直接把包管理干掉了，这也意味着你没办法直接进入`Pod`安装对应的工具。
+这时上面提到的`Pod`内抓包工具就不够用了，我还需要在`Pod`运行更多的命令。而容器化后的镜像大多是精简过的镜像，很多都直接把包管理干掉了，这也意味着你没办法直接进入`Pod`安装对应的工具。
 
 最后找到一个更好用的工具：[简化 Pod 故障诊断: kubectl-debug 介绍](https://aleiwu.com/post/kubectl-debug-intro/)
 
@@ -584,3 +584,9 @@ API Gateway 上线运行一段时间后，又一些问题，下游业务常常�
 ![Gateway](/uploads/2020/02/gateway.png)
 
 上面是我们的 API Gateway 长时间运行无重启的截图。
+
+&nbsp;
+
+#### 后续
+
+API Gateway 该实现的功能大多数都实现了，后面随着服务越来越多，规则配置变更也会很多。目前配置是打包在代码中的，后面会考虑把配置做成动态配置再加上一个管理界面。
