@@ -265,21 +265,23 @@ mysql_query_rules:
 | 2000             | 4                | 7.99 ms | 11.15 ms | 45.65 ms | 17.63 ms |
 | 2000             | 8                | 5.68 ms | 7.54 ms  | 58.87 ms | 9.91 ms  |
 
-这里就出现了一个很有意思的现象了，除了 Max 外比的都降低了。
+这里就出现了一个很有意思的现象了，除了 Max 外别的都降低了。
 
-如果它并发做得好，在线程数大于 CPU 数的前提下，线程数越少越好。
+如果它并发做得好，在线程数大于 CPU 核心数的前提下，线程数越少越好。
 
 官方的一个 Issue 也很好地解释了应该如何配置线程数：[How can i find the correct number of mysql-threads](https://github.com/sysown/proxysql/issues/1166)
 
-但为什么我配置的 CPU `limits` 是 1，加大了线程数却有效果呢？因为 Kubernetes `limits` 里配置的 1 不是给你一个核，而是指相当于 1 个核的 CPU 时间。
+但为什么我配置的 CPU `limits` 是 1，加大了线程数却有效果呢？因为 Kubernetes `limits` 里配置的 1 不是给你一个核，而是指相当于一个核的 CPU 时间。
 
 这篇文章讲解的很好：[Kubernetes Container Resource Requirements — Part 2: CPU](https://medium.com/expedia-group-tech/kubernetes-container-resource-requirements-part-2-cpu-83ca227a18b1)
 
+举个例子就是在 1 秒内让一个工人给你工作 1 秒和在 1 秒内让 4 个工人分别给你工作 0.25 秒 的区别。
+
 我的电脑是 8 核的 CPU，所以配置成 8 个线程后整体延迟下降了。但是，虽然 8 个核都可以用到，但都是残血的。所以有些线程跑到一半资源又被别的线程抢过去了，导致 Max 增加。
 
-所以在容器化下跑这些东西还是要压测一下才能比较靠谱。
+所以在容器化下跑这些东西还是要压测一下真实数据才更靠谱。
 
-后面还要继续调优的话，可以看看官方文档，还有这里有些博客，也有很多介绍：[MySQL-中间件：ProxySQL](https://www.junmajinlong.com/mysql/index/#3-2-MySQL-%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%9AProxySQL)
+后面还要继续调优 ProxySQL 的话，可以看看官方文档，还有这里有些博客，也有很多介绍：[MySQL-中间件：ProxySQL](https://www.junmajinlong.com/mysql/index/#3-2-MySQL-%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%9AProxySQL)
 
 &nbsp;
 
