@@ -1,123 +1,120 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	{% if page.title %}
-	<title>{{ page.title }}</title>
-	{% else %}
-	<title>{{ site.title }}</title>
-	{% endif %}
-	{% if page.description %}
-	<meta name="description" content="{{ page.description }}">
-	{% elsif site.description %}
-	<meta name="description" content="{{ site.description }}">
-	{% endif %}
-	{% if page.keywords%}
-	<meta name="keywords" content="{{ page.keywords }}">
-	{% elsif site.keywords %}
-	<meta name="keywords" content="{{ site.keywords }}">
-	{% endif %}
-	<meta name="author" content="{{ site.author.name }}">
-	<meta name="yandex-verification" content="cdb196ee7042b852" />
+    <meta charset="utf-8"> {% if page.title %}
+    <title>{{ page.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %} {% if page.description %}
+    <meta name="description" content="{{ page.description }}"> {% elsif site.description %}
+    <meta name="description" content="{{ site.description }}"> {% endif %} {% if page.keywords%}
+    <meta name="keywords" content="{{ page.keywords }}"> {% elsif site.keywords %}
+    <meta name="keywords" content="{{ site.keywords }}"> {% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="yandex-verification" content="cdb196ee7042b852" />
 
-	<link rel="shortcut icon" href="/favicon.ico">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<!-- Enable responsive viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Le styles -->
-	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.BASE_PATH }}/{{ site.rss_path }}">
-	<link href="{{ site.BASE_PATH }}/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Le styles -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.BASE_PATH }}/{{ site.rss_path }}">
+    <link href="{{ site.BASE_PATH }}/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15745144-3"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15745144-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-		gtag('config', 'UA-15745144-3');
-	</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-15745144-3');
+    </script>
 </head>
+
 <body>
-	<nav class="navbar navbar-default visible-xs" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    <nav class="navbar navbar-default visible-xs" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
-			</button>
-			{% if site.author.github %}
-			<a type="button" class="navbar-toggle nav-link" href="http://github.com/{{ site.author.github }}">
-				<i class="fa fa-github"></i>
-			</a>
-			{% endif %}
-			{% if site.author.twitter %}
-			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/{{ site.author.twitter }}">
-				<i class="fa fa-twitter"></i>
-			</a>
-			{% endif %}
-			{% if site.author.email %}
-			<a type="button" class="navbar-toggle nav-link" href="mailto:{{ site.author.email }}">
-				<i class="fa fa-envelope"></i>
-			</a>
-			{% endif %}
-			<a class="navbar-brand" href="{{ site.BASE_PATH }}/">
+			</button> {% if site.author.github %}
+            <a type="button" class="navbar-toggle nav-link" href="http://github.com/{{ site.author.github }}">
+                <i class="fa fa-github"></i>
+            </a>
+            {% endif %} {% if site.author.twitter %}
+            <a type="button" class="navbar-toggle nav-link" href="http://twitter.com/{{ site.author.twitter }}">
+                <i class="fa fa-twitter"></i>
+            </a>
+            {% endif %} {% if site.author.email %}
+            <a type="button" class="navbar-toggle nav-link" href="mailto:{{ site.author.email }}">
+                <i class="fa fa-envelope"></i>
+            </a>
+            {% endif %}
+            <a class="navbar-brand" href="{{ site.BASE_PATH }}/">
 				{{ site.title }}
 			</a>
-		</div>
+        </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="{{ site.BASE_PATH }}/">Home</a></li>
-				<li><a href="{{ site.BASE_PATH}}/{{ site.archives_path }}">Archives</a></li>
-				<li><a href="{{ site.BASE_PATH}}/{{ site.categories_path }}">Categories</a></li>
-				<li><a href="{{ site.BASE_PATH}}/{{ site.tags_path }}">Tags</a></li>
-				<li><a href="{{ site.BASE_PATH}}/about.html">About</a></li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ site.BASE_PATH }}/">Home</a></li>
+                <li><a href="{{ site.BASE_PATH}}/{{ site.archives_path }}">Archives</a></li>
+                <li><a href="{{ site.BASE_PATH}}/{{ site.categories_path }}">Categories</a></li>
+                <li><a href="{{ site.BASE_PATH}}/{{ site.tags_path }}">Tags</a></li>
+                <li><a href="{{ site.BASE_PATH}}/about.html">About</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
 
-	<!-- nav-menu-dropdown -->
-	<div class="btn-group hidden-xs" id="nav-menu">
-		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <!-- nav-menu-dropdown -->
+    <div class="btn-group hidden-xs" id="nav-menu">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 			<i class="fa fa-bars"></i>
 		</button>
-		<ul class="dropdown-menu" role="menu">
-			<li><a href="{{ site.BASE_PATH}}/"><i class="fa fa-home"></i>Home</a></li>
-			<li><a href="{{ site.BASE_PATH}}/{{ site.archives_path }}"><i class="fa fa-archive"></i>Archives</a></li>
-			<li><a href="{{ site.BASE_PATH}}/{{ site.categories_path }}"><i class="fa fa-folder"></i>Categories</a></li>
-			<li><a href="{{ site.BASE_PATH}}/{{ site.tags_path }}"><i class="fa fa-tags"></i>Tags</a></li>
-			<li><a href="{{ site.BASE_PATH}}/about.html"><i class="fa fa-info"></i>About</a></li>
-			<li class="divider"></li>
-			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
-		</ul>
-	</div>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ site.BASE_PATH}}/"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="{{ site.BASE_PATH}}/{{ site.archives_path }}"><i class="fa fa-archive"></i>Archives</a></li>
+            <li><a href="{{ site.BASE_PATH}}/{{ site.categories_path }}"><i class="fa fa-folder"></i>Categories</a></li>
+            <li><a href="{{ site.BASE_PATH}}/{{ site.tags_path }}"><i class="fa fa-tags"></i>Tags</a></li>
+            <li><a href="{{ site.BASE_PATH}}/about.html"><i class="fa fa-info"></i>About</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+        </ul>
+    </div>
 
-	<div class="col-sm-3 sidebar hidden-xs">
-		{% include sidebar.html %}
-	</div>
+    <div class="col-sm-3 sidebar hidden-xs">
+        {% include sidebar.html %}
+    </div>
 
-	<div class="col-sm-9 main-content col-sm-offset-3">
-		{{ content }}
+    <div class="col-sm-9 main-content col-sm-offset-3">
+        {{ content }}
 
-		<footer>
-			<hr/>
-			<p>
-				&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
-			</p>
-		</footer>
-	</div>
+        <footer>
+            <hr/>
+            <p>
+                &copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with Jekyll. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+            </p>
+        </footer>
+    </div>
 
 </body>
+
 </html>
 <link href="{{ site.BASE_PATH }}/assets/css/style.css" rel="stylesheet">
 <link href="{{ site.BASE_PATH }}/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="{{ site.BASE_PATH }}/assets/resources/hightlight/atom-one-dark.css" rel="stylesheet">
+<link href="{{ site.BASE_PATH }}/assets/resources/hightlight/github.css" rel="stylesheet">
 <link href="{{ site.BASE_PATH }}/assets/resources/fancybox/jquery.fancybox.css" rel="stylesheet">
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/bootstrap/js/bootstrap.min.js"></script>
