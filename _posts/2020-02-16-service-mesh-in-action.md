@@ -166,7 +166,7 @@ Istio 跑起来不难，配置好不容易。
 
 要解决它，只盯着一个请求看不行的，应该从更高的角度看整个调用链，然后想办法去做优化。
 
-后面也会有专门的文章介绍我在这块的思考。`(10)`
+后面也会有专门的文章介绍我在这块的思考。`(9)`
 
 &nbsp;
 
@@ -242,7 +242,9 @@ Istio 的蓝图中，可观测性是一个很大的亮点。所以前期我们�
 
 ##### 日志搜集
 
-依然是 Cloud Native 中的开源项目，[Fluent Bit](https://fluentbit.io/) 是针对 Kubernetes 用 C 语言重现的 Fluentd。再配合 Elasticsearch，可以基本满足我们对日志搜集的需求。`(8)`
+依然是 Cloud Native 中的开源项目，[Fluent Bit](https://fluentbit.io/) 是针对 Kubernetes 用 C 语言重现的 Fluentd。它针对 Kubernetes 做了很多优化。
+
+再配合 Elasticsearch，可以基本满足我们对日志搜集的需求。
 
 &nbsp;
 
@@ -312,7 +314,7 @@ Java 程序启动太慢，Golang 程序启动太快… 如何做到优雅启动�
 
 主要靠开源项目 [k8s-prometheus-adapte](https://github.com/DirectXMan12/k8s-prometheus-adapter) 解决，整体难度不大。
 
-但后面可以讲讲为什么需要让`HorizontalPodAutoscaler` 支持自定义 Metrics。`(11)`
+但后面可以讲讲为什么需要让`HorizontalPodAutoscaler` 支持自定义 Metrics。`(10)`
 
 &nbsp;
 
@@ -336,7 +338,7 @@ CI / CD 再次出现，原因很明显，第一版的 CI / CD 不好用，后续
 
 ##### 分布式上下文
 
-一般 RPC 服务都会自动传播上下文，这样可以在调用链上游下游之间共享一些数据。但 Service Mesh 的重要一点是跨语言，RPC 协议也只是普通的 HTTP 或 gRPC，它们并没有相关协议。所以这块只能我们自己研发了。`(9)`
+一般 RPC 服务都会自动传播上下文，这样可以在调用链上游下游之间共享一些数据。但 Service Mesh 的重要一点是跨语言，RPC 协议也只是普通的 HTTP 或 gRPC，它们并没有相关协议。所以这块只能我们自己研发了。`(8)`
 
 &nbsp;
 
@@ -378,8 +380,7 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 4. [Service Mesh 实践（四）：从开源 Ingress 到自研 API Gateway](/2020/02/api-gateway.html)
 5. [Service Mesh 实践（五）：优雅启动和优雅关闭](/2020/02/graceful-start-and-shutdown.html)
 6. [Service Mesh 实践（六）：I18N Language](/2020/03/i18n-language.html)
-7. Service Mesh 实践（七）：CI / CD 的变迁
-8. Service Mesh 实践（八）：Fluent Bit 自定义 Parser
-9. Service Mesh 实践（九）：分布式上下文
-10. Service Mesh 实践（十）：为什么 Golang 更适合 Service Mesh
-11. Service Mesh 实践（十一）：HorizontalPodAutoscaler 支持自定义 Metrics
+7. [Service Mesh 实践（七）：CI / CD 的变迁](/2020/03/ci-cd.html)
+8. Service Mesh 实践（八）：分布式上下文
+9. Service Mesh 实践（九）：为什么 Golang 更适合 Service Mesh
+10. Service Mesh 实践（十）：HorizontalPodAutoscaler 支持自定义 Metrics
