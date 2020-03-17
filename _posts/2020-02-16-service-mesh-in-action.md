@@ -381,6 +381,7 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 5. [Service Mesh 实践（五）：优雅启动和优雅关闭](/2020/02/graceful-start-and-shutdown.html)
 6. [Service Mesh 实践（六）：I18N Language](/2020/03/i18n-language.html)
 7. [Service Mesh 实践（七）：CI / CD 的变迁](/2020/03/ci-cd.html)
-8. Service Mesh 实践（八）：分布式上下文
+8. [Service Mesh 实践（八）：分布式上下文](/2020/03/distributed-context.html)
 9. Service Mesh 实践（九）：为什么 Golang 更适合 Service Mesh
 10. Service Mesh 实践（十）：HorizontalPodAutoscaler 支持自定义 Metrics
+11. Service Mesh 实践（十一）：健康检查最佳实践
