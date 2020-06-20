@@ -140,7 +140,7 @@ Istio 跑起来不难，配置好不容易。
 
 一种拆法是垂直拆分，如果原来的单体程序中业务都比较独立，那这样是可行的。但事实并不是这样，虽然我们各个业务都是独立的，但是中间公用的业务还不少。例如一个`block`功能，用户可以把别人`block`，而`block`之后在上层很多代码中需要做检查。
 
-所以，水平拆分开起来是一个更可行的方案，而且也只能从底层开始，把依赖最少的模块独立出来。例如上面提到的`block`功能，它内部只依赖了数据库，并不会再涉及到别的业务了。
+所以，水平拆分看起来是一个更可行的方案，而且也只能从底层开始，把依赖最少的模块独立出来。例如上面提到的`block`功能，它内部只依赖了数据库，并不会再涉及到别的业务了。
 
 这个功能的调用量不小，功能简单，就算完全挂了也不会有严重的影响，看似是一个非常适合的小白鼠。于是我们第一个 Service Mesh 项目`block-sercice`就诞生了。
 
@@ -382,6 +382,6 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 6. [Service Mesh 实践（六）：I18N Language](/2020/03/i18n-language.html)
 7. [Service Mesh 实践（七）：CI / CD 的变迁](/2020/03/ci-cd.html)
 8. [Service Mesh 实践（八）：分布式上下文](/2020/03/distributed-context.html)
-9. Service Mesh 实践（九）：为什么 Golang 更适合 Service Mesh
+9. [Service Mesh 实践（九）：为什么 Golang 更适合 Service Mesh](/2020/06/why-golang-is-a-better-choice-for-service-mesh.html)
 10. Service Mesh 实践（十）：HorizontalPodAutoscaler 支持自定义 Metrics
 11. Service Mesh 实践（十一）：健康检查最佳实践
