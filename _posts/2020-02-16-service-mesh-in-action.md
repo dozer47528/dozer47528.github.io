@@ -184,7 +184,7 @@ Istio 跑起来不难，配置好不容易。
 
 最后，这个项目上线后，后面要做什么我们也越来越清晰了。在验证它可靠性的同时，我们也开始一步步解决上面遇到的问题了。
 
-目前和以前最大的区别就是，以前 block 相关的业务是以前的单体程序直接访问数据库的，现在是先访问 Kubernetes 集群内的 `block-service`，由这个服务访问相关数据库。
+目前和以前最大的区别就是，以前 block 相关的业务是直接访问数据库的，现在是先访问 Kubernetes 集群内的 `block-service`，由这个服务访问相关数据库。
 
 ![architecture_2](/uploads/2020/02/architecture_2.png)
 
@@ -372,8 +372,6 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 
 ### 更多内容
 
-> 以下内容如果没有链接代表还未完成。
-
 1. [Service Mesh 实践（一）：从 kops 到 EKS](/2020/02/migrate-kops-to-eks.html)
 2. [Service Mesh 实践（二）：Istio Mixer 模块的性能问题与替代方案](/2020/02/replace-istio-mixer.html)
 3. [Service Mesh 实践（三）：数据库中间件](/2020/02/database-middleware.html)
@@ -384,4 +382,3 @@ Kubernetes Ingress 从 Istio Ingress 换成了自研的 API Gateway。以前单�
 8. [Service Mesh 实践（八）：分布式上下文](/2020/03/distributed-context.html)
 9. [Service Mesh 实践（九）：为什么 Golang 更适合 Service Mesh](/2020/06/why-golang-is-a-better-choice-for-service-mesh.html)
 10. [Service Mesh 实践（十）：HorizontalPodAutoscaler 支持自定义 Metrics](/2020/06/custom-metrics-for-hpa.html)
-11. Service Mesh 实践（十一）：健康检查最佳实践
