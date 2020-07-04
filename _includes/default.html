@@ -122,3 +122,11 @@
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/toc/toc.min.js"></script>
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/app.js"></script>
+<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/mermaid/mermaid.min.js"></script>
+<script type="text/javascript">
+var config = {
+    startOnLoad:true,
+};
+mermaid.initialize(config);
+window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
