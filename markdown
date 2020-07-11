@@ -8,7 +8,7 @@ from optparse import OptionParser
 
 usg = \
     '''
-    worker.py --path ./_posts/2020-02-28-graceful-start-and-shutdown.md --img-use-oss
+    ./markdown --path ./_posts/2020-02-28-graceful-start-and-shutdown.md --img-use-oss
     '''
 
 parser = OptionParser(usage=usg)
