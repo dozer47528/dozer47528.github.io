@@ -9,9 +9,8 @@ permalink: /about.html
 new dozer()
 {
 	name = "Dozer",
-	company = ["Amino Apps", "大众点评网"],
+	company = ["Ctrip", "Amino Apps", "大众点评网"],
 	tags = ["开源", "互联网", "数码产品"],
-	email = "mail(d)dozer.cc (请把(d)替换成@)",
 	copyright = "如需转载，请注明出处，谢谢配合！",
 }
 ```
